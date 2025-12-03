@@ -43,12 +43,12 @@
 .fc-preview__frame.fc-option-noframe.fc-size-small .fc-artwork,
 .fc-preview__frame.fc-mat-border.fc-size-small .fc-artwork,
 .fc-preview__frame.fc-mat-oversized.fc-size-small .fc-artwork {
-    transform: scale(0.9);
+    transform: scale(0.85);
 }
 .framing-configurator-landscape .fc-preview__frame.fc-option-noframe.fc-size-small img[data-role="preview"],
 .framing-configurator-landscape .fc-preview__frame.fc-mat-border.fc-size-small img[data-role="preview"],
 .framing-configurator-landscape .fc-preview__frame.fc-mat-oversized.fc-size-small img[data-role="preview"] {
-    transform: scale(0.9) rotate(-90deg) scaleX(-1);
+    transform: scale(0.85) rotate(-90deg) scaleX(-1);
 }
 /* MEDIUM */
 .fc-preview__frame.fc-option-noframe.fc-size-medium img[data-role="preview"],
@@ -57,12 +57,12 @@
 .fc-preview__frame.fc-option-noframe.fc-size-medium .fc-artwork,
 .fc-preview__frame.fc-mat-border.fc-size-medium .fc-artwork,
 .fc-preview__frame.fc-mat-oversized.fc-size-medium .fc-artwork {
-    transform: scale(0.9);
+    transform: scale(0.85);
 }
 .framing-configurator-landscape .fc-preview__frame.fc-option-noframe.fc-size-medium img[data-role="preview"],
 .framing-configurator-landscape .fc-preview__frame.fc-mat-border.fc-size-medium img[data-role="preview"],
 .framing-configurator-landscape .fc-preview__frame.fc-mat-oversized.fc-size-medium img[data-role="preview"] {
-    transform: scale(0.9) rotate(-90deg) scaleX(-1);
+    transform: scale(0.85) rotate(-90deg) scaleX(-1);
 }
 /* LARGE */
 .fc-preview__frame.fc-option-noframe.fc-size-large img[data-role="preview"],
@@ -71,12 +71,12 @@
 .fc-preview__frame.fc-option-noframe.fc-size-large .fc-artwork,
 .fc-preview__frame.fc-mat-border.fc-size-large .fc-artwork,
 .fc-preview__frame.fc-mat-oversized.fc-size-large .fc-artwork {
-    transform: scale(0.9);
+    transform: scale(0.85);
 }
 .framing-configurator-landscape .fc-preview__frame.fc-option-noframe.fc-size-large img[data-role="preview"],
 .framing-configurator-landscape .fc-preview__frame.fc-mat-border.fc-size-large img[data-role="preview"],
 .framing-configurator-landscape .fc-preview__frame.fc-mat-oversized.fc-size-large img[data-role="preview"] {
-    transform: scale(0.9) rotate(-90deg) scaleX(-1);
+    transform: scale(0.85) rotate(-90deg) scaleX(-1);
 }
 /* GALLERY */
 .fc-preview__frame.fc-option-noframe.fc-size-gallery img[data-role="preview"],
