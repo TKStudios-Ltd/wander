@@ -1,0 +1,193 @@
+{% stylesheet %}
+  .announcement-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+    padding: 12px;
+    height: 44px;
+    position: relative;
+    background-color: #e5e2dd;
+  }
+
+  .announcement-container {
+    flex: 1;
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  .announcement-content {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .announcement-content.visible {
+    opacity: 1;
+  }
+  .announcement-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  .announcement-link:hover {
+    text-decoration: underline;
+  }
+
+  .announcement-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: inherit;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .announcement-arrow.left {
+    left: 10px;
+  }
+
+  .announcement-arrow.right {
+    right: 10px;
+  }
+{% endstylesheet %}
+
+  <div class="announcement-bar" data-section-id="{{ section.id }}">
+    <button class="announcement-arrow left" aria-label="Previous">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 2L3 5L7 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  
+    <div class="announcement-container">
+      <div class="announcement-content fade" id="announcement-{{ section.id }}">
+        {{ section.blocks.first.settings.text }}
+      </div>
+    </div>
+  
+    <button class="announcement-arrow right" aria-label="Next">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 2L7 5L3 8" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const bar = document.querySelector(`[data-section-id="{{ section.id }}"]`);
+      const container = bar.querySelector('.announcement-content');
+      const prev = bar.querySelector('.announcement-arrow.left');
+      const next = bar.querySelector('.announcement-arrow.right');
+  
+      const announcements = [
+        {% for block in section.blocks %}
+          {
+            text: {{ block.settings.text | json }},
+            link: {{ block.settings.link | json }}
+          },
+        {% endfor %}
+      ];
+  
+      let index = 0;
+      let intervalMs = {{ section.settings.rotation_interval | times: 1000 }};
+      const autoRotate = {{ section.settings.auto_rotate | json }};
+      let timer;
+  
+      function renderAnnouncement() {
+        container.classList.remove('visible');
+        setTimeout(() => {
+          const { text, link } = announcements[index];
+          container.innerHTML = link ? `<a href="${link}" class="announcement-link">${text}</a>` : text;
+          container.classList.add('visible');
+        }, 200); // matches CSS transition duration
+      }
+  
+      function nextAnnouncement() {
+        index = (index + 1) % announcements.length;
+        renderAnnouncement();
+      }
+  
+      function prevAnnouncement() {
+        index = (index - 1 + announcements.length) % announcements.length;
+        renderAnnouncement();
+      }
+  
+      function startAutoRotate() {
+        if (autoRotate && announcements.length > 1) {
+          timer = setInterval(nextAnnouncement, intervalMs);
+        }
+      }
+  
+      function resetTimer() {
+        if (autoRotate) {
+          clearInterval(timer);
+          startAutoRotate();
+        }
+      }
+  
+      prev.addEventListener('click', () => {
+        prevAnnouncement();
+        resetTimer();
+      });
+  
+      next.addEventListener('click', () => {
+        nextAnnouncement();
+        resetTimer();
+      });
+  
+      // Init
+      container.classList.add('visible');
+      startAutoRotate();
+    });
+  </script>
+
+{% schema %}
+  {
+    "name": "Announcement Bar",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "auto_rotate",
+        "label": "Auto-rotate announcements",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "rotation_interval",
+        "label": "Rotation interval (seconds)",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "default": 5
+      }
+    ],
+    "blocks": [
+      {
+        "type": "announcement",
+        "name": "Announcement",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Free shipping on all orders!"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "max_blocks": 10,
+    "presets": [
+      {
+        "name": "WANDER Announcement Bar"
+      }
+    ]
+  }
+  {% endschema %}

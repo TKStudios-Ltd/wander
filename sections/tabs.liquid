@@ -1,0 +1,195 @@
+{% stylesheet %}
+.tabs-navigation-container {
+  border-bottom: 2px solid var(--text-alpha-25);
+  padding-bottom: 10px;
+}
+.tabs-navigation-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.tabs-navigation-container ul li a {
+  border-left: 1px solid black;
+}
+.tabs-navigation-container ul li:first-child a {
+  border-left-color: transparent;
+}
+.tab-link {
+  display: inline-block;
+  padding: 0 20px;
+  color: var(--text-alpha-50);
+}
+.tab-link:hover {
+  color: var(--text-alpha-60);
+}
+.tab-link.active {
+  color: black;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.tabs-content-container {
+  padding: 2rem 0;
+}
+.tab-text p,
+.tab-text ul li,
+.tab-text ol li,
+.tab-text .size-chart-trigger,
+.accordion__item__text.product__description p,
+.accordion__item__text.product__description ul li,
+.accordion__item__text.product__description ol li,
+.accordion__item__text.product__description .size-chart-trigger {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.accordion__item__text.product__description ul {
+  list-style: disc;
+  margin-bottom: 1rem;
+}
+.tab-text a {
+  text-decoration: underline !important;
+}
+.accordion__item__text.product__description a:before,
+.accordion__item__text.product__description a:after {
+  display: none;
+}
+@media (max-width: 989px) {
+  .tabs-navigation-container,
+  .tabs-content-container { display: none; }
+  .mobile-accordion-root { display: block; margin-bottom: 2rem; }
+  .mobile-accordion-root .accordion__item__title__text.section-header__subheading { font-size: 14px !important; }
+  .mobile-accordion-root .accordion__item__text-wrapper { padding-right: 0; }
+  .mobile-accordion-root .accordion__item__text-wrapper.is-expanded { padding-top: 0.5rem; padding-bottom: 1rem; }
+}
+@media (min-width: 990px) {
+  .mobile-accordion-root { display: none; }
+}
+{% endstylesheet %}
+
+<section class="section-padding">
+  <div class="wrapper">
+    <!-- DESKTOP TABS (unchanged) -->
+    <tabs-component>
+      <div class="tabs-navigation-container">
+        <ul>
+          {% for block in section.blocks %}
+            <li>
+              <a href="#{{ block.id }}" class="tab-link section-header__subheading {% if forloop.index == 1 %}active{% endif %}" data-tab="{{ block.id }}">
+                {{ block.settings.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="tabs-content-container">
+        {% for block in section.blocks %}
+          <div id="{{ block.id }}" class="tab-content {% if forloop.index == 1 %}active{% endif %}" data-tab="{{ block.id }}">
+            <div class="tab-text">
+              {{ block.settings.content }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </tabs-component>
+  </div>
+
+  {%- comment -%}
+    MOBILE ACCORDION
+    - Moved OUTSIDE <tabs-component>
+    - Wrapped in a container that mimics a real accordion section root
+    - Unique IDs to avoid clashes with any other accordions on the page
+  {%- endcomment -%}
+  <div
+    data-section-id="{{ section.id }}--mobile-acc"
+    id="Accordions--{{ section.id }}--mobile"
+    data-section-type="accordions"
+    class="accordions-section text-dark mobile-accordion-root"
+  >
+    <div class="accordion__content">
+      <div class="wrapper" data-collapsible-single>
+        <ul class="accordion__list">
+          {% for block in section.blocks %}
+            <li id="Accordion--{{ block.id }}--mobile" class="accordion__item{% if forloop.index == 1 %} accordion__item--first{% endif %}" aria-haspopup="true">
+              <button
+                class="accordion__item__title"
+                aria-controls="Accordions-item--{{ forloop.index0 }}-{{ section.id }}--mobile"
+                data-collapsible-trigger
+                aria-expanded="false"
+                type="button"
+              >
+                <span class="accordion__item__title__text section-header__subheading">{{ block.settings.title }}</span>
+                {%- render 'icon-toggle-plus' -%}
+                {%- render 'icon-toggle-minus' -%}
+              </button>
+
+              <div
+                class="accordion__item__text-wrapper"
+                id="Accordions-item--{{ forloop.index0 }}-{{ section.id }}--mobile"
+                aria-expanded="false"
+                data-collapsible-container
+              >
+                <div class="accordion__item__text product__description rte" data-collapsible-content>
+                  {{ block.settings.content }}
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Optional fallback: if your theme initializes accordions via section events,
+  // nudge it to (re)initialize this faux accordion section on DOM ready.
+  document.addEventListener('DOMContentLoaded', function() {
+    var root = document.getElementById('Accordions--{{ section.id }}--mobile');
+    if (!root) return;
+
+    // If your theme listens for 'shopify:section:load', this will trigger its init.
+    try {
+      document.dispatchEvent(new CustomEvent('shopify:section:load', {
+        detail: { sectionId: root.getAttribute('data-section-id') }
+      }));
+    } catch (e) {}
+  });
+</script>
+
+
+{% schema %}
+  {
+    "name": "Tabs",
+    "presets": [
+      {
+        "name": "Tabs"
+      }
+    ],
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "type": "tab",
+        "name": "Tab",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Tab Title"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Tab Content"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

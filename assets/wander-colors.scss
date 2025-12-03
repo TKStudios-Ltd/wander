@@ -1,0 +1,49 @@
+// WANDER COLOR PALETTE
+
+$beige: #E5E2DD;
+$black: #020202;
+$white: #FFFFFF;
+$off-white: #f8f8f8;
+$light-grey: #EBEBEB;
+$brown: #C5C3BC;
+$lightBeige: #F1EFEB;
+
+.is-background-beige {
+    background-color: $beige;
+}
+
+.is-beige { 
+    background-color: $beige;
+}
+
+.is-light-beige {
+    background-color: $lightBeige;
+}
+
+.is-black { 
+    background-color: $black;
+}
+
+.is-background-off-white { 
+    background-color: $off-white;
+}
+
+.is-light-grey {
+    background-color: $light-grey;
+}
+
+.has-border-color-light-grey {
+    border-color: $light-grey;
+}
+
+.is-brown {
+    background-color: $brown;
+}
+
+.is-off-white {
+    background-color: $off-white;
+}
+
+.is-white {
+    background-color: $white;
+}

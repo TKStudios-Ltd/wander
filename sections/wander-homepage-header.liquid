@@ -1,0 +1,71 @@
+{% if section.settings.image != blank or section.settings.heading != blank %}
+  <div class="wander-homepage-header">
+    <div class="wander-homepage-header__inner">
+      {% if section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 295 | image_tag }}
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h1 class="wander-homepage-header__heading">{{ section.settings.heading }}</h1>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% style %}
+.wander-homepage-header {
+  background-color: #F8F8F8;
+  padding-top: 175px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+.wander-homepage-header__inner img {
+  max-width: 110px;
+  height: auto;
+}
+.wander-homepage-header__heading {
+    color: #000;
+    font-family: var(--FONT-STACK-SUBHEADING);
+    font-weight: var(--FONT-WEIGHT-SUBHEADING);
+    font-size: 12px;
+    letter-spacing: 2.8px;
+    text-transform: var(--SUBHEADING-TEXT-CAPS);
+    margin: 4rem 0 0;
+}
+@media (max-width: 749px) {
+  .wander-homepage-header {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+  .wander-homepage-header__heading {
+    font-size: 7px !important;
+    margin: 2rem 0 0 !important;
+  }
+  .wander-homepage-header__inner img {
+    max-width: 65px !important;
+  }
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "WANDER Homepage Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select the Homepage Header Logo SVG"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading Text (H1)",
+      "default": "Welcome to Wander"
+    }
+  ],
+  "presets": [
+    {
+      "name": "WANDER Homepage Header"
+    }
+  ]
+}
+{% endschema %}

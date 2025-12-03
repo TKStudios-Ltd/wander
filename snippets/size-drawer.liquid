@@ -1,0 +1,120 @@
+<style>
+  {% comment %} .size-chart-trigger {
+    text-decoration: underline !important;
+    text-transform: capitalize;
+    font-size: 0.9em;
+    display: inline-block;
+    padding: 0 0 0 20px;
+    height: 20px;
+    background-image: url('{{ 'icon-ruler.png' | asset_url }}');
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+  }
+  .size-chart-trigger:before, .size-chart-trigger:after {
+    content: none !important;
+  } {% endcomment %}
+  
+  .size-chart-drawer {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    display: none;
+  }
+  .size-chart-drawer.is-open {
+    display: block;
+  }
+  .size-chart-drawer__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .size-chart-drawer .size-chart-drawer__content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  .size-chart-drawer:not(.is-open) .size-chart-drawer__content {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  .size-chart-drawer.is-open .size-chart-drawer__content {
+    animation: slideIn 0.2s ease-in;
+  }
+  .size-chart-drawer__close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+</style>
+
+<div id="size-chart-drawer" class="size-chart-drawer" aria-hidden="true">
+  <div class="size-chart-drawer__overlay"></div>
+  <div class="size-chart-drawer__content" role="dialog" aria-label="Size Chart">
+    <button class="size-chart-drawer__close" aria-label="Close Size Chart">×</button>
+    <h2>Size Chart</h2>
+    {% assign size_guide_page = pages['size-guide'] %}
+    {% if size_guide_page %}
+      {{ size_guide_page.content }}
+    {% else %}
+      <p>Size guide not found.</p>
+    {% endif %}
+  </div>
+</div>
+
+{% comment %} <script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    const sizeChartLinks = document.querySelectorAll('a[href="/pages/size-guide"]');
+    
+    sizeChartLinks.forEach(trigger => {
+      trigger.classList.add('size-chart-trigger');
+      trigger.setAttribute('aria-expanded', 'false');
+
+    });
+    
+    document.querySelectorAll('.size-chart-trigger').forEach(trigger => {
+      trigger.addEventListener('click', function (event) {
+        event.preventDefault();
+        const drawer = document.getElementById('size-chart-drawer');
+        drawer.classList.add('is-open');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.querySelectorAll('.size-chart-trigger').forEach(t => t.setAttribute('aria-expanded', 'true'));
+      });
+    });
+
+    document.querySelector('.size-chart-drawer__close').addEventListener('click', function () {
+      const drawer = document.getElementById('size-chart-drawer');
+      drawer.classList.remove('is-open');
+      drawer.setAttribute('aria-hidden', 'true');
+      document.querySelector('.size-chart-trigger').setAttribute('aria-expanded', 'false');
+    });
+
+    document.querySelector('.size-chart-drawer__overlay').addEventListener('click', function () {
+      document.querySelector('.size-chart-drawer__close').click();
+    });
+  });
+</script> {% endcomment %}

@@ -1,0 +1,324 @@
+{%- liquid
+  assign autoplay      = section.settings.autoplay
+  assign duration_ms   = section.settings.duration_seconds | times: 1000
+  assign show_dots     = section.settings.show_dots
+  assign slides_count  = section.blocks.size
+-%}
+
+{%- if slides_count > 0 -%}
+<section
+  id="IBTAS--{{ section.id }}"
+  class="ibtas wrapper"
+  data-autoplay="{{ autoplay }}"
+  data-interval="{{ duration_ms }}"
+  style="--height-desktop: {{ section.settings.height_desktop }}; --height-mobile: {{ section.settings.height_mobile }};"
+>
+    <div class="ibtas__inner">
+        <div class="swiper ibtas__swiper">
+            <div class="swiper-wrapper">
+                {%- for block in section.blocks -%}
+                {%- liquid
+                    assign d_img = block.settings.desktop_image
+                    assign m_img = block.settings.mobile_image | default: d_img
+                    assign col   = block.settings.collection
+
+                    # Title
+                    assign title = ''
+                    if block.settings.title_source == 'collection' and col
+                    assign title = col.title
+                    else
+                    assign title = block.settings.manual_title
+                    endif
+
+                    # Series (plain text)
+                    assign series_name = block.settings.series_name
+
+                    # eager-load first slide if high on page
+                    assign load_eager = false
+                    if forloop.index0 == 0 and section.index < 3
+                    assign load_eager = true
+                    endif
+                -%}
+
+                <div class="swiper-slide"
+                  {{ block.shopify_attributes }}
+                  data-cta-enabled="{{ block.settings.show_button | default: false }}"
+                  data-cta-url="{{ col.url | default: '#' }}"
+                  data-cta-label="{{ block.settings.button_label | default: 'Shop the collection' }}"
+                  >
+                    <div class="ibtas__slide">
+                    {%- comment -%} TEXT ABOVE IMAGE {%- endcomment -%}
+                    <div class="ibtas__text">
+                        <div class="ibtas__text_subheading">
+                        {%- if title != blank -%}
+                            {%- if col -%}
+                                <a class="ibtas__title subheading-text" href="{{ col.url }}">
+                                {{ title | escape }} Collection
+                                </a>
+                            {%- else -%}
+                                <div class="ibtas__title subheading-text">
+                                {{ title | escape }}
+                                </div>
+                            {%- endif -%}
+                        {%- endif -%}
+                        {%- if series_name != blank -%}
+                            <div class="ibtas__series subheading-text">{{ series_name | escape }}</div>
+                        {%- endif -%}
+                        </div>
+                        <h2>WANDERINGS<em>TM</em> Fine Art Photography</h2>
+                    </div>
+
+                    {%- comment -%} IMAGE {%- endcomment -%}
+                    <div class="ibtas__media">
+                        <picture>
+                        {%- if d_img != blank -%}
+                            <source
+                            media="(min-width: 750px)"
+                            srcset="{{ d_img | image_url: width: 2400 }} 2400w,
+                                    {{ d_img | image_url: width: 2000 }} 2000w,
+                                    {{ d_img | image_url: width: 1600 }} 1600w,
+                                    {{ d_img | image_url: width: 1200 }} 1200w,
+                                    {{ d_img | image_url: width: 1000 }} 1000w,
+                                    {{ d_img | image_url: width: 800  }} 800w"
+                            sizes="100vw">
+                        {%- endif -%}
+                        {%- assign img_mobile = m_img | default: d_img -%}
+                        {%- if img_mobile != blank -%}
+                            <img
+                            class="ibtas__img"
+                            alt="{{ block.settings.alt | escape }}"
+                            loading="{% if load_eager %}eager{% else %}lazy{% endif %}"
+                            fetchpriority="{% if load_eager %}high{% else %}auto{% endif %}"
+                            src="{{ img_mobile | image_url: width: 1600 }}"
+                            srcset="{{ img_mobile | image_url: width: 1600 }} 1600w,
+                                    {{ img_mobile | image_url: width: 1200 }} 1200w,
+                                    {{ img_mobile | image_url: width: 900  }} 900w,
+                                    {{ img_mobile | image_url: width: 700  }} 700w,
+                                    {{ img_mobile | image_url: width: 500  }} 500w"
+                            sizes="100vw">
+                        {%- endif -%}
+                        </picture>
+                    </div>
+                    </div>
+                </div>
+                {%- endfor -%}
+            </div>
+            {%- if show_dots -%}
+                <div class="swiper-pagination"></div>
+            {%- endif -%}
+        </div>
+
+        <div class="ibtas__cta-wrap">
+          <a class="btn btn--solid btn--large btn--black ibtas__cta" href="#" hidden>Shop the collection</a>
+        </div>
+
+    </div>
+</section>
+
+{%- style -%}
+  #IBTAS--{{ section.id }} { 
+    position: relative; 
+    width: 100%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+  #IBTAS--{{ section.id }} .ibtas__inner { width: 100%; }
+  #IBTAS--{{ section.id }} .ibtas__swiper { width: 100%; }
+  #IBTAS--{{ section.id }} .swiper-slide { position: relative; }
+
+  #IBTAS--{{ section.id }} .ibtas__text {
+    margin: 0 auto 30px auto;
+    text-align: center;
+  }
+  #IBTAS--{{ section.id }} .ibtas__text em {
+    vertical-align: super;
+    font-size: 8px;
+    margin-left: 6px;
+  }
+  #IBTAS--{{ section.id }} .ibtas__text_subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  #IBTAS--{{ section.id }} .ibtas__text .ibtas__title {
+    font-weight: 600;
+    line-height: 1;
+  }
+  #IBTAS--{{ section.id }} .ibtas__text .ibtas__series {
+    border-left: 1px solid currentColor;
+    margin-left: 16px;
+    padding-left: 16px;
+    line-height: 1;
+  }
+  #IBTAS--{{ section.id }} .ibtas__text .subheading-text {
+    font-size: 8px;
+  }
+  #IBTAS--{{ section.id }} .ibtas__media { position: relative; }
+  #IBTAS--{{ section.id }} .ibtas__img {
+    display:block; width:100%;
+    height: var(--height-mobile, auto);
+    object-fit: cover;
+    padding: 0 2rem;
+  }
+  @media (max-width: 749px) {
+    #IBTAS--{{ section.id }} .ibtas__text h2 {
+      font-size: 5vw;
+    }
+    #IBTAS--{{ section.id }} .ibtas__text .subheading-text {
+      font-size: 7px !important;
+    }
+  }
+  @media (min-width: 750px) {
+    #IBTAS--{{ section.id }} .ibtas__img { 
+      height: var(--height-desktop, auto); 
+      padding: 0 4rem;
+    }
+    #IBTAS--{{ section.id }} {
+        padding-top: 100px;
+        padding-bottom: 100px; 
+    }
+  }
+  @media (min-width: 990px) {
+    #IBTAS--{{ section.id }} .ibtas__text .subheading-text {
+      font-size: 10px;
+    }
+  }
+  #IBTAS--{{ section.id }} .swiper-pagination {
+    position: absolute;
+    left: 50%; bottom: 10px; transform: translateX(-50%);
+    z-index: 3;
+  }
+  #IBTAS--{{ section.id }} .swiper-pagination-bullet {
+    width: 4px; height: 4px; opacity:.5; background: currentColor;
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+  }
+  #IBTAS--{{ section.id }} .swiper-pagination-bullet-active { opacity:1; }
+  #IBTAS--{{ section.id }} .ibtas__cta-wrap {
+    display: flex; justify-content: center;
+    margin-top: 25px;
+  }
+{%- endstyle -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var root = document.getElementById('IBTAS--{{ section.id }}');
+    if (!root) return;
+
+    var autoplay = root.getAttribute('data-autoplay') === 'true';
+    var interval = parseInt(root.getAttribute('data-interval'), 10) || 4000;
+
+    var swiper = new Swiper(root.querySelector('.ibtas__swiper'), {
+      loop: {% if slides_count > 1 %}true{% else %}false{% endif %},
+      speed: 500,
+      autoplay: autoplay ? { delay: interval, disableOnInteraction: false } : false,
+      pagination: { el: root.querySelector('.swiper-pagination'), clickable: true },
+      on: {
+        init: function() { updateCTA(); },
+        slideChange: function() { updateCTA(); }
+      }
+    });
+
+    function updateCTA() {
+      var btn = root.querySelector('.ibtas__cta');
+      if (!btn) return;
+
+      var active = root.querySelector('.swiper-slide.swiper-slide-active');
+      if (!active) return;
+
+      var enabled = active.getAttribute('data-cta-enabled') === 'true';
+      var url = active.getAttribute('data-cta-url') || '#';
+      var label = active.getAttribute('data-cta-label') || 'Shop the collection';
+
+      if (enabled && url && url !== '#') {
+        btn.removeAttribute('hidden');
+        btn.setAttribute('href', url);
+        btn.textContent = label;
+      } else {
+        btn.setAttribute('hidden', 'hidden');
+        btn.setAttribute('href', '#');
+        btn.textContent = label;
+      }
+    }
+  });
+</script>
+
+{%- else -%}
+  <div class="page-width">
+    <p>No slides added yet. Add blocks to “Image banner • Text above slider”.</p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Image Col Banner Slider",
+  "class": "image-banner-text-above-slider",
+  "settings": [
+    { "type": "header", "content": "Slider behavior" },
+    { "type": "checkbox", "id": "autoplay", "label": "Autoplay", "default": false },
+    { "type": "range", "id": "duration_seconds", "label": "Change slide every (sec)", "min": 2, "max": 12, "step": 1, "default": 4 },
+    { "type": "checkbox", "id": "show_dots", "label": "Show dot pagination", "default": true },
+
+    { "type": "header", "content": "Height presets" },
+    {
+      "type": "select",
+      "id": "height_desktop",
+      "label": "Desktop height",
+      "default": "clamp(400px, 45vw, 680px)",
+      "options": [
+        { "value": "auto", "label": "Adapt to image" },
+        { "value": "400px", "label": "Small (400px)" },
+        { "value": "550px", "label": "Medium (550px)" },
+        { "value": "700px", "label": "Large (700px)" },
+        { "value": "clamp(400px, 45vw, 680px)", "label": "Responsive (clamp 400–680px)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "height_mobile",
+      "label": "Mobile height",
+      "default": "320px",
+      "options": [
+        { "value": "auto", "label": "Adapt to image" },
+        { "value": "240px", "label": "Small (240px)" },
+        { "value": "320px", "label": "Medium (320px)" },
+        { "value": "420px", "label": "Large (420px)" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type": "image_picker", "id": "desktop_image", "label": "Desktop image" },
+        { "type": "image_picker", "id": "mobile_image", "label": "Mobile image (optional)" },
+        { "type": "text", "id": "alt", "label": "Image alt text", "default": "Banner image" },
+
+        { "type": "header", "content": "Content" },
+        { "type": "collection", "id": "collection", "label": "Collection (for title link)" },
+
+        {
+          "type": "select",
+          "id": "title_source",
+          "label": "Title source",
+          "default": "collection",
+          "options": [
+            { "value": "collection", "label": "Use collection title" },
+            { "value": "manual", "label": "Manual title" }
+          ]
+        },
+        { "type": "text", "id": "manual_title", "label": "Manual title", "default": "Custom title" },
+        { "type": "text", "id": "series_name", "label": "Series name", "default": "WANDERINGS™ COLLECTION" },
+
+        { "type": "checkbox", "id": "show_button", "label": "Show CTA button (uses first slide)", "default": true },
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop the collection" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Image Col Banner Slider", "category": "Image" }
+  ],
+  "disabled_on": { "groups": ["header", "aside", "footer"] }
+}
+{% endschema %}

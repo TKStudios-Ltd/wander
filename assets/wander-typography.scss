@@ -1,0 +1,22 @@
+@use 'wander-colors.scss';
+@use 'MyWebfontsKit.css';
+
+.AbovetheBeyondSerifRegular {
+	font-family: AbovetheBeyondSerifRegular;
+}.AbovetheBeyondSerifItalic {
+	font-family: AbovetheBeyondSerifItalic;
+}
+
+.serif-italic {
+    font-family: AbovetheBeyondSerifItalic;
+}
+
+.serif { 
+    font-family: AbovetheBeyondSerifRegular;
+}
+
+.sans-serif {
+    font-family: DINCondensed-Light;
+}
+
+

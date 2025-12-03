@@ -1,0 +1,200 @@
+{%- comment -%} /sections/section-recommended-posts.liquid — Back/Next only {%- endcomment -%}
+{%- liquid
+  assign id = 'RecommendedPosts--' | append: section.id
+  assign selector_id = '#' | append: id
+  assign section_width = section.settings.width
+  assign title = section.settings.title
+  assign body = section.settings.article_note
+  assign bg_color_secondary = section.settings.bg_color_secondary
+
+  assign animations_enabled = settings.animations_enabled
+  assign animation_anchor = selector_id
+  assign animation_delay = 150
+-%}
+
+{%- style -%}
+  .recommended-posts {
+    --PT: {{ section.settings.padding_top }}px;
+    --PB: {{ section.settings.padding_bottom }}px;
+  }
+  #{{ id }} .recommended-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  #{{ id }} .recommended-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+    font-family: var(--FONT-STACK-SUBHEADING);
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration:none;
+  }
+  #{{ id }} .recommended-link--prev svg { transform: rotate(180deg) !important;}
+  #{{ id }} .recommended-link svg {
+    width: 18px;height: 12px;flex: 0 0 18px;
+  }
+  #{{ id }} .recommended-link--prev svg { transform: none; }
+  #{{ id }} .recommended-link--next svg { transform: none; }
+  #{{ id }} .recommended-link[aria-disabled="true"] {
+    pointer-events:none; opacity:.4;
+  }
+  #{{ id }} .text__content p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 7px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.8;
+  }
+  #{{ id }} .text__content {
+    max-width: 510px;
+    margin: 6rem auto 0;
+  }
+  @media (max-width: 749px) {
+    #{{ id }} .text__content {
+      max-width: 355px;
+      margin: 8rem auto 0;
+    }
+    #{{ id }} .text__content p {
+      font-size: 4.5px !important;
+    }
+  }
+{%- endstyle -%}
+
+<section id="{{ id }}"
+  class="recommended-posts section-padding{% if bg_color_secondary %} bg-secondary{% endif %}"
+  data-section-type="recommended-posts"
+  data-section-id="{{ section.id }}">
+  <div class="{{ section_width }}">
+    {%- if title != blank -%}
+      <h2 class="section__heading text-center"
+        {% if animations_enabled %}
+          data-aos="fade-up"
+          data-aos-anchor="{{ animation_anchor }}"
+          data-aos-delay="{{ animation_delay }}"
+          {%- assign animation_delay = animation_delay | plus: 150 -%}
+        {% endif %}>
+        {{ title }}
+      </h2>
+    {%- endif -%}
+
+    <nav class="recommended-nav"
+      {% if animations_enabled %}
+        data-aos="fade-up"
+        data-aos-anchor="{{ animation_anchor }}"
+        data-aos-delay="{{ animation_delay }}"
+      {% endif %}>
+
+      {%- if blog.previous_article -%}
+        <a class="recommended-link recommended-link--prev link" href="{{ articles[blog.previous_article.handle].url }}" aria-label="Previous article">
+          <svg viewBox="0 0 36 24" width="24" height="24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+            vector-effect="non-scaling-stroke" aria-hidden="true">
+            <path d="M2 12H28M23 6l7 6-7 6"/>
+          </svg>
+          <span>Back</span>
+        </a>
+      {%- else -%}
+        <span class="recommended-link recommended-link--prev" aria-disabled="true">
+          <svg viewBox="0 0 36 24" width="24" height="24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+            vector-effect="non-scaling-stroke" aria-hidden="true">
+            <path d="M2 12H28M23 6l7 6-7 6"/>
+          </svg>
+          <span>Back</span>
+        </span>
+      {%- endif -%}
+
+      <span class="pager__divider" aria-hidden="true">|</span>
+
+      {%- if blog.next_article -%}
+        <a class="recommended-link recommended-link--next link" href="{{ articles[blog.next_article.handle].url }}" aria-label="Next article">
+          <span>Next</span>
+          <svg viewBox="0 0 36 24" width="24" height="24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+            vector-effect="non-scaling-stroke" aria-hidden="true">
+            <path d="M2 12H28M23 6l7 6-7 6"/>
+          </svg>
+        </a>
+      {%- else -%}
+        <span class="recommended-link recommended-link--next" aria-disabled="true">
+          <span>Next</span>
+          <svg viewBox="0 0 36 24" width="24" height="24" fill="none"
+            stroke="currentColor" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+            vector-effect="non-scaling-stroke" aria-hidden="true">
+            <path d="M2 12H28M23 6l7 6-7 6"/>
+          </svg>
+        </span>
+      {%- endif -%}
+    </nav>
+  </div>
+
+  {%- if body != blank -%}
+  <div class="wrapper--narrow text-section text-center">
+    <div class="text__content">
+      {{ body }}
+    </div>
+  </div>
+  {%- endif -%}
+
+</section>
+
+{% schema %}
+{
+  "name": "Recommended posts",
+  "settings": [
+    { "label": "Heading", "id": "title", "type": "text" },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "checkbox",
+      "id": "bg_color_secondary",
+      "label": "Background",
+      "info": "Use secondary background color",
+      "default": false
+    },
+    { "type": "richtext", "id": "article_note", "label": "Article note", "default": "<p>THIS BLOG CONTAINS CONCEPTS & OPINIONS FROM WANDER, IT's FOUNDER, AND IT'S AFFLILIATES. ANY CONTENT HEREIN, OR ANY PRODUCTS SOLD ON THIS WEBSITE ARE NOT INTENDED TO SUBSTITUTE FOR SEEKING YOUR OWN PROFESSIONAL HEALTH OR WELLNESS ADVICE.</p>" },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "wrapper",
+      "options": [
+        { "value": "wrapper--full-padded", "label": "Full width padded" },
+        { "value": "wrapper", "label": "Page width" },
+        { "value": "wrapper--narrow", "label": "Page width narrow" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 40
+    }
+  ],
+  "enabled_on": { "templates": ["article"] }
+}
+{% endschema %}

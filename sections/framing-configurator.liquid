@@ -1,0 +1,1019 @@
+{% comment %}
+  Framing Configurator (MVP)
+{% endcomment %}
+{{ 'framing-configurator.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+    assign current_variant = product.selected_or_first_available_variant
+    assign product_form_id = 'AddToCartForm--' | append: unique
+    assign form_qty = current_variant.quantity_rule.min
+    assign cart_qty = cart | item_count_for_variant: current_variant.id
+    assign qty_sum = form_qty | plus: cart_qty
+-%}
+
+<section id="framing-configurator-{{ section.id }}" class="framing-configurator wrapper">
+    {%- assign cfg = product.metafields.custom.framing_config -%}
+    {%- if cfg == blank or cfg.value == blank -%}
+    <div class="framing-configurator__notice">
+        <em>Framing config not set for this product (metafield: custom.framing_config).</em>
+    </div>
+    {%- else -%}
+    {%- assign crumb_collection = collection -%}
+    {%- if crumb_collection == blank -%}
+        {%- assign crumb_collection = product.collections | first -%}
+    {%- endif -%}
+        <nav class="breadcrumb__list hide-desk" role="navigation" aria-label="breadcrumbs">
+            {%- if product.type != blank -%}
+            <span class="breadcrumb__item">
+                <a href="{{ shop.url }}/collections/all/{{ product.type | handleize }}">
+                    {{ product.type }}
+                </a>
+            </span>
+            {%- endif -%}
+            {%- if crumb_collection -%}
+            <span class="breadcrumb__item">
+                <a href="{{ crumb_collection.url }}">
+                    {{ crumb_collection.title }}
+                </a>
+            </span>
+            {%- endif -%}
+            <span class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                {{ product.title }}
+            </span>
+        </nav>
+    <div class="framing-configurator__grid">
+        {%- assign rb = product.metafields.custom.room_background -%}
+        <div class="framing-configurator__preview_background"
+          {% if rb and rb.value and rb.value.image %}
+            data-room-url="{{ rb.value.image | image_url: width: 2200 }}"
+            data-room-name="{{ rb.value.name | escape }}"
+          {% endif %}>
+          <div class="framing-configurator__preview">
+            <div class="fc-preview__frame">
+                <div class="fc-artwork" data-role="artwork"></div>
+                <img data-role="preview" class="fc-overlay" alt="Frame overlay"/>
+            </div>
+            {%- liquid
+                assign location_text = product.metafields.custom.location
+                assign collection_title = ''
+                if collection and collection.title != blank
+                assign collection_title = collection.title
+                elsif product.collections and product.collections.size > 0
+                assign collection_title = product.collections.first.title
+                endif
+            -%}
+            <div class="product__meta-list">
+                {%- if collection_title != blank -%}
+                <span class="product-meta__item product-meta__collection">{{ collection_title | escape }}</span>
+                {%- endif -%}
+                {%- if location_text != blank -%}
+                <span class="product-meta__item product-meta__location">{{ location_text | escape }}</span>
+                {%- endif -%}
+                <span class="product-meta__item product-card__title">“{{ product.title | escape }}”</span>
+            </div>
+          </div>
+          <div class="product__vir-toggle">
+            <button 
+              type="button"
+              class="fc-vir-toggle btn btn--large"
+              data-role="vir-toggle"
+              {% unless rb and rb.value and rb.value.image %}hidden{% endunless %}>
+              View in Room
+            </button>
+          </div>
+        </div>
+        <div class="framing-configurator__product-info">
+            <nav class="breadcrumb__list hide-mob" role="navigation" aria-label="breadcrumbs">
+                {%- if product.type != blank -%}
+                <span class="breadcrumb__item">
+                    <a href="{{ shop.url }}/collections/{{ product.type | handleize }}">
+                        {{ product.type }}
+                    </a>
+                </span>
+                {%- endif -%}
+                {%- if crumb_collection -%}
+                <span class="breadcrumb__item">
+                    <a href="{{ crumb_collection.url }}">
+                        {{ crumb_collection.title }}
+                    </a>
+                </span>
+                {%- endif -%}
+                <span class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    {{ product.title }}
+                </span>
+            </nav>
+            <div class="product__title__wrapper">
+              <h1 class="product__title">
+                  {{ product.title }}
+              </h1>
+              <button 
+                aria-label="Add to Wishlist" 
+                data-with-epi="true" 
+                class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" 
+                data-swaction="addToWishlist" 
+                data-product-id="{{product.id | json}}" 
+                data-variant-id="{{product.variants[0].id}}" 
+                data-product-url="{{ shop.url }}{{ product.url }}">
+              </button>
+            </div>
+            <div class="product__block product__description product__description_top rte">
+                {%- unless product == blank -%}
+                  {{- product.description -}}
+                {%- else -%}
+                  <p>{{ 'homepage.onboarding.single_product_description' | t }}</p>
+                {%- endunless -%}
+            </div>
+            <div class="product__description rte size-chart-trigger__icon-flex">
+                <span class="ruler-icon"></span><a href="/pages/size-guide" title="Size Guide" class="size-chart-trigger lb-regular" target="_blank" aria-expanded="false">Size Guide</a>
+            </div>
+            <div class="framing-configurator__controls">
+                <!-- SIZE PILLS -->
+                <div class="fc-group">
+                    <div class="fc-label">Size</div>
+                    <div class="fc-pills" data-role="size">
+                        <div class="fc-size-cards" data-role="size-cards"></div>
+                    </div>
+                </div>
+                <!-- FRAME COLOR PILLS (N/A hidden) -->
+                <div class="fc-group">
+                    <div class="fc-label">Frame Color</div>
+                    <div class="fc-pills" data-role="frame"></div>
+                </div>
+                <!-- FRAMING OPTION PILLS -->
+                <div class="fc-group">
+                    <div class="fc-label">Framing Option</div>
+                    <div class="fc-pills" data-role="option"></div>
+                </div>
+                <!-- Line item properties (hidden) -->
+                <input type="hidden" name="properties[FC Size]" value="">
+                <input type="hidden" name="properties[FC Frame Color]" value="">
+                <input type="hidden" name="properties[FC Framing Option]" value="">
+                <input type="hidden" name="properties[FC Asset]" value="">
+            </div>
+            <div class="order__instructions product__description rte"><span>(1) CHOOSE SIZE</span><span>(2) CHOOSE FRAMING OPTION</span><span>(3) CHOOSE FRAME COLOR</span></div>
+            {% if section.settings.instructions_text != blank %}
+                <div class="product__description rte">
+                    {{ section.settings.instructions_text }}
+                </div>  
+            {% endif %}
+            <div class="order__sizing product__description rte">
+                For additional information, sizing & options see tables below & SIZE GUIDE <span class="size-chart-trigger__icon-flex"><span class="ruler-icon"></span><a href="/pages/size-guide" title="Size Guide" class="size-chart-trigger lb-regular" target="_blank" aria-expanded="false">Size Guide</a></span>
+            </div>
+
+            {% form 'product', product, id: product_form_id, class: 'product__form', novalidate: 'novalidate', data-product-form: '' %}
+            <input type="hidden" name="id" value="{{ current_variant.id }}">
+            <div class="product__purchase-data">
+                <!-- QUANTITY -->
+                <div class="select__fieldset">
+                    <span class="quantity__label">Quantity:</span>
+                    <div class="select-popout select-popout--small" data-popout data-popout-prevent="true">
+                        <div class="quantity-selector" style="display:block;" data-quantity-holder>
+                            <label for="product-quantity-buttons-{{ section.id }}" class="label-hidden">{{ 'products.product.quantity' | t }}</label>
+                            <button type="button" class="quantity__btn quantity__btn--decrease" data-quantity-minus data-quantity-button tabindex="0" title="{{ 'general.accessibility.decrease' | t }} - {{ product.title | strip_html -}}">
+                                <span class="visually-hidden">{{ 'general.accessibility.decrease' | t }}</span>
+                                {%- render 'icon-toggle-minus' -%}
+                            </button>
+                            <input id="product-quantity-buttons-{{ section.id }}" data-popout-input type="number" class="quantity__selector quantity__input" value="1" min="1" aria-label="quantity" autocomplete="off" name="quantity" data-quantity-field title="{{- 'products.product.quantity' | t }} - {{ product.title | strip_html -}}" pattern="[0-9]*" />
+                            <button type="button" class="quantity__btn quantity__btn--increase" data-quantity-plus data-quantity-button tabindex="0" title="{{- 'general.accessibility.increase' | t }} - {{ product.title | strip_html -}}">
+                                <span class="visually-hidden">{{ 'general.accessibility.increase' | t }}</span>
+                                {%- render 'icon-toggle-plus' -%}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRICE -->
+                <div class="product__price-wrapper">
+                  <span class="price__label">Price:</span>
+                  <div class="product__price" data-price-wrapper{% if price_style != blank %}{{ price_style }}{% endif %}>
+                    <!-- FC display price (driven by config) -->
+                    <span data-fc-price class="product__price--regular"></span>
+                    <!-- keep native price in DOM for the theme, but hidden by our CSS -->
+                    <span data-native-price>
+                      <span data-product-price class="product__price--regular{% if current_variant.compare_at_price > current_variant.price %} product__price--sale{% endif %}{% if bold_price %} product__price--bold{% endif %}">
+                        {%- liquid
+                          if currency_code_enable
+                            echo 1999 | money_with_currency
+                          else
+                            echo 1999 | money
+                          endif
+                        -%}
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <!-- ADD TO CART -->
+                <div class="product__submit__holder{% if show_payment_button %} product__submit__holder--spb{% endif %} btn--half">
+                    <div class="product__submit__buttons">
+                        <div class="product__submit__item">
+                        <button
+                            type="submit"
+                            name="add"
+                            id="AddToCart--{{ unique }}"
+                            class="btn btn--large btn--submit product__submit__add"
+                            data-add-to-cart>
+                            <span>
+                            {%- if current_variant.available and product.tags contains '_preorder' -%}
+                                {{ 'products.product.preorder' | t }}
+                            {%- elsif current_variant.available -%}
+                                {{ 'products.product.add_to_cart' | t }}
+                            {%- else -%}
+                                Sold Out
+                            {%- endif -%}
+                            </span>
+                            <em class="loader loader--line"><em class="loader-indeterminate"></em></em>
+                        </button>
+                        </div>
+                        {%- if show_payment_button -%}
+                        <div class="product__submit__item{% if sold_out %} hidden{% endif %}" data-buy-it-now>
+                            {{ form | payment_button }}
+                        </div>
+                        {%- endif -%}
+                    </div>
+                    <div data-cart-errors-container role="alert" class="product__form__errors"></div>
+                </div>
+            </div>
+            {% endform %}
+        </div>
+    </div>
+{%- endif -%}
+
+{%- render 'size-drawer' -%}
+
+{% if cfg and cfg.value %}
+<script>
+(function(){
+  const root = document.getElementById("framing-configurator-{{ section.id }}");
+  if(!root) return;
+
+  // ---------------- Core config & DOM ----------------
+  const CFG = {{ cfg.value | json }};
+  const assetsBase = "{{ 'asset-probe.js' | asset_url }}".split('asset-probe.js')[0];
+
+  const pillsSize   = root.querySelector('[data-role="size"]');
+  const pillsFrame  = root.querySelector('[data-role="frame"]');
+  const pillsOption = root.querySelector('[data-role="option"]');
+  const imgPrev     = root.querySelector('[data-role="preview"]');
+  const fnLabel     = root.querySelector('[data-role="filename"]');
+  const art         = root.querySelector('[data-role="artwork"]');
+
+  // NEW: View-in-Room toggle + background refs
+  const virToggle    = root.querySelector('[data-role="vir-toggle"]');
+  const previewBG    = root.querySelector('.framing-configurator__preview_background');
+  const previewFrame = root.querySelector('.fc-preview__frame');
+  const roomURL      = (previewBG && previewBG.getAttribute('data-room-url')) || '';
+
+  // NEW: our display price node (independent of theme)
+  const fcPriceEl = root.querySelector('[data-fc-price]');
+
+  // Hidden line-item props
+  const propSize   = root.querySelector('input[name="properties[FC Size]"]');
+  const propColor  = root.querySelector('input[name="properties[FC Frame Color]"]');
+  const propOption = root.querySelector('input[name="properties[FC Framing Option]"]');
+  const propAsset  = root.querySelector('input[name="properties[FC Asset]"]');
+
+  imgPrev.classList.add('fc-overlay');
+  art.style.backgroundImage = 'url({{ product.featured_media | default: product.media.first | img_url: "1100x" }})';
+
+  const naToken = "na";
+  let sizeToken, colorToken, optionToken, matToken;
+  let lastColorBeforeUnframed = null;
+  let lastRenderedPriceCents = null;
+
+  // ---------- Pricing helpers (tiered by color) ----------
+  const PRICING_STD =  (CFG.pricing && CFG.pricing.standard)   ? CFG.pricing.standard   : {};
+  const PRICING_BL  = (CFG.pricing && CFG.pricing.blacklabel) ? CFG.pricing.blacklabel : {};
+  const ADD_ON = CFG.add_on_skus || {};
+
+  // Detect if the chosen frame color is a Black Label
+  function isBlackLabel(colorTok){
+    const entry = (CFG.frame_colors || []).find(c => c.token === colorTok);
+    return entry && entry.tier === 'blacklabel';
+  }
+  // Returns cents (number) or null
+  function currentPriceCents(sz, opt, mat){
+    const key = `${opt}|${mat}`;
+
+    // Canvas & Unframed don’t depend on color tier
+    const useBL = (opt === 'frame' && mat !== 'canvas' && colorToken && isBlackLabel(colorToken));
+    const table = useBL ? PRICING_BL : PRICING_STD;
+
+    const row = table[sz] || {};
+    return (key in row) ? row[key] : null;
+  }
+  function fmt(cents){
+    if (cents == null) return 'N/A';
+    if (typeof Shopify !== 'undefined' && Shopify.formatMoney) {
+      return Shopify.formatMoney(cents, "${{amount}}"); // clean $ format
+    }
+    return '$' + (cents/100).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function renderPrice(sz, opt, mat){
+    if (!fcPriceEl) return;
+    const cents = currentPriceCents(sz,opt,mat);
+    lastRenderedPriceCents = cents;
+    fcPriceEl.textContent = fmt(cents);
+    const atc = root.querySelector('[data-add-to-cart]');
+    if (atc) atc.disabled = (cents == null);
+  }
+
+  // ---------- File + UI helpers ----------
+  function buildFilename(sizeToken, frameColorToken, optionToken, matToken) {
+    let m = matToken, c = frameColorToken;
+    if (optionToken === 'noframe') { m = 'border'; c = naToken; }
+    const pat = (CFG.file_tokens && CFG.file_tokens.pattern) || "[frame]_[mat]_[color]_[size].png";
+    return pat.replace("[frame]", optionToken)
+              .replace("[mat]", m)
+              .replace("[color]", c)
+              .replace("[size]", sizeToken);
+  }
+  function resolveSrc(fn){ return assetsBase + fn; }
+  function setPressed(parent, value){
+    parent.querySelectorAll('.fc-pill').forEach(btn=>{
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-value')===value ? 'true' : 'false');
+    });
+  }
+
+  // ---------- Sync size to theme variant (unchanged) ----------
+  const PRODUCT = {{ product | json }};
+  function syncVariantToSize(sizeToken) {
+    const s = (CFG.sizes || []).find(x => x.token === sizeToken);
+    if (!s) return;
+
+    const full  = (s.label || '').trim();
+    const short = full.split(' (')[0];
+
+    const form = document.getElementById('{{ product_form_id }}')
+              || document.querySelector('form[action="/cart/add"]');
+    if (!form) return;
+
+    const idInput = form.querySelector('input[name="id"]');
+
+    // 1) SELECT
+    const sizeSelect =
+      form.querySelector('select[name^="options"][name$="[Size]"]') ||
+      form.querySelector('select[data-option-index="0"]');
+    if (sizeSelect) {
+      let match = Array.from(sizeSelect.options).find(o => o.text.trim() === full)
+             ||   Array.from(sizeSelect.options).find(o => o.text.trim() === short);
+      if (match) {
+        sizeSelect.value = match.value;
+        sizeSelect.dispatchEvent(new Event('change', { bubbles:true }));
+        return;
+      }
+    }
+
+    // 2) RADIO
+    const sizeRadios = form.querySelectorAll('input[type="radio"][name="options[Size]"]');
+    if (sizeRadios.length) {
+      const findRadio = (txt) => Array.from(sizeRadios).find(r => {
+        const val = (r.value || r.getAttribute('aria-label') || '').trim();
+        if (val === txt) return true;
+        const lab = form.querySelector(`label[for="${r.id}"]`);
+        const labText = lab ? lab.textContent.trim() : '';
+        return labText === txt;
+      });
+      const radio = findRadio(full) || findRadio(short);
+      if (radio) {
+        radio.checked = true;
+        radio.dispatchEvent(new Event('change', { bubbles:true }));
+        return;
+      }
+    }
+
+    // 3) Fallback: set id
+    if (idInput && PRODUCT && PRODUCT.variants) {
+      const findVid = (needle) => {
+        const shortNeedle = (needle || '').split(' (')[0];
+        const byExact = PRODUCT.variants.find(v => (v.option1 || '').trim() === needle);
+        if (byExact) return byExact.id;
+        const byShort = PRODUCT.variants.find(v => (v.option1 || '').trim() === shortNeedle);
+        if (byShort) return byShort.id;
+        const low = (needle || '').toLowerCase();
+        const lowShort = shortNeedle.toLowerCase();
+        const ci = PRODUCT.variants.find(v => (v.option1 || '').trim().toLowerCase() === low)
+                || PRODUCT.variants.find(v => (v.option1 || '').trim().toLowerCase() === lowShort);
+        return ci ? ci.id : null;
+      };
+      const vid = findVid(full) || findVid(short);
+      if (vid) {
+        idInput.value = vid;
+        form.dispatchEvent(new Event('change', { bubbles:true }));
+        form.dispatchEvent(new CustomEvent('variant:changed', { bubbles:true, detail:{ variantId: vid } }));
+      }
+    }
+  }
+
+  // ---------- Canvas availability ----------
+    function getAllowedSizesFor(optTok, matTok){
+    // Check per-option allowed_sizes first
+    const opt = (CFG.framing_options || []).find(o => o.token===optTok && o.mat_token===matTok);
+    if (opt && Array.isArray(opt.allowed_sizes)) return opt.allowed_sizes;
+
+    // Fallback to global allowed_sizes map
+    const key = `${optTok}|${matTok}`;
+    if (CFG.allowed_sizes && Array.isArray(CFG.allowed_sizes[key])) return CFG.allowed_sizes[key];
+
+    return null; // null => all sizes allowed
+  }
+  function setSizeAvailabilityForOption(sizeTok, optTok, matTok){
+    const allowed = getAllowedSizesFor(optTok, matTok); // e.g. ["small","medium","large"] for oversized
+    const cardsWrap = root.querySelector('[data-role="size-cards"]');
+    if (!cardsWrap) return;
+
+    cardsWrap.querySelectorAll('.fc-size-card').forEach(card=>{
+      const inp = card.querySelector('input[type="radio"]');
+      if (!inp) return;
+      const tok = inp.value;
+      const ok = !allowed || allowed.includes(tok);
+      card.classList.toggle('is-disabled', !ok);
+      inp.disabled = !ok;
+    });
+
+    // If current size is invalid, jump to first allowed
+    if (allowed && !allowed.includes(sizeTok)) {
+      const next = allowed.find(t=>{
+        const r = cardsWrap.querySelector(`input[value="${t}"]`);
+        return r && !r.disabled;
+      }) || allowed[0];
+      const r = cardsWrap.querySelector(`input[value="${next}"]`);
+      if (r) { r.checked = true; sizeToken = next; }
+    }
+  }
+
+  function updatePreviewClasses(frameWrap, { sizeTok, optTok, matTok, colorTok }) {
+    if (!frameWrap) return;
+    // Remove our previous dynamic classes
+    const toRemove = [];
+    frameWrap.classList.forEach(cls => {
+      if (
+        cls.startsWith('fc-size-') ||
+        cls.startsWith('fc-option-') ||
+        cls.startsWith('fc-mat-') ||
+        cls.startsWith('fc-color-')
+      ) {
+        toRemove.push(cls);
+      }
+    });
+    toRemove.forEach(cls => frameWrap.classList.remove(cls));
+    // Add new ones
+    if (sizeTok)  frameWrap.classList.add(`fc-size-${sizeTok}`);
+    if (optTok)   frameWrap.classList.add(`fc-option-${optTok}`);
+    if (matTok)   frameWrap.classList.add(`fc-mat-${matTok}`);
+    if (colorTok) frameWrap.classList.add(`fc-color-${colorTok}`);
+  }
+
+  // ---------- Overlay pipeline ----------
+  let pendingLoad = null;
+  function preloadOverlay(url) {
+    return new Promise((resolve, reject) => {
+      const im = new Image();
+      im.onload = () => resolve(url);
+      im.onerror = reject;
+      im.src = url;
+    });
+  }
+
+  async function sync(){
+    const targetSizeToken   = sizeToken;
+    const targetOptionToken = optionToken;
+    const targetMatToken    = matToken;
+    let   targetColorToken  = colorToken;
+
+    setSizeAvailabilityForOption(targetSizeToken, targetOptionToken, targetMatToken);
+
+    const isUnframed = targetOptionToken === 'noframe';
+    if (isUnframed) {
+      if (targetColorToken !== naToken) lastColorBeforeUnframed = targetColorToken;
+      targetColorToken = naToken;
+      if (pillsFrame._disable) pillsFrame._disable(true);
+    } else {
+      if (pillsFrame._disable) pillsFrame._disable(false);
+      if (targetColorToken === naToken) {
+        targetColorToken = lastColorBeforeUnframed || ((CFG.frame_colors||[]).find(c=>c.token!=='na')||{}).token || 'na';
+      }
+    }
+
+    // ✅ Write price immediately so it shows even if image is slow/404
+    renderPrice(targetSizeToken, targetOptionToken, targetMatToken);
+
+    // ✅ Also update the wrapper classes immediately
+    updatePreviewClasses(previewFrame, {
+      sizeTok:  targetSizeToken,
+      optTok:   targetOptionToken,
+      matTok:   targetMatToken,
+      colorTok: targetColorToken
+    });
+
+    const filename = buildFilename(targetSizeToken, targetColorToken, targetOptionToken, targetMatToken);
+    const nextURL  = resolveSrc(filename);
+
+    imgPrev.classList.add('is-loading');
+    const myLoad = { url: nextURL, filename, targetSizeToken, targetColorToken, targetOptionToken, targetMatToken };
+    pendingLoad = myLoad;
+
+    try {
+      await preloadOverlay(nextURL);
+      if (pendingLoad !== myLoad) return;
+
+      root.setAttribute('data-size', myLoad.targetSizeToken);
+      root.setAttribute('data-mode', myLoad.targetOptionToken + '-' + (myLoad.targetOptionToken==='noframe' ? 'border' : myLoad.targetMatToken));
+      imgPrev.src = myLoad.url;
+      fnLabel.textContent = myLoad.filename;
+
+      updatePreviewClasses(previewFrame, {
+        sizeTok:  myLoad.targetSizeToken,
+        optTok:   myLoad.targetOptionToken,
+        matTok:   myLoad.targetMatToken,
+        colorTok: myLoad.targetColorToken
+      });
+
+      sizeToken   = myLoad.targetSizeToken;
+      colorToken  = myLoad.targetColorToken;
+      optionToken = myLoad.targetOptionToken;
+      matToken    = myLoad.targetMatToken;
+
+      const sizeLabel = ((CFG.sizes||[]).find(s => s.token===sizeToken)||{}).label || sizeToken;
+      const colorLabel = ((CFG.frame_colors||[]).find(c => c.token===colorToken)||{}).label || (colorToken===naToken ? 'N/A' : colorToken);
+      const optEntry = (CFG.framing_options||[]).find(o => o.token===optionToken && o.mat_token===matToken)
+                    || (CFG.framing_options||[]).find(o => o.token===optionToken);
+      const optionLabel = (optEntry && optEntry.label) || (optionToken + ' ' + matToken);
+
+      propSize.value  = sizeLabel;
+      propColor.value = colorLabel;
+      propOption.value = optionLabel;
+      propAsset.value  = myLoad.filename;
+
+      setPressed(pillsSize, sizeToken);
+      setPressed(pillsOption, optionToken + '|' + matToken);
+      if (colorToken !== naToken && pillsFrame._setActive) pillsFrame._setActive(colorToken);
+
+      // ✅ Keep this too (harmless duplicate if tokens didn’t change)
+      renderPrice(sizeToken, optionToken, matToken);
+
+      syncVariantToSize(sizeToken);
+
+    } finally {
+      if (pendingLoad === myLoad) {
+        imgPrev.classList.remove('is-loading');
+        pendingLoad = null;
+      }
+    }
+  }
+
+  // ---------- Build controls (unchanged from your last working version) ----------
+  (function buildSizeCards(){
+    const cardsWrap = root.querySelector('[data-role="size-cards"]');
+    if (!cardsWrap) return;
+    cardsWrap.innerHTML = '';
+
+    const assetsBase2 = "{{ 'asset-probe.js' | asset_url }}".split('asset-probe.js')[0];
+    const svgSrcFor = (sizeToken) => assetsBase2 + `size-${sizeToken}.svg`;
+
+    (CFG.sizes || []).forEach(s => {
+      const token = s.token;
+      const labelFull = s.label || token;
+      const labelName = labelFull.split(' (')[0];
+      const dims = (labelFull.match(/\((.+)\)$/) || [,''])[1];
+
+      const id = `fc-size-{{ section.id }}-${token}`;
+
+      const label = document.createElement('label');
+      label.className = 'fc-size-card';
+      label.setAttribute('for', id);
+
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.name = `fc-size-{{ section.id }}`;
+      input.value = token;
+      input.id = id;
+
+      const img = document.createElement('img');
+      img.className = 'fc-size-img';
+      img.alt = labelName;
+      img.loading = 'lazy';
+      img.src = svgSrcFor(token);
+
+      const txt = document.createElement('div');
+      txt.className = 'fc-size-text';
+      const nameEl = document.createElement('div');
+      nameEl.className = 'fc-size-name';
+      nameEl.textContent = labelName;
+      const dimsEl = document.createElement('div');
+      dimsEl.className = 'fc-size-dims';
+      dimsEl.textContent = dims || '';
+      txt.appendChild(nameEl);
+      txt.appendChild(dimsEl);
+
+      const radio = document.createElement('div');
+      radio.className = 'fc-size-radio';
+      const dot = document.createElement('span');
+      dot.className = 'dot';
+      radio.appendChild(dot);
+
+      label.appendChild(input);
+      label.appendChild(img);
+      label.appendChild(txt);
+      label.appendChild(radio);
+      cardsWrap.appendChild(label);
+
+      input.addEventListener('change', () => {
+        if (input.checked) {
+          sizeToken = token;
+          setTimeout(()=>{ input.checked = true; },0);
+          sync();
+        }
+      });
+    });
+
+    pillsSize._checkSizeRadio = (token) => {
+      const inp = cardsWrap.querySelector(`input[value="${token}"]`);
+      if (inp && !inp.checked) inp.checked = true;
+    };
+  })();
+
+  function buildFrameSwatches(){
+    const wrap = document.createElement('div');
+    wrap.className = 'fc-swatch-cards';
+    pillsFrame.innerHTML = '';
+    pillsFrame.appendChild(wrap);
+
+    const base = "{{ 'asset-probe.js' | asset_url }}".split('asset-probe.js')[0];
+    const swatchSrcFor = (token) => {
+      const entry = (CFG.frame_colors||[]).find(c => c.token===token);
+      const file  = (entry && entry.swatch) ? entry.swatch : `swatch-${token}.png`;
+      return base + file;
+    };
+
+    (CFG.frame_colors || [])
+      .filter(c => c.token !== 'na')
+      .forEach(c => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'fc-swatch-card';
+        card.setAttribute('data-value', c.token);
+        card.setAttribute('aria-pressed', 'false');
+
+        const tile = document.createElement('div');
+        tile.className = 'fc-swatch-img';
+        tile.style.backgroundImage = `url(${swatchSrcFor(c.token)})`;
+
+        const name = document.createElement('div');
+        name.className = 'fc-swatch-name';
+        name.textContent = c.label || c.token;
+
+        card.appendChild(tile);
+        card.appendChild(name);
+        wrap.appendChild(card);
+
+        card.addEventListener('click', () => {
+          if (card.classList.contains('is-disabled')) return;
+          colorToken = c.token;
+          if (pillsFrame._setActive) pillsFrame._setActive(colorToken);
+          sync();
+        });
+      });
+
+    pillsFrame._setActive = (token) => {
+      wrap.querySelectorAll('.fc-swatch-card').forEach(el => {
+        const active = el.getAttribute('data-value') === token;
+        el.classList.toggle('is-active', active);
+        el.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+    };
+
+    pillsFrame._disable = (disabled) => {
+      wrap.querySelectorAll('.fc-swatch-card').forEach(card => {
+        card.classList.toggle('is-disabled', !!disabled);
+      });
+    };
+  }
+  buildFrameSwatches();
+
+  function buildOptionRadios(){
+    const wrap = document.createElement('div');
+    wrap.className = 'fc-option-radios';
+    pillsOption.innerHTML = '';
+    pillsOption.appendChild(wrap);
+
+    (CFG.framing_options || []).forEach(o => {
+      const id = `fc-opt-{{ section.id }}-${o.token}-${o.mat_token}`;
+
+      const label = document.createElement('label');
+      label.className = 'fc-radio';
+      label.setAttribute('for', id);
+      if (o.allowed_sizes && o.allowed_sizes.length) {
+        label.setAttribute('data-allowed-sizes', o.allowed_sizes.join(','));
+      }
+
+      const input = document.createElement('input');
+      input.type  = 'radio';
+      input.name  = `fc-option-{{ section.id }}`;
+      input.id    = id;
+      input.value = `${o.token}|${o.mat_token}`;
+
+      const ring = document.createElement('span');
+      ring.className = 'ring';
+
+      const txt = document.createElement('span');
+      txt.className = 'label';
+      txt.textContent = o.label || `${o.token} ${o.mat_token}`;
+
+      label.appendChild(input);
+      label.appendChild(ring);
+      label.appendChild(txt);
+      wrap.appendChild(label);
+
+      input.addEventListener('change', () => {
+        if (!input.checked) return;
+        [optionToken, matToken] = input.value.split('|');
+        sync();
+      });
+    });
+
+    pillsOption._check = (token, mat) => {
+      const val = `${token}|${mat}`;
+      const inp = wrap.querySelector(`input[value="${val}"]`);
+      if (inp && !inp.checked) inp.checked = true;
+    };
+  }
+  buildOptionRadios();
+
+  // Defaults — Statement / Natural / Framed w/ Mat (border)
+  sizeToken = 'statement';
+  const framedBorder = (CFG.framing_options || []).find(o => o.token === 'frame' && o.mat_token === 'border')
+                    || (CFG.framing_options || []).find(o => o.token === 'frame')
+                    || (CFG.framing_options || [])[0];
+
+  optionToken = framedBorder ? framedBorder.token : 'frame';
+  matToken    = framedBorder ? framedBorder.mat_token : 'border';
+
+  const natural = (CFG.frame_colors || []).find(c => c.token === 'natural');
+  colorToken = natural ? 'natural' : (
+    ((CFG.frame_colors || []).find(c => c.token !== naToken) || {}).token || naToken
+  );
+
+  setPressed(pillsSize, sizeToken);
+  if (pillsOption._check) pillsOption._check(optionToken, matToken);
+  if (pillsSize._checkSizeRadio) pillsSize._checkSizeRadio(sizeToken);
+  if (colorToken !== naToken && pillsFrame._setActive) pillsFrame._setActive(colorToken);
+  setSizeAvailabilityForOption(sizeToken, optionToken, matToken);
+
+  // ----- View in Room toggle -----
+  function setViewInRoom(on){
+  if (!previewBG || !roomURL) return;
+    if (on){
+      previewBG.style.backgroundImage = `url(${roomURL})`;
+      previewBG.classList.add('is-vir');
+      if (virToggle) virToggle.textContent = 'View in Frame';
+    } else {
+      previewBG.style.backgroundImage = '';
+      previewBG.classList.remove('is-vir');
+      if (virToggle) virToggle.textContent = 'View in Room';
+    }
+  }
+  if (virToggle && roomURL){
+    let virOn = false;
+    virToggle.addEventListener('click', ()=>{
+      virOn = !virOn;
+      setViewInRoom(virOn);
+    });
+  }
+
+  // Seed preview classes once so they appear immediately
+  updatePreviewClasses(previewFrame, {
+    sizeTok:  sizeToken,
+    optTok:   optionToken,
+    matTok:   matToken,
+    colorTok: colorToken
+  });
+
+  // First paint
+  sync();
+
+  // ---- Quantity fix (attach if theme didn't) ----
+  (function wireQty(){
+    const form = document.getElementById('{{ product_form_id }}')
+              || root.closest('form[action="/cart/add"]')
+              || document.querySelector('form[action="/cart/add"]');
+    if (!form) return;
+
+    const holder = form.querySelector('[data-quantity-holder]');
+    if (!holder) return;
+
+    const input = holder.querySelector('[data-quantity-field]');
+    const plus  = holder.querySelector('[data-quantity-plus]');
+    const minus = holder.querySelector('[data-quantity-minus]');
+    if (!input) return;
+
+    const step = parseInt(input.step || '1', 10);
+    const min  = parseInt(input.min  || '1', 10);
+
+    const clamp = (v)=> Math.max(min, v);
+
+    plus && plus.addEventListener('click', ()=>{
+      const cur = parseInt(input.value || '0', 10) || 0;
+      input.value = clamp(cur + step);
+      input.dispatchEvent(new Event('change', { bubbles:true }));
+    });
+
+    minus && minus.addEventListener('click', ()=>{
+      const cur = parseInt(input.value || '0', 10) || 0;
+      input.value = clamp(cur - step);
+      input.dispatchEvent(new Event('change', { bubbles:true }));
+    });
+  })();
+
+  // ---------- ATC: add base + correct surcharge ----------
+  (function hookATC(){
+    const form = document.getElementById('{{ product_form_id }}')
+              || root.closest('form[action="/cart/add"]')
+              || document.querySelector('form[action="/cart/add"]');
+    if (!form) return;
+
+    const qtyInput = form.querySelector('input[name="quantity"]') || { value: 1 };
+    const atcBtn   = form.querySelector('[data-add-to-cart]');
+
+    // Helper: find the product variant ID that matches the current sizeToken
+    function findVariantIdForSize(sizeTok) {
+      const s = (CFG.sizes || []).find(x => x.token === sizeTok);
+      if (!s || !PRODUCT || !PRODUCT.variants) return null;
+
+      const full  = (s.label || '').trim();      // e.g., 'Large (25" x 33")'
+      const short = full.split(' (')[0];         // e.g., 'Large'
+
+      // Exact label match first
+      let v = PRODUCT.variants.find(v => (v.option1 || '').trim() === full);
+      if (v) return v.id;
+
+      // Fallback: short label match
+      v = PRODUCT.variants.find(v => (v.option1 || '').trim() === short);
+      if (v) return v.id;
+
+      // Case-insensitive fallbacks
+      const lf = full.toLowerCase(), ls = short.toLowerCase();
+      v = PRODUCT.variants.find(v => {
+        const o = (v.option1 || '').trim().toLowerCase();
+        return o === lf || o === ls;
+      });
+      return v ? v.id : null;
+    }
+
+    form.addEventListener('submit', async (e)=>{
+      const priceCents = currentPriceCents(sizeToken, optionToken, matToken);
+      if (priceCents == null) {
+        e.preventDefault();
+        alert('This configuration is not available.');
+        return;
+      }
+
+      // ✅ Use the variant that matches the chosen size
+      const baseVid = findVariantIdForSize(sizeToken);
+      if (!baseVid) {
+        e.preventDefault();
+        console.warn('No base variant found for size:', sizeToken, PRODUCT);
+        alert('Could not find a matching product variant for this size.');
+        return;
+      }
+
+      const qty = Math.max(1, parseInt(qtyInput.value, 10) || 1);
+
+      // --- Clean, human-friendly labels for cart ---
+      const sizeEntry   = (CFG.sizes || []).find(s => s.token === sizeToken) || {};
+      const sizeLabel   = sizeEntry.label || sizeToken;
+
+      const colorEntry  = (CFG.frame_colors || []).find(c => c.token === colorToken) || {};
+      const colorLabel  = colorEntry.label || (colorToken === naToken ? 'N/A' : colorToken);
+
+      const optEntry    = (CFG.framing_options || []).find(o => o.token === optionToken && o.mat_token === matToken)
+                      || (CFG.framing_options || []).find(o => o.token === optionToken);
+      const optionLabel = (optEntry && optEntry.label) || (optionToken + ' ' + matToken);
+
+      // ---------------- Base product line ----------------
+      // Shows in cart as:
+      //   Title:    Custom Unframed Print   (or your product title if you don’t change the cart template)
+      //   Subtitle: [Product Name]          (optional if you wire it in your cart template)
+      //   Props:    Size - [Product Size]
+      const baseProps = {
+        'Size': sizeLabel,
+
+        // hidden/debug (leading underscore)
+        '_FC_SIZE_TOK': sizeToken,
+        '_FC_COLOR_TOK': colorToken,
+        '_FC_OPTION_TOK': `${optionToken}|${matToken}`,
+        '_FC_SIZE_LABEL': sizeLabel,
+        '_FC_COLOR_LABEL': colorLabel,
+        '_FC_OPTION_LABEL': optionLabel,
+
+        // optional title/subtitle overrides (use in cart template if desired)
+        '_OverrideTitle': 'Custom Unframed Print',
+        '_Subtitle1': '{{ product.title | escape }}'
+      };
+
+      const items = [{
+        id: baseVid,          // variant id for the chosen size
+        quantity: qty,
+        properties: baseProps
+      }];
+
+      // ---------------- Framing surcharge line (if framed) ----------------
+      // Shows in cart as:
+      //   Title:    Custom Framing Add-On
+      //   Props:    Size - [Product Size]
+      //             Framing - [Product Frame Type] - [Product Frame Material]
+      if (optionToken === 'frame') {
+        let surchargeKey = `${optionToken}|${matToken}`;
+        if (matToken !== 'canvas') {
+          const tier = isBlackLabel(colorToken) ? 'blacklabel' : 'standard';
+          surchargeKey += `|${tier}`;
+        }
+
+        const map = ADD_ON[surchargeKey];
+        const surchargeVid = map && map[sizeToken];
+
+        if (!surchargeVid) {
+          e.preventDefault();
+          console.warn('Missing surcharge variant for', { surchargeKey, sizeToken, ADD_ON });
+          alert('This framing option for the selected size is temporarily unavailable.');
+          return;
+        }
+
+        const framingSummary = `${optionLabel} - ${colorLabel}`;
+
+        items.push({
+          id: surchargeVid,
+          quantity: qty,
+          properties: {
+            'Size': sizeLabel,
+            'Framing': framingSummary,
+
+            // hidden/debug:
+            '_AddOn': 'Framing Surcharge',
+            '_ParentProductId': '{{ product.id }}',
+            '_FC_SIZE_TOK': sizeToken,
+            '_FC_COLOR_TOK': colorToken,
+            '_FC_OPTION_TOK': `${optionToken}|${matToken}`,
+
+            // optional title override for this line
+            '_OverrideTitle': 'Custom Framing Add-On'
+          }
+        });
+      }
+
+      e.preventDefault();
+      if (atcBtn) atcBtn.classList.add('is-loading');
+      try {
+        const res = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ items })
+        });
+        if (!res.ok) throw new Error('ATC failed');
+        document.dispatchEvent(new CustomEvent('cart:refresh', { bubbles:true }));
+        document.dispatchEvent(new CustomEvent('cart:open', { bubbles:true }));
+        setTimeout(()=>{ if (!document.body.classList.contains('cart-open')) location.href='/cart'; }, 300);
+      } catch (err) {
+        console.error(err);
+        alert('Sorry—something went wrong adding to cart. Please try again.');
+      } finally {
+        if (atcBtn) atcBtn.classList.remove('is-loading');
+      }
+    });
+  })();
+
+})();
+</script>
+{% endif %}
+
+
+
+{% schema %}
+  {
+    "name": "Framing Config",
+    "settings": [
+        {
+          "type": "header",
+          "content": "Form elements"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_payment_button",
+          "label": "Show dynamic checkout buttons",
+          "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/en/manual/online-store/os/dynamic-checkout)",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Instructions",
+          "info": "Appears between product options and quantity selector"
+        },
+        {
+          "type": "richtext",
+          "id": "instructions_text",
+          "label": "Sizing Instructions"
+        }
+    ],
+    "blocks": [],
+    "presets": [{ "name": "Framing Config" }]
+  }
+  {% endschema %}
+</section>

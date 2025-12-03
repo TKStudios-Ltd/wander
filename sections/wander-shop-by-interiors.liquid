@@ -1,0 +1,219 @@
+{%- style -%}
+
+@media (min-width: 1837px) {
+    .wander-shop-by-interiors {
+        padding: 160px 146px;
+        margin-top: {{ section.settings.top-margin }}px;
+    }
+}
+
+@media (max-width: 1836px) {
+    .wander-shop-by-interiors {
+        padding: 160px 50px;
+        padding-bottom: 50px;
+        margin-top: {{ section.settings.top-margin }}px;
+    }
+}
+
+.wander-shop-by-interiors .image-wrapper {
+    position: absolute;
+}
+
+@media (min-width: 1837px) {
+    .wander-shop-by-interiors .floating-panel {
+        width: 901px;
+        right: 0px;
+        top: 172px;
+        z-index: 300;
+        padding: 148px 106px;
+        position: absolute;
+    }
+}
+
+@media (max-width: 1836px) {
+    .wander-shop-by-interiors .floating-panel {
+        //width: 100%;
+        margin-left: 50px;
+        margin-top: 0px;
+        position: relative;
+        top: -100px;
+        right: 50px;
+        left: 0px;
+        padding: 75px 75px;
+        margin-right: 0px;
+    }
+}
+
+.wander-shop-by-interiors .eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 12px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.wander-shop-by-interiors .headline {
+    font-size: 70px;
+    letter-spacing: 4px;
+    margin-bottom: 33px;
+    line-height: 68px;
+}
+
+.wander-shop-by-interiors .body {
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 38px;
+}
+
+.wander-shop-by-interiors .cta-button {
+    background-color: black;
+    padding: 15px 63px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 3px; 
+}
+
+.wander-shop-by-interiors .cta-button:hover {
+    opacity: .7;
+}
+
+@media (min-width: 1836px) {
+    .wander-shop-by-interiors .image-wrapper {
+        position: relative;
+        margin: 0 auto;
+        max-width: 1616px;
+    }
+}
+
+@media (max-width: 1835px) {
+    .wander-shop-by-interiors .image-wrapper {
+        position: static;
+        margin: 0 auto;
+        max-width: 764px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1837px) {
+    .wander-shop-by-interiors .image-wrapper-2 {
+        top: 0px;
+        left: 0px;
+        width: 796px;
+        position: absolute;
+        z-index: 199;
+    }
+}
+
+@media (max-width: 1836px) {
+    .wander-shop-by-interiors .image-wrapper-2 {
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        position: static;
+        z-index: 199;
+        padding-right: 50px;
+    }
+}
+
+@media (min-width: 1837px) {
+    .wander-shop-by-interiors .image-wrapper-2 img {
+        width: 796px;
+    }
+}
+
+@media (max-width: 1836px) {
+    .wander-shop-by-interiors .image-wrapper-2 img {
+        width: 100%;
+    }
+}
+
+{%- endstyle -%}
+
+<div class="wander-shop-by-interiors">
+    <div class="image-wrapper">
+        <div class="image-wrapper-2"><img src="{{ section.settings.image | image_url: width: 796 }}" /></div>
+        <div class="floating-panel is-light-beige">
+            <div class="eyebrow sans-serif">
+                {{ section.settings.eyebrow | raw }}
+            </div>
+            <div class="headline serif-italic">
+                {{ section.settings.headline | raw }}
+            </div>
+            <div class="body serif-italic">
+                {{ section.settings.body | raw }}
+            </div> 
+            <div>
+                <a href="#" class="cta-button serif">{{ section.settings.cta-button-text | raw }}</a>
+            </div> 
+        </div>
+    </div>
+</div>
+
+<script>
+  $(document).ready(function() { 
+
+        $(window).resize(function() {
+            var windowWidth = $(window).width();
+            if (windowWidth > 1836) {
+                var height = $('.image-wrapper-2').outerHeight(false) + (parseInt($('.wander-shop-by-interiors').css('padding-top'), 10) * 2);
+                console.log('height', height);
+                $('.wander-shop-by-interiors').css({height: height + 'px'});
+            } else {
+                $('.wander-shop-by-interiors').css({height: 'auto'});
+            }
+        });
+
+        $(window).trigger('resize');
+  });
+</script>
+
+{% schema %}
+{
+  "name": "WANDER Shop By Interiors",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Select the Image for the left side."
+    },
+    {
+      "type": "html",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "html",
+      "id": "headline",
+      "label": "Headline"
+    },
+    {
+      "type": "html",
+      "id": "body",
+      "label": "Body"
+    },
+    {
+      "type": "html",
+      "id": "cta-button-text",
+      "label": "CTA Button Text"
+    },
+    {
+      "type": "number",
+      "id": "top-margin",
+      "label": "Top Margin",
+      "default": 0  
+    }
+    
+  ],
+  "presets": [
+    {
+      "name": "WANDER Shop By Interiors",
+      "settings": {
+        
+      } 
+    }
+  ]
+}
+{% endschema %}

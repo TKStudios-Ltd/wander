@@ -1,0 +1,876 @@
+{%- stylesheet -%}
+    .wander-main-nav {
+        background-color: #ebebeb;
+        border-top: 1px solid #929292;
+        border-bottom: 1px solid #929292;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: "urw-din-semi-condensed";
+    }
+    #desktop-home {
+        position: relative;
+        padding-top: 14px;
+        padding-bottom: 12px;
+        min-width: 160px;
+        text-align: center;
+        font-size: 11px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #desktop-home img,
+    .primary-menu-item.icons img {
+        width: 16px;
+        height: 16px;
+    }
+    #desktop-primary-items,
+    #desktop-home {
+        border-right: 0px;
+    }
+    #desktop-home #search__toggle {
+        margin-right: 20px;
+    }
+    #primary-items .primary-menu-item {
+        padding: 0;
+        position: relative;
+        z-index: 3;
+    }
+    #primary-items .primary-menu-item > a {
+        height: 100%;
+        width: 100%;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    @media (min-width: 990px) { 
+        #primary-items {
+            display: flex;
+        }
+        .nav-wrapper {
+            display: none;
+        }
+        a#home-text, a#search__toggle {
+            display: inline;
+        }
+        .pushNav {
+            width: 100%;
+            left: 0px;
+        }
+        #mobile-w {
+            display: none !important;
+        }
+        .primary-menu-item.icons {
+            border-left: 1px solid #929292;
+            border-right: 0;
+        }
+        #desktop-home {
+            border-right: 1px solid #929292;
+        }
+    }
+    @media (min-width: 990px) and (max-width: 1200px) {
+        #desktop-home,
+        .menu-item {
+            min-width: 135px !important;
+        }
+    }
+    @media (max-width: 989px) { 
+        #mobile-w {
+            display: none;
+        }
+        .sticky #mobile-w {
+            width: 40px;
+            display: inherit;
+        }
+        #primary-items,
+        #desktop-home #search__toggle {
+            display: none;
+        }
+        .nav-wrapper {
+            display: block;
+        }
+        #desktop-home, .menu-item {
+            min-width: 120px !important;
+            padding: 1rem 1.5rem;
+            border: none !important;
+        }
+        #desktop-home {
+            justify-content: flex-start;
+        }
+        .menu-item.icons {
+            justify-content: flex-end;
+        }
+        a#home-text {
+            display: none;
+        }
+        .pushNav {
+            width: 100%;
+            left: 0px;
+        }
+    }
+    
+    @media (pointer: coarse) and (hover: none) {
+        #primary-items {
+            display: none;
+        }
+        .nav-wrapper {
+            display: block;
+        }
+        a#home-text {
+            display: none;
+        }
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 1000; /* Ensure it stays on top of other elements */
+    }
+
+    .main-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .main-menu > li {
+        margin: 0;
+    }
+
+    .nav-collections li {
+        margin-bottom: 15px;
+    }
+
+    .menu-item {
+        position: relative;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        min-width: 160px;
+        border-right: 1px solid #929292;
+        text-align: center;
+        display: flex;
+        font-size: 11px;
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-item a {
+        color: black;
+        text-decoration: none;
+        display: block;
+    }
+
+    .menu-item.has-dropdown:hover .dropdown {
+        /* display: block; */
+        /* transform: translateY(0); */
+        opacity: 1;
+        pointer-events: auto;
+        padding: 1.5rem !important;
+    }
+
+    .dropdown {
+        /* display: none; */
+        /* transform: translateY(-15px); */
+        opacity: 0;
+        transition: all 0.4s ease;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #F8F8F8 !important;
+        list-style: none;
+        margin: 0;
+        margin-top: 1px !important;
+        padding: 0;
+        text-align: left;
+        text-transform: uppercase;
+        padding: 0.5rem 1.5rem !important;
+        width: 320px;
+        z-index: 1000;
+        letter-spacing: 2px;
+    }
+
+    .dropdown-item { 
+        max-width: auto;
+    }
+
+    .dropdown-item:last-child {
+        
+    }
+
+    .dropdown-item a {
+        color: #020202;
+        display: block;
+        text-decoration: none;
+    }
+
+    .dropdown-item a:hover {
+        opacity: .5;
+    }
+
+    .icons {
+        text-align: center;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .icons a {
+        display: inline-block;
+        margin-right: 16px;
+    }
+
+    .icons a:hover {
+        opacity: .5;
+    }
+
+    .icons a:last-child {
+        margin-right: 0;
+    }
+
+    ul.nav-collections {
+        list-style: none;
+        margin-top: 15px;
+        padding-left: 12px;
+        
+    }
+
+    ul.nav-collections li:last-child {
+        margin-bottom: 0px;
+    }
+
+
+    ul.pushNav {
+        margin: 0;
+        padding: 30px 0;
+        list-style-type: none;
+        text-transform: uppercase; 
+        font-family: "urw-din-semi-condensed"; 
+        letter-spacing: 1px;
+        line-height: 1;
+        color: black;
+    }
+
+    .pushNav {
+    display: none;
+    height: 100%;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    overflow: hidden;
+    background-color: white;
+    /* border-right: 1px solid #020202; */
+    transition: ease-in-out 0.5s;
+    padding-top: 50px;
+    border-top: 1px solid #020202;
+    padding-bottom: 235px;
+    }
+
+    .pushNav .pushNav {
+        border-top: 0px;
+        padding-left: 0px;
+        margin-left: 0px !important;
+        padding-bottom: 0;
+        display: none;
+    }
+
+
+    .pushNav .pushNav .pushNav .pushNav .pushNav {
+        display: none;
+    }
+
+
+    .pushNav .pushNav li.closeLevel {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .pushNav .pushNav.pushNav_level.js-pushNavLevel {
+        padding-top: 0px;
+        margin: 0;
+    }
+
+    .pushNav ul { 
+        padding-top: 20px;
+    }
+
+    /* .pushNav li {
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    } */
+    .pushNav hr {
+    border: 1px solid #555;
+    }
+
+    .pushNav, .pushNav a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #020202;
+    text-decoration: none;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin: 0;
+    list-style: none;
+    }
+
+    .pushNavIsOpen {
+    overflow: auto;
+    height: 100%;
+    }
+
+    .js-topPushNav.isOpen, .pushNav_level.isOpen {
+    display: block;
+    }
+
+    .closeLevel, .openLevel {
+    cursor: pointer;
+    }
+
+    .open-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 14px;
+    }
+
+    .open-close-wrapper.open a.open {
+        display: none !important;
+    }
+    .open-close-wrapper.open a.close {
+        display: inline !important;
+    }
+    .open-close-wrapper a.open {
+        display: inline !important;
+    }
+    .open-close-wrapper a.close {
+        display: none !important;
+    }
+    .openLevel > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 14px;
+    }
+    .openLevel > div .open-close-wrapper {
+        height: 14px;
+    }
+
+    .openLevel img {
+        width: 12px;
+    }
+
+    .pushNav li.closeLevel {
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+
+    ul.level-1 > li, ul.level-2 > li, ul.level-2 > li, ul.level-3 > li, ul.level-4 > li  {
+        margin-bottom: 15px;
+    }
+
+    ul.level-1 > li:last-child, ul.level-2 > li:last-child, ul.level-3 > li:last-child, ul.level-4 > li:last-child  {
+        margin-bottom: 0px;
+    }
+
+    ul.level-2, ul.level-3, ul.level-4 {
+        margin-top: 15px;
+    }
+
+
+    .openLevel, .closeLevel, .pushNav a {
+    display: block;
+    /* text-indent: 20px; */
+    transition: background 0.4s ease-in-out;
+    }
+
+    .pushNav a .pushNav a {
+        margin-top: 0px;
+    }
+
+    .openLevel .openLevel {
+        margin-top: 0px;
+    }
+
+    .pushNav li {
+        margin: 15px 1.5rem;
+    }
+
+    .pushNav .pushNav li {
+        margin-left: 15px;
+        margin-right: 0;
+    }
+
+    /* .openLevel:hover, .closeLevel:hover, .pushNav a:hover {
+    background: #494a50;
+    }
+
+    .hdg {
+    background-color: #ebebeb;
+    } */
+
+    .closeLevel, closelevel > i {
+    font-size: 1em;
+    color: #a5a5a4;
+    }
+
+    .burger {
+        position: relative;
+        top: 3px;
+    }
+
+    .screen {
+    position: fixed;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    width: 100%;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    }
+
+    .pushNavIsOpen .screen {
+    height: 100%;
+    opacity: 1;
+    }
+
+    .fa {
+    display: inline;
+    padding: 5px;
+    }
+
+    .fa-regular, .fa-solid {
+        font-size: 1.5em;
+        display: inline-block;
+        padding: 0px;
+    }
+
+    .nav-wrapper {
+    color: #020202;
+    }
+
+    .cart-links {
+        border-top: 1px solid #020202; 
+        margin-top: 15px; 
+        display: flex;
+        padding-top: 15px;
+    }
+
+    .cart-links > a {
+        position: relative;
+        left: -15px;
+    }
+
+    .cart-links > a:last-child {
+        position: relative;
+        left: -45px;
+    }
+
+
+.burger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.burger:focus-visible {
+  outline: 1px solid #020202;
+  outline-offset: 3px;
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #020202;
+  border-radius: 1px;
+  transition:
+    transform 0.28s ease,
+    opacity 0.2s ease,
+    top 0.28s ease;
+}
+
+.burger__line:nth-child(1) { top: 0; }
+.burger__line:nth-child(2) { top: 6px; }
+.burger__line:nth-child(3) { top: 12px; }
+
+.burger.is-open .burger__line:nth-child(1) {
+  top: 6px;
+  transform: rotate(45deg);
+}
+.burger.is-open .burger__line:nth-child(2) {
+  opacity: 0;
+}
+.burger.is-open .burger__line:nth-child(3) {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+.toggle-plus {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.toggle-plus__line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #020202;
+  border-radius: 1px;
+  transition: transform 0.25s ease;
+}
+.toggle-plus__line:nth-child(1) {
+  transform: translateY(-50%);
+}
+.toggle-plus__line:nth-child(2) {
+  transform: translateY(-50%) rotate(90deg);
+}
+.toggle-plus.is-open .toggle-plus__line:nth-child(1) {
+  transform: translateY(-50%) rotate(45deg);
+}
+.toggle-plus.is-open .toggle-plus__line:nth-child(2) {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+{%- endstylesheet -%}
+
+<span class="screen"></span>
+<style>
+.primary-menu-item > a {
+    position: relative;
+    top: 0px;
+}
+#search__wrapper {
+    display: none;
+    border-top: 1px solid #929292;
+}
+#search__wrapper .search-form__inner {
+    background-color: inherit;
+}
+</style>
+<div class="wander-main-nav is-light-grey has-border-color-light-grey sans-serif">
+     <ul class="main-menu">
+        <li class="menu-item primary-menu-item sans-serif" id="desktop-home">
+            <a href="#" id="search__toggle"><img src="{{ 'wander-search.svg' | asset_url }}" alt="Wishlist"></a>
+            <a id="home-text" href="/">Home</a>
+            <div class="nav-wrapper">
+                <button class="burger js-menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </li>
+        <li id="desktop-primary-items" class="menu-item sans-serif"  style="flex-grow: 3; padding: 0; border-bottom: 0;">
+            <img id="mobile-w" src="https://cdn.shopify.com/s/files/1/0897/7491/5904/files/logo_42e44e33-154e-444f-ac53-7ec392df105f.svg?v=1731082502">
+            <ul id="primary-items" class="main-menu" style="border: 0; justify-content: center;">
+                {% for link in linklists.main-menu.links %}
+                    {% if link.title != 'Home' %}
+                        <li class="primary-menu-item menu-item {% if link.links.size > 0 %}has-dropdown{% endif %} sans-serif" {% if link.title == 'Shop' %}style="border-left: 1px solid #929292;"{% endif %}>
+                            
+                            <!-- LEVEL 1 -->
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                            {% if link.links.size > 0 %}
+                                <ul class="dropdown nav-collections">
+                                    {% assign counter = 0 %}
+                                    
+                                    {% for sublink in link.links %}
+                                        
+                                            <li class="dropdown-item sans-serif">
+
+                                                <!-- LEVEL 2 -->
+                                                <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                                                    {% if sublink.links %}
+                                                        <ul class="nav-collections">
+                                                            {% for sublink2 in sublink.links %}
+                                                                <li>
+                                                                    
+                                                                    <!-- LEVEL 3 -->
+                                                                    <a href="{{ sublink2.url }}">{{ sublink2.title }}</a>
+                                                                    
+                                                                    
+                                                                            
+                                                                        {% if sublink2.title == 'Shop By Collections'%}
+                                                                                <ul class="collections">
+                                                                                
+                                                                                    {% for collection in shop.metaobjects.homepage_settings.homepage-settings-20241025.collections.value %}
+                                                                                        <li style="margin-bottom: 13px;">
+                                                                                            <a href="/collections/{{ collection.handle }}">{{ collection.title }}</a>
+                                                                                        </li>
+                                                                                    {% endfor %}
+                                                                                </ul>
+                                                                        {% endif %}
+                                                                            
+                                                                        
+                                                                    
+                                                                </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    {% endif %}
+                                            </li>
+                                        
+                                        
+                                            
+                                        {% assign counter = counter | plus: 1 %}
+                                    {% endfor %}
+                                </ul> 
+                            {% endif %}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        <li class="primary-menu-item menu-item sans-serif icons">
+            <a href="#swym-wishlist"><img src="{{ 'wander-heart.svg' | asset_url }}" alt="Wishlist"></a>
+            <a href="/account"><img src="{{ 'wander-user-icon.svg' | asset_url }}" alt="Account"></a>
+            <a href="/cart"><img src="{{ 'wander-shopping-bag.svg' | asset_url }}" alt="Cart"></a>
+        </li>
+    </ul>
+
+
+    <ul id="mobile-nav" class="pushNav js-topPushNav sans-serif level-1">
+        
+        {% comment %} <li class="closeLevel js-closeLevelTop hdg">
+            <img src="{{ 'wander-close.svg' | asset_url }}" style="width: 15px;" />
+        </li> {% endcomment %}
+        
+        <li>
+            {% render 'search-nav' %}
+        </li>
+
+        <li>
+            <a href="/">
+                Home  
+            </a>
+        </li>
+            
+        {% for link in linklists.main-menu.links %}
+            {% if link.title != 'Home' %}
+                <li>
+                {% if link.links.size > 0 %}
+                    <!-- LEVEL 1 row -->
+                    <div class="openLevel js-openLevel">
+                    <div class="open-wrapper">
+                        <div>{{ link.title }}</div>
+                        <div class="open-close-wrapper">
+                        <button type="button" class="toggle-plus" aria-expanded="false" aria-label="Expand {{ link.title }}">
+                            <span class="toggle-plus__line"></span>
+                            <span class="toggle-plus__line"></span>
+                        </button>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- LEVEL 2 list (direct child of the same LI) -->
+                    <ul class="pushNav pushNav_level js-pushNavLevel level-2">
+                    {% for sublink in link.links %}
+                        <li>
+                        {% if sublink.links.size > 0 %}
+                            <!-- LEVEL 2 row (with toggle) -->
+                            <div class="openLevel js-openLevel">
+                            <div class="open-wrapper">
+                                <div>{{ sublink.title }}</div>
+                                <div class="open-close-wrapper">
+                                <button type="button" class="toggle-plus" aria-expanded="false" aria-label="Expand {{ sublink.title }}">
+                                    <span class="toggle-plus__line"></span>
+                                    <span class="toggle-plus__line"></span>
+                                </button>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- LEVEL 3 list -->
+                            <ul class="pushNav pushNav_level js-pushNavLevel level-3">
+                            {% for sublink2 in sublink.links %}
+                                {% if sublink2.links.size > 0 %}
+                                <li>
+                                    <!-- LEVEL 3 row (with toggle) -->
+                                    <div class="openLevel js-openLevel">
+                                    <div class="open-wrapper">
+                                        <div>{{ sublink2.title }}</div>
+                                        <div class="open-close-wrapper">
+                                        <button type="button" class="toggle-plus" aria-expanded="false" aria-label="Expand {{ sublink2.title }}">
+                                            <span class="toggle-plus__line"></span>
+                                            <span class="toggle-plus__line"></span>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <!-- LEVEL 4 list -->
+                                    <ul class="pushNav pushNav_level js-pushNavLevel level-4">
+                                    {% for sublink3 in sublink2.links %}
+                                        <li><a href="{{ sublink3.url }}">{{ sublink3.title }}</a></li>
+                                    {% endfor %}
+
+                                    {%- comment -%} Special collections branch, if you need it {%- endcomment -%}
+                                    {% if sublink2.title == 'Shop By Collections' %}
+                                        {% assign collections = shop.metaobjects.homepage_settings.homepage-settings-20241025.collections.value %}
+                                        {% if collections %}
+                                        {% for collection in collections %}
+                                            <li><a href="/collections/{{ collection.handle }}">{{ collection.title }}</a></li>
+                                        {% endfor %}
+                                        {% endif %}
+                                    {% endif %}
+                                    </ul>
+                                </li>
+                                {% else %}
+                                <li><a href="{{ sublink2.url }}">{{ sublink2.title }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            </ul>
+                        {% else %}
+                            <!-- LEVEL 2 simple link (no children) -->
+                            <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                        {% endif %}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <!-- LEVEL 1 simple link -->
+                    <div class="openLevel js-openLevel">
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                    </div>
+                {% endif %}
+                </li>
+            {% endif %}
+            {% endfor %}
+        
+    </ul>
+
+    
+    
+
+    <div id="search__wrapper">{%- render 'search-popdown', unique: 'desktop-compress', in_header: false, classes: 'menu__item menu__item--icon', summary_classes: summary_classes -%}</div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var $win = $(window);
+    var $body = $('body');
+    var $searchToggle = $('#search__toggle');
+    var $searchWrapper = $('#search__wrapper');
+    var $burger = $('.js-menuToggle');
+    var $topNav = $('.js-topPushNav');
+    var $navbar = $('.wander-main-nav');
+
+    var stickyOffset = $navbar.length ? $navbar.offset().top : 0;
+    $win.on('scroll', function () {
+      if ($(this).scrollTop() >= stickyOffset) $navbar.addClass('sticky');
+      else $navbar.removeClass('sticky');
+    });
+
+    var RESIZE_BREAKPOINT = 990;
+
+    function openPushNav() {
+      $topNav.addClass('isOpen');
+      $body.addClass('pushNavIsOpen');
+      $('.wander-main-nav > .pushNav').show();
+      $burger.addClass('is-open').attr({'aria-expanded': 'true', 'aria-label': 'Close menu'});
+    }
+    function closePushNav() {
+      $topNav.removeClass('isOpen');
+      $body.removeClass('pushNavIsOpen');
+      $('.wander-main-nav > .pushNav').hide();
+      $burger.removeClass('is-open').attr({'aria-expanded': 'false', 'aria-label': 'Open menu'});
+    }
+
+    $(document).on('keydown', function (e) {
+      if (e.key === 'Escape' && $topNav.hasClass('isOpen')) closePushNav();
+    });
+    var resizeTimer;
+    $win.on('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if ($win.width() >= RESIZE_BREAKPOINT && $topNav.hasClass('isOpen')) closePushNav();
+      }, 120);
+    });
+
+    $searchToggle.on('click touchstart', function (e) {
+      e.preventDefault();
+      if ($win.width() < RESIZE_BREAKPOINT) {
+        $topNav.hasClass('isOpen') ? closePushNav() : openPushNav();
+        var $inp = $('.pushNav .search-form input[type="search"]').first();
+        if ($inp.length) $inp.trigger('focus');
+      } else {
+        $searchWrapper.slideToggle(200).toggleClass('isOpen');
+      }
+    });
+
+    $burger.on('click touchstart', function (e) {
+      e.preventDefault();
+      $topNav.hasClass('isOpen') ? closePushNav() : openPushNav();
+    });
+
+    // Open next level when tapping the text row (ignore clicks on the plus button itself)
+    $(document).on('click touchstart', '.js-openLevel .open-wrapper', function (e) {
+      if ($(e.target).closest('.toggle-plus').length) return;
+      var $row = $(this);
+      var $li = $row.closest('li');
+      var $level = $li.children('.js-pushNavLevel').first();
+      if ($level.length) {
+        e.preventDefault();
+        $row.find('.toggle-plus').first().addClass('is-open').attr('aria-expanded', 'true');
+        $level.addClass('isOpen');
+      }
+    });
+
+    // Plus button toggles its sibling level
+    $(document).on('click touchstart', '.toggle-plus', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var $btn = $(this);
+      var $li = $btn.closest('li');
+      var $level = $li.children('.js-pushNavLevel').first();
+      if (!$level.length) return;
+      if ($btn.hasClass('is-open')) {
+        $btn.removeClass('is-open').attr('aria-expanded', 'false');
+        $level.removeClass('isOpen');
+      } else {
+        $btn.addClass('is-open').attr('aria-expanded', 'true');
+        $level.addClass('isOpen');
+      }
+    });
+
+    // Links inside levels shouldn't bubble
+    $(document).on('click', '.js-pushNavLevel a', function (e) { e.stopPropagation(); });
+
+    $('.screen').on('click', closePushNav);
+  });
+</script>
+
+
+
+{% schema %}
+{
+  "name": "WANDER Primary Navigation",
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "WANDER Primary Navigation",
+      "settings": {
+       
+      } 
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,272 @@
+{% comment %}
+  sections/gallery-paginated.liquid
+  Block-driven gallery with JS pagination (matches blog-style chevron/slash layout)
+{% endcomment %}
+
+{%- liquid
+  assign columns   = section.settings.columns | plus: 0
+  assign per_page  = section.settings.per_page | plus: 0
+  assign total_blocks = section.blocks.size
+  assign total_pages = total_blocks | plus: per_page | minus: 1 | divided_by: per_page
+  assign base_url = request.path
+-%}
+
+{%- style -%}
+.gallery-paginated {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+.gallery-paginated__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.gallery-paginated__item .text-center {
+  margin: 1.5rem auto 2rem;
+}
+.gallery-paginated__item__image {
+  display: block;
+  position: relative;
+  height: 0;
+  padding-top: 115%;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+.gallery-paginated__item__image_cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.gallery-paginated__item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.8s cubic-bezier(.19, .61, .15, .82);
+  transform-origin: center center;
+  will-change: transform;
+}
+.gallery-paginated__item__image:hover img {
+  transform: scale(1.05);
+}
+.gallery-paginated__pagination { 
+  margin: 20px 0;
+}
+.gallery-paginated__pagination strong { 
+  opacity: 1 !important;
+  font-weight: var(--FONT-WEIGHT-BODY) !important;
+}
+.gallery-paginated__pagination a,
+.gallery-paginated__pagination strong,
+.gallery-paginated__pagination span { 
+  opacity: .5;
+  font-size: 12px;
+  padding: 0 8px;
+  font-family: 'urw-din-semi-condensed';
+  font-weight: var(--FONT-WEIGHT-BODY);
+  font-style: var(--FONT-STYLE-BODY); 
+  text-decoration: none;
+  cursor: pointer;
+}
+.gallery-paginated__pagination span {
+  padding: 0 !important;
+}
+@media (min-width: 990px) {
+  .gallery-paginated__grid {
+    grid-template-columns: repeat({{ columns }}, 1fr);
+  }
+}
+@media (min-width: 750px) and (max-width: 989px) {
+  .gallery-paginated__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 749px) {
+  .gallery-paginated__grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-paginated__item .text-center {
+    margin: 1.5rem auto;
+  }
+}
+{%- endstyle -%}
+
+<section class="gallery-paginated" id="Gallery-{{ section.id }}">
+  <div class="wrapper">
+    {%- if total_pages > 1 -%}
+      <div class="gallery-paginated__pagination" 
+           data-total-pages="{{ total_pages }}" 
+           data-base="{{ base_url }}" 
+           data-section="{{ section.id }}" 
+           style="text-align: left; margin-left: -8px;">
+        <a href="#"><</a>
+        {%- for i in (1..total_pages) -%}
+          {%- if i == 1 -%}
+            <strong>{{ i }}</strong>
+          {%- else -%}
+            <a href="#">{{ i }}</a>
+          {%- endif -%}
+          {%- unless forloop.last -%}<span>/</span>{%- endunless -%}
+        {%- endfor -%}
+        <a href="#">></a>
+      </div>
+    {%- endif -%}
+
+    <div class="gallery-paginated__grid" 
+         data-per-page="{{ per_page }}" 
+         data-section-id="{{ section.id }}">
+      {%- for block in section.blocks -%}
+        {%- assign product = all_products[block.settings.product] -%}
+        <div class="gallery-paginated__item" {{ block.shopify_attributes }}>
+          <a href="{{ product.url }}" class="gallery-paginated__item__image">
+            {%- if block.settings.image != blank -%}
+              <div class="gallery-paginated__item__image_cover">
+                <img src="{{ block.settings.image | image_url: width: 1200 }}" alt="">
+              </div>
+            {%- elsif product and product.featured_image -%}
+              <div class="gallery-paginated__item__image_cover">
+                <img src="{{ product.featured_image | image_url: width: 1200 }}" alt="{{ product.title | escape }}">
+              </div>
+            {%- endif -%}
+          </a>
+          <div class="text-center">
+            <a href="{{ product.url }}" class="btn btn--solid btn--large btn--black">Shop this print</a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if total_pages > 1 -%}
+      <div class="gallery-paginated__pagination" 
+           data-total-pages="{{ total_pages }}" 
+           data-base="{{ base_url }}" 
+           data-section="{{ section.id }}" 
+           style="text-align: right; margin-right: -8px;">
+        <a href="#"><</a>
+        {%- for i in (1..total_pages) -%}
+          {%- if i == 1 -%}
+            <strong>{{ i }}</strong>
+          {%- else -%}
+            <a href="#">{{ i }}</a>
+          {%- endif -%}
+          {%- unless forloop.last -%}<span>/</span>{%- endunless -%}
+        {%- endfor -%}
+        <a href="#">></a>
+      </div>
+    {%- endif -%}
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const section = document.querySelector('#Gallery-{{ section.id }}');
+    if (!section) return;
+
+    const grid = section.querySelector('.gallery-paginated__grid');
+    if (!grid) return;
+
+    const perPage = parseInt(grid.dataset.perPage, 10) || 6;
+    const items = Array.from(grid.children);
+    const pagers = Array.from(section.querySelectorAll('.gallery-paginated__pagination'));
+    const totalPages = parseInt(pagers[0]?.dataset.totalPages || Math.ceil(items.length / perPage), 10) || 1;
+
+    function buildPagerHTML(currentPage) {
+      let html = '';
+      if (currentPage > 1) html += `<a href="#"><</a>`;
+      for (let i = 1; i <= totalPages; i++) {
+        html += (i === currentPage) ? `<strong>${i}</strong>` : `<a href="#">${i}</a>`;
+        if (i !== totalPages) html += `<span>/</span>`;
+      }
+      if (currentPage < totalPages) html += `<a href="#">></a>`;
+      return html;
+    }
+
+    function renderPage(page) {
+      items.forEach((item, i) => {
+        item.style.display = (i >= (page - 1) * perPage && i < page * perPage) ? '' : 'none';
+      });
+      pagers.forEach(p => p.innerHTML = buildPagerHTML(page));
+      attachPagerHandlers();
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function attachPagerHandlers() {
+      pagers.forEach(pager => {
+        pager.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', e => {
+            e.preventDefault();
+            const label = a.textContent.trim();
+            let newPage = 1;
+            if (label === '<') newPage = Math.max(currentPage - 1, 1);
+            else if (label === '>') newPage = Math.min(currentPage + 1, totalPages);
+            else newPage = parseInt(label, 10);
+            if (isNaN(newPage)) return;
+            currentPage = newPage;
+            renderPage(currentPage);
+          });
+        });
+      });
+    }
+
+    let currentPage = 1;
+    renderPage(currentPage);
+  });
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "Paginated Gallery",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Cards per row (desktop)",
+      "min": 1,
+      "max": 4,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "per_page",
+      "label": "Cards per page",
+      "min": 1,
+      "max": 20,
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Image card",
+      "settings": [
+        { "type": "product", "id": "product", "label": "Select product" },
+        { "type": "image_picker", "id": "image", "label": "Custom image override" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Paginated Gallery" }]
+}
+{% endschema %}

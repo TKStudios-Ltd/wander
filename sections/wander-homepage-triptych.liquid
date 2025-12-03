@@ -1,0 +1,182 @@
+{% assign collections = shop.metaobjects.homepage_settings.homepage-settings-20241025.collections.value %}
+
+{% style %}
+
+@media (min-width: 507px) {
+    .triptych-wrapper {
+        display: flex; 
+        justify-content: space-between; 
+        gap: 20px;
+    }
+
+    .triptych-wrapper .triptych-product {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 506px) {
+    .triptych-wrapper {
+        display: block; 
+        
+    }
+
+    .triptych-wrapper .triptych-product {
+        margin-bottom: 70px;
+    }
+}
+
+.eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.heading {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.triptych-details {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 25px;
+    
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.homepage-triptyc-wrapper .fader-group {
+    margin: 0 auto; 
+    max-width: 1542px; 
+    text-align: center;
+    position: relative;
+    
+}
+
+.triptych-cta-wrapper {
+    justify-content: center;
+    display: none;
+    width: 100%;
+    
+    
+}
+
+a.tripych-cta {
+    border: 1px solid black;
+    padding: 28px 63px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 2px;
+}
+
+.triptych-cta {
+
+}
+
+.slide {
+    display: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.homepage-triptych {
+    //position: relative;
+}
+
+{% endstyle %}
+
+<div class="homepage-triptyc-wrapper">
+    <div class="homepage-triptych" style="padding-top: 147px; padding-left: 50px; padding-right: 50px;">
+        <div class="fader-group" id="fader-group-{{ section.id }}">
+            {% assign collectionIndex = 0 %}
+            {% for collection in collections %}
+                <div class="slide {% if collectionIndex == 0 %}showme{% endif %}">
+                    <div class="eyebrow sans-serif">
+                        {{ collection.title }} Collection &nbsp;|&nbsp; {{ collection.title }}: {{ collection.metafields.custom.homepage_triptych_representative_series.value.label }} Series
+                    </div>
+                    <div class="heading serif-italic">
+                        {{ shop.metaobjects.homepage_settings.homepage-settings-20241025.homepage_triptych_heading }}
+                    </div>
+                    <div class="triptych-wrapper">
+                        {% for product in collection.metafields.custom.homepage_triptych_representative_series.value.products.value %}
+                            <div class="triptych-product">
+                                <img class="triptych-product-image" src="{{ product.metafields.custom.flattened_triptych_framed | img_url: '505x728' }}" style="width: 100%; height: auto; display: block; margin-bottom: 18px;" />
+                                <div class="triptych-details sans-serif">
+                                    {{ collection.title }} | {{ product.metafields.custom.location }} | &quot;{{ product.title }}&quot;
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <a class="tripych-cta sans-serif" style="background-color: white; margin-top: 38px; margin-bottom: 117px;">Shop Wanderings<sup>&trade;</sup>{{ collection.title }} Collection </a>
+                    </div>
+                </div>
+                {% assign collectionIndex = collectionIndex | plus: 1 %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+        $(document).ready(function() { 
+            window.homepageTimer.registerFaderGroupId('#fader-group-{{ section.id }}');
+            window.homepageTimer.registerFaderGroupId('#fader-cta-{{ section.id }}');
+            
+
+            $(window).resize(function() {
+                
+                var windowWidth = $(window).width();
+                if (windowWidth < 507) {
+                    var realProductHeight = $('img.triptych-product-image').outerHeight(true);
+                    console.log('realproductheight', realProductHeight)
+                    var totalHeight = (realProductHeight * 3) + $('.triptych-details').outerHeight(true) + $('.eyebrow').outerHeight(true) + $('.heading').outerHeight(true) + $('.triptych-product').outerHeight(true) - 157
+                    console.log('totalHeight', totalHeight);
+                    //var totalHeight = $('.triptych-details').outerHeight(true) + $('.eyebrow').outerHeight(true) + $('.heading').outerHeight(true) + 157 + ($('.triptych-product-image').outerHeight(true) * 3)
+                    //totalHeight = $('.slide').first().height;
+                    $('.homepage-triptych').css({height: totalHeight + 'px'});
+                    console.log('details', $('.triptych-details').outerHeight());
+                    $('.triptych-cta-wrapper').css({display: 'flex'});
+                } else {
+                    var realProductHeight = $('.triptych-product-image').outerHeight(true);
+                    var totalHeight = realProductHeight + $('.triptych-details').outerHeight(true) + $('.eyebrow').outerHeight(true) + $('.heading').outerHeight(true) + 157
+                    
+                    $('.homepage-triptych').css({height: totalHeight + 'px'});
+                    console.log('details', $('.triptych-details').outerHeight());
+                    $('.triptych-cta-wrapper').css({display: 'flex'});
+                }
+            });
+
+            $(window).trigger('resize');     
+            
+        });
+
+
+         
+    </script>
+
+{% schema %}
+{
+  "name": "WANDER Homepage Triptych",
+  "settings": [
+    
+  ],
+  "presets": [
+    {
+        "name": "WANDER Homepage Triptych",
+        "settings": {
+            
+        }
+    }
+  ]
+}
+{% endschema %}
+
+
+

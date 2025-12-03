@@ -1,0 +1,317 @@
+{% comment %}
+  Section: Collection Anchor Navigation (no-wrap + horizontal scroll)
+  - Add blocks with a "Name" (e.g., "Swimming Shorts")
+  - Each block links to the anchor id: href="#{{ name | handleize }}"
+  - Matches anchors created in collection-grid-item.liquid (collection.handle or heading | handleize)
+{% endcomment %}
+
+{%- liquid
+  assign id = 'collection-anchor-nav--' | append: section.id
+  assign selector_id = '#' | append: id
+
+  assign mobile_prefix = section.settings.mobile_prefix
+  assign text_color = section.settings.text_color
+  assign bg_color = section.settings.bg_color
+  assign padding_top = section.settings.padding_top
+  assign padding_bottom = section.settings.padding_bottom
+  assign gap = section.settings.item_gap
+-%}
+
+{%- style -%}
+  {{ selector_id }} {
+    --gap: {{ gap }}px;
+    --pt: {{ padding_top }}px;
+    --pb: {{ padding_bottom }}px;
+    {% if text_color != blank and text_color != 'rgba(0,0,0,0)' %} --text: {{ text_color }}; {% endif %}
+    {% if bg_color != blank and bg_color != 'rgba(0,0,0,0)' %} --bg: {{ bg_color }}; {% endif %}
+  }
+  {{ selector_id }} .collection-anchor-nav {
+    padding: var(--pt) 0 var(--pb);
+    background: var(--bg, transparent);
+    color: var(--text, inherit);
+  }
+  {{ selector_id }} .collection-anchor-nav__inner {
+    margin: 0 auto;
+  }
+  {{ selector_id }} .collection-anchor-nav__bar {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  {{ selector_id }} .collection-anchor-nav__scroll {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    /* hide scrollbars (all browsers) */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  {{ selector_id }} .collection-anchor-nav__scroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+    }
+  {{ selector_id }} .collection-anchor-nav__list {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    white-space: nowrap;
+    margin: 0;
+    padding: 8px 0;
+  }
+  {{ selector_id }} .collection-anchor-nav__item {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  {{ selector_id }} .collection-anchor-nav__item p {
+    margin: 0;
+  }
+  {{ selector_id }} .collection-anchor-nav__item + .collection-anchor-nav__item {
+    border-left: 1px solid currentColor;
+    margin-left: var(--gap);
+    padding-left: var(--gap);
+    opacity: 1;
+  }
+  {{ selector_id }} .collection-anchor-nav__link {
+    text-decoration: none;
+    color: currentColor;
+    line-height: 1;
+  }
+  {{ selector_id }} .collection-anchor-nav__link:hover,
+  {{ selector_id }} .collection-anchor-nav__link:focus {
+    text-decoration: underline;
+  }
+
+.template-index .collection-anchor-nav__inner {
+  margin: 1.5rem auto 1.3rem !important;
+}
+.template-index .collection-anchor-nav__prefix {
+  display: inline-block !important;
+  margin: 0;
+  font-weight: 600;
+}
+/* .template-index .collection-anchor-nav__prefix em {
+  font-weight: 600;
+} */
+.template-index .collection-anchor-nav__prefix p {
+  margin: 0;
+  line-height: 1;
+}
+.template-index .collection-anchor-nav__item:nth-child(2) {
+  border-left: 0 !important;
+  margin-left: 0 !important;
+}
+/* @media (min-width: 1800px) {
+
+} */
+@media (max-width: 1749px) {
+  {{ selector_id }} .collection-anchor-nav__bar { justify-content: flex-start !important; }
+  {{ selector_id }} .collection-anchor-nav__scroll { justify-content: flex-start !important; padding-left: 1rem !important; }
+  {{ selector_id }} .collection-anchor-nav__item,
+  {{ selector_id }} .collection-anchor-nav__item p {
+    font-size: 9px;
+  }
+}
+@media (min-width: 1750px) {
+  {{ selector_id }} .collection-anchor-nav__bar { justify-content: center; width: 100%; }
+  {{ selector_id }} .collection-anchor-nav__scroll { justify-content: center; }
+  {{ selector_id }} .collection-anchor-nav__item,
+  {{ selector_id }} .collection-anchor-nav__item p {
+    font-size: 10px;
+  }
+}
+/* @media (max-width: 1349px) {
+  {{ selector_id }} .collection-anchor-nav__bar { justify-content: flex-start; }
+  {{ selector_id }} .collection-anchor-nav__scroll { justify-content: flex-start; padding-left: 1rem; }
+} */
+@media (max-width: 989px) {
+  {{ selector_id }} .collection-anchor-nav__bar { justify-content: flex-start; }
+  {{ selector_id }} .collection-anchor-nav__scroll { justify-content: flex-start; }
+  {{ selector_id }} .collection-anchor-nav__item,
+  {{ selector_id }} .collection-anchor-nav__item p {
+    font-size: 8px;
+  }
+}
+{%- endstyle -%}
+
+<section id="{{ id }}" class="collection-anchor-nav" data-section-type="collection-anchor-nav">
+  <div class="collection-anchor-nav__inner">
+    <nav class="collection-anchor-nav__bar" aria-label="Collections navigation">
+      <div class="collection-anchor-nav__scroll" tabindex="0" aria-label="Scrollable collections links">
+        <ul class="collection-anchor-nav__list">
+          <li class="collection-anchor-nav__prefix collection-anchor-nav__item subheading-text">{{ section.settings.mobile_prefix }}</li>
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign label = block.settings.name | strip
+              if label == blank and block.settings.collection != blank
+                assign label = block.settings.collection.title
+              endif
+              if label == blank
+                continue
+              endif
+
+              assign anchor = label | handleize
+              if block.settings.anchor_override != blank
+                assign anchor = block.settings.anchor_override | strip
+              endif
+
+              # default to in-page anchor
+              assign href = '#' | append: anchor
+
+              # priority: full URL > collection URL > anchor
+              if block.settings.full_url != blank
+                assign href = block.settings.full_url | strip
+              elsif block.settings.collection != blank
+                assign href = block.settings.collection.url
+              endif
+            -%}
+            <li class="collection-anchor-nav__item subheading-text" {{ block.shopify_attributes }}>
+              <a class="collection-anchor-nav__link" href="{{ href }}">
+                {{- label -}}
+              </a>
+            </li>
+          {%- endfor -%}
+
+          {%- if section.blocks.size == 0 -%}
+            <li class="collection-anchor-nav__item">
+              <a class="collection-anchor-nav__link" href="#">{{ 'Add nav items in the section settings' }}</a>
+            </li>
+          {%- endif -%}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<script>
+(function () {
+  function headerHeight() {
+    const h = document.querySelector('.site-header-desktop, .shopify-section-header, .header, header[sticky]');
+    return h ? h.offsetHeight : 0;
+  }
+  function scrollToId(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - headerHeight() - 8;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+  const root = document.getElementById('{{ id }}');
+  if (!root) return;
+  root.addEventListener('click', function (e) {
+    const a = e.target.closest('a.collection-anchor-nav__link[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    if (document.getElementById(id)) {
+      e.preventDefault();
+      scrollToId(id);
+    }
+  });
+  window.addEventListener('hashchange', function () {
+    const id = location.hash.replace('#', '');
+    if (id) scrollToId(id);
+  });
+  if (location.hash) {
+    const id = location.hash.replace('#', '');
+    setTimeout(() => scrollToId(id), 50);
+  }
+})();
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Collection anchor nav",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "mobile_prefix",
+      "label": "Mobile prefix",
+      "default": "<p>Shop Our Collections:</p>"
+    },
+    {
+      "type": "range",
+      "id": "item_gap",
+      "label": "Spacing between items",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_item",
+      "name": "Nav item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Collection name"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Link to collection (optional)"
+        },
+        {
+          "type": "text",
+          "id": "anchor_override",
+          "label": "Anchor ID override (optional)",
+          "info": "If set, uses this instead of the handleized name. Example: swimming-shorts"
+        },
+        {
+          "type": "url",
+          "id": "full_url",
+          "label": "Full URL (optional)",
+          "info": "If set, this exact URL is used for the nav item and overrides collection/anchor."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection anchor nav",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

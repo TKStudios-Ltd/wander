@@ -1,0 +1,283 @@
+{%- liquid
+  assign autoplay   = section.settings.autoplay
+  assign duration   = section.settings.duration | times: 1000
+  assign effect     = section.settings.transition
+  assign show_dots  = section.settings.show_nav_dots
+  # Count valid slides (collections with BOTH metafields set)
+  assign slides_count = 0
+  for coll in section.settings.collections
+    assign has_img  = coll.metafields.custom.collection_bottom_slider_image
+    assign has_desc = coll.metafields.custom.collection_bottom_slider_description
+    if has_img != blank
+      if has_desc != blank
+        assign slides_count = slides_count | plus: 1
+      endif
+    endif
+  endfor
+-%}
+
+{%- if slides_count > 0 -%}
+<section id="CollectionBottomSlider--{{ section.id }}" class="cbs cbs--{{ effect | escape }}" data-section-id="{{ section.id }}" data-effect="{{ effect }}" data-autoplay="{{ autoplay }}" data-interval="{{ duration }}">
+  <div class="swiper cbs__swiper">
+    <div class="swiper-wrapper">
+      {%- for collection in section.settings.collections -%}
+        {%- assign slider_image = collection.metafields.custom.collection_bottom_slider_image -%}
+        {%- assign slider_desc  = collection.metafields.custom.collection_bottom_slider_description -%}
+        {%- if slider_image != blank and slider_desc != blank -%}
+          {%- liquid
+            assign loading_attr = 'lazy'
+            assign fetchpriority_attr = 'auto'
+            if forloop.index0 < 2 and section.index < 3
+              assign loading_attr = 'eager'
+              assign fetchpriority_attr = 'high'
+            endif
+          -%}
+          <div class="swiper-slide">
+            <div class="cbs__pane">
+              <div class="cbs__inner">
+                <div class="cbs__media">
+                  {{ slider_image
+                    | image_url: width: 2000
+                    | image_tag:
+                      loading: loading_attr,
+                      fetchpriority: fetchpriority_attr,
+                      widths: '400,700,1000,1400,2000',
+                      sizes: '(min-width: 990px) 50vw, 100vw',
+                      class: 'cbs__image'
+                  }}
+                </div>
+
+                <div class="cbs__content">
+                  <span class="cbs__title collection__box__title"><em>WANDERINGS</em>™ COLLECTION:&nbsp;<b style="font-weight: 700;">{{ collection.title | escape }}</b></span>
+
+                  <div class="cbs__description h3 list-collections__item__title">
+                    {%- if slider_desc.type contains 'rich_text' -%}
+                      {{ slider_desc | metafield_tag }}
+                    {%- else -%}
+                      {{ slider_desc }}
+                    {%- endif -%}
+                  </div>
+
+                  <div class="cbs__actions">
+                    <a class="btn btn--primary btn--solid btn--large" href="{{ collection.url }}">
+                      {{ section.settings.button_label | default: 'Shop' }}
+                    </a>
+                  </div>
+
+                  {%- if section.settings.show_text_pager -%}
+                    <nav class="cbs__pager" aria-label="Slide navigation">
+                        <button class="pager__btn pager__btn--prev" type="button" data-cbs-prev aria-label="{{ section.settings.prev_aria | default: 'Previous slide' }}">
+                          <span class="pager__chev" aria-hidden="true">&lt;</span>
+                          <span class="pager__label">{{ section.settings.prev_label | default: 'BACK' }}</span>
+                        </button>
+                        <span class="pager__divider" aria-hidden="true">|</span>
+                        <button class="pager__btn pager__btn--next" type="button" data-cbs-next aria-label="{{ section.settings.next_aria | default: 'Next slide' }}">
+                          <span class="pager__label">{{ section.settings.next_label | default: 'NEXT' }}</span>
+                          <span class="pager__chev" aria-hidden="true">&gt;</span>
+                        </button>
+                    </nav>
+                  {%- endif -%}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if show_dots -%}
+      <div class="swiper-pagination"></div>
+    {%- endif -%}
+  </div>
+</section>
+
+{%- style -%}
+  /* ===== Layout ===== */
+  #CollectionBottomSlider--{{ section.id }} {
+    margin-bottom: 16px;
+  }
+  #CollectionBottomSlider--{{ section.id }} .cbs__inner {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 0; 
+    align-items: center;
+    background-color: #f1f0ee;
+  }
+  #CollectionBottomSlider--{{ section.id }} .cbs__image { width: 100%; height: auto; display: block; object-fit: cover; }
+  #CollectionBottomSlider--{{ section.id }} .cbs__content { 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #CollectionBottomSlider--{{ section.id }} .cbs__content .cbs__description {
+    text-align: center;
+    max-width: 630px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  #CollectionBottomSlider--{{ section.id }} .cbs__actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap;}
+
+  /* Desktop 2 columns */
+  @media screen and (min-width: 990px) {
+    #CollectionBottomSlider--{{ section.id }} .cbs__inner { 
+      grid-template-columns: 1fr 1fr; 
+    }
+    #CollectionBottomSlider--{{ section.id }} .cbs__inner .cbs__media,
+    #CollectionBottomSlider--{{ section.id }} .cbs__inner .cbs__content {
+      height: 52vw; 
+      max-height: 800px;
+    }
+    #CollectionBottomSlider--{{ section.id }} .cbs__pager { position: absolute; bottom: 4rem; }
+  }
+  @media (max-width: 899px) {
+    #CollectionBottomSlider--{{ section.id }} .cbs__content {
+      margin: 65px 0;
+      height: 240px;
+    }
+    #CollectionBottomSlider--{{ section.id }} .cbs__media .cbs__image {
+      height: 100vw;
+    }
+    #CollectionBottomSlider--{{ section.id }} .cbs__content .cbs__description {
+        font-size: 11px;
+    }
+    #CollectionBottomSlider--{{ section.id }} .cbs__pager { 
+      display: none !important; 
+    }
+    .collection__box__title {
+      font-size: 7px !important;
+    }
+  }
+
+  /* ===== Pager styling ===== */
+  #CollectionBottomSlider--{{ section.id }} .cbs__pager { display:inline-flex; align-items:center; gap:18px; user-select:none; }
+  #CollectionBottomSlider--{{ section.id }} .pager__divider { opacity:.5; }
+  #CollectionBottomSlider--{{ section.id }} .pager__btn {
+    appearance:none; 
+    -webkit-appearance:none; 
+    background:transparent; 
+    border:0; 
+    padding:6px 2px;
+    font-family: "urw-din-semi-condensed";
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display:inline-flex; 
+    align-items:center; 
+    gap:10px; 
+    cursor:pointer;
+  }
+  #CollectionBottomSlider--{{ section.id }} .pager__btn:hover { opacity:.75; }
+  #CollectionBottomSlider--{{ section.id }} .pager__btn:focus { outline:2px solid currentColor; outline-offset:2px; }
+  #CollectionBottomSlider--{{ section.id }} .pager__chev { font-weight:600; }
+
+  /* ===== Swiper pagination (dots) ===== */
+  #CollectionBottomSlider--{{ section.id }} .swiper-pagination { position: static; margin-top: 12px; }
+  #CollectionBottomSlider--{{ section.id }} .swiper-pagination-bullet { width:8px; height:8px; opacity:.4; }
+  #CollectionBottomSlider--{{ section.id }} .swiper-pagination-bullet-active { opacity:1; }
+
+  /* ===== Wipe effect (mask reveal on the active slide) ===== */
+  /* We run Swiper in fade mode for wipe, then overlay a clip-path reveal on the pane */
+  #CollectionBottomSlider--{{ section.id }}.cbs--wipe .swiper-slide { position: relative; }
+  #CollectionBottomSlider--{{ section.id }}.cbs--wipe .cbs__pane {
+    will-change: clip-path;
+  }
+  @keyframes cbs-wipe-reveal {
+    from { clip-path: inset(0 100% 0 0); }
+    to   { clip-path: inset(0 0 0 0); }
+  }
+  /* class toggled by JS on the entering slide */
+  #CollectionBottomSlider--{{ section.id }}.cbs--wipe .cbs__pane.is-wiping {
+    animation: cbs-wipe-reveal .5s ease forwards;
+  }
+{%- endstyle -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var root = document.getElementById('CollectionBottomSlider--{{ section.id }}');
+    if (!root) return;
+
+    var effect = root.getAttribute('data-effect') || 'slide';
+    var autoplay = root.getAttribute('data-autoplay') === 'true';
+    var interval = parseInt(root.getAttribute('data-interval'), 10) || 4000;
+
+    // Use Swiper's 'fade' when we're doing wipe; we add our own clip-path animation.
+    var swiperEffect = (effect === 'wipe') ? 'fade' : effect;
+
+    var swiper = new Swiper(root.querySelector('.cbs__swiper'), {
+      loop: {% if slides_count > 1 %}true{% else %}false{% endif %},
+      speed: 500,
+      effect: swiperEffect,
+      fadeEffect: { crossFade: true },
+      autoplay: autoplay ? { delay: interval, disableOnInteraction: false } : false,
+      pagination: {
+        el: root.querySelector('.swiper-pagination'),
+        clickable: true
+      },
+      on: {
+        slideChangeTransitionStart: function () {
+          if (effect !== 'wipe') return;
+          // Add wipe animation to the active slide's pane
+          var slides = root.querySelectorAll('.swiper-slide');
+          slides.forEach(function(s){ var p = s.querySelector('.cbs__pane'); if (p) p.classList.remove('is-wiping'); });
+          var active = root.querySelector('.swiper-slide.swiper-slide-active .cbs__pane');
+          if (active) {
+            // restart animation
+            active.classList.remove('is-wiping');
+            // force reflow to restart CSS animation
+            void active.offsetWidth;
+            active.classList.add('is-wiping');
+          }
+        }
+      }
+    });
+
+    // BACK | NEXT in-column pager
+    root.addEventListener('click', function(e) {
+      var prev = e.target.closest('[data-cbs-prev]');
+      var next = e.target.closest('[data-cbs-next]');
+      if (prev) { swiper.slidePrev(); }
+      if (next) { swiper.slideNext(); }
+    }, { passive: true });
+  });
+</script>
+{%- else -%}
+  <div class="collection-bottom-slider__empty">
+    <p>
+      No slides to show. Ensure selected collections have both
+      <code>custom.collection_bottom_slider_image</code> and
+      <code>custom.collection_bottom_slider_description</code> metafields filled.
+    </p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection Bottom Slider",
+  "class": "collection-bottom-slider-swiper",
+  "settings": [
+    { "type": "collection_list", "id": "collections", "label": "Collections to include", "limit": 20 },
+    { "type": "text", "id": "button_label", "label": "Primary button label", "default": "Shop Now" },
+
+    { "type": "header", "content": "Navigation & dots" },
+    { "type": "checkbox", "id": "show_text_pager", "label": "Show “< BACK | NEXT >” pager", "default": true },
+    { "type": "checkbox", "id": "show_nav_dots", "label": "Show slide navigation dots", "default": false },
+
+    { "type": "header", "content": "Autoplay" },
+    { "type": "checkbox", "id": "autoplay", "label": "Autoplay slider", "default": false },
+    { "type": "range", "id": "duration", "min": 3, "max": 8, "step": 1, "unit": "sec", "label": "Change slides every", "default": 4 },
+
+    { "type": "header", "content": "Transition" },
+    { "type": "select", "id": "transition", "label": "Style", "default": "wipe",
+      "options": [
+        { "label": "Slide", "value": "slide" },
+        { "label": "Fade",  "value": "fade"  },
+        { "label": "Wipe (reveal)", "value": "wipe" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Collection Bottom Slider", "category": "Image" }],
+  "disabled_on": { "groups": ["header","aside","footer"] }
+}
+{% endschema %}

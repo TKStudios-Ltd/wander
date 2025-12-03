@@ -1,0 +1,34 @@
+<form class="search-form" action="{{ routes.search_url }}" method="get" role="search" data-search-form>
+  <input name="options[prefix]" type="hidden" value="last">
+
+    <div class="search-form__input-holder">
+      <label for="searchInput-{{ unique }}" class="search-form__label">
+        <span class="visually-hidden">{{ 'general.search.title' | t }}</span>
+        {%- render 'icon-search' -%}
+      </label>
+
+      <input type="search"
+        id="searchInput-{{ unique }}"
+        class="search-form__input"
+        name="q"
+        value=""
+        aria-label="{{ 'general.search.placeholder' | t }}"
+        {% if settings.enable_predictive_search %}
+          role="combobox"
+          aria-expanded="false"
+          aria-owns="searchResults-{{ unique }}"
+          aria-controls="searchResults-{{ unique }}"
+          aria-haspopup="listbox"
+          aria-autocomplete="list"
+          autocorrect="off"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        {% endif %}
+      >
+
+      <button class="search-form__submit visually-hidden" type="submit" tabindex="-1" aria-label="{{ 'general.search.submit' | t }}">
+        {%- render 'icon-search' -%}
+      </button>
+    </div>
+</form>

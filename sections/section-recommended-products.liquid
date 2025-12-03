@@ -1,0 +1,213 @@
+{% stylesheet %}
+  @media (max-width: 749px) {
+    .recommended-products__wrapper .grid-item {
+      width: 100% !important;
+      padding: 0 1rem;
+    }
+  }
+  .recommended-products__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    margin: 4rem 1rem;
+  }
+  .recommended-products__wrapper .grid-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.333% - 4rem);
+  }
+  .recommended-products__wrapper .grid-item .image-wrapper {
+    object-fit: contain;
+    width: -webkit-fill-available;
+  }
+  .recommended-products__wrapper .grid-item .image-wrapper .product-card {
+    padding: 0 0.5rem;
+  }
+{% endstylesheet %}
+
+{% style %}
+.recommended-products {
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+{% endstyle %}
+
+<section id="{{ section.id }}" class="recommended-products">
+  <div class="{{ section.settings.width }}">
+
+    {% if section.settings.title %}
+      <div class="text-center">
+        <div class="slider__heading">
+          {{ section.settings.title }}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="recommended-products__wrapper">
+
+      {%- assign recommended_products_count = 0 -%}
+
+      {%- comment -%}
+        1) Metafield first: product.metafields.custom.recommended_products (List → Product)
+           Use .value for reference types; fallback to raw if .value unavailable.
+      {%- endcomment -%}
+      {%- assign _mf = product.metafields.custom.recommended_products -%}
+      {%- assign metafield_products = _mf.value | default: _mf -%}
+
+      {%- if metafield_products and metafield_products.size > 0 -%}
+        {%- for p in metafield_products -%}
+          {%- if p.id == product.id -%}{% continue %}{%- endif -%}
+          {% render 'product-card', product: p, swym_enabled: section.settings.swym_enabled %}
+          {%- assign recommended_products_count = recommended_products_count | plus: 1 -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- comment -%} 2) If no metafield items, use blocks (existing behavior). {%- endcomment -%}
+      {%- if recommended_products_count == 0 -%}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'product_list' -%}
+              {%- assign recommended_product_list = block.settings.product_list -%}
+              {%- for p in recommended_product_list -%}
+                {%- if p.id == product.id -%}{% continue %}{%- endif -%}
+                {% render 'product-card', product: p, swym_enabled: section.settings.swym_enabled %}
+                {%- assign recommended_products_count = recommended_products_count | plus: 1 -%}
+              {%- endfor -%}
+
+            {%- when 'collection' -%}
+              {%- assign recommended_collection = block.settings.collection -%}
+              {%- for p in recommended_collection.products -%}
+                {%- if p.id == product.id -%}{% continue %}{%- endif -%}
+                {% render 'product-card', product: p, swym_enabled: section.settings.swym_enabled %}
+                {%- assign recommended_products_count = recommended_products_count | plus: 1 -%}
+              {%- endfor -%}
+
+            {%- when 'product' -%}
+              {%- assign p = block.settings.product -%}
+              {%- if p and p.id != product.id -%}
+                {% render 'product-card', product: p, swym_enabled: section.settings.swym_enabled %}
+                {%- assign recommended_products_count = recommended_products_count | plus: 1 -%}
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- comment -%} 3) Final fallback: same collection, max 3, excluding current product. {%- endcomment -%}
+      {%- if recommended_products_count == 0 -%}
+        {%- assign same_collection = product.collections.first -%}
+        {%- if same_collection -%}
+          {%- assign loop_count = 0 -%}
+          {%- for rp in same_collection.products -%}
+            {%- if rp.id == product.id -%}{% continue %}{%- endif -%}
+            {% render 'product-card', product: rp, swym_enabled: section.settings.swym_enabled %}
+            {%- assign loop_count = loop_count | plus: 1 -%}
+            {%- if loop_count >= 3 -%}{% break %}{%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Recommended products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Pairs well with"
+    },
+    {
+      "type": "header",
+      "content": "Swym Wishlist"
+    },
+    {
+      "type": "checkbox",
+      "id": "swym_enabled",
+      "label": "Swym Enabled (on product cards)",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "wrapper",
+      "options": [
+        { "value": "wrapper--full-padded", "label": "Full width padded" },
+        { "value": "wrapper", "label": "Page width" },
+        { "value": "wrapper--narrow", "label": "Page width narrow" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_list",
+      "name": "Product List",
+      "settings": [
+        {
+          "type": "product_list",
+          "id": "product_list",
+          "label": "Select product list"
+        }
+      ]
+    },
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select collection"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recommended products"
+    }
+  ]
+}
+{% endschema %}
