@@ -738,8 +738,8 @@
   }
   buildOptionRadios();
 
-  // Defaults — Statement / Natural / Framed w/ Mat (border)
-  sizeToken = 'statement';
+  // Defaults — Collector / Natural / Framed w/ Mat (border)
+  sizeToken = 'collector';
   const framedBorder = (CFG.framing_options || []).find(o => o.token === 'frame' && o.mat_token === 'border')
                     || (CFG.framing_options || []).find(o => o.token === 'frame')
                     || (CFG.framing_options || [])[0];
