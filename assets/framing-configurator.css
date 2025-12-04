@@ -353,7 +353,7 @@
 
 [data-size="small"] .fc-artwork     { inset: 27% 27% 27% 27%; }
 [data-size="medium"] .fc-artwork    { inset: 22.75% 22.75% 22.75% 22.75%; }
-[data-size="large"] .fc-artwork     { inset: 20.5% 20.5% 20.5% 20.5%; }
+[data-size="large"] .fc-artwork     { inset: 20% 20% 20% 20%; }
 [data-size="gallery"] .fc-artwork   { inset: 15% 15% 15% 15%; }
 [data-size="statement"] .fc-artwork { inset: 11% 11% 11% 11%; }
 [data-size="collector"] .fc-artwork { inset: 8% 8% 8% 8%; }
