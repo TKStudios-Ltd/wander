@@ -242,15 +242,21 @@
         width: 800px;
         column-count: 3;
     }
-    .is-mega ul.nav-collections li:nth-child(2) ul.nav-collections {
+    .is-mega ul.nav-collections > li {
+        break-inside: avoid;
+        margin-bottom: 30px;
+    }
+    .is-mega ul.nav-collections > li:nth-child(2) > ul.nav-collections {
         display: flex;
+        flex-wrap: wrap;
     }
-    .is-mega ul.nav-collections li:nth-child(2) ul.nav-collections li {
+    .is-mega ul.nav-collections > li:nth-child(2) > ul.nav-collections > li {
         flex: 0 0 50%;
+        margin-bottom: 14px;
     }
-
-    ul.nav-collections li:last-child {
-        margin-bottom: 0px;
+    .is-mega ul.nav-collections li a {
+        line-height: 1.6;
+        display: inline-block;
     }
 
 
