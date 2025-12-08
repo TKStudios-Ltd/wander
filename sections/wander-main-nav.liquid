@@ -583,7 +583,7 @@
             <ul id="primary-items" class="main-menu" style="border: 0; justify-content: center;">
                 {% for link in linklists.main-menu.links %}
                     {% if link.title != 'Home' %}
-                        <li class="primary-menu-item menu-item {% if link.links.size > 0 %}has-dropdown{% endif %} sans-serif" {% if link.title == 'Shop' %}style="border-left: 1px solid #929292;"{% endif %}>
+                        <li class="primary-menu-item menu-item {% if link.links.size > 0 %}has-dropdown{% endif %} {% if link.title == 'Shop' %}is-mega{% endif %} sans-serif" {% if link.title == 'Shop' %}style="border-left: 1px solid #929292;"{% endif %}>
                             
                             <!-- LEVEL 1 -->
                             <a href="{{ link.url }}">{{ link.title }}</a>
