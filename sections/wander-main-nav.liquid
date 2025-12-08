@@ -238,8 +238,8 @@
 
     /* MEGA MENU */
 
-    /* ===========================
-   SHOP MEGA MENU (LOCKED GRID)
+/* ===========================
+   SHOP MEGA MENU (BUNCHED STACK)
 =========================== */
 
 .primary-menu-item.is-mega > ul.dropdown {
@@ -250,7 +250,7 @@
   align-items: start;
 }
 
-/* Reset spacing */
+/* Base spacing */
 .primary-menu-item.is-mega > ul.dropdown > li {
   margin-bottom: 18px;
 }
@@ -283,28 +283,24 @@
 }
 
 /* ===========================
-   COLUMN 3 (EXPLICIT STACK)
+   COLUMN 3 (BUNCHED + FAKE STACK)
 =========================== */
 
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3) {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4) {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5) {
-  grid-column: 3;
-  grid-row: 3;
-}
-
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3),
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4),
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5),
 .primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) {
   grid-column: 3;
-  grid-row: 4;
+  grid-row: 1;       /* FORCE BUNCH */
+  position: relative;
 }
+
+/* FAKE VERTICAL STACKING */
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3) { margin-top: 0; }
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4) { margin-top: 80px; }
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5) { margin-top: 160px; }
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) { margin-top: 240px; }
+
 
 
 
