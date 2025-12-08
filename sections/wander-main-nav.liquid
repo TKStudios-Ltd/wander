@@ -236,12 +236,17 @@
         
     }
 
+    /* MEGA MENU */
+
     .is-mega ul.nav-collections {
         width: 800px;
         column-count: 3;
     }
     .is-mega ul.nav-collections li:nth-child(2) ul.nav-collections {
-        column-count: 2;
+        display: flex;
+    }
+    .is-mega ul.nav-collections li:nth-child(2) ul.nav-collections li {
+        flex: 0 0 50%;
     }
 
     ul.nav-collections li:last-child {
