@@ -239,11 +239,16 @@
 /* MEGA MENU */
 
 .primary-menu-item.is-mega > ul.dropdown {
-  width: 800px;
+  width: 674px;
   display: grid;
   grid-template-columns: 2fr 1.5fr 1.5fr;
   column-gap: 40px;
   align-items: start;
+}
+@media (min-width: 1200px) {
+    .primary-menu-item.is-mega > ul.dropdown {
+        width: 798px;
+    }
 }
 .primary-menu-item.is-mega > ul.dropdown > li {
   margin-bottom: 18px;
