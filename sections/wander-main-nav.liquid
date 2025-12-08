@@ -238,29 +238,29 @@
 
     /* MEGA MENU */
 
-    .primary-menu-item.is-mega > ul.dropdown {
+    /* ===========================
+   SHOP MEGA MENU (LOCKED GRID)
+=========================== */
+
+.primary-menu-item.is-mega > ul.dropdown {
   width: 800px;
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  column-gap: 40px;
+  align-items: start;
 }
 
-/* Column wrappers via nth-child */
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(1),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(2),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) {
-  width: auto;
+/* Reset spacing */
+.primary-menu-item.is-mega > ul.dropdown > li {
+  margin-bottom: 18px;
 }
 
-/* COLUMN 1 (50%) */
+/* COLUMN 1 */
 .primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) {
-  flex: 2;
+  grid-column: 1;
+  grid-row: 1;
 }
 
-/* Inner two columns for column 1 */
 .primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) > ul.nav-collections {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -270,9 +270,10 @@
   margin-left: 10px;
 }
 
-/* COLUMN 2 (25%) */
+/* COLUMN 2 */
 .primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) {
-  flex: 1.5;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) > ul.nav-collections {
@@ -281,15 +282,30 @@
   margin-left: 10px;
 }
 
-/* COLUMN 3 (25%) */
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) {
-  flex: 1.5;
-  display: block;
-  margin-bottom: 20px;
+/* ===========================
+   COLUMN 3 (EXPLICIT STACK)
+=========================== */
+
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
 }
+
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) {
+  grid-column: 3;
+  grid-row: 4;
+}
+
 
 
     ul.pushNav {
