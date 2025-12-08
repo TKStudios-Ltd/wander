@@ -240,23 +240,31 @@
 
     .primary-menu-item.is-mega > ul.dropdown {
         width: 800px;
-        column-count: 3;
         column-gap: 80px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
     }
     .primary-menu-item.is-mega > ul.dropdown > li {
-        break-inside: avoid;
         margin-bottom: 40px;
     }
     .primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) > ul.nav-collections {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
     }
-    .primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) > ul.nav-collections > li {
-        flex: 0 0 50%;
-        margin-bottom: 12px;
+    .primary-menu-item.is-mega > ul.dropdown > li:nth-child(3) {
+        grid-column: 3;
+    }
+    .primary-menu-item.is-mega > ul.dropdown > li:nth-child(4),
+    .primary-menu-item.is-mega > ul.dropdown > li:nth-child(5),
+    .primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) {
+        grid-column: 3;
+    }
+    .primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) {
+        grid-column: 2;
     }
     .primary-menu-item.is-mega a {
-        line-height: 1.7;
+        line-height: 1.8;
         display: inline-block;
     }
 
