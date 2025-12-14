@@ -215,6 +215,8 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
   }, true);
 })();
 
+
+
 (function () {
   document.addEventListener('click', function (e) {
     var trigger = e.target.closest('.js-copyright-trigger');
