@@ -222,68 +222,24 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
   var TRIGGER_SELECTOR = '.js-copyright-trigger';
   var POPUP_WRAPPER_SELECTOR = '[data-popup][data-manual-trigger-id="copyright_open"]';
 
-  function getPopup() {
+  function init() {
+    var trigger = document.querySelector(TRIGGER_SELECTOR);
+    if (!trigger) return;
+
     var wrapper = document.querySelector(POPUP_WRAPPER_SELECTOR);
-    if (!wrapper) return null;
-    return wrapper.querySelector('.popup[id]');
-  }
+    if (!wrapper) return;
 
-  function openPopup(a) {
-    var popup = getPopup();
+    var popup = wrapper.querySelector('.popup[id]');
     if (!popup) return;
 
-    a.setAttribute('href', '#' + popup.id);
-
-    setTimeout(function () {
-      a.click();
-    }, 0);
+    // Set href ONCE so the theme can fully manage open + close
+    trigger.setAttribute('href', '#' + popup.id);
   }
 
-  function closePopup() {
-    var popup = getPopup();
-    if (!popup) return;
-
-    popup.classList.remove('popup--visible');
-    popup.style.display = '';
-
-    document.body.classList.remove('notification-visible');
-
-    history.pushState(
-      '',
-      document.title,
-      window.location.pathname + window.location.search
-    );
+  // Run after DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
-
-  document.addEventListener(
-    'click',
-    function (e) {
-      var a = e.target.closest(TRIGGER_SELECTOR);
-      if (!a) return;
-
-      e.preventDefault();
-      openPopup(a);
-    },
-    true
-  );
-
-  document.addEventListener(
-    'click',
-    function (e) {
-      if (
-        e.target.closest('[data-popup-close]') ||
-        e.target.closest('[data-popup-underlay]')
-      ) {
-        closePopup();
-      }
-    },
-    true
-  );
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      closePopup();
-    }
-  });
 })();
-
