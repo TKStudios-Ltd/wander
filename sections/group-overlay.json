@@ -67,7 +67,6 @@
         },
         "popup_with_image_haEQhW": {
           "type": "popup-with-image",
-          "disabled": true,
           "settings": {
             "position": "center-center",
             "image": "shopify://shop_images/logo_42e44e33-154e-444f-ac53-7ec392df105f.svg",
