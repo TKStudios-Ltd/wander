@@ -216,18 +216,55 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
 })();
 
 
+/* Copyright */
 
 (function () {
-  document.addEventListener('click', function (e) {
-    var trigger = e.target.closest('.js-copyright-trigger');
-    if (!trigger) return;
+  var TRIGGER_ID = 'copyright_open';
+  var TRIGGER_SELECTOR = '.js-copyright-trigger';
 
-    e.preventDefault();
+  function findPopupWrapper(triggerId) {
+    return document.querySelector('[data-popup][data-manual-trigger-id="' + triggerId + '"]');
+  }
 
-    window.dispatchEvent(
-      new CustomEvent('openPopup', {
-        detail: 'copyright_open'
-      })
-    );
-  });
+  function openPopupDirect(popupWrapper) {
+    if (!popupWrapper) return false;
+
+    // In your theme, the visible class is applied to the inner .popup node
+    var popupEl = popupWrapper.querySelector('.popup');
+    if (!popupEl) return false;
+
+    popupEl.classList.add('popup--visible');
+    document.body.classList.add('notification-visible');
+
+    return true;
+  }
+
+  function openByTriggerId(triggerId) {
+    // 1) Prefer the theme's event system (what you already have)
+    try {
+      window.dispatchEvent(new CustomEvent('openPopup', { detail: triggerId }));
+    } catch (err) {}
+
+    // 2) Fallback: open directly (in case the listener is missing or blocked)
+    var wrapper = findPopupWrapper(triggerId);
+    if (wrapper) openPopupDirect(wrapper);
+  }
+
+  // Use capture so it still fires if other scripts stopPropagation on click
+  document.addEventListener(
+    'click',
+    function (e) {
+      var el = e.target.closest(TRIGGER_SELECTOR);
+      if (!el) return;
+
+      e.preventDefault();
+      openByTriggerId(TRIGGER_ID);
+    },
+    true
+  );
+
+  // Quick sanity check you can run on page load
+  // If this logs null, the popup block is not configured with manual_trigger_id = copyright_open
+  console.log('[copyright popup] wrapper:', findPopupWrapper(TRIGGER_ID));
 })();
+
