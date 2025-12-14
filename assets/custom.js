@@ -220,27 +220,35 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
 
 (function () {
   var TRIGGER_SELECTOR = '.js-copyright-trigger';
-  var POPUP_SELECTOR = '[data-manual-trigger-id="copyright_open"]';
+  var POPUP_WRAPPER_SELECTOR = '[data-popup][data-manual-trigger-id="copyright_open"]';
 
-  function openPopupViaHash() {
-    var wrapper = document.querySelector(POPUP_SELECTOR);
-    if (!wrapper) return;
+  function getPopupId() {
+    var wrapper = document.querySelector(POPUP_WRAPPER_SELECTOR);
+    if (!wrapper) return null;
 
     var popup = wrapper.querySelector('.popup[id]');
-    if (!popup) return;
-
-    // This is the key line – matches existing popup behaviour
-    window.location.hash = popup.id;
+    return popup ? popup.id : null;
   }
 
   document.addEventListener(
     'click',
     function (e) {
-      var trigger = e.target.closest(TRIGGER_SELECTOR);
-      if (!trigger) return;
+      var a = e.target.closest(TRIGGER_SELECTOR);
+      if (!a) return;
 
+      var popupId = getPopupId();
+      if (!popupId) return;
+
+      // prevent whatever href is currently there
       e.preventDefault();
-      openPopupViaHash();
+
+      // set href dynamically so it behaves exactly like your working hardcoded version
+      a.setAttribute('href', '#' + popupId);
+
+      // force a native anchor click in the next tick
+      setTimeout(function () {
+        a.click();
+      }, 0);
     },
     true
   );
