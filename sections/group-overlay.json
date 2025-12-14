@@ -90,12 +90,39 @@
             "bg_color": "#f0efed",
             "text_color": "text-dark"
           }
+        },
+        "popup_with_image_dhgYKy": {
+          "type": "popup-with-image",
+          "settings": {
+            "position": "center-center",
+            "image": "shopify://shop_images/logo_42e44e33-154e-444f-ac53-7ec392df105f.svg",
+            "height": "original-height",
+            "title": "",
+            "preheading": "",
+            "subtitle": "",
+            "text": "<p>© WANDER DESIGN, INC. All rights reserved. All pages on this website, as well as all photographs, design, artwork, products, logos, etc seen on this website, www.shopwander.com, or social media @wander.brand.co, @reese_cara are copyrighted and protected, and are of the sole ownership and copyright of WANDER DESIGN, INC. Do not copy, disperse, distribute or sell anything on this site, without direct permission from WANDER. Unless you obtain permission to sell or reproduce our images, it is a breach of copyright. Please email us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a>, about any collaborations, or for acquiring possible permission to sell/use/reproduce anything on this site.</p>",
+            "show_newsletter_form": false,
+            "extra_fields": "",
+            "button_text": "Sign Up",
+            "trigger": "always",
+            "target_url_enabled": false,
+            "target_url": "",
+            "manual_trigger_id": "copyright",
+            "allow_manual_trigger_only": true,
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile",
+            "bg_color": "#f0efed",
+            "text_color": "text-dark"
+          }
         }
       },
       "block_order": [
         "popup-0",
         "popup_with_image_YjhCci",
-        "popup_with_image_haEQhW"
+        "popup_with_image_haEQhW",
+        "popup_with_image_dhgYKy"
       ],
       "settings": {}
     }
