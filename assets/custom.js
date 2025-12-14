@@ -219,26 +219,18 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
 /* Copyright */
 
 (function () {
-  var TRIGGER_ID = 'copyright_open';
   var TRIGGER_SELECTOR = '.js-copyright-trigger';
+  var POPUP_SELECTOR = '[data-manual-trigger-id="copyright_open"]';
 
-  function findPopupWrapper() {
-    return document.querySelector(
-      '[data-popup][data-manual-trigger-id="' + TRIGGER_ID + '"]'
-    );
-  }
-
-  function openPopupViaTheme(wrapper) {
+  function openPopupViaHash() {
+    var wrapper = document.querySelector(POPUP_SELECTOR);
     if (!wrapper) return;
 
-    // This is what the theme listens for
-    wrapper.dispatchEvent(
-      new MouseEvent('click', {
-        bubbles: true,
-        cancelable: true,
-        view: window
-      })
-    );
+    var popup = wrapper.querySelector('.popup[id]');
+    if (!popup) return;
+
+    // This is the key line – matches existing popup behaviour
+    window.location.hash = popup.id;
   }
 
   document.addEventListener(
@@ -248,11 +240,7 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
       if (!trigger) return;
 
       e.preventDefault();
-
-      var wrapper = findPopupWrapper();
-      if (!wrapper) return;
-
-      openPopupViaTheme(wrapper);
+      openPopupViaHash();
     },
     true
   );
