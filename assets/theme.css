@@ -24296,6 +24296,17 @@ body.notification-visible .popup.popup--visible {
   flex-direction: column;
 }
 
+#popup--popup_with_image_dhgYKy .popup__inner {
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  max-width: none;
+}
+@media only screen and (min-width: 1024px) {
+  #popup--popup_with_image_dhgYKy .popup__inner {
+    padding: 5rem 2rem;
+  }
+}
+
 .popup__inner {
   margin: 0 auto;
   padding: 4rem 2rem;
@@ -24305,6 +24316,7 @@ body.notification-visible .popup.popup--visible {
     padding: 5rem 3.5rem;
   }
 }
+
 
 .popup__title {
   font-size: 1.6rem;
