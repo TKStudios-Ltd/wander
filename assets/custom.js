@@ -222,12 +222,37 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
   var TRIGGER_SELECTOR = '.js-copyright-trigger';
   var POPUP_WRAPPER_SELECTOR = '[data-popup][data-manual-trigger-id="copyright_open"]';
 
-  function getPopupId() {
+  function getPopup() {
     var wrapper = document.querySelector(POPUP_WRAPPER_SELECTOR);
     if (!wrapper) return null;
+    return wrapper.querySelector('.popup[id]');
+  }
 
-    var popup = wrapper.querySelector('.popup[id]');
-    return popup ? popup.id : null;
+  function openPopup(a) {
+    var popup = getPopup();
+    if (!popup) return;
+
+    a.setAttribute('href', '#' + popup.id);
+
+    setTimeout(function () {
+      a.click();
+    }, 0);
+  }
+
+  function closePopup() {
+    var popup = getPopup();
+    if (!popup) return;
+
+    popup.classList.remove('popup--visible');
+    popup.style.display = '';
+
+    document.body.classList.remove('notification-visible');
+
+    history.pushState(
+      '',
+      document.title,
+      window.location.pathname + window.location.search
+    );
   }
 
   document.addEventListener(
@@ -236,20 +261,29 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
       var a = e.target.closest(TRIGGER_SELECTOR);
       if (!a) return;
 
-      var popupId = getPopupId();
-      if (!popupId) return;
-
-      // prevent whatever href is currently there
       e.preventDefault();
-
-      // set href dynamically so it behaves exactly like your working hardcoded version
-      a.setAttribute('href', '#' + popupId);
-
-      // force a native anchor click in the next tick
-      setTimeout(function () {
-        a.click();
-      }, 0);
+      openPopup(a);
     },
     true
   );
+
+  document.addEventListener(
+    'click',
+    function (e) {
+      if (
+        e.target.closest('[data-popup-close]') ||
+        e.target.closest('[data-popup-underlay]')
+      ) {
+        closePopup();
+      }
+    },
+    true
+  );
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closePopup();
+    }
+  });
 })();
+
