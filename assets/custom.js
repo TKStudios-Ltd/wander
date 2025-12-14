@@ -215,3 +215,17 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
   }, true);
 })();
 
+(function () {
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest('.js-copyright-trigger');
+    if (!trigger) return;
+
+    e.preventDefault();
+
+    window.dispatchEvent(
+      new CustomEvent('openPopup', {
+        detail: 'copyright_open'
+      })
+    );
+  });
+})();
