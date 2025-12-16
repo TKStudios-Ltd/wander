@@ -1,1 +1,46 @@
-{"sections":{"main":{"type":"article","custom_css":["@media (min-width: 768px) {.breadcrumb__list .breadcrumb__item {font-size: 10px; }}"],"settings":{"show_date":true,"show_author":false,"show_tags":false,"show_share_button":false,"text":"Share","bg_color_secondary":false,"padding_top":0,"padding_bottom":60}},"recommended-posts":{"type":"section-recommended-posts","custom_css":[],"settings":{"title":"","bg_color_secondary":false,"article_note":"<p>THIS BLOG CONTAINS CONCEPTS & OPINIONS FROM WANDER, IT's FOUNDER, AND IT'S AFFLILIATES. ANY CONTENT HEREIN, OR ANY PRODUCTS SOLD ON THIS WEBSITE ARE NOT INTENDED TO SUBSTITUTE FOR SEEKING YOUR OWN PROFESSIONAL HEALTH OR WELLNESS ADVICE.<\/p>","width":"wrapper","padding_top":60,"padding_bottom":100}}},"order":["main","recommended-posts"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "article",
+      "custom_css": [
+        "@media (min-width: 768px) {.breadcrumb__list .breadcrumb__item {font-size: 10px; }}",
+        "@media (min-width: 768px) and (max-width: 989px) {.article__wrapper {padding: 0 40px; }}"
+      ],
+      "settings": {
+        "show_date": true,
+        "show_author": false,
+        "show_tags": false,
+        "show_share_button": false,
+        "text": "Share",
+        "bg_color_secondary": false,
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "recommended-posts": {
+      "type": "section-recommended-posts",
+      "custom_css": [],
+      "settings": {
+        "title": "",
+        "bg_color_secondary": false,
+        "article_note": "<p>THIS BLOG CONTAINS CONCEPTS & OPINIONS FROM WANDER, IT's FOUNDER, AND IT'S AFFLILIATES. ANY CONTENT HEREIN, OR ANY PRODUCTS SOLD ON THIS WEBSITE ARE NOT INTENDED TO SUBSTITUTE FOR SEEKING YOUR OWN PROFESSIONAL HEALTH OR WELLNESS ADVICE.</p>",
+        "width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recommended-posts"
+  ]
+}
