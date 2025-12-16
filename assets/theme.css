@@ -5431,12 +5431,16 @@ hr.hr--full {
   }
 }
 
-@media (max-width: 889px) {
-  .wrapper .text {
-    padding: 0 20px;
-  }
+@media (max-width: 749px) {
+  .wrapper .text,
   .shopify-section--page .rte {
     padding: 0 20px;
+  }
+}
+@media (min-width: 750px) and (max-width: 889px) {
+  .wrapper .text,
+  .shopify-section--page .rte {
+    padding: 0 40px;
   }
 }
 
@@ -34628,5 +34632,6 @@ div.footer-title h5 {
 @media (min-width: 1025px) {
   #shopify-section-template--25561597968704__section_image_with_text_jkbYpa .section-padding {
     min-height: 100vh !important;
+    max-height: 1000px !important;
   }
 }
