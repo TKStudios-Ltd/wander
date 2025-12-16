@@ -21569,7 +21569,7 @@ search-popdown details > summary:first-of-type {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 990px) {
   .image-with-text--image-fifty .image-with-text__image,
   .image-with-text--image-fifty .image-with-text__content {
     flex-basis: 50%;
