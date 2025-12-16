@@ -21964,7 +21964,7 @@ search-popdown details > summary:first-of-type {
 .image-with-text__items--inline-right .image-with-text__content {
   border: none;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 990px) {
   .image-with-text__items--inline-left .image-with-text__content,
   .image-with-text__items--inline-right .image-with-text__content {
     height: 100%;
