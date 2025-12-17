@@ -1673,7 +1673,7 @@
       "custom_css": [
         ".text .text__content {margin-left: 0 !important;}",
         ".text .text__heading {margin: -5px 0 25px -5px;}",
-        "@media (max-width: 767px) {.section-padding {padding: 100px 0; }}"
+        "@media (max-width: 989px) {.section-padding {padding: 100px 0 20px; }}"
       ],
       "name": "Text",
       "settings": {
