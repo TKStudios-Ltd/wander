@@ -1589,7 +1589,7 @@
       "custom_css": [
         ".image-with-text__text {max-width: 590px; margin: 20px auto 35px; padding: 1rem 2rem 0;}",
         ".image-with-text__text p strong {display: block; max-width: 390px; margin: auto;}",
-        "@media (max-width: 989px) {.image-with-text__content-items {padding: 5rem 0; } .image-with-text__text {margin-bottom: 20px !important; } .image-with-text__text {max-width: 385px; }}",
+        "@media (max-width: 989px) {.image-with-text__content-items {padding: 5rem 2rem; } .image-with-text__text {margin-bottom: 20px !important; }}",
         ".hover-scale img {transform: none;}"
       ],
       "name": "Image with text",
