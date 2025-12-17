@@ -5439,7 +5439,8 @@ hr.hr--full {
 }
 @media (min-width: 750px) and (max-width: 889px) {
   .wrapper .text,
-  .shopify-section--page .rte {
+  .shopify-section--page .rte,
+  .wrapper .section-image__container {
     padding: 0 40px;
   }
 }
