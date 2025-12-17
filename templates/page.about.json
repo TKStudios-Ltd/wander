@@ -260,7 +260,7 @@
         ".background-size-cover b {padding-left: 2rem; padding-top: 2rem;}",
         ".image-with-text__text p strong {display: block; max-width: 390px; margin: auto;}",
         "img {margin-top: 2rem;}",
-        "@media (max-width: 989px) {.image-with-text__content-items {padding: 1rem 0 3rem; } img {padding: 0 4vw 0 10vw; } .image-with-text__image {padding-top: 75%; } .image-with-text__content, .image-with-text__image {flex-basis: 100%; }}"
+        "@media (max-width: 989px) {.image-with-text__content-items {padding: 1rem 0 3rem; } img {padding: 0 4vw 0 10vw; } .image-with-text__image {padding-top: 75%; } .image-with-text__content, .image-with-text__image {flex-basis: 100%; padding-left: 0; }}"
       ],
       "settings": {
         "section_height": "six-fifty-height",
