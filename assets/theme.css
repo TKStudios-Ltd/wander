@@ -21730,7 +21730,7 @@ search-popdown details > summary:first-of-type {
   width: 100%;
   overflow: hidden;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 989px) {
   .image-with-text__image {
     flex-basis: 100%;
     width: 100%;
