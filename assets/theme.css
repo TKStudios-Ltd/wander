@@ -25604,7 +25604,11 @@ search-form mark {
   gap: 0.5rem;
 }
 
-@
+@media (max-width: 899px) {
+  .product__price-wrapper {
+    margin: 1rem 0;
+  }
+}
 
 .product__price {
   display: flex;
