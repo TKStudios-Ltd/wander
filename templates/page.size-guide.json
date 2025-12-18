@@ -1,1 +1,376 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"custom_css":["h4 {text-transform: uppercase; font-family: \"urw-din-semi-condensed\";}","h5 {text-transform: uppercase; font-family: \"urw-din-semi-condensed\";}"],"settings":{"show_page_title":false,"bg_color_secondary":false,"padding_top":60,"padding_bottom":60}},"section_text_faALhq":{"type":"section-text","blocks":{"heading_7VxPPG":{"type":"heading","settings":{"text":"<p>SIZING & FRAMING GUIDE<\/p>","size":110,"margin_bottom":16,"heading_highlight_type":"underline-hand-drawn","highlight_color":"#000000","highlight_text_color":""}}},"block_order":["heading_7VxPPG"],"name":"Text","settings":{"custom_class":"","text_position":"center","bg_color_secondary":false,"text_color":"text-dark","width":"wrapper--narrow","padding_top":120,"padding_bottom":0}},"wander_collection_thin_banner_jV9yY4":{"type":"wander-collection-thin-banner","blocks":{"nav_item_K3zQaY":{"type":"nav_item","settings":{"name":"Unframed","collection":"","anchor_override":"unframed","full_url":""}},"nav_item_PM6XrD":{"type":"nav_item","settings":{"name":"Oversized Mat","collection":"","anchor_override":"oversized-mat-framing","full_url":""}},"nav_item_kx4YCe":{"type":"nav_item","settings":{"name":"Standard Border\/Mat","collection":"","anchor_override":"standard-mat-border-framing","full_url":""}},"nav_item_LYrVQf":{"type":"nav_item","settings":{"name":"Full-Bleed","collection":"","anchor_override":"full-bleed-framing","full_url":""}},"nav_item_NDTy4G":{"type":"nav_item","settings":{"name":"Framing Colors","collection":"","anchor_override":"","full_url":"\/pages\/framing-colors#colors"}},"nav_item_XK3Erp":{"type":"nav_item","settings":{"name":"Size in Room","collection":"","anchor_override":"","full_url":"\/pages\/size-in-room#view"}}},"block_order":["nav_item_K3zQaY","nav_item_PM6XrD","nav_item_kx4YCe","nav_item_LYrVQf","nav_item_NDTy4G","nav_item_XK3Erp"],"custom_css":[".collection-anchor-nav__scroll {justify-content: center !important; padding-left: 0;}",".collection-anchor-nav__inner {margin: 2rem auto;}",".collection-anchor-nav__item:first-child + .collection-anchor-nav__item {border-left: none; margin-left: 0; padding-left: 0;}","@media (max-width: 749px) {.collection-anchor-nav__item + .collection-anchor-nav__item {padding: 0 0 10px 0; margin: 0 0 10px 0; border-left: none; } .collection-anchor-nav__list {flex-direction: column; align-items: center; }}"],"name":"Collection anchor nav","settings":{"mobile_prefix":"","item_gap":20,"text_color":"","bg_color":"","padding_top":20,"padding_bottom":20}},"section_text_JKeUVp":{"type":"section-text","blocks":{"text_aRT9Jx":{"type":"text","settings":{"text":"<p>Each museum-quality Fine Art \/ Photography print is printed and framed in the USA on heavyweight matte, artist-grade, acid-free photo paper using archival inks.<\/p>","size":100,"max_width":650,"margin_bottom":0}},"text_q8UWYJ":{"type":"text","settings":{"text":"<p>All of our artworks are custom-printed, custom-framed and made-to-order specifically for you.<\/p>","size":100,"max_width":800,"margin_bottom":0}},"text_xah8gt":{"type":"text","settings":{"text":"<p>All Sizes listed are outer border dimensions. On “Unframed” prints, we include a 1”-5” border for ample framing.<\/p>","size":100,"max_width":875,"margin_bottom":0}},"text_rKbiwp":{"type":"text","settings":{"text":"<p>Dimensions listed below are identical for horizontal-formatted photography, but the dimensions are flipped.<\/p>","size":100,"max_width":900,"margin_bottom":0}},"text_gVBXJd":{"type":"text","settings":{"text":"<p>We currently do not offer our “Oversized Mat Framing” option on horizontal-formatted photography.<\/p>","size":100,"max_width":800,"margin_bottom":0}},"text_8fV96G":{"type":"text","settings":{"text":"<p>All framed photography comes with hanging hardware. Every print comes with a Certificate of Authenticity.<\/p>","size":100,"max_width":875,"margin_bottom":0}},"text_Y7BtUG":{"type":"text","settings":{"text":"<p>We currently do not offer our “Oversized Mat Framing” option on horizontal-formatted photography.<\/p>","size":100,"max_width":800,"margin_bottom":0}},"text_kWLGn7":{"type":"text","settings":{"text":"<p>For any questions, please contact us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a><\/p>","size":100,"max_width":800,"margin_bottom":35}},"subheading_rhripi":{"type":"subheading","settings":{"text":"<p>WE HAVE DONE OUR BEST TO SUPPLY SIZES, BUT GIVEN THE FACT THAT WE OFFER VARIOUS FRAMES & COLORS IN EACH SIZE, WHICH HAVE VARIOUS FACE WIDTHS, THESE SIZES LISTED MAY VARY SLIGHTLY BY 1-2” DEPENDING ON FRAME SELECTION.<\/p>","size":100,"margin_bottom":0}}},"block_order":["text_aRT9Jx","text_q8UWYJ","text_xah8gt","text_rKbiwp","text_gVBXJd","text_8fV96G","text_Y7BtUG","text_kWLGn7","subheading_rhripi"],"custom_css":["#Text--subheading_rhripi p {letter-spacing: 1px; font-size: 12px; max-width: 730px; margin: auto; font-style: italic;}"],"name":"Text","settings":{"custom_class":"","text_position":"center","bg_color_secondary":false,"text_color":"text-dark","width":"wrapper--narrow","padding_top":60,"padding_bottom":40}},"section_image_Lm9DkP":{"type":"section-image","custom_css":[".section-image__container {margin: 4rem 0 0;}",".section-image__image {width: 100vw !important;}"],"name":"Image","settings":{"image":"shopify:\/\/shop_images\/image_95.jpg","allow_mobile_zoom":true,"custom_id":"unframed","height":"original-height","enable_mobile_height":false,"mobile_height":"original-height","enable_stretch":false,"image_position":"center","bg_color_secondary":false,"width":"wrapper--full","padding_top":0,"padding_bottom":0}},"section_image_FU6JB4":{"type":"section-image","custom_css":[".section-image__container {margin: 4rem 0 0;}",".section-image__image {width: 100vw !important;}"],"name":"Image","settings":{"image":"shopify:\/\/shop_images\/image_96.jpg","allow_mobile_zoom":true,"custom_id":"oversized-mat-framing","height":"original-height","enable_mobile_height":false,"mobile_height":"original-height","enable_stretch":false,"image_position":"center","bg_color_secondary":false,"width":"wrapper--full","padding_top":0,"padding_bottom":0}},"section_image_VeQVBB":{"type":"section-image","custom_css":[".section-image__container {margin: 4rem 0 0;}",".section-image__image {width: 100vw !important;}"],"name":"Image","settings":{"image":"shopify:\/\/shop_images\/image_97.jpg","allow_mobile_zoom":true,"custom_id":"standard-mat-border-framing","height":"original-height","enable_mobile_height":false,"mobile_height":"original-height","enable_stretch":false,"image_position":"center","bg_color_secondary":false,"width":"wrapper--full","padding_top":0,"padding_bottom":0}},"section_image_NDcqzF":{"type":"section-image","custom_css":[".section-image__container {margin: 4rem 0;}",".section-image__image {width: 100vw !important;}"],"name":"Image","settings":{"image":"shopify:\/\/shop_images\/image_98.jpg","allow_mobile_zoom":true,"custom_id":"full-bleed-framing","height":"original-height","enable_mobile_height":false,"mobile_height":"original-height","enable_stretch":false,"image_position":"center","bg_color_secondary":false,"width":"wrapper--full","padding_top":0,"padding_bottom":0}},"section_text_BPViNP":{"type":"section-text","blocks":{"subheading_kbE6Rx":{"type":"subheading","settings":{"text":"<p>* PLEASE NOTE:<strong> <\/strong>(1) We offer certain images at even larger “Exhibition” & “Giant” sizes, in limited editions of 50 and 25 respectively. Contact us if you are interested in these larger limited edition sizes or a custom size. (2) Given the advancements in camera technology, not all older images\/artwork can be printed perfectly at the larger sizes. While this doesn’t happen frequently, if we believe there may be an issue\/concern with resolution of a specific print ordered, we will notify you. (3) Occasionally we have an image that does not fit proportionally well into our exact sizes listed above. If this is the case, we reserve the right to crop\/edit the size of the print by 1”-2” on any given dimension in order to preserve the creative integrity of the original image\/print. (4) Given the fact that we supply various frames and colors, which have various face widths & depths, these sizes listed may vary slightly by 1”-1.5” depending on frame. (5) For additional sizing\/matting\/framing questions, email us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a><\/p>","size":100,"margin_bottom":0}}},"block_order":["subheading_kbE6Rx"],"custom_css":["p {letter-spacing: 1px; font-size: 10px; max-width: 1000px; margin: 4rem auto 6rem; font-style: italic;}","@media (max-width: 989px) {p {font-size: 1.8vw; margin: 2rem auto 3rem; }}"],"name":"Text","settings":{"custom_class":"","text_position":"center","bg_color_secondary":false,"text_color":"text-dark","width":"wrapper--narrow","padding_top":60,"padding_bottom":100}}},"order":["main","section_text_faALhq","wander_collection_thin_banner_jV9yY4","section_text_JKeUVp","section_image_Lm9DkP","section_image_FU6JB4","section_image_VeQVBB","section_image_NDcqzF","section_text_BPViNP"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [
+        "h4 {text-transform: uppercase; font-family: \"urw-din-semi-condensed\";}",
+        "h5 {text-transform: uppercase; font-family: \"urw-din-semi-condensed\";}"
+      ],
+      "settings": {
+        "show_page_title": false,
+        "bg_color_secondary": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_text_faALhq": {
+      "type": "section-text",
+      "blocks": {
+        "heading_7VxPPG": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>SIZING & FRAMING GUIDE</p>",
+            "size": 110,
+            "margin_bottom": 16,
+            "heading_highlight_type": "underline-hand-drawn",
+            "highlight_color": "#000000",
+            "highlight_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_7VxPPG"
+      ],
+      "name": "Text",
+      "settings": {
+        "custom_class": "",
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "text_color": "text-dark",
+        "width": "wrapper--narrow",
+        "padding_top": 120,
+        "padding_bottom": 0
+      }
+    },
+    "wander_collection_thin_banner_jV9yY4": {
+      "type": "wander-collection-thin-banner",
+      "blocks": {
+        "nav_item_K3zQaY": {
+          "type": "nav_item",
+          "settings": {
+            "name": "Unframed",
+            "collection": "",
+            "anchor_override": "unframed",
+            "full_url": ""
+          }
+        },
+        "nav_item_PM6XrD": {
+          "type": "nav_item",
+          "settings": {
+            "name": "Oversized Mat",
+            "collection": "",
+            "anchor_override": "oversized-mat-framing",
+            "full_url": ""
+          }
+        },
+        "nav_item_kx4YCe": {
+          "type": "nav_item",
+          "settings": {
+            "name": "Standard Border/Mat",
+            "collection": "",
+            "anchor_override": "standard-mat-border-framing",
+            "full_url": ""
+          }
+        },
+        "nav_item_LYrVQf": {
+          "type": "nav_item",
+          "settings": {
+            "name": "Full-Bleed",
+            "collection": "",
+            "anchor_override": "full-bleed-framing",
+            "full_url": ""
+          }
+        },
+        "nav_item_NDTy4G": {
+          "type": "nav_item",
+          "settings": {
+            "name": "Framing Colors",
+            "collection": "",
+            "anchor_override": "",
+            "full_url": "/pages/framing-colors#colors"
+          }
+        },
+        "nav_item_XK3Erp": {
+          "type": "nav_item",
+          "settings": {
+            "name": "Size in Room",
+            "collection": "",
+            "anchor_override": "",
+            "full_url": "/pages/size-in-room#view"
+          }
+        }
+      },
+      "block_order": [
+        "nav_item_K3zQaY",
+        "nav_item_PM6XrD",
+        "nav_item_kx4YCe",
+        "nav_item_LYrVQf",
+        "nav_item_NDTy4G",
+        "nav_item_XK3Erp"
+      ],
+      "custom_css": [
+        ".collection-anchor-nav__scroll {justify-content: center !important; padding-left: 0;}",
+        ".collection-anchor-nav__inner {margin: 2rem auto;}",
+        ".collection-anchor-nav__item:first-child + .collection-anchor-nav__item {border-left: none; margin-left: 0; padding-left: 0;}",
+        "@media (max-width: 749px) {.collection-anchor-nav__item + .collection-anchor-nav__item {padding: 0 0 10px 0; margin: 0 0 10px 0; border-left: none; } .collection-anchor-nav__list {flex-direction: column; align-items: center; }}"
+      ],
+      "name": "Collection anchor nav",
+      "settings": {
+        "mobile_prefix": "",
+        "item_gap": 20,
+        "text_color": "",
+        "bg_color": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "section_text_JKeUVp": {
+      "type": "section-text",
+      "blocks": {
+        "text_aRT9Jx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each museum-quality Fine Art / Photography print is printed and framed in the USA on heavyweight matte, artist-grade, acid-free photo paper using archival inks.</p>",
+            "size": 100,
+            "max_width": 650,
+            "margin_bottom": 0
+          }
+        },
+        "text_q8UWYJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All of our artworks are custom-printed, custom-framed and made-to-order specifically for you.</p>",
+            "size": 100,
+            "max_width": 800,
+            "margin_bottom": 0
+          }
+        },
+        "text_xah8gt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All Sizes listed are outer border dimensions. On “Unframed” prints, we include a 1”-5” border for ample framing.</p>",
+            "size": 100,
+            "max_width": 875,
+            "margin_bottom": 0
+          }
+        },
+        "text_rKbiwp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dimensions listed below are identical for horizontal-formatted photography, but the dimensions are flipped.</p>",
+            "size": 100,
+            "max_width": 900,
+            "margin_bottom": 0
+          }
+        },
+        "text_gVBXJd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We currently do not offer our “Oversized Mat Framing” option on horizontal-formatted photography.</p>",
+            "size": 100,
+            "max_width": 800,
+            "margin_bottom": 0
+          }
+        },
+        "text_8fV96G": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All framed photography comes with hanging hardware. Every print comes with a Certificate of Authenticity.</p>",
+            "size": 100,
+            "max_width": 875,
+            "margin_bottom": 0
+          }
+        },
+        "text_Y7BtUG": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We currently do not offer our “Oversized Mat Framing” option on horizontal-formatted photography.</p>",
+            "size": 100,
+            "max_width": 800,
+            "margin_bottom": 0
+          }
+        },
+        "text_kWLGn7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For any questions, please contact us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a></p>",
+            "size": 100,
+            "max_width": 800,
+            "margin_bottom": 35
+          }
+        },
+        "subheading_rhripi": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>WE HAVE DONE OUR BEST TO SUPPLY SIZES, BUT GIVEN THE FACT THAT WE OFFER VARIOUS FRAMES & COLORS IN EACH SIZE, WHICH HAVE VARIOUS FACE WIDTHS, THESE SIZES LISTED MAY VARY SLIGHTLY BY 1-2” DEPENDING ON FRAME SELECTION.</p>",
+            "size": 100,
+            "margin_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_aRT9Jx",
+        "text_q8UWYJ",
+        "text_xah8gt",
+        "text_rKbiwp",
+        "text_gVBXJd",
+        "text_8fV96G",
+        "text_Y7BtUG",
+        "text_kWLGn7",
+        "subheading_rhripi"
+      ],
+      "custom_css": [
+        "#Text--subheading_rhripi p {letter-spacing: 1px; font-size: 12px; max-width: 730px; margin: auto; font-style: italic;}"
+      ],
+      "name": "Text",
+      "settings": {
+        "custom_class": "",
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "text_color": "text-dark",
+        "width": "wrapper--narrow",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "section_image_Lm9DkP": {
+      "type": "section-image",
+      "custom_css": [
+        ".section-image__container {margin: 4rem 0 0;}",
+        ".section-image__image {width: 100vw !important;}"
+      ],
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/image_95.jpg",
+        "allow_mobile_zoom": true,
+        "custom_id": "unframed",
+        "height": "original-height",
+        "enable_mobile_height": false,
+        "mobile_height": "original-height",
+        "enable_stretch": false,
+        "image_position": "center",
+        "bg_color_secondary": false,
+        "width": "wrapper--full",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_image_FU6JB4": {
+      "type": "section-image",
+      "custom_css": [
+        ".section-image__container {margin: 4rem 0 0;}",
+        ".section-image__image {width: 100vw !important;}"
+      ],
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/image_96.jpg",
+        "allow_mobile_zoom": true,
+        "custom_id": "oversized-mat-framing",
+        "height": "original-height",
+        "enable_mobile_height": false,
+        "mobile_height": "original-height",
+        "enable_stretch": false,
+        "image_position": "center",
+        "bg_color_secondary": false,
+        "width": "wrapper--full",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_image_VeQVBB": {
+      "type": "section-image",
+      "custom_css": [
+        ".section-image__container {margin: 4rem 0 0;}",
+        ".section-image__image {width: 100vw !important;}"
+      ],
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/image_97.jpg",
+        "allow_mobile_zoom": true,
+        "custom_id": "standard-mat-border-framing",
+        "height": "original-height",
+        "enable_mobile_height": false,
+        "mobile_height": "original-height",
+        "enable_stretch": false,
+        "image_position": "center",
+        "bg_color_secondary": false,
+        "width": "wrapper--full",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_image_NDcqzF": {
+      "type": "section-image",
+      "custom_css": [
+        ".section-image__container {margin: 4rem 0;}",
+        ".section-image__image {width: 100vw !important;}"
+      ],
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/image_98.jpg",
+        "allow_mobile_zoom": true,
+        "custom_id": "full-bleed-framing",
+        "height": "original-height",
+        "enable_mobile_height": false,
+        "mobile_height": "original-height",
+        "enable_stretch": false,
+        "image_position": "center",
+        "bg_color_secondary": false,
+        "width": "wrapper--full",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_text_BPViNP": {
+      "type": "section-text",
+      "blocks": {
+        "subheading_kbE6Rx": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>* PLEASE NOTE:<strong> </strong>(1) We offer certain images at even larger “Exhibition” & “Giant” sizes, in limited editions of 50 and 25 respectively. Contact us if you are interested in these larger limited edition sizes or a custom size. (2) Given the advancements in camera technology, not all older images/artwork can be printed perfectly at the larger sizes. While this doesn’t happen frequently, if we believe there may be an issue/concern with resolution of a specific print ordered, we will notify you. (3) Occasionally we have an image that does not fit proportionally well into our exact sizes listed above. If this is the case, we reserve the right to crop/edit the size of the print by 1”-2” on any given dimension in order to preserve the creative integrity of the original image/print. (4) Given the fact that we supply various frames and colors, which have various face widths & depths, these sizes listed may vary slightly by 1”-1.5” depending on frame. (5) For additional sizing/matting/framing questions, email us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a></p>",
+            "size": 100,
+            "margin_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading_kbE6Rx"
+      ],
+      "custom_css": [
+        "p {letter-spacing: 1px; font-size: 10px; max-width: 1000px; margin: 4rem auto 6rem; font-style: italic;}",
+        "@media (max-width: 899px) {p {font-size: 1.8vw; margin: 2rem auto 3rem; }}"
+      ],
+      "name": "Text",
+      "settings": {
+        "custom_class": "",
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "text_color": "text-dark",
+        "width": "wrapper--narrow",
+        "padding_top": 60,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_text_faALhq",
+    "wander_collection_thin_banner_jV9yY4",
+    "section_text_JKeUVp",
+    "section_image_Lm9DkP",
+    "section_image_FU6JB4",
+    "section_image_VeQVBB",
+    "section_image_NDcqzF",
+    "section_text_BPViNP"
+  ]
+}
