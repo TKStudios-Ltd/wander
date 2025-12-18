@@ -39,7 +39,7 @@
       ],
       "custom_css": [
         ".wrapper {margin-top: 2rem;}",
-        "strong {font-weight: 400; font-size: 10px;}"
+        "strong {font-weight: 400; font-size: 16px; vertical-align: super; margin-left: 3px;}"
       ],
       "name": "Text",
       "settings": {
