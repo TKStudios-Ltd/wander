@@ -18491,6 +18491,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   background: transparent;
   padding: 8px 15px;
   font-family: 'urw-din-semi-condensed';
+  text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 1.5px;
 }
