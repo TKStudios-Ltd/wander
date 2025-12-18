@@ -4681,7 +4681,9 @@ img[loading].is-loading {
   .contact-form input,
   .contact-form select,
   .recipient-form input,
-  .recipient-form select {
+  .recipient-form select,
+  .contact-form textarea, 
+  .recipient-form textarea {
     font-size: 10px;
   }
 }
@@ -4690,7 +4692,9 @@ img[loading].is-loading {
   .contact-form input,
   .contact-form select,
   .recipient-form input,
-  .recipient-form select {
+  .recipient-form select,
+  .contact-form textarea, 
+  .recipient-form textarea {
     font-size: 9px;
   }
 }
