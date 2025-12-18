@@ -34153,8 +34153,18 @@ div.footer-title h5 {
     display: none !important;
   }
 }
+@media (min-width: 750px) and (max-width: 989px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
 @media (min-width: 750px) {
   .hide-desk {
+    display: none !important;
+  }
+}
+@media (min-width: 990px) {
+  .hide-l-desk {
     display: none !important;
   }
 }
