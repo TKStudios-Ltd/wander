@@ -5441,7 +5441,7 @@ hr.hr--full {
     padding: 0 20px;
   }
 }
-@media (min-width: 750px) and (max-width: 889px) {
+@media (min-width: 750px) and (max-width: 899px) {
   .wrapper .text,
   .shopify-section--page .rte,
   .wrapper .section-image__container {
@@ -25603,6 +25603,8 @@ search-form mark {
   margin-bottom: 0.5rem;
   gap: 0.5rem;
 }
+
+@
 
 .product__price {
   display: flex;
