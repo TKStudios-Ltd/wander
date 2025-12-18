@@ -14313,6 +14313,12 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
 .blog__post-content {
   position: relative;
 }
+@media (max-width: 749px) {
+  .two-col .two-col__right .blog__post-content {
+    max-width: 250px;
+  }
+}
+
 .blog__post_main .blog__post-content {
   padding: 0 0.5rem 3rem;
 }
