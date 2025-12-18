@@ -1589,7 +1589,7 @@
       "custom_css": [
         ".image-with-text__text {max-width: 590px; margin: 20px auto 35px; padding: 1rem 2rem 0;}",
         ".image-with-text__text p strong {display: block; max-width: 390px; margin: auto;}",
-        "@media (max-width: 899px) {.image-with-text__content-items {padding: 5rem 2rem; } .image-with-text__text {margin-bottom: 20px !important; }}",
+        "@media (max-width: 989px) {.image-with-text__content-items {padding: 5rem 2rem; } .image-with-text__text {margin-bottom: 20px !important; }}",
         ".hover-scale img {transform: none;}"
       ],
       "name": "Image with text",
@@ -1673,7 +1673,7 @@
       "custom_css": [
         ".text .text__content {margin-left: 0 !important;}",
         ".text .text__heading {margin: -5px 0 25px -5px;}",
-        "@media (max-width: 899px) {.section-padding {padding: 100px 0 20px; }}"
+        "@media (max-width: 989px) {.section-padding {padding: 100px 0 20px; }}"
       ],
       "name": "Text",
       "settings": {
@@ -1690,7 +1690,7 @@
       "type": "section-image",
       "custom_css": [
         "@media (min-width: 768px) {img {padding-right: 8rem; }}",
-        "@media (min-width: 768px) and (max-width: 899px) {img {max-width: 60vw; height: 100%; }}",
+        "@media (min-width: 768px) and (max-width: 989px) {img {max-width: 60vw; height: 100%; }}",
         "@media (max-width: 767px) {img {padding: 0 2rem; }}"
       ],
       "name": "Image",

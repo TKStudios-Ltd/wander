@@ -290,7 +290,7 @@
         transform: scale(0.85) translate(0, 7.5%);
     }
 }
-@media (max-width: 899px) {
+@media (max-width: 989px) {
     .framing-configurator__product-info {
         padding: 1rem 0 0;
     }
@@ -413,7 +413,7 @@
         padding-left: 2rem !important;
     }
 }
-@media (max-width: 899px) {
+@media (max-width: 989px) {
     .framing-configurator__grid {
         flex-direction: column;
         margin: 2rem 0 4rem;
@@ -593,7 +593,7 @@ span.ruler-icon {
     left: 0.5rem;
     top: 0.5rem;
 }
-@media (max-width: 899px) {
+@media (max-width: 989px) {
     .order__sizing {
         display: inline;
         position: relative;

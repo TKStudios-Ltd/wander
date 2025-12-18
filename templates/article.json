@@ -13,7 +13,7 @@
       "type": "article",
       "custom_css": [
         "@media (min-width: 768px) {.breadcrumb__list .breadcrumb__item {font-size: 10px; }}",
-        "@media (min-width: 768px) and (max-width: 899px) {.article__wrapper {padding: 0 40px; }}"
+        "@media (min-width: 768px) and (max-width: 989px) {.article__wrapper {padding: 0 40px; }}"
       ],
       "settings": {
         "show_date": true,

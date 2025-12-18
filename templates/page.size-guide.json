@@ -348,7 +348,7 @@
       ],
       "custom_css": [
         "p {letter-spacing: 1px; font-size: 10px; max-width: 1000px; margin: 4rem auto 6rem; font-style: italic;}",
-        "@media (max-width: 899px) {p {font-size: 1.8vw; margin: 2rem auto 3rem; }}"
+        "@media (max-width: 989px) {p {font-size: 1.8vw; margin: 2rem auto 3rem; }}"
       ],
       "name": "Text",
       "settings": {

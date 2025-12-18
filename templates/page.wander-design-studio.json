@@ -127,7 +127,7 @@
         "contact-form-3"
       ],
       "custom_css": [
-        "@media (max-width: 899px) {.contact-form {padding: 0 3rem 6rem !important; } .section-padding {padding-top: 80px !important; }}",
+        "@media (max-width: 989px) {.contact-form {padding: 0 3rem 6rem !important; } .section-padding {padding-top: 80px !important; }}",
         "@media (min-width: 990px) {.contact-form {padding: 0 6rem 8rem !important; } .section-padding {padding-top: 100px !important; }}",
         ".wrapper {width: auto; max-width: 840px; padding: 0;}"
       ],
