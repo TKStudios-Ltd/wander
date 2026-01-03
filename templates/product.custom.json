@@ -233,7 +233,7 @@
         "product_list_UFNPkx"
       ],
       "custom_css": [
-        "@media (max-width: 749px) {.grid-item {padding: 0 3rem; }}"
+        "@media (max-width: 749px) {.grid-item {padding: 0 4rem; }}"
       ],
       "name": "Recommended products",
       "settings": {
