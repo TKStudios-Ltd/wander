@@ -25,18 +25,9 @@
         "image_m3dd6n": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/logo_42e44e33-154e-444f-ac53-7ec392df105f.svg",
-            "image_width": 60,
+            "image": "shopify://shop_images/Screenshot_2025-10-30_at_10.11.46_AM_1.png",
+            "image_width": 150,
             "image_link": ""
-          }
-        },
-        "text_dUbTGF": {
-          "type": "text",
-          "settings": {
-            "text": "<p>WANDER DESIGN STUDIO</p>",
-            "size": 100,
-            "max_width": 1000,
-            "margin_bottom": 0
           }
         },
         "separator_6niMB6": {
@@ -68,7 +59,6 @@
       },
       "block_order": [
         "image_m3dd6n",
-        "text_dUbTGF",
         "separator_6niMB6",
         "text_LyhPjM",
         "text_CgMi9t"
