@@ -238,49 +238,38 @@
 
 /* MEGA MENU */
 
-.wander-main-nav {
-  position: relative; /* anchor absolute dropdowns to full width nav */
-}
-
 .primary-menu-item.is-mega {
-  position: static; /* do not anchor to the li */
-}
-
-/* IMPORTANT: your existing hover rule adds padding: 1.5rem to .dropdown
-   This override keeps the mega menu flush */
-.primary-menu-item.is-mega.has-dropdown:hover > ul.dropdown {
-  padding: 0 !important;
+  position: static;
 }
 
 .primary-menu-item.is-mega > ul.dropdown {
   position: absolute !important;
   top: 100% !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;          /* flush to nav width */
-  margin-left: 0 !important;
-  transform: none !important;
 
-  padding: 0 !important;            /* flush */
+  left: 50% !important;
+  width: 100vw !important;
+  transform: translateX(-50%) !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: #fff !important;
+  z-index: 9999;
   box-sizing: border-box;
 }
 
-/* also remove the global dropdown inner padding for mega */
-.primary-menu-item.is-mega > ul.dropdown.nav-collections {
+/* If you have any global hover rule adding padding, keep this override */
+.primary-menu-item.is-mega.has-dropdown:hover > ul.dropdown {
   padding: 0 !important;
 }
 
-/* Center the inner content to your 800px */
+/* Keep your centered inner layout */
 .primary-menu-item.is-mega > ul.dropdown .dropdown__wrapper {
   width: 800px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 40px;
-  align-items: start;
-  padding: 1.5rem; /* add spacing INSIDE so edges stay flush */
-  box-sizing: border-box;
+  background: #fff; /* optional but safe */
 }
+
 
 .primary-menu-item.is-mega > ul.dropdown .dropdown__wrapper > li {
   margin-bottom: 18px;
