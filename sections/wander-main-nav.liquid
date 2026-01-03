@@ -703,8 +703,8 @@ ul.pushNav {
                             <!-- LEVEL 1 -->
                             <a href="{{ link.url }}">{{ link.title }}</a>
                             {% if link.links.size > 0 %}
-                                <div class="dropdown__wrapper">
                                 <ul class="dropdown nav-collections">
+                                    <div class="dropdown__wrapper">
                                     {% assign counter = 0 %}
                                     
                                     {% for sublink in link.links %}
@@ -746,8 +746,9 @@ ul.pushNav {
                                             
                                         {% assign counter = counter | plus: 1 %}
                                     {% endfor %}
+                                    </div>
+                                    
                                 </ul> 
-                                </div>
                             {% endif %}
                         </li>
                     {% endif %}
