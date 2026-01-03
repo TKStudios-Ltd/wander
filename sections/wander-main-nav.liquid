@@ -254,13 +254,12 @@
   position: static;
 }
 
-/* full width panel (viewport anchored) */
 .primary-menu-item.is-mega > .dropdown__wrapper {
   position: absolute;
   top: 100%;
 
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50vw);
   width: 100vw;
 
   background: #F8F8F8 !important;
@@ -270,12 +269,10 @@
   margin-top: 1px !important;
   box-sizing: border-box;
 
-  /* hide by default */
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 
-  /* optional: nicer */
   transition: opacity 150ms ease, visibility 150ms ease;
 }
 
