@@ -242,46 +242,45 @@
    MEGA MENU
    ========================= */
 
-/* ensure nothing clips the full-width panel */
-.wander-main-nav,
-.wander-main-nav .main-menu,
-.wander-main-nav .main-menu > li {
-  overflow: visible;
-}
+.primary-menu-item.is-mega { position: static; }
 
-/* important: the LI should not be the positioning context */
-.primary-menu-item.is-mega {
-  position: static;
-}
-
-.primary-menu-item.is-mega > .dropdown__wrapper {
+.primary-menu-item.is-mega > ul.dropdown {
   position: absolute;
   top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  max-width: calc(100% - 48px);
+  margin: 0;
+  padding: 32px 0;
+  background: transparent;
+  z-index: 1000;
+}
 
+.primary-menu-item.is-mega > ul.dropdown::before {
+  content: "";
+  position: absolute;
+  top: 0;
   left: 50%;
   transform: translateX(-50vw);
   width: 100vw;
-
-  background: #F8F8F8 !important;
-  z-index: 1000;
-
-  padding: 32px 0;
-  margin-top: 1px !important;
-  box-sizing: border-box;
-
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-
-  transition: opacity 150ms ease, visibility 150ms ease;
+  height: 100%;
+  background: #F8F8F8;
+  z-index: -1;
 }
 
-/* show on hover/focus */
-.primary-menu-item.is-mega.has-dropdown:hover > .dropdown__wrapper,
-.primary-menu-item.is-mega.has-dropdown:focus-within > .dropdown__wrapper {
+.primary-menu-item.is-mega.has-dropdown:hover > ul.dropdown,
+.primary-menu-item.is-mega.has-dropdown:focus-within > ul.dropdown {
   opacity: 1;
-  pointer-events: auto;
   visibility: visible;
+  pointer-events: auto;
+}
+
+.primary-menu-item.is-mega > ul.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 150ms ease, visibility 150ms ease;
 }
 
 /* inner UL becomes centered container + grid */
