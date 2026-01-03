@@ -234,43 +234,34 @@
         margin-top: 15px;
         padding-left: 12px;
         
-    }
-
-/* MEGA MENU */
-
-.primary-menu-item.is-mega {
-  position: static; /* lets the panel position relative to the nav, not the li box */
 }
 
-/* Make the wrapper the actual panel */
-.primary-menu-item.is-mega > .dropdown__wrapper {
-  display: none; /* only show on hover like your dropdown */
+
+
+/* =========================
+   MEGA MENU (STABLE VERSION)
+   ========================= */
+
+/* anchor dropdown safely */
+.primary-menu-item.is-mega {
+  position: relative;
+}
+
+/* dropdown panel */
+.primary-menu-item.is-mega > ul.dropdown {
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100vw;
 
-  background: #F8F8F8;
-  padding: 0;
-  margin: 0;
-  z-index: 999;
-  box-sizing: border-box;
-}
-
-/* Show mega on hover/focus */
-.primary-menu-item.is-mega.has-dropdown:hover > .dropdown__wrapper,
-.primary-menu-item.is-mega.has-dropdown:focus-within > .dropdown__wrapper {
-  display: block;
-}
-
-/* Inner UL becomes the centered "container" */
-.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown {
   width: 800px;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 24px; /* inner padding here */
+  padding: 32px 24px;
+  margin: 0;
+
+  background: #F8F8F8;
   box-sizing: border-box;
+  z-index: 999;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -280,110 +271,104 @@
   list-style: none;
 }
 
-/* Optional: kill any old dropdown padding that makes it not flush */
-.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown.nav-collections {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-/* Your existing column targeting can stay, just update selectors if needed */
-.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li {
+/* base spacing */
+.primary-menu-item.is-mega > ul.dropdown > li {
   margin-bottom: 18px;
 }
 
-
-/* Column 1 */
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(1) {
+/* -----------------
+   COLUMN 1
+   ----------------- */
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) {
   grid-column: 1;
   grid-row: 1;
   font-weight: 600;
 }
 
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(1) > ul.nav-collections {
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) > ul.nav-collections {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 50px;
+  row-gap: 8px;
   padding-left: 0;
   margin-top: 20px;
-  margin-left: 0;
 }
 
-@media (min-width: 1200px) {
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(1) > ul.nav-collections {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* make level 3 items normal weight */
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(1) > ul.nav-collections li,
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(2) > ul.nav-collections li {
-  font-weight: 400;
-}
-
-/* Column 2 */
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(2) {
+/* -----------------
+   COLUMN 2
+   ----------------- */
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) {
   grid-column: 2;
   grid-row: 1;
   font-weight: 600;
 }
 
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(2) > ul.nav-collections {
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) > ul.nav-collections {
   padding-left: 0;
   margin-top: 20px;
-  margin-left: 0;
 }
 
-/* Column 3 fake stacking */
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(3),
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(4),
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(5),
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(6) {
+/* level-3 normal weight */
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) ul li,
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) ul li {
+  font-weight: 400;
+}
+
+/* -----------------
+   COLUMN 3 (FAKE STACK)
+   ----------------- */
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3),
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4),
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5),
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) {
   grid-column: 3;
   grid-row: 1;
-  position: relative;
   font-weight: 600;
+  position: relative;
 }
 
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(3) { margin-top: 0; }
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(4) { margin-top: 30px; }
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(5) { margin-top: 60px; }
-.primary-menu-item.is-mega > ul.dropdown  > li:nth-child(6) { margin-top: 90px; }
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3) { margin-top: 0; }
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4) { margin-top: 32px; }
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5) { margin-top: 64px; }
+.primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) { margin-top: 96px; }
 
-/* Tablet layout */
+/* =========================
+   TABLET (990–1199)
+   ========================= */
 @media (min-width: 990px) and (max-width: 1199px) {
-  .primary-menu-item.is-mega > ul.dropdown  {
+
+  .primary-menu-item.is-mega > ul.dropdown {
     width: 674px;
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
-    row-gap: 0;
-    align-items: start;
-    padding: 1.5rem;
   }
 
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(1) {
+  /* full-width first column */
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) {
     grid-column: 1 / -1;
     grid-row: 1;
   }
 
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(2) {
+  /* second column */
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) {
     grid-column: 1;
     grid-row: 2;
   }
 
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(3),
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(4),
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(5),
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(6) {
+  /* fake stacked right column */
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(3),
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(4),
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(5),
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) {
     grid-column: 2;
     grid-row: 2;
-    position: relative;
   }
 
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(3) { margin-top: 0; }
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(4) { margin-top: 26px; }
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(5) { margin-top: 52px; }
-  .primary-menu-item.is-mega > ul.dropdown  > li:nth-child(6) { margin-top: 78px; }
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(3) { margin-top: 0; }
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(4) { margin-top: 28px; }
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(5) { margin-top: 56px; }
+  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) { margin-top: 84px; }
 }
+
 
 
 /* MEGA MENU (END) */
