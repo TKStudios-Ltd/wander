@@ -239,20 +239,19 @@
 /* MEGA MENU */
 
 .primary-menu-item.is-mega {
-    position: relative;
+  position: static; /* important: don't anchor to the li */
 }
 .primary-menu-item.is-mega > ul.dropdown {
-    position: absolute !important;
-    top: 100% !important;
-
-    width: 100vw !important;
-    max-width: 100vw !important;
-
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-
-    margin: 0 !important;
-    overflow-x: clip;
+  position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+  width: 100vw !important;
+  margin-left: -50vw !important;
+  right: auto !important;
+  transform: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
 }
 .primary-menu-item.is-mega > ul.dropdown .dropdown__wrapper {
     width: 800px;
