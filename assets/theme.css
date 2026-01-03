@@ -34028,10 +34028,10 @@ div.footer-title h5 {
 }
 @media (max-width: 767px) {
   .product-card .product-card__image.with-frame img {
-    border-width: 2vw !important;
+    border-width: 1.5vw !important;
   }
   .product-card .product-card__image.with-matte img {
-    padding: 3vw !important;
+    padding: 2vw !important;
   }
   .search-grid .product-card .product-card__image.with-frame img {
     border-width: 1.5vw !important;
