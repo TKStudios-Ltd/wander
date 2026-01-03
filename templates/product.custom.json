@@ -1,1 +1,333 @@
-{"sections":{"main":{"type":"product","blocks":{"breadcrumbs_cTKAyL":{"type":"breadcrumbs","settings":{"subheading":"breadcrumbs","padding_bottom":20}},"title":{"type":"title","settings":{"title_size":100,"show_wishlist":false,"padding_bottom":20}},"wishlist_plus_wishlist_pdp_button_9LbFJc":{"type":"shopify:\/\/apps\/wishlist-plus\/blocks\/wishlist-pdp-button\/80c3b1fc-3a8f-407e-8367-ffdeebb8b612","settings":{"swym_atw_button_icon":"heart","swym_atw_icon_thickness":1.3,"swym_atw_display_btn_text":false,"swym_button_position":"product_title_right","swym_atw_button_vertical_offset":0,"swym_atw_full_width":true,"swym_atw_button_alignment":"right","swym_add_to_wishlist_color":"#000000","swym_added_to_wishlist_color":"#f8f8f8","swym_button_text_color":"#000000","swym_atw_border_color":"#000000","swym_atw_border_thickness":0,"swym_atw_button_border_radius":0,"swym_enable_hover_customization":false,"swym_hover_add_to_wishlist_color":"#d02e2e","swym_hover_added_to_wishlist_color":"#d3d3d3","swym_hover_button_text_color":"#ffffff","swym_hover_atw_border_color":"#000000","swym_hover_atw_border_thickness":0,"swym_hover_atw_button_border_radius":0,"swym_custom_css":".atw-button-add, #swym-atw-pdp-button {\nbackground: none;\n}"}},"description":{"type":"description","settings":{"padding_bottom":20}},"text_y4eLPp":{"type":"text","settings":{"title":"<p><a href=\"\/pages\/size-guide\" title=\"Size Guide\">Size Guide<\/a><\/p>","text_alignment":"left","padding_bottom":20}},"product_accordion":{"type":"product_accordion","settings":{"accordion_heading":"Size guide","heading_style":"font-body","accordion_text":"{{ block.settings.accordion_page.content }}","accordion_page":"","padding_bottom":10}},"form":{"type":"form","settings":{"show_labels":true,"show_quantity":true,"show_payment_button":false,"instructions":"<p>(1) CHOOSE SIZE (2) CHOOSE FRAMING OPTION (3) CHOOSE FRAME COLOR<\/p><p>*NOTE: All sizes listed above are outside dimensions of our STANDARD FRAMED OPTION. Various matting\/framing options will change or decrease outside dimensions. See SIZE GUIDE for full SIZING & FRAMING details. White & Natural & Black are Standard Hardwood Gallery Frames.<\/p>","sizing":"<p>For additional information, sizing & options see tables below & SIZE GUIDE <a href=\"\/pages\/size-guide\" title=\"Size Guide\">Size Guide<\/a><\/p>","enable_subscriptions_selectors":false,"show_price":true,"show_price_label":true,"price_size":100,"bold_price":false,"padding_bottom":20}},"upsell_V6dpfM":{"type":"upsell","disabled":true,"settings":{"product_list":["oversized-mat-selection"],"padding_bottom":0}}},"block_order":["breadcrumbs_cTKAyL","title","wishlist_plus_wishlist_pdp_button_9LbFJc","description","text_y4eLPp","product_accordion","form","upsell_V6dpfM"],"disabled":true,"custom_css":["a.breadcrumbs__link,.breadcrumbs__current {font-size: 10px; text-transform: uppercase; font-family: \"urw-din-semi-condensed\"; letter-spacing: 1.5px; line-height: 15.3px;}",".product-upsell__holder {border: 0px solid green;}","#view-toggle-button {font-family: \"urw-din-semi-condensed\";}",".opacity-100 {}"],"settings":{"product_sticky_enable":true,"image_layout":"carousel","image_width":"standard","product_image_aspect_ratio":false,"enable_zoom":false,"enable_video_looping":false,"bg_color":"","width":"wrapper","padding_top":62,"padding_bottom":60}},"framing_configurator_CEdJ68":{"type":"framing-configurator","name":"Framing Config","settings":{"show_payment_button":false,"instructions_text":"<p>*NOTE: All sizes listed above are outside dimensions of our STANDARD FRAMED OPTION. Various matting\/framing options will change or decrease outside dimensions. See SIZE GUIDE for full SIZING & FRAMING details. White & Natural & Black are Standard Hardwood Gallery Frames. Pale Ash, White Wash & Grey Ash are 'Black Label' Frames & add add'l cost & time.<\/p>"}},"tabs_nW9JLK":{"type":"tabs","blocks":{"tab_BWEk4B":{"type":"tab","settings":{"title":"DETAILS","content":"<p>All of our WANDERINGS™ Fine Art \/ Photography Prints are custom-printed and framed just for you—and because of this, we do not accept returns.<br\/>All photography & artwork is by WANDER founder, Renee Cara. <br\/><br\/><span style=\"text-decoration:underline\"><strong>All WANDERINGS<\/strong><\/span><strong>™<\/strong><span style=\"text-decoration:underline\"><strong> Fine Art Photography Prints include the following:<\/strong><\/span><\/p><ul><li>Custom-printed to order<\/li><li>Printed on heavyweight archival acid-free paper, using archival inks—to last for generations to come<\/li><li>Printed with a 1”-5” border to allow for sufficient framing<\/li><li>Include a Certificate of Authenticity<\/li><\/ul><p><span style=\"text-decoration:underline\"><strong>All FRAME Fine Art Photography Prints include the above list, PLUS the following:<\/strong><\/span><\/p><ul><li>Custom-framed to order<\/li><li>Choice of natural hardwood frame moulding<\/li><li>Lightweight protective acrylic<\/li><li>Archival backing, and matting if selected<\/li><li>Hanging hardware<\/li><li>Protective paperback finish<\/li><\/ul><p>For more information, click on the tabs above.  Also see our SIZING\/FRAMING GUIDES <a href=\"\/pages\/size-guide\" target=\"_blank\" title=\"\/pages\/size-guide\">HERE<\/a>.<\/p><p><strong>NOTE: *While we make every effort to ensure color accuracy, variations may occur due to differences in screens and printers.<\/strong><\/p>"}},"tab_UzRQpg":{"type":"tab","settings":{"title":"SIZING","content":"<p>We offer most of our WANDERINGS™ PRINTS in the following STANDARD SIZES:<br\/><br\/><span style=\"text-decoration:underline\"><strong>SMALL - 16\" x 20\" - (Open Edition)<\/strong><\/span><br\/>Image Size: 9” x 13”<br\/>Unframed Paper Size: 16\" x 20”<br\/>Framed w\/ Border\/Mat Size: 16\" x 20”<br\/>Framed w\/ Full Bleed Size: 10.5\" x 14.5”<br\/>Framed w\/ Oversized Mat: Image Size: 8” x 10”; Outer dimension 16” x 20”, variable mat<br\/><br\/><span style=\"text-decoration:underline\"><strong>MEDIUM - 20\" x 27\" - (Open Edition)<\/strong><\/span><span style=\"text-decoration:underline\"><br\/><\/span>Image Size: 14.5” x 21.5”<br\/>Unframed Paper Size: 20” x 27”<br\/>Framed w\/ Border\/Mat Size*: 20” x 27”<br\/>Framed w\/Full Bleed Size: 16” x 23”<br\/>Framed w\/ Oversized Mat: Image Size: 10” x 13”; Outer dimension 20” x 27”, variable mat<br\/><br\/><span style=\"text-decoration:underline\"><strong>LARGE - 25\" x 33\" - (Open Edition)<\/strong><\/span><br\/>Image Size: 19” x 27”<br\/>Unframed Paper Size: 25” x 33”<br\/>Framed w\/ Border\/Mat Size*: 25” x 33”<br\/>Framed w\/Full Bleed Size: 21” x 29”<br\/>Framed w\/ Oversized Mat: Image Size: 13” x 17”; Outer dimension 25” x 33”, variable mat<br\/><br\/><span style=\"text-decoration:underline\"><strong>GALLERY - 31\" x 42\" - (Open Edition)<\/strong><\/span><br\/>Image Size: 25” x 36”<br\/>Unframed Paper Size: 31” x 42”<br\/>Framed w\/ Border\/Mat Size*: 31 x 42”<br\/>Framed w\/Full Bleed Size: 27” x 38”<br\/>Framed w\/ Oversized Mat: we do not offer this option at this size <br\/><br\/><span style=\"text-decoration:underline\"><strong>STATEMENT - 36\" x 51\" - (Open Edition)<\/strong><\/span><br\/>Image Size: 30” x 45”<br\/>Unframed Paper Size: 36” x 51”<br\/>Framed w\/ Border\/Mat Size*: 36 x 51”<br\/>Framed w\/Full Bleed Size: 32 x 47”<br\/>Framed w\/ Oversized Mat: we do not offer this option at this size <br\/><br\/><span style=\"text-decoration:underline\"><strong>COLLECTOR - 40\" x 58\" - (Limited Edition of 200)<\/strong><\/span><br\/>Image Size: 35” x 53”<br\/>Unframed Paper Size: 40” x 58”<br\/>Framed w\/ Border\/Mat Size*: 40 x 58”<br\/>Framed w\/Full Bleed Size: 37” x 55”<br\/>Framed w\/ Oversized Mat: we do not offer this option at this size <\/p><p><br\/>We also offer select WANDERINGS™ PRINTS in the following OVERSIZED CUSTOM ORDER LIMITED EDITION sizes (Contact us for these two sizes):<br\/><br\/><span style=\"text-decoration:underline\"><strong>EXHIBITION - 46\" x 66\" - (Limited Edition of 50)<\/strong><\/span><br\/>Image Size: 40” x 60”<br\/>Unframed Paper Size: 46” x 66”<br\/>Framed w\/Full Bleed Size: 42” x 62”<br\/>Framed w\/ Border\/Mat Size*: 46” x 66”<br\/><br\/><span style=\"text-decoration:underline\"><strong>GIANT - 50\" x 74\" - Limited Edition of 25<\/strong><\/span><br\/>Image Size: 48” x 72”<br\/>Unframed Paper Size: 52” x 76”<br\/>Framed w\/Full Bleed Size: 50 x 74”<br\/>Framed w\/ Border\/Mat Size*: UNAVAILABLE at this size<br\/><\/p><p><br\/>PLEASE NOTE: <\/p><ol><li>Our Small, Medium and Large Border\/Mat Framed prints come with a 2-2.75\" mat board border & are framed in our Classic Frame Style<\/li><li>Our Gallery, Statement and Collector Border\/Mat Framed prints come with a 1-2” fine art paper border & are framed in our Premium Shadow Box Style<\/li><li>Our Oversized Mat Framing option comes only in SMALL, MEDIUM and LARGE sizes - and is NOT AVAILABLE on horizontal formatted artwork (vertical only)<\/li><li>Our framed canvas option is currently only offered for our FINE ART SERIES COLLECTIONS. For sizing, follow the Full Bleed Sizing above.<\/li><li>All sizes above are based on outer dimensions. <\/li><li>For more detailed charts and SIZE IN ROOM, click on our SIZE GUIDE <a href=\"\/pages\/size-guide\" target=\"_blank\" title=\"\/pages\/size-guide\">HERE<\/a>. <\/li><li>Occasionally an image does not fit proportionally into our standard sizes. We reserve the right to add or subtract up to 2” per dimension, to honor the proportions of the image. <\/li><li>Our frames vary slightly in face width\/depth, so the sizes listed may vary 1”-2”, depending on frame. <\/li><li>Not all of our prints can be printed at some of our larger sizes. We will notify you if there is an issue with your order.<\/li><li>Please contact us directly at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a> if you are interested in inquiring about our oversized EXHIBITION & GIANT sizes. These sizes are CUSTOM ORDER LIMITED EDITION PRINTS, not available for order directly on our website. <\/li><li>We encourage you to measure your space carefully, paying attention to the total outer framed size. We even suggest that you make an outline on your wall with removable painters tape, so you can visually see the size—the sizing may surprise you!<\/li><\/ol>"}},"tab_ed79Mc":{"type":"tab","settings":{"title":"FRAMING & MATTING","content":"<p>All of our UNFRAMED prints are custom-printed just for you—and come with a 1”-5\" border all around to allow for ample framing. Unframed prints are carefully rolled & shipped in a mailing tube. <\/p><p>All FRAMED prints are custom-framed just for you—with lightweight protective acrylic, acid-free mats, archival backing, and beautiful hardwood frames. Each FRAMED print comes wrapped with a kraft paper backing & hanging hardware. All prints are custom-framed in the USA.<\/p><p><span style=\"text-decoration:underline\"><strong>We offer our prints in the following framing\/matting options:<\/strong><\/span><\/p><ul><li>“Unframed”—the artwork ships to you unframed—for your framing flexibility<\/li><li>“Framed Full Bleed”—the artwork extends all the way to the edges of the frame, without a mat—a modern look<\/li><li>“Framed w\/ Standard Border\/Mat”—the artwork has a border or mat around the image—a traditional look<\/li><li>“Framed w\/ Oversized Mat” — a limited time offering— this option has excess matting—an intimate look<\/li><li>“Framed Canvas” — the artwork is printed on canvas, and framed full bleed—this option is available only on select FINE ART SERIES Collections<\/li><\/ul><p><span style=\"text-decoration:underline\"><strong>Additional framing\/matting details:<\/strong><\/span><\/p><p>Our Small, Medium and Large-sized “Framed w\/ Standard Border\/Mat” prints come with a 2-2.75\" mat board border & are framed in our Classic Frame Style. Our Gallery, Statement and Collector-sized “Framed w\/ Standard Border\/Mat” prints come with a 1-2” fine art paper border & are framed in our Premium Shadow Box Style. Shadow box framing adds extra depth between the artwork and the acrylic. It creates a beautiful definition around the artwork and is the preferred choice of most photographers, galleries and designers.<\/p><p>Our “Framed w\/ Oversized Mat” is only available on our vertical formatted artwork\/photography—in small, medium and large sizes only. <\/p><p><span style=\"text-decoration:underline\"><strong>Frame colors:<\/strong><\/span><\/p><p>We offer STANDARD hardwood frame options in WHITE and NATURAL wood\/colors, both of which pair particularly well with the light & airy feel of our our WANDERINGS™ Fine Art Photography Prints. We also offer a STANDARD hardwood frame in BLACK, on select photography\/artwork.  <\/p><p>Additionally, we offer a selection of “BLACK LABEL” handmade wood frames in various hardwoods\/finishes. They add extra cost and an additional 2 weeks production time on top of our normal 2-3 week framing timeline, but they are a work of art in themselves!  The “BLACK LABEL” frames available on our website are: WHITE WASH, PALE ASH, GREY ASH—and we have other “BLACK LABEL” wood\/finishes available as a custom order.<\/p><p>Please note: Due to the variations in hardwoods\/colors, our Standard NATURAL frame will vary in color and may vary from the photos shown—with pink, yellow, orange or grey\/neutral undertones. If you want a specific natural wood color, our BLACK LABEL FRAMES offer more consistent wood\/color selections. Or contact us at <a href=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a> so we can help you find the best fit. <\/p><p>We also offer custom framing options. If you don’t see what you are looking for or are a trade partner, please contact us directly at <a href=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a> to discuss other options. You can join our TRADE PROGRAM <a href=\"\/pages\/trade-program\" target=\"_blank\" title=\"\/pages\/trade-program\">HERE<\/a>. <\/p><p>See our GUIDES <a href=\"\/pages\/size-guide\" target=\"_blank\" title=\"\/pages\/size-guide\">HERE<\/a> for more information on frame colors and options.<\/p>"}},"tab_Lz9DDz":{"type":"tab","settings":{"title":"OPEN & LIMITED EDITION","content":"<p><span style=\"text-decoration:underline\"><strong>OPEN-EDITION PRINTS:<\/strong><\/span><br\/><br\/>Our SMALL, MEDIUM, LARGE, GALLERY, and STATEMENT-sized prints are being offered as Open Edition Prints—meaning their quantity is not limited.  All WANDERINGS™ Fine Art Photography Open Edition prints purchased through our www.shopwander.com website include a Certificate of Authenticity included in the packaging—which guarantees the authenticity of the print.<\/p><p><span style=\"text-decoration:underline\"><strong><br\/>LIMITED-EDITION PRINTS:<\/strong><\/span><\/p><p>Our COLLECTOR-sized and our two Custom Order Oversized EXHIBITION and GIANT-sized prints are offered as Limited Edition prints—meaning their quantity IS limited. Their edition runs are as follows:<\/p><p>COLLECTOR - LIMITED EDITION OF 200, Comes with numbered\/signed Certificate of Authenticity<br\/>EXHIBITION - LIMITED EDITION OF 50, Comes with numbered\/signed Certificate of Authenticity<br\/>GIANT - LIMITED EDITION OF 25, Comes with numbered\/signed Certificate of Authenticity<\/p><p>These WANDERINGS™ Fine Art\/Photography Limited Edition prints are truly special, & include a numbered\/signed Certificate of Authenticity with each print, depicting its series number in the Limited Edition, and guaranteeing the authenticity of the print. To maintain the integrity & value of the piece, we encourage you to store the certificate in a safe place. Please note that prices of Limited Edition prints may increase as limited editions run close.<\/p><p>PLEASE NOTE: Not all of our artwork\/photography is available at our larger sizes. Please contact us directly at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a> for availability regarding any EXHIBITION & GIANT-Sized prints.<\/p><p><span style=\"text-decoration:underline\"><strong><br\/>SIGNATURE SERIES - LIMITED-EDITION PRINTS:<\/strong><\/span><\/p><p>Occasionally we offer certain artwork\/photography as SIGNATURE SERIES LIMITED EDITION Fine Art\/Photography prints in Limited Editions in our Standard SMALL, MEDIUM, LARGE, GALLERY, and STATEMENT sizes, in runs of 50-200 per print, per size. When offered, these will be notated on our website as such, and will include a numbered\/signed Certificate of Authenticity with each print, depicting its series number in the Limited Edition.<\/p>"}},"tab_HfanXU":{"type":"tab","settings":{"title":"MATERIALS","content":"<p>We have extensive background in design, printmaking, and photography—and have a deep appreciation for the craft. We use the highest quality materials for our prints—and we work with experts in these trades. We are committed to the environment and are pro-active in using natural materials as much as possible. We are conscious of toxins & waste.<\/p><p>Each artwork is custom-processed and sent out for custom printing and framing, based on your selections. The companies we use produce high-end archival prints and framing for professional artists, photographers, galleries & museums. From Hahnemühle, to Canson, Epson, or Moab—we use only high-end archival heavyweight papers that are ideal for printing both black & white and color images. We use archival pigment inks, ensuring that your print is archival. We process, print and frame all artwork in the US.<\/p><p>All framed artwork is custom-framed with plexiglass, acid-free mat, archival acid-free backing and a beautiful natural wood frame. We also offer special handmade BLACK LABEL FRAMES in various colors\/finishes, which are a work of art in themselves. Make sure to check out our tabs above and our SIZE GUIDE <a href=\"\/pages\/size-guide\" target=\"_blank\" title=\"\/pages\/size-guide\">HERE<\/a> for more details.  <\/p><p>Each UNFRAMED print is carefully placed in a cardboard recyclable tube for shipment. All UNFRAMED prints come with a 1-5\" border, for adequate framing. If you order a FRAMED print, it will arrive with a kraft paper backing, and hanging hardware. All framed prints arrive in a recyclable box or crate, depending on size.<\/p><p>No matter the size, framing option, or edition type—all of our WANDERINGS™ FINE ART\/PHOTOGRAPHY PRINTS receive the highest level of care. We make all efforts to make sure your artwork arrives to you in beautiful condition, so you can enjoy it, for years to come.<\/p>"}},"tab_3fyJjx":{"type":"tab","settings":{"title":"SHIPPING & RETURNS","content":"<p><span style=\"text-decoration:underline\"><strong>SHIPPING:<\/strong><\/span><\/p><p>Each print is custom-printed and custom-framed by hand, just for you—and we take great care in this process. So please allow 2-3 weeks to receive a shipment notification for our UNFRAMED prints. All STANDARD FRAMED artwork can take up to 3-4 weeks to print, mount, frame and ship, so please allow up to 4 weeks for a shipment notification for our STANDARD FRAMED prints. If ordering a BLACK LABEL frame with your print, please allow an additional 2 weeks (4-6 weeks total), as there is additional production time to custom-make each BLACK LABEL frame, by hand. Once your artwork ships, you will receive a tracking number to the email address you provided, so you can follow your shipment. All UNFRAMED prints are sent in a durable tube. All FRAMED prints come packaged tightly in a flat kraft box or crate with protective packaging.<\/p><p>Currently, we are offering FREE standard US domestic ground shipping to addresses in the contiguous US, with the purchase of each of our UNFRAMED Fine Art\/Photography Prints. We are also offering FREE standard US domestic ground shipping to addresses in the contiguous US for all FRAMED prints in our SMALL, MEDIUM, LARGE, and GALLERY sizes. Our larger-sized STATEMENT & COLLECTOR FRAMED prints have additional shipping requirements due to their size—shipping cost will be calculated at checkout. <\/p><p>At this time we are only taking ONLINE orders to addresses inside of the contiguous US. If you are in Hawaii, Alaska, Canada, or International and would like to place an order, please contact us directly at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a>.<\/p><p><span style=\"text-decoration:underline\"><strong><br\/>RETURNS:<\/strong><\/span><\/p><p>All pieces are custom-printed and framed to order based on your selected size, frame and matting options, just for you. Due to this, we are unable to accept returns or exchanges —All sales are final. We also cannot make any changes or cancellations to your order after 24 hours. <\/p><p>We make all efforts to ensure your print arrives safely to you. Once you receive, please immediately and carefully unpack and inspect your artwork, to make sure of safe arrival. If your print has arrived damaged in transit, please contact us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a> within 72-hours of receipt. Photographic evidence must be provided for any damages, including photos of the shipping box or container, in order to be remedied. If damage is evident, we will remedy the situation with a repair or replacement. We do not issue refunds. We cannot be responsible for damages past 72-hours after arrival. If your print is returned to us due to an incorrect shipping address, or unsuccessful attempts made to deliver your package, or other unknown causes not of our fault, additional shipping fees may apply for us to re-route the parcel back to you. <\/p>"}},"tab_qFaDxj":{"type":"tab","settings":{"title":"SUSTAINABILITY","content":"<p>We are proud to be a company that puts sustainability at the forefront... and our materials & processes reflect our commitment to this mission.  <\/p><p>We use natural materials wherever possible and work with partners in local markets to ensure the shortest possible shipping. We use high quality hardwood frames, and FSC certified materials when possible. <\/p><p>For every WANDERINGS™ PRINT sold here on our www.shopwander.com website, we will plant a tree, in partnership with ONE TREE PLANTED. <\/p><p>Additionally, with the purchase of every print sold within our GIVING BACK Program, we are donating a % of the profits to an environmental or wildlife cause in need. You can read more about which Collections we are currently featuring, and how we are GIVING BACK, <a href=\"\/pages\/giving-back\" target=\"_blank\" title=\"\/pages\/giving-back\">HERE<\/a>. <\/p><p>Read more about our SUSTAINABILITY MISSION <a href=\"\/pages\/mission\" target=\"_blank\" title=\"\/pages\/mission\">HERE<\/a>.<\/p>"}},"tab_UigrnG":{"type":"tab","settings":{"title":"CUSTOM & TRADE","content":"<p>Feel free to contact us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a> if you are interested in a custom size\/frame option. <\/p><p>If you are a designer, contractor, gallery owner, or in the trade—please join our WANDER TRADE PROGRAM <a href=\"\/pages\/trade-program\" target=\"_blank\" title=\"\/pages\/trade-program\">HERE<\/a>, for tailored support and exclusive benefits. <\/p><p>We also offer select WANDERINGS™ PRINTS in the following OVERSIZED CUSTOM ORDER LIMITED EDITION sizes, not available on our website:<br\/><br\/><span style=\"text-decoration:underline\"><strong>EXHIBITION - 46\" x 66\" - (Limited Edition of 50)<\/strong><\/span><br\/>Image Size: 40” x 60”<br\/>Unframed Paper Size: 46” x 66”<br\/>Framed w\/Full Bleed Size: 42” x 62”<br\/>Framed w\/ Border\/Mat Size*: 46” x 66”<br\/><br\/><span style=\"text-decoration:underline\"><strong>GIANT - 50\" x 74\" - (Limited Edition of 25)<\/strong><\/span><br\/>Image Size: 48” x 72”<br\/>Unframed Paper Size: 52” x 76”<br\/>Framed w\/Full Bleed Size: 50 x 74”<br\/>Framed w\/ Border\/Mat Size*: UNAVAILABLE at this size<\/p>"}}},"block_order":["tab_BWEk4B","tab_UzRQpg","tab_ed79Mc","tab_Lz9DDz","tab_HfanXU","tab_3fyJjx","tab_qFaDxj","tab_UigrnG"],"name":"Tabs","settings":{}},"section_recommended_products_iY3FTK":{"type":"section-recommended-products","blocks":{"product_list_UFNPkx":{"type":"product_list","settings":{"product_list":["pink-palms-4","pink-palms-5","pink-palms-6"]}}},"block_order":["product_list_UFNPkx"],"name":"Recommended products","settings":{"title":"Pairs well with","swym_enabled":true,"width":"wrapper","padding_top":100,"padding_bottom":100}},"section_text_yc3dJC":{"type":"section-text","blocks":{"separator_YbdFKV":{"type":"separator","settings":{"separator_width":30,"margin_top":60,"margin_bottom":60}},"text_9bLyaH":{"type":"text","settings":{"text":"<p>WE BELIEVE IN HAVING A MINIMAL ENVIRONMENTAL FOOTPRINT.<br\/>WITH THE PURCHASE OF EVERY PRINT BOUGHT DIRECTLY ON OUR WEBSITE,<br\/>WE WILL PLANT A TREE, IN PARTNERSHIP WITH ONE TREE PLANTED.<br\/>YOU CAN READ MORE ABOUT HOW WE ARE GIVING BACK, <a href=\"\/pages\/giving-back\" target=\"_blank\" title=\"Giving Back\">HERE<\/a>.<br\/><\/p>","size":100,"max_width":1000,"margin_bottom":16}},"separator_dczE4Y":{"type":"separator","settings":{"separator_width":30,"margin_top":60,"margin_bottom":60}}},"block_order":["separator_YbdFKV","text_9bLyaH","separator_dczE4Y"],"custom_css":["p {font-family: Libre Baskerville, serif; font-size: 11px !important; text-transform: uppercase; letter-spacing: 1px; line-height: 1.8;}","@media (max-width: 749px) {p {font-size: 1.4vw !important; }}","a {text-decoration: none;}","a:hover {text-decoration: underline;}"],"name":"Text","settings":{"custom_class":"","text_position":"center","bg_color_secondary":false,"text_color":"text-dark","width":"wrapper--narrow","padding_top":60,"padding_bottom":60}},"related":{"type":"related-products","blocks":{"related_JAPgWt":{"type":"related","settings":{"title":"Pairs Well With","product_recommendations_limit":4}}},"block_order":["related_JAPgWt"],"disabled":true,"settings":{"enable_tabs":false,"columns_mobile":"1","type_style":"subheading-text","tab_heading_size":120,"bg_color":"","width":"wrapper--full-padded","padding_top":60,"padding_bottom":60}}},"order":["main","framing_configurator_CEdJ68","tabs_nW9JLK","section_recommended_products_iY3FTK","section_text_yc3dJC","related"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "breadcrumbs_cTKAyL": {
+          "type": "breadcrumbs",
+          "settings": {
+            "subheading": "breadcrumbs",
+            "padding_bottom": 20
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": 100,
+            "show_wishlist": false,
+            "padding_bottom": 20
+          }
+        },
+        "wishlist_plus_wishlist_pdp_button_9LbFJc": {
+          "type": "shopify://apps/wishlist-plus/blocks/wishlist-pdp-button/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+          "settings": {
+            "swym_atw_button_icon": "heart",
+            "swym_atw_icon_thickness": 1.3,
+            "swym_atw_display_btn_text": false,
+            "swym_button_position": "product_title_right",
+            "swym_atw_button_vertical_offset": 0,
+            "swym_atw_full_width": true,
+            "swym_atw_button_alignment": "right",
+            "swym_add_to_wishlist_color": "#000000",
+            "swym_added_to_wishlist_color": "#f8f8f8",
+            "swym_button_text_color": "#000000",
+            "swym_atw_border_color": "#000000",
+            "swym_atw_border_thickness": 0,
+            "swym_atw_button_border_radius": 0,
+            "swym_enable_hover_customization": false,
+            "swym_hover_add_to_wishlist_color": "#d02e2e",
+            "swym_hover_added_to_wishlist_color": "#d3d3d3",
+            "swym_hover_button_text_color": "#ffffff",
+            "swym_hover_atw_border_color": "#000000",
+            "swym_hover_atw_border_thickness": 0,
+            "swym_hover_atw_button_border_radius": 0,
+            "swym_custom_css": ".atw-button-add, #swym-atw-pdp-button {\nbackground: none;\n}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "padding_bottom": 20
+          }
+        },
+        "text_y4eLPp": {
+          "type": "text",
+          "settings": {
+            "title": "<p><a href=\"/pages/size-guide\" title=\"Size Guide\">Size Guide</a></p>",
+            "text_alignment": "left",
+            "padding_bottom": 20
+          }
+        },
+        "product_accordion": {
+          "type": "product_accordion",
+          "settings": {
+            "accordion_heading": "Size guide",
+            "heading_style": "font-body",
+            "accordion_text": "{{ block.settings.accordion_page.content }}",
+            "accordion_page": "",
+            "padding_bottom": 10
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_labels": true,
+            "show_quantity": true,
+            "show_payment_button": false,
+            "instructions": "<p>(1) CHOOSE SIZE (2) CHOOSE FRAMING OPTION (3) CHOOSE FRAME COLOR</p><p>*NOTE: All sizes listed above are outside dimensions of our STANDARD FRAMED OPTION. Various matting/framing options will change or decrease outside dimensions. See SIZE GUIDE for full SIZING & FRAMING details. White & Natural & Black are Standard Hardwood Gallery Frames.</p>",
+            "sizing": "<p>For additional information, sizing & options see tables below & SIZE GUIDE <a href=\"/pages/size-guide\" title=\"Size Guide\">Size Guide</a></p>",
+            "enable_subscriptions_selectors": false,
+            "show_price": true,
+            "show_price_label": true,
+            "price_size": 100,
+            "bold_price": false,
+            "padding_bottom": 20
+          }
+        },
+        "upsell_V6dpfM": {
+          "type": "upsell",
+          "disabled": true,
+          "settings": {
+            "product_list": [
+              "oversized-mat-selection"
+            ],
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumbs_cTKAyL",
+        "title",
+        "wishlist_plus_wishlist_pdp_button_9LbFJc",
+        "description",
+        "text_y4eLPp",
+        "product_accordion",
+        "form",
+        "upsell_V6dpfM"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "a.breadcrumbs__link,.breadcrumbs__current {font-size: 10px; text-transform: uppercase; font-family: \"urw-din-semi-condensed\"; letter-spacing: 1.5px; line-height: 15.3px;}",
+        ".product-upsell__holder {border: 0px solid green;}",
+        "#view-toggle-button {font-family: \"urw-din-semi-condensed\";}",
+        ".opacity-100 {}"
+      ],
+      "settings": {
+        "product_sticky_enable": true,
+        "image_layout": "carousel",
+        "image_width": "standard",
+        "product_image_aspect_ratio": false,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "bg_color": "",
+        "width": "wrapper",
+        "padding_top": 62,
+        "padding_bottom": 60
+      }
+    },
+    "framing_configurator_CEdJ68": {
+      "type": "framing-configurator",
+      "name": "Framing Config",
+      "settings": {
+        "show_payment_button": false,
+        "instructions_text": "<p>*NOTE: All sizes listed above are outside dimensions of our STANDARD FRAMED OPTION. Various matting/framing options will change or decrease outside dimensions. See SIZE GUIDE for full SIZING & FRAMING details. White & Natural & Black are Standard Hardwood Gallery Frames. Pale Ash, White Wash & Grey Ash are 'Black Label' Frames & add add'l cost & time.</p>"
+      }
+    },
+    "tabs_nW9JLK": {
+      "type": "tabs",
+      "blocks": {
+        "tab_BWEk4B": {
+          "type": "tab",
+          "settings": {
+            "title": "DETAILS",
+            "content": "<p>All of our WANDERINGS™ Fine Art / Photography Prints are custom-printed and framed just for you—and because of this, we do not accept returns.<br/>All photography & artwork is by WANDER founder, Renee Cara. <br/><br/><span style=\"text-decoration:underline\"><strong>All WANDERINGS</strong></span><strong>™</strong><span style=\"text-decoration:underline\"><strong> Fine Art Photography Prints include the following:</strong></span></p><ul><li>Custom-printed to order</li><li>Printed on heavyweight archival acid-free paper, using archival inks—to last for generations to come</li><li>Printed with a 1”-5” border to allow for sufficient framing</li><li>Include a Certificate of Authenticity</li></ul><p><span style=\"text-decoration:underline\"><strong>All FRAME Fine Art Photography Prints include the above list, PLUS the following:</strong></span></p><ul><li>Custom-framed to order</li><li>Choice of natural hardwood frame moulding</li><li>Lightweight protective acrylic</li><li>Archival backing, and matting if selected</li><li>Hanging hardware</li><li>Protective paperback finish</li></ul><p>For more information, click on the tabs above.  Also see our SIZING/FRAMING GUIDES <a href=\"/pages/size-guide\" target=\"_blank\" title=\"/pages/size-guide\">HERE</a>.</p><p><strong>NOTE: *While we make every effort to ensure color accuracy, variations may occur due to differences in screens and printers.</strong></p>"
+          }
+        },
+        "tab_UzRQpg": {
+          "type": "tab",
+          "settings": {
+            "title": "SIZING",
+            "content": "<p>We offer most of our WANDERINGS™ PRINTS in the following STANDARD SIZES:<br/><br/><span style=\"text-decoration:underline\"><strong>SMALL - 16\" x 20\" - (Open Edition)</strong></span><br/>Image Size: 9” x 13”<br/>Unframed Paper Size: 16\" x 20”<br/>Framed w/ Border/Mat Size: 16\" x 20”<br/>Framed w/ Full Bleed Size: 10.5\" x 14.5”<br/>Framed w/ Oversized Mat: Image Size: 8” x 10”; Outer dimension 16” x 20”, variable mat<br/><br/><span style=\"text-decoration:underline\"><strong>MEDIUM - 20\" x 27\" - (Open Edition)</strong></span><span style=\"text-decoration:underline\"><br/></span>Image Size: 14.5” x 21.5”<br/>Unframed Paper Size: 20” x 27”<br/>Framed w/ Border/Mat Size*: 20” x 27”<br/>Framed w/Full Bleed Size: 16” x 23”<br/>Framed w/ Oversized Mat: Image Size: 10” x 13”; Outer dimension 20” x 27”, variable mat<br/><br/><span style=\"text-decoration:underline\"><strong>LARGE - 25\" x 33\" - (Open Edition)</strong></span><br/>Image Size: 19” x 27”<br/>Unframed Paper Size: 25” x 33”<br/>Framed w/ Border/Mat Size*: 25” x 33”<br/>Framed w/Full Bleed Size: 21” x 29”<br/>Framed w/ Oversized Mat: Image Size: 13” x 17”; Outer dimension 25” x 33”, variable mat<br/><br/><span style=\"text-decoration:underline\"><strong>GALLERY - 31\" x 42\" - (Open Edition)</strong></span><br/>Image Size: 25” x 36”<br/>Unframed Paper Size: 31” x 42”<br/>Framed w/ Border/Mat Size*: 31 x 42”<br/>Framed w/Full Bleed Size: 27” x 38”<br/>Framed w/ Oversized Mat: we do not offer this option at this size <br/><br/><span style=\"text-decoration:underline\"><strong>STATEMENT - 36\" x 51\" - (Open Edition)</strong></span><br/>Image Size: 30” x 45”<br/>Unframed Paper Size: 36” x 51”<br/>Framed w/ Border/Mat Size*: 36 x 51”<br/>Framed w/Full Bleed Size: 32 x 47”<br/>Framed w/ Oversized Mat: we do not offer this option at this size <br/><br/><span style=\"text-decoration:underline\"><strong>COLLECTOR - 40\" x 58\" - (Limited Edition of 200)</strong></span><br/>Image Size: 35” x 53”<br/>Unframed Paper Size: 40” x 58”<br/>Framed w/ Border/Mat Size*: 40 x 58”<br/>Framed w/Full Bleed Size: 37” x 55”<br/>Framed w/ Oversized Mat: we do not offer this option at this size </p><p><br/>We also offer select WANDERINGS™ PRINTS in the following OVERSIZED CUSTOM ORDER LIMITED EDITION sizes (Contact us for these two sizes):<br/><br/><span style=\"text-decoration:underline\"><strong>EXHIBITION - 46\" x 66\" - (Limited Edition of 50)</strong></span><br/>Image Size: 40” x 60”<br/>Unframed Paper Size: 46” x 66”<br/>Framed w/Full Bleed Size: 42” x 62”<br/>Framed w/ Border/Mat Size*: 46” x 66”<br/><br/><span style=\"text-decoration:underline\"><strong>GIANT - 50\" x 74\" - Limited Edition of 25</strong></span><br/>Image Size: 48” x 72”<br/>Unframed Paper Size: 52” x 76”<br/>Framed w/Full Bleed Size: 50 x 74”<br/>Framed w/ Border/Mat Size*: UNAVAILABLE at this size<br/></p><p><br/>PLEASE NOTE: </p><ol><li>Our Small, Medium and Large Border/Mat Framed prints come with a 2-2.75\" mat board border & are framed in our Classic Frame Style</li><li>Our Gallery, Statement and Collector Border/Mat Framed prints come with a 1-2” fine art paper border & are framed in our Premium Shadow Box Style</li><li>Our Oversized Mat Framing option comes only in SMALL, MEDIUM and LARGE sizes - and is NOT AVAILABLE on horizontal formatted artwork (vertical only)</li><li>Our framed canvas option is currently only offered for our FINE ART SERIES COLLECTIONS. For sizing, follow the Full Bleed Sizing above.</li><li>All sizes above are based on outer dimensions. </li><li>For more detailed charts and SIZE IN ROOM, click on our SIZE GUIDE <a href=\"/pages/size-guide\" target=\"_blank\" title=\"/pages/size-guide\">HERE</a>. </li><li>Occasionally an image does not fit proportionally into our standard sizes. We reserve the right to add or subtract up to 2” per dimension, to honor the proportions of the image. </li><li>Our frames vary slightly in face width/depth, so the sizes listed may vary 1”-2”, depending on frame. </li><li>Not all of our prints can be printed at some of our larger sizes. We will notify you if there is an issue with your order.</li><li>Please contact us directly at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a> if you are interested in inquiring about our oversized EXHIBITION & GIANT sizes. These sizes are CUSTOM ORDER LIMITED EDITION PRINTS, not available for order directly on our website. </li><li>We encourage you to measure your space carefully, paying attention to the total outer framed size. We even suggest that you make an outline on your wall with removable painters tape, so you can visually see the size—the sizing may surprise you!</li></ol>"
+          }
+        },
+        "tab_ed79Mc": {
+          "type": "tab",
+          "settings": {
+            "title": "FRAMING & MATTING",
+            "content": "<p>All of our UNFRAMED prints are custom-printed just for you—and come with a 1”-5\" border all around to allow for ample framing. Unframed prints are carefully rolled & shipped in a mailing tube. </p><p>All FRAMED prints are custom-framed just for you—with lightweight protective acrylic, acid-free mats, archival backing, and beautiful hardwood frames. Each FRAMED print comes wrapped with a kraft paper backing & hanging hardware. All prints are custom-framed in the USA.</p><p><span style=\"text-decoration:underline\"><strong>We offer our prints in the following framing/matting options:</strong></span></p><ul><li>“Unframed”—the artwork ships to you unframed—for your framing flexibility</li><li>“Framed Full Bleed”—the artwork extends all the way to the edges of the frame, without a mat—a modern look</li><li>“Framed w/ Standard Border/Mat”—the artwork has a border or mat around the image—a traditional look</li><li>“Framed w/ Oversized Mat” — a limited time offering— this option has excess matting—an intimate look</li><li>“Framed Canvas” — the artwork is printed on canvas, and framed full bleed—this option is available only on select FINE ART SERIES Collections</li></ul><p><span style=\"text-decoration:underline\"><strong>Additional framing/matting details:</strong></span></p><p>Our Small, Medium and Large-sized “Framed w/ Standard Border/Mat” prints come with a 2-2.75\" mat board border & are framed in our Classic Frame Style. Our Gallery, Statement and Collector-sized “Framed w/ Standard Border/Mat” prints come with a 1-2” fine art paper border & are framed in our Premium Shadow Box Style. Shadow box framing adds extra depth between the artwork and the acrylic. It creates a beautiful definition around the artwork and is the preferred choice of most photographers, galleries and designers.</p><p>Our “Framed w/ Oversized Mat” is only available on our vertical formatted artwork/photography—in small, medium and large sizes only. </p><p><span style=\"text-decoration:underline\"><strong>Frame colors:</strong></span></p><p>We offer STANDARD hardwood frame options in WHITE and NATURAL wood/colors, both of which pair particularly well with the light & airy feel of our our WANDERINGS™ Fine Art Photography Prints. We also offer a STANDARD hardwood frame in BLACK, on select photography/artwork.  </p><p>Additionally, we offer a selection of “BLACK LABEL” handmade wood frames in various hardwoods/finishes. They add extra cost and an additional 2 weeks production time on top of our normal 2-3 week framing timeline, but they are a work of art in themselves!  The “BLACK LABEL” frames available on our website are: WHITE WASH, PALE ASH, GREY ASH—and we have other “BLACK LABEL” wood/finishes available as a custom order.</p><p>Please note: Due to the variations in hardwoods/colors, our Standard NATURAL frame will vary in color and may vary from the photos shown—with pink, yellow, orange or grey/neutral undertones. If you want a specific natural wood color, our BLACK LABEL FRAMES offer more consistent wood/color selections. Or contact us at <a href=\"mailto:hello@shopwander.com\">hello@shopwander.com</a> so we can help you find the best fit. </p><p>We also offer custom framing options. If you don’t see what you are looking for or are a trade partner, please contact us directly at <a href=\"mailto:hello@shopwander.com\">hello@shopwander.com</a> to discuss other options. You can join our TRADE PROGRAM <a href=\"/pages/trade-program\" target=\"_blank\" title=\"/pages/trade-program\">HERE</a>. </p><p>See our GUIDES <a href=\"/pages/size-guide\" target=\"_blank\" title=\"/pages/size-guide\">HERE</a> for more information on frame colors and options.</p>"
+          }
+        },
+        "tab_Lz9DDz": {
+          "type": "tab",
+          "settings": {
+            "title": "OPEN & LIMITED EDITION",
+            "content": "<p><span style=\"text-decoration:underline\"><strong>OPEN-EDITION PRINTS:</strong></span><br/><br/>Our SMALL, MEDIUM, LARGE, GALLERY, and STATEMENT-sized prints are being offered as Open Edition Prints—meaning their quantity is not limited.  All WANDERINGS™ Fine Art Photography Open Edition prints purchased through our www.shopwander.com website include a Certificate of Authenticity included in the packaging—which guarantees the authenticity of the print.</p><p><span style=\"text-decoration:underline\"><strong><br/>LIMITED-EDITION PRINTS:</strong></span></p><p>Our COLLECTOR-sized and our two Custom Order Oversized EXHIBITION and GIANT-sized prints are offered as Limited Edition prints—meaning their quantity IS limited. Their edition runs are as follows:</p><p>COLLECTOR - LIMITED EDITION OF 200, Comes with numbered/signed Certificate of Authenticity<br/>EXHIBITION - LIMITED EDITION OF 50, Comes with numbered/signed Certificate of Authenticity<br/>GIANT - LIMITED EDITION OF 25, Comes with numbered/signed Certificate of Authenticity</p><p>These WANDERINGS™ Fine Art/Photography Limited Edition prints are truly special, & include a numbered/signed Certificate of Authenticity with each print, depicting its series number in the Limited Edition, and guaranteeing the authenticity of the print. To maintain the integrity & value of the piece, we encourage you to store the certificate in a safe place. Please note that prices of Limited Edition prints may increase as limited editions run close.</p><p>PLEASE NOTE: Not all of our artwork/photography is available at our larger sizes. Please contact us directly at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a> for availability regarding any EXHIBITION & GIANT-Sized prints.</p><p><span style=\"text-decoration:underline\"><strong><br/>SIGNATURE SERIES - LIMITED-EDITION PRINTS:</strong></span></p><p>Occasionally we offer certain artwork/photography as SIGNATURE SERIES LIMITED EDITION Fine Art/Photography prints in Limited Editions in our Standard SMALL, MEDIUM, LARGE, GALLERY, and STATEMENT sizes, in runs of 50-200 per print, per size. When offered, these will be notated on our website as such, and will include a numbered/signed Certificate of Authenticity with each print, depicting its series number in the Limited Edition.</p>"
+          }
+        },
+        "tab_HfanXU": {
+          "type": "tab",
+          "settings": {
+            "title": "MATERIALS",
+            "content": "<p>We have extensive background in design, printmaking, and photography—and have a deep appreciation for the craft. We use the highest quality materials for our prints—and we work with experts in these trades. We are committed to the environment and are pro-active in using natural materials as much as possible. We are conscious of toxins & waste.</p><p>Each artwork is custom-processed and sent out for custom printing and framing, based on your selections. The companies we use produce high-end archival prints and framing for professional artists, photographers, galleries & museums. From Hahnemühle, to Canson, Epson, or Moab—we use only high-end archival heavyweight papers that are ideal for printing both black & white and color images. We use archival pigment inks, ensuring that your print is archival. We process, print and frame all artwork in the US.</p><p>All framed artwork is custom-framed with plexiglass, acid-free mat, archival acid-free backing and a beautiful natural wood frame. We also offer special handmade BLACK LABEL FRAMES in various colors/finishes, which are a work of art in themselves. Make sure to check out our tabs above and our SIZE GUIDE <a href=\"/pages/size-guide\" target=\"_blank\" title=\"/pages/size-guide\">HERE</a> for more details.  </p><p>Each UNFRAMED print is carefully placed in a cardboard recyclable tube for shipment. All UNFRAMED prints come with a 1-5\" border, for adequate framing. If you order a FRAMED print, it will arrive with a kraft paper backing, and hanging hardware. All framed prints arrive in a recyclable box or crate, depending on size.</p><p>No matter the size, framing option, or edition type—all of our WANDERINGS™ FINE ART/PHOTOGRAPHY PRINTS receive the highest level of care. We make all efforts to make sure your artwork arrives to you in beautiful condition, so you can enjoy it, for years to come.</p>"
+          }
+        },
+        "tab_3fyJjx": {
+          "type": "tab",
+          "settings": {
+            "title": "SHIPPING & RETURNS",
+            "content": "<p><span style=\"text-decoration:underline\"><strong>SHIPPING:</strong></span></p><p>Each print is custom-printed and custom-framed by hand, just for you—and we take great care in this process. So please allow 2-3 weeks to receive a shipment notification for our UNFRAMED prints. All STANDARD FRAMED artwork can take up to 3-4 weeks to print, mount, frame and ship, so please allow up to 4 weeks for a shipment notification for our STANDARD FRAMED prints. If ordering a BLACK LABEL frame with your print, please allow an additional 2 weeks (4-6 weeks total), as there is additional production time to custom-make each BLACK LABEL frame, by hand. Once your artwork ships, you will receive a tracking number to the email address you provided, so you can follow your shipment. All UNFRAMED prints are sent in a durable tube. All FRAMED prints come packaged tightly in a flat kraft box or crate with protective packaging.</p><p>Currently, we are offering FREE standard US domestic ground shipping to addresses in the contiguous US, with the purchase of each of our UNFRAMED Fine Art/Photography Prints. We are also offering FREE standard US domestic ground shipping to addresses in the contiguous US for all FRAMED prints in our SMALL, MEDIUM, LARGE, and GALLERY sizes. Our larger-sized STATEMENT & COLLECTOR FRAMED prints have additional shipping requirements due to their size—shipping cost will be calculated at checkout. </p><p>At this time we are only taking ONLINE orders to addresses inside of the contiguous US. If you are in Hawaii, Alaska, Canada, or International and would like to place an order, please contact us directly at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a>.</p><p><span style=\"text-decoration:underline\"><strong><br/>RETURNS:</strong></span></p><p>All pieces are custom-printed and framed to order based on your selected size, frame and matting options, just for you. Due to this, we are unable to accept returns or exchanges —All sales are final. We also cannot make any changes or cancellations to your order after 24 hours. </p><p>We make all efforts to ensure your print arrives safely to you. Once you receive, please immediately and carefully unpack and inspect your artwork, to make sure of safe arrival. If your print has arrived damaged in transit, please contact us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a> within 72-hours of receipt. Photographic evidence must be provided for any damages, including photos of the shipping box or container, in order to be remedied. If damage is evident, we will remedy the situation with a repair or replacement. We do not issue refunds. We cannot be responsible for damages past 72-hours after arrival. If your print is returned to us due to an incorrect shipping address, or unsuccessful attempts made to deliver your package, or other unknown causes not of our fault, additional shipping fees may apply for us to re-route the parcel back to you. </p>"
+          }
+        },
+        "tab_qFaDxj": {
+          "type": "tab",
+          "settings": {
+            "title": "SUSTAINABILITY",
+            "content": "<p>We are proud to be a company that puts sustainability at the forefront... and our materials & processes reflect our commitment to this mission.  </p><p>We use natural materials wherever possible and work with partners in local markets to ensure the shortest possible shipping. We use high quality hardwood frames, and FSC certified materials when possible. </p><p>For every WANDERINGS™ PRINT sold here on our www.shopwander.com website, we will plant a tree, in partnership with ONE TREE PLANTED. </p><p>Additionally, with the purchase of every print sold within our GIVING BACK Program, we are donating a % of the profits to an environmental or wildlife cause in need. You can read more about which Collections we are currently featuring, and how we are GIVING BACK, <a href=\"/pages/giving-back\" target=\"_blank\" title=\"/pages/giving-back\">HERE</a>. </p><p>Read more about our SUSTAINABILITY MISSION <a href=\"/pages/mission\" target=\"_blank\" title=\"/pages/mission\">HERE</a>.</p>"
+          }
+        },
+        "tab_UigrnG": {
+          "type": "tab",
+          "settings": {
+            "title": "CUSTOM & TRADE",
+            "content": "<p>Feel free to contact us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a> if you are interested in a custom size/frame option. </p><p>If you are a designer, contractor, gallery owner, or in the trade—please join our WANDER TRADE PROGRAM <a href=\"/pages/trade-program\" target=\"_blank\" title=\"/pages/trade-program\">HERE</a>, for tailored support and exclusive benefits. </p><p>We also offer select WANDERINGS™ PRINTS in the following OVERSIZED CUSTOM ORDER LIMITED EDITION sizes, not available on our website:<br/><br/><span style=\"text-decoration:underline\"><strong>EXHIBITION - 46\" x 66\" - (Limited Edition of 50)</strong></span><br/>Image Size: 40” x 60”<br/>Unframed Paper Size: 46” x 66”<br/>Framed w/Full Bleed Size: 42” x 62”<br/>Framed w/ Border/Mat Size*: 46” x 66”<br/><br/><span style=\"text-decoration:underline\"><strong>GIANT - 50\" x 74\" - (Limited Edition of 25)</strong></span><br/>Image Size: 48” x 72”<br/>Unframed Paper Size: 52” x 76”<br/>Framed w/Full Bleed Size: 50 x 74”<br/>Framed w/ Border/Mat Size*: UNAVAILABLE at this size</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_BWEk4B",
+        "tab_UzRQpg",
+        "tab_ed79Mc",
+        "tab_Lz9DDz",
+        "tab_HfanXU",
+        "tab_3fyJjx",
+        "tab_qFaDxj",
+        "tab_UigrnG"
+      ],
+      "name": "Tabs",
+      "settings": {}
+    },
+    "section_recommended_products_iY3FTK": {
+      "type": "section-recommended-products",
+      "blocks": {
+        "product_list_UFNPkx": {
+          "type": "product_list",
+          "settings": {
+            "product_list": [
+              "pink-palms-4",
+              "pink-palms-5",
+              "pink-palms-6"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "product_list_UFNPkx"
+      ],
+      "custom_css": [
+        "@media (max-width: 749px) {.grid-item {padding: 0 2.5rem; }}"
+      ],
+      "name": "Recommended products",
+      "settings": {
+        "title": "Pairs well with",
+        "swym_enabled": true,
+        "width": "wrapper",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "section_text_yc3dJC": {
+      "type": "section-text",
+      "blocks": {
+        "separator_YbdFKV": {
+          "type": "separator",
+          "settings": {
+            "separator_width": 30,
+            "margin_top": 60,
+            "margin_bottom": 60
+          }
+        },
+        "text_9bLyaH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>WE BELIEVE IN HAVING A MINIMAL ENVIRONMENTAL FOOTPRINT.<br/>WITH THE PURCHASE OF EVERY PRINT BOUGHT DIRECTLY ON OUR WEBSITE,<br/>WE WILL PLANT A TREE, IN PARTNERSHIP WITH ONE TREE PLANTED.<br/>YOU CAN READ MORE ABOUT HOW WE ARE GIVING BACK, <a href=\"/pages/giving-back\" target=\"_blank\" title=\"Giving Back\">HERE</a>.<br/></p>",
+            "size": 100,
+            "max_width": 1000,
+            "margin_bottom": 16
+          }
+        },
+        "separator_dczE4Y": {
+          "type": "separator",
+          "settings": {
+            "separator_width": 30,
+            "margin_top": 60,
+            "margin_bottom": 60
+          }
+        }
+      },
+      "block_order": [
+        "separator_YbdFKV",
+        "text_9bLyaH",
+        "separator_dczE4Y"
+      ],
+      "custom_css": [
+        "p {font-family: Libre Baskerville, serif; font-size: 11px !important; text-transform: uppercase; letter-spacing: 1px; line-height: 1.8;}",
+        "@media (max-width: 749px) {p {font-size: 1.4vw !important; }}",
+        "a {text-decoration: none;}",
+        "a:hover {text-decoration: underline;}"
+      ],
+      "name": "Text",
+      "settings": {
+        "custom_class": "",
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "text_color": "text-dark",
+        "width": "wrapper--narrow",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "related": {
+      "type": "related-products",
+      "blocks": {
+        "related_JAPgWt": {
+          "type": "related",
+          "settings": {
+            "title": "Pairs Well With",
+            "product_recommendations_limit": 4
+          }
+        }
+      },
+      "block_order": [
+        "related_JAPgWt"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_tabs": false,
+        "columns_mobile": "1",
+        "type_style": "subheading-text",
+        "tab_heading_size": 120,
+        "bg_color": "",
+        "width": "wrapper--full-padded",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "framing_configurator_CEdJ68",
+    "tabs_nW9JLK",
+    "section_recommended_products_iY3FTK",
+    "section_text_yc3dJC",
+    "related"
+  ]
+}
