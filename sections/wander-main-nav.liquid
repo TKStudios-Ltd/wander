@@ -239,135 +239,172 @@
 
 
 /* =========================
-   MEGA MENU (STABLE VERSION)
+   MEGA MENU (FIXED FOR NEW LIQUID)
+   Structure now is:
+   li.is-mega > .dropdown__wrapper > ul.dropdown.nav-collections > li...
    ========================= */
 
-/* anchor dropdown safely */
-.primary-menu-item.is-mega {
+/* Make sure the overall nav can be the positioning context */
+.wander-main-nav {
   position: relative;
 }
 
-/* dropdown panel */
-.primary-menu-item.is-mega > ul.dropdown {
+/* Keep normal dropdown behavior as-is, but mega uses its own wrapper */
+.primary-menu-item.is-mega {
+  position: static; /* so wrapper can position relative to .wander-main-nav */
+}
+
+/* FULL-WIDTH PANEL (flush to viewport edges) */
+.primary-menu-item.is-mega > .dropdown__wrapper {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
 
-  width: 800px;
-  max-width: 100%;
-  padding: 32px 24px;
-  margin: 0;
+  width: 100vw;
+  background: #F8F8F8 !important;
+  z-index: 1000;
+  margin-top: 1px !important;
 
-  background: #F8F8F8;
+  /* panel padding */
+  padding: 32px 0;
   box-sizing: border-box;
-  z-index: 999;
+}
 
-  display: grid;
+/* SHOW mega panel on hover/focus */
+.primary-menu-item.is-mega.has-dropdown:hover > .dropdown__wrapper,
+.primary-menu-item.is-mega.has-dropdown:focus-within > .dropdown__wrapper {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* INNER GRID CONTAINER (centered 800px) */
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown.nav-collections {
+  /* override base .dropdown rules */
+  position: static !important;
+  transform: none !important;
+  left: auto !important;
+  top: auto !important;
+  width: 800px !important;
+  max-width: calc(100% - 48px) !important; /* keeps side breathing room */
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+
+  opacity: 1 !important;            /* wrapper handles fade */
+  pointer-events: auto !important;   /* wrapper handles pointer events */
+
+  display: grid !important;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
   align-items: start;
 
   list-style: none;
+  box-sizing: border-box;
 }
 
 /* base spacing */
-.primary-menu-item.is-mega > ul.dropdown > li {
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li {
   margin-bottom: 18px;
 }
 
-/* -----------------
-   COLUMN 1
-   ----------------- */
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) {
+/* COLUMN 1 heading */
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(1) {
   grid-column: 1;
   grid-row: 1;
   font-weight: 600;
 }
 
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) > ul.nav-collections {
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(1) > ul.nav-collections {
   display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 8px;
+  grid-template-columns: 1fr; /* keep single column like your NEW design */
+  row-gap: 0;
   padding-left: 0;
   margin-top: 20px;
+  margin-left: 0;
 }
 
-/* -----------------
-   COLUMN 2
-   ----------------- */
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) {
+/* COLUMN 2 heading */
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(2) {
   grid-column: 2;
   grid-row: 1;
   font-weight: 600;
 }
 
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) > ul.nav-collections {
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(2) > ul.nav-collections {
   padding-left: 0;
   margin-top: 20px;
+  margin-left: 0;
 }
 
-/* level-3 normal weight */
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) ul li,
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) ul li {
+/* Level 3 items normal weight */
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(1) > ul.nav-collections li,
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(2) > ul.nav-collections li {
   font-weight: 400;
 }
 
-/* -----------------
-   COLUMN 3 (FAKE STACK)
-   ----------------- */
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5),
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) {
+/* COLUMN 3 fake stacking (no huge vertical gaps) */
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(3),
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(4),
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(5),
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(6) {
   grid-column: 3;
   grid-row: 1;
-  font-weight: 600;
   position: relative;
+  font-weight: 600;
+  margin-bottom: 0; /* important: stop adding real stacking space */
 }
 
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(3) { margin-top: 0; }
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(4) { margin-top: 32px; }
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(5) { margin-top: 64px; }
-.primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) { margin-top: 96px; }
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(3) { margin-top: 0; }
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(4) { margin-top: 30px; }
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(5) { margin-top: 60px; }
+.primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(6) { margin-top: 90px; }
+
 
 /* =========================
    TABLET (990–1199)
+   col 1 full width, then col 2 + col 3 as two columns (fake stacked right)
    ========================= */
 @media (min-width: 990px) and (max-width: 1199px) {
 
-  .primary-menu-item.is-mega > ul.dropdown {
-    width: 674px;
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown.nav-collections {
+    width: 674px !important;
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
   }
 
-  /* full-width first column */
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(1) {
+  /* col 1 full width top row */
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(1) {
     grid-column: 1 / -1;
     grid-row: 1;
   }
 
-  /* second column */
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(2) {
+  /* left column second row */
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(2) {
     grid-column: 1;
     grid-row: 2;
   }
 
-  /* fake stacked right column */
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(3),
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(4),
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(5),
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) {
+  /* right column second row, fake stacked */
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(3),
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(4),
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(5),
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(6) {
     grid-column: 2;
     grid-row: 2;
+    margin-bottom: 0;
   }
 
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(3) { margin-top: 0; }
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(4) { margin-top: 28px; }
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(5) { margin-top: 56px; }
-  .primary-menu-item.is-mega > ul.dropdown > li:nth-child(6) { margin-top: 84px; }
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(3) { margin-top: 0; }
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(4) { margin-top: 26px; }
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(5) { margin-top: 52px; }
+  .primary-menu-item.is-mega > .dropdown__wrapper > ul.dropdown > li:nth-child(6) { margin-top: 78px; }
 }
+
 
 
 
