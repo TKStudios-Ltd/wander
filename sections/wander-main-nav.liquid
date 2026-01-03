@@ -253,6 +253,23 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
   align-items: start;
+  position: relative;
+}
+.primary-menu-item.is-mega > ul.dropdown:before {
+    position: absolute;
+    left: -50vw;
+    content: "";
+    background: white;
+    height: 100%;
+    width: 100vw;
+}
+.primary-menu-item.is-mega > ul.dropdown:after {
+    position: absolute;
+    right: -50vw;
+    content: "";
+    background: white;
+    height: 100%;
+    width: 100vw;
 }
 
 .primary-menu-item.is-mega > ul.dropdown  > li {
