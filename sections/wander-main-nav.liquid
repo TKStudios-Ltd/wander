@@ -674,6 +674,7 @@
                             <a href="{{ link.url }}">{{ link.title }}</a>
                             {% if link.links.size > 0 %}
                                 <ul class="dropdown nav-collections">
+                                    <div class="dropdown__wrapper">
                                     {% assign counter = 0 %}
                                     
                                     {% for sublink in link.links %}
@@ -715,6 +716,7 @@
                                             
                                         {% assign counter = counter | plus: 1 %}
                                     {% endfor %}
+                                    </div>
                                 </ul> 
                             {% endif %}
                         </li>
