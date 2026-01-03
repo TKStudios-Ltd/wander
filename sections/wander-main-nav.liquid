@@ -250,6 +250,7 @@
   top: 100%;
   left: 0;
   background: #F8F8F8;
+  padding: 0 !important;
 }
 
 .primary-menu-item.is-mega > ul.dropdown .dropdown__wrapper {
@@ -259,14 +260,15 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
   align-items: start;
+    padding: .5rem 1.5rem !important;
 }
 .primary-menu-item.is-mega > ul.dropdown .dropdown__wrapper:before {
     content: "";
     background: #F8F8F8;
     position: absolute;
     left: -50vw;
-    top: -24px;
-    height: calc(100% + 48px);
+    top: 0;
+    height: 100%;
     width: 50vw;
     z-index: -1;
 }
@@ -275,8 +277,8 @@
     background: #F8F8F8;
     position: absolute;
     right: -50vw;
-    top: -24px;
-    height: calc(100% + 48px);
+    top: 0;
+    height: 100%;
     width: 50vw;
     z-index: -1;
 }
