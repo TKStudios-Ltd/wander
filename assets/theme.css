@@ -17446,6 +17446,11 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   display: none;
   text-decoration: underline;
   text-decoration-thickness: var(--BORDER-WIDTH);
+  text-underline-offset: 2px;
+  font-family: var(--FONT-STACK-SUBHEADING);
+  font-size: 10px !important;
+  letter-spacing: .8px;
+  text-transform: uppercase;
 }
 
 .collection__filters__reset.is-visible {
