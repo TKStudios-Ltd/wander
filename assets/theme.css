@@ -17758,7 +17758,10 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   width: auto;
   margin: 0 10px 10px 0;
   padding: 6px 32px 6px 10px;
-  font-size: var(--text-size);
+  font-family: var(--FONT-STACK-SUBHEADING);
+  font-size: 10px !important;
+  letter-spacing: .8px;
+  text-transform: uppercase;
   text-align: left;
   background: var(--bg-lighten-darken-foreground);
   border-radius: var(--RADIUS);
