@@ -29516,6 +29516,10 @@ body:not(.no-outline) .product-grid-item__image:focus-within {
 }
 .search-page__note p {
   margin: 0;
+  font-family: var(--FONT-STACK-SUBHEADING);
+  font-size: 10px !important;
+  letter-spacing: .8px;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 1440px) {
   .collection__filters + .collection__products .search-page__note {
