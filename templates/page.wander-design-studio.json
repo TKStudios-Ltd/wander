@@ -26,7 +26,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Screenshot_2025-10-30_at_10.11.46_AM_1.png",
-            "image_width": 150,
+            "image_width": 170,
             "image_link": ""
           }
         },
@@ -64,8 +64,8 @@
         "text_CgMi9t"
       ],
       "custom_css": [
-        "@media (min-width: 750px) {hr {margin: 45px auto !important; width: 125px !important; } img {margin-bottom: 15px; }}",
-        "@media (max-width: 749px) {hr {margin: 30px auto !important; width: 100px !important; } img {margin-bottom: 10px; }}"
+        "@media (min-width: 750px) {hr {margin: 45px auto 80px !important; width: 125px !important; } img {margin-bottom: 15px; }}",
+        "@media (max-width: 749px) {hr {margin: 30px auto 55px !important; width: 100px !important; } img {margin-bottom: 10px; }}"
       ],
       "name": "Text",
       "settings": {
