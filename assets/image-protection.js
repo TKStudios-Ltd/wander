@@ -31,16 +31,16 @@
   function isProtectedImageTarget(target) {
     if (!target) return false;
 
-    if (target.closest && target.closest('img, picture, figure, svg, canvas')) return true;
-
     if (
         target.closest &&
         target.closest(
-        '.image-with-text__image, .image-with-text__image-bg, .banner-inner, .banner__image-container, .banner-img'
+        '.image-with-text__image, .image-with-text__image-bg, .lazy-image.background-size-cover, .lazy-image, .img-in'
         )
     ) {
         return true;
     }
+
+    if (target.closest && target.closest('img, picture, figure, svg, canvas')) return true;
 
     const el = target.closest && target.closest('div, figure, a, span, section, article, li');
     if (el) {
@@ -49,7 +49,7 @@
     }
 
     return false;
-    }
+  }
 
   function block(e) {
     if (!inRoot(e.target)) return;
