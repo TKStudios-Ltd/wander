@@ -34681,7 +34681,8 @@ div.footer-title h5 {
   }
 }
 
-/* Image protection toast */
+/* Image Protection Toast */
+
 #image-protection-toast {
   position: fixed;
   left: 50%;
@@ -34699,10 +34700,10 @@ div.footer-title h5 {
   pointer-events: none;
   transition: opacity 0.18s ease;
 }
-
 #image-protection-toast.is-visible {
   opacity: 1;
 }
+
 
 main img {
   -webkit-user-drag: none;
