@@ -30,7 +30,12 @@
     endif
   endcapture
 
-  assign image_widths = '180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048, 2560, 3000'
+  # Web-optimised caps (adjust if needed)
+  assign MAX_DESKTOP_W = 2000
+  assign MAX_MOBILE_W  = 1200
+
+  # IMPORTANT: keep this list <= max caps so srcset never serves print-ready sizes
+  assign image_widths = '180, 360, 540, 720, 900, 1080, 1200, 1600, 2000'
 
   assign desktop_space = 120
   assign tablet_space = 40
@@ -115,11 +120,11 @@
   comment
     When allow_mobile_zoom is true:
     - On mobile we do NOT clamp sizes to viewport
-    - We'll give the browser a huge size so it requests a large srcset
-    We'll keep desktop/tablet logic the same.
+    - We'll give the browser a large size so it requests a large srcset
+    We cap this to MAX_DESKTOP_W to avoid serving print-ready images.
   endcomment
 
-  assign sizes_zoom_mobile = '(min-width: 1024px) ' | append: img_width_lg | append: ', (min-width: 768px) ' | append: img_width_md | append: ', 3000px'
+  assign sizes_zoom_mobile = '(min-width: 1024px) ' | append: img_width_lg | append: ', (min-width: 768px) ' | append: img_width_md | append: ', ' | append: MAX_DESKTOP_W | append: 'px'
 
   assign sizes = sizes_default
   if allow_mobile_zoom
@@ -196,7 +201,7 @@
       <div class="section-image__desktop">
         {%- render 'image',
           image: image,
-          width: image_width,
+          width: MAX_DESKTOP_W,
           widths: image_widths,
           sizes: sizes,
           alt: image_alt,
@@ -219,7 +224,7 @@
               <div class="section-image__zoom-inner">
                 {%- render 'image',
                   image: mobile_image,
-                  width: mobile_image.width,
+                  width: MAX_MOBILE_W,
                   widths: image_widths,
                   sizes: sizes,
                   alt: mobile_image_alt,
@@ -233,7 +238,7 @@
           <div class="section-image__mobile">
             {%- render 'image',
               image: mobile_image,
-              width: mobile_image.width,
+              width: MAX_MOBILE_W,
               widths: image_widths,
               sizes: sizes,
               alt: mobile_image_alt,
@@ -246,6 +251,7 @@
     </div>
   </div>
 </section>
+
 
 {% schema %}
 {
