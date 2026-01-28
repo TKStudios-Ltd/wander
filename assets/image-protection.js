@@ -4,10 +4,10 @@
   const MESSAGE = '© All rights reserved. Image saving is disabled on this website.';
 
   function ensureToast() {
-    let el = document.getElementById('tk-image-protection-toast');
+    let el = document.getElementById('image-protection-toast');
     if (!el) {
       el = document.createElement('div');
-      el.id = 'tk-image-protection-toast';
+      el.id = 'image-protection-toast';
       el.setAttribute('role', 'status');
       el.setAttribute('aria-live', 'polite');
       document.body.appendChild(el);
