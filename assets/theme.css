@@ -34703,3 +34703,10 @@ div.footer-title h5 {
 #image-protection-toast.is-visible {
   opacity: 1;
 }
+
+main img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
