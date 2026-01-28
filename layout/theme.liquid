@@ -267,6 +267,8 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
     </button>
   {%- endif -%}
 
+  <script src="{{ 'image-protection.js' | asset_url }}" defer></script>
+
   {%- comment -%}
     In order to use your custom javascript file at assets/custom.js
     just cut this next line and paste it outside this comment:
