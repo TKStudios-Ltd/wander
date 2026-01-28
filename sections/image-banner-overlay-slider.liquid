@@ -3,6 +3,10 @@
   assign duration_ms   = section.settings.duration_seconds | times: 1000
   assign show_dots     = section.settings.show_dots
   assign slides_count  = section.blocks.size
+
+  # Web-optimised caps (adjust if needed)
+  assign MAX_DESKTOP_W = 2000
+  assign MAX_MOBILE_W  = 1200
 -%}
 
 {%- if slides_count > 0 -%}
@@ -42,6 +46,7 @@
           if forloop.index0 == 0 and section.index < 3
             assign load_eager = true
           endif
+
           assign loading_attr        = load_eager | default: false | ternary: 'eager', 'lazy'
           assign fetchpriority_attr  = load_eager | default: false | ternary: 'high', 'auto'
         -%}
@@ -53,8 +58,7 @@
                 {%- if d_img != blank -%}
                   <source
                     media="(min-width: 750px)"
-                    srcset="{{ d_img | image_url: width: 2400 }} 2400w,
-                            {{ d_img | image_url: width: 2000 }} 2000w,
+                    srcset="{{ d_img | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
                             {{ d_img | image_url: width: 1600 }} 1600w,
                             {{ d_img | image_url: width: 1200 }} 1200w,
                             {{ d_img | image_url: width: 1000 }} 1000w,
@@ -69,9 +73,8 @@
                     alt="{{ block.settings.alt | escape }}"
                     loading="{{ loading_attr }}"
                     fetchpriority="{{ fetchpriority_attr }}"
-                    src="{{ img_mobile | image_url: width: 1600 }}"
-                    srcset="{{ img_mobile | image_url: width: 1600 }} 1600w,
-                            {{ img_mobile | image_url: width: 1200 }} 1200w,
+                    src="{{ img_mobile | image_url: width: MAX_MOBILE_W }}"
+                    srcset="{{ img_mobile | image_url: width: MAX_MOBILE_W }} {{ MAX_MOBILE_W }}w,
                             {{ img_mobile | image_url: width: 900  }} 900w,
                             {{ img_mobile | image_url: width: 700  }} 700w,
                             {{ img_mobile | image_url: width: 500  }} 500w"
@@ -163,10 +166,10 @@
     margin: 0;
   }
   #IBOS--{{ section.id }} .ibos__cta { margin-top: 20px; }
-  #IBOS--{{ section.id }} .ibos__cta .btn { 
+  #IBOS--{{ section.id }} .ibos__cta .btn {
     --top-bottom-padding: 10px !important;
     --left-right-padding: 25px !important;
-   }
+  }
 
   /* Dots: centered over image bottom */
   #IBOS--{{ section.id }} .swiper-pagination {
@@ -181,8 +184,8 @@
   #IBOS--{{ section.id }} .swiper-pagination-bullet-active { opacity: 1; }
 
   @media (min-width: 750px) {
-    #IBOS--{{ section.id }} .ibos__img { 
-      height: var(--height-desktop, auto); 
+    #IBOS--{{ section.id }} .ibos__img {
+      height: var(--height-desktop, auto);
       max-height: 880px;
     }
   }
@@ -201,20 +204,8 @@
       transform: translate(-50%, -50%) scale(0.55) !important;
       left: 50% !important;
       top: 75% !important;
-      /* max-width: 125vw !important;
-      width: 125vw !important;
-      padding: 4rem 1.5rem 3rem !important; */
     }
-    /* #IBOS--{{ section.id }} .ibos__box .list-collections__item__title {
-      max-width: calc(100% - 1rem);
-      width: calc(100% - 1rem);
-      padding: 0 0.5rem;
-    } */
-    /* #IBOS--{{ section.id }} .ibos__box .list-collections__item__title p {
-      font-size: 12px;
-    } */
   }
-
 {%- endstyle -%}
 
 <script>
