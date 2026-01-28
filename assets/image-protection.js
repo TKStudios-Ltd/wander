@@ -31,18 +31,25 @@
   function isProtectedImageTarget(target) {
     if (!target) return false;
 
-    // If you right click on an image or its wrappers
-    if (target.closest && target.closest('img, picture, svg, canvas')) return true;
+    if (target.closest && target.closest('img, picture, figure, svg, canvas')) return true;
 
-    // If you right click on a div with a background-image (common in galleries)
+    if (
+        target.closest &&
+        target.closest(
+        '.image-with-text__image, .image-with-text__image-bg, .banner-inner, .banner__image-container, .banner-img'
+        )
+    ) {
+        return true;
+    }
+
     const el = target.closest && target.closest('div, figure, a, span, section, article, li');
     if (el) {
-      const cs = window.getComputedStyle(el);
-      if (cs && cs.backgroundImage && cs.backgroundImage !== 'none') return true;
+        const cs = window.getComputedStyle(el);
+        if (cs && cs.backgroundImage && cs.backgroundImage !== 'none') return true;
     }
 
     return false;
-  }
+    }
 
   function block(e) {
     if (!inRoot(e.target)) return;
