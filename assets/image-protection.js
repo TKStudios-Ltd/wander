@@ -1,7 +1,8 @@
-// assets/image-protection.js
 (() => {
-  const SELECTOR = 'main img, .product__media img, .article-template img, .collection img, .rte img';
   const MESSAGE = '© All rights reserved. Image saving is disabled on this website.';
+
+  // Limit protection to main site content so it doesn't break header icons, etc.
+  const ROOT_SELECTOR = 'main';
 
   function ensureToast() {
     let el = document.getElementById('image-protection-toast');
@@ -23,63 +24,56 @@
     showToast._t = setTimeout(() => el.classList.remove('is-visible'), 2200);
   }
 
-  function isInsideAllowedUI(target) {
-    // Let users interact with inputs/buttons/links etc
-    return !!target.closest('a, button, input, textarea, select, summary, details, [role="button"]');
+  function inRoot(target) {
+    return !!(target && target.closest && target.closest(ROOT_SELECTOR));
   }
 
-  function shouldProtect(target) {
+  function isProtectedImageTarget(target) {
     if (!target) return false;
-    if (isInsideAllowedUI(target)) return false;
-    const img = target.closest('img');
-    if (!img) return false;
-    // only protect images in main content areas (avoid icons/logos if you want)
-    return img.matches(SELECTOR);
+
+    // If you right click on an image or its wrappers
+    if (target.closest && target.closest('img, picture, svg, canvas')) return true;
+
+    // If you right click on a div with a background-image (common in galleries)
+    const el = target.closest && target.closest('div, figure, a, span, section, article, li');
+    if (el) {
+      const cs = window.getComputedStyle(el);
+      if (cs && cs.backgroundImage && cs.backgroundImage !== 'none') return true;
+    }
+
+    return false;
   }
 
-  // Block right-click context menu on protected images
-  document.addEventListener(
-    'contextmenu',
-    (e) => {
-      if (!shouldProtect(e.target)) return;
-      e.preventDefault();
-      showToast(MESSAGE);
-    },
-    { capture: true }
-  );
+  function block(e) {
+    if (!inRoot(e.target)) return;
+    if (!isProtectedImageTarget(e.target)) return;
 
-  // Block drag (drag-to-desktop/save)
-  document.addEventListener(
-    'dragstart',
-    (e) => {
-      if (!shouldProtect(e.target)) return;
-      e.preventDefault();
-      showToast(MESSAGE);
-    },
-    { capture: true }
-  );
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.stopImmediatePropagation) e.stopImmediatePropagation();
 
-  // Optional: block long-press save on some mobile browsers (limited effectiveness)
-  document.addEventListener(
-    'touchstart',
-    (e) => {
-      if (!shouldProtect(e.target)) return;
-      const target = e.target;
-      target.dataset.tkTouchStart = String(Date.now());
-    },
-    { passive: true, capture: true }
-  );
+    showToast(MESSAGE);
+    return false;
+  }
 
-  document.addEventListener(
-    'touchend',
-    (e) => {
-      const img = e.target && e.target.closest && e.target.closest('img');
-      if (!img || !img.matches(SELECTOR)) return;
-      const started = Number(img.dataset.tkTouchStart || 0);
-      if (started && Date.now() - started > 550) {
-        showToast(MESSAGE);
-      }
-    },
-    { passive: true, capture: true }
-  );
+  // Capture phase so we win against other listeners
+  document.addEventListener('contextmenu', block, true);
+  document.addEventListener('dragstart', block, true);
+
+  // Extra friction: make imgs non-draggable (helps some browsers)
+  function markImages() {
+    document.querySelectorAll(`${ROOT_SELECTOR} img`).forEach((img) => {
+      img.setAttribute('draggable', 'false');
+      img.style.userSelect = 'none';
+      img.style.webkitUserSelect = 'none';
+      img.style.webkitUserDrag = 'none';
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', markImages);
+  markImages();
+
+  // Support AJAX renders (collection filters, quick view, etc.)
+  const obs = new MutationObserver(() => markImages());
+  obs.observe(document.documentElement, { childList: true, subtree: true });
 })();
