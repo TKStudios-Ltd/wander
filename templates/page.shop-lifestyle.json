@@ -236,56 +236,83 @@
         "padding_bottom": 100
       }
     },
-    "section_text_Dyj87j": {
-      "type": "section-text",
+    "section_grid_WKkxyy": {
+      "type": "section-grid",
       "blocks": {
-        "text_qzQrRh": {
-          "type": "text",
+        "image_KcHJaJ": {
+          "type": "image",
           "settings": {
-            "text": "<p>With every print purchased, <br/>you are helping to protect & preserve our <br/>precious natural resources or wildlife in need. </p>",
-            "size": 100,
-            "max_width": 500,
-            "margin_bottom": 25
+            "width": "33.33",
+            "overlay_opacity": 10,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "overlay_text_color": "text-light"
           }
         },
-        "text_HaeMb4": {
-          "type": "text",
+        "image_CXLBDG": {
+          "type": "image",
           "settings": {
-            "text": "<p>SHOP OUR COLLECTIONS...</p>",
-            "size": 100,
-            "max_width": 675,
-            "margin_bottom": 50
+            "width": "33.33",
+            "overlay_opacity": 10,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "overlay_text_color": "text-light"
           }
         },
-        "button_YUXTtp": {
-          "type": "button",
+        "image_frzjht": {
+          "type": "image",
           "settings": {
-            "button_text": "Shop",
-            "button_link": "/collections",
-            "button_color": "btn--black",
-            "button_style": "btn--solid",
-            "button_size": "btn--large"
+            "width": "33.33",
+            "overlay_opacity": 10,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "overlay_text_color": "text-light"
           }
         }
       },
       "block_order": [
-        "text_qzQrRh",
-        "text_HaeMb4",
-        "button_YUXTtp"
+        "image_KcHJaJ",
+        "image_CXLBDG",
+        "image_frzjht"
       ],
-      "custom_css": [
-        "@media screen and (min-width: 768px) {.section-padding {padding: 130px 0 120px; }}",
-        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 90px; }}"
-      ],
-      "name": "Text",
+      "name": "Grid",
       "settings": {
-        "custom_class": "",
-        "text_position": "center",
+        "desktop_height": "original-height",
+        "enable_mobile_height": false,
+        "mobile_height": "original-height-mobile",
+        "heading_size": 130,
+        "button_1_color": "btn--white",
+        "button_1_style": "btn--text",
+        "button_1_size": "btn--small",
+        "button_2_color": "btn--black",
+        "button_2_style": "btn--text",
+        "button_2_size": "btn--small",
         "bg_color_secondary": false,
-        "text_color": "text-dark",
-        "width": "wrapper--narrow",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "enable_slider_mobile": false,
+        "columns_mobile": "1",
+        "overlay_text": false,
+        "width": "wrapper--full",
+        "add_gutter": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "section_newsletter_zELBYF": {
@@ -371,7 +398,7 @@
     "product_slider_swiper_GA4ywX",
     "section_image_with_text_jkbYpa",
     "product_slider_swiper_zc6FKK",
-    "section_text_Dyj87j",
+    "section_grid_WKkxyy",
     "section_newsletter_zELBYF",
     "section_text_teWeMN"
   ]
