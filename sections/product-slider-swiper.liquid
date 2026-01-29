@@ -149,20 +149,35 @@
   </style>
 
   <script>
-    (function(){
-      var root = document.getElementById({{ section_id | json }});
-      if(!root) return;
+  (function () {
+    function getSwiperCtor() {
+      // Covers common installs:
+      // - window.Swiper (UMD)
+      // - window.Swiper.default (some bundlers)
+      // - window.swiper (rare)
+      return window.Swiper || (window.Swiper && window.Swiper.default) || window.swiper || null;
+    }
+
+    function initProductSliderSwiper(root) {
+      if (!root) return;
 
       var swiperEl = root.querySelector('[data-swiper]');
-      if(!swiperEl) return;
+      if (!swiperEl) return;
 
-      if(typeof window.Swiper === 'undefined'){
-        console.warn('Swiper not found on window. Make sure Swiper JS is loaded before this section.');
+      var SwiperCtor = getSwiperCtor();
+      if (!SwiperCtor) {
+        console.warn('Swiper constructor not found on window. Found keys:', Object.keys(window).filter(k => k.toLowerCase().includes('swiper')));
         return;
+      }
+
+      // Prevent double init (theme editor reloads)
+      if (swiperEl.swiper && typeof swiperEl.swiper.destroy === 'function') {
+        try { swiperEl.swiper.destroy(true, true); } catch (e) {}
       }
 
       var prevBtn = root.querySelector('.product-slider-swiper__nav--prev');
       var nextBtn = root.querySelector('.product-slider-swiper__nav--next');
+      var scrollbarEl = root.querySelector('.swiper-scrollbar');
 
       var slidesDesktop = parseFloat(swiperEl.getAttribute('data-slides-desktop')) || 4;
       var slidesTablet  = parseFloat(swiperEl.getAttribute('data-slides-tablet')) || 3;
@@ -170,38 +185,75 @@
 
       var spaceDesktop  = parseInt(swiperEl.getAttribute('data-space-desktop'), 10);
       var spaceMobile   = parseInt(swiperEl.getAttribute('data-space-mobile'), 10);
-      if(isNaN(spaceDesktop)) spaceDesktop = 24;
-      if(isNaN(spaceMobile)) spaceMobile = 16;
+      if (isNaN(spaceDesktop)) spaceDesktop = 24;
+      if (isNaN(spaceMobile))  spaceMobile  = 16;
 
       var loop = (swiperEl.getAttribute('data-loop') === 'true');
-      var autoplay = (swiperEl.getAttribute('data-autoplay') === 'true');
+      var autoplayEnabled = (swiperEl.getAttribute('data-autoplay') === 'true');
+
       var autoplayDelay = parseInt(swiperEl.getAttribute('data-autoplay-delay'), 10);
-      if(isNaN(autoplayDelay)) autoplayDelay = 3500;
+      if (isNaN(autoplayDelay)) autoplayDelay = 3500;
 
       var speed = parseInt(swiperEl.getAttribute('data-speed'), 10);
-      if(isNaN(speed)) speed = 450;
+      if (isNaN(speed)) speed = 450;
 
-      // Prevent double init in theme editor refreshes
-      if(swiperEl.swiper) {
-        try { swiperEl.swiper.destroy(true, true); } catch(e){}
-      }
-
-      new window.Swiper(swiperEl, {
+      var opts = {
         slidesPerView: slidesMobile,
         spaceBetween: spaceMobile,
         speed: speed,
         loop: loop,
         watchOverflow: true,
-        navigation: (prevBtn && nextBtn) ? { prevEl: prevBtn, nextEl: nextBtn } : undefined,
-        scrollbar: root.querySelector('.swiper-scrollbar') ? { el: root.querySelector('.swiper-scrollbar'), draggable: true } : undefined,
-        autoplay: autoplay ? { delay: autoplayDelay, disableOnInteraction: false } : false,
         breakpoints: {
           768:  { slidesPerView: slidesTablet,  spaceBetween: spaceDesktop },
           1024: { slidesPerView: slidesDesktop, spaceBetween: spaceDesktop }
         }
-      });
-    })();
-  </script>
+      };
+
+      if (prevBtn && nextBtn) {
+        opts.navigation = { prevEl: prevBtn, nextEl: nextBtn };
+      }
+
+      if (scrollbarEl) {
+        opts.scrollbar = { el: scrollbarEl, draggable: true };
+      }
+
+      if (autoplayEnabled) {
+        opts.autoplay = { delay: autoplayDelay, disableOnInteraction: false };
+      }
+
+      // Init
+      swiperEl._swiperInstance = new SwiperCtor(swiperEl, opts);
+
+      // Helpful sanity check
+      // console.log('Swiper inited for', root.id, swiperEl._swiperInstance);
+    }
+
+    function initById(sectionId) {
+      var root = document.getElementById(sectionId);
+      initProductSliderSwiper(root);
+    }
+
+    // Initial load
+    initById({{ section_id | json }});
+
+    // Shopify theme editor: re-init when section reloads
+    document.addEventListener('shopify:section:load', function (event) {
+      if (!event || !event.detail || !event.detail.sectionId) return;
+      if (event.detail.sectionId === {{ section.id | json }}) {
+        initById({{ section_id | json }});
+      }
+    });
+
+    // If blocks are used later, this keeps it resilient
+    document.addEventListener('shopify:block:select', function (event) {
+      if (!event || !event.detail || !event.detail.sectionId) return;
+      if (event.detail.sectionId === {{ section.id | json }}) {
+        initById({{ section_id | json }});
+      }
+    });
+  })();
+</script>
+
 </section>
 
 {% schema %}
