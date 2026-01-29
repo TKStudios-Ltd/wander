@@ -14,9 +14,14 @@
     }
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding { 
-        padding-top: var(--pt-desktop); 
-        padding-bottom: var(--pb-desktop); 
+            padding-top: var(--pt-desktop); 
+            padding-bottom: var(--pb-desktop); 
+        }
     }
+    @media screen and (max-width: 749px) {
+        .wrapper--full-padded {
+            padding-right: 0;
+        }
     }
 
     .product-slider-swiper .product-slider-swiper__header{
