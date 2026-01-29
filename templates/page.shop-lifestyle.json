@@ -23,6 +23,44 @@
         "padding_bottom": 60
       }
     },
+    "section_banner_image_3MaANB": {
+      "type": "section-banner-image",
+      "blocks": {
+        "heading_JJE9Vb": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>Of the land. Of the sea. Of the flowers.</p>",
+            "size": 120,
+            "heading_highlight_type": "underline-hand-drawn",
+            "highlight_color": "#000",
+            "highlight_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_JJE9Vb"
+      ],
+      "name": "Banner image",
+      "settings": {
+        "height": "full-height",
+        "enable_mobile_height": true,
+        "mobile_height": "full-height-mobile",
+        "image": "shopify://shop_images/waNDER_Shop-Lifestyle_Placeholder.jpg",
+        "image_mobile": "shopify://shop_images/waNDER_Shop-Lifestyle_Placeholder.jpg",
+        "overlay_opacity": 10,
+        "transition": "zoom-out",
+        "enable_zoom_animation": true,
+        "enable_card_scrolling": false,
+        "increase_border_radius": false,
+        "text_width": "wide",
+        "text_position": "center",
+        "text_alignment": "text-center",
+        "text_color": "text-light",
+        "width": "wrapper--full",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "section_text_jJzDaL": {
       "type": "section-text",
       "blocks": {
@@ -206,81 +244,6 @@
         "padding_bottom": 100
       }
     },
-    "image_banner_overlay_slider_YaUrKD": {
-      "type": "image-banner-overlay-slider",
-      "blocks": {
-        "slide_VgmcQL": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/wild_horses.png",
-            "mobile_image": "shopify://shop_images/IMG_3535.jpg",
-            "alt": "Banner image",
-            "collection": "wild-horses",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>For every WILD HORSES COLLECTION print sold on our website, we are giving back to an EQUINE RESCUE organization in need</p>",
-            "show_button": true,
-            "button_label": "Shop",
-            "pos_x": 60,
-            "pos_y": 50,
-            "box_max_width": 390
-          }
-        }
-      },
-      "block_order": [
-        "slide_VgmcQL"
-      ],
-      "custom_css": [
-        "@media (min-width: 768px) {.ibos {margin-bottom: 1.2vw; } .ibos__box {padding: 3.5rem 4rem 2.5rem; }}",
-        "@media (max-width: 767px) {.ibos {margin-bottom: 1rem; }}"
-      ],
-      "name": "Image Banner Slider",
-      "settings": {
-        "autoplay": false,
-        "duration_seconds": 4,
-        "show_dots": false,
-        "height_desktop": "auto",
-        "height_mobile": "auto"
-      }
-    },
-    "image_banner_overlay_slider_BdxN7t": {
-      "type": "image-banner-overlay-slider",
-      "blocks": {
-        "slide_8pbpNy": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/birds_option_1_copy_1.png",
-            "mobile_image": "shopify://shop_images/IMG_0048_copy_1.jpg",
-            "alt": "Banner image",
-            "collection": "birds-sky",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>For every BIRD & SKY COLLECTION print sold on our website,  we are giving back to a BIRD RESCUE organization in need.</p>",
-            "show_button": true,
-            "button_label": "Shop",
-            "pos_x": 40,
-            "pos_y": 50,
-            "box_max_width": 380
-          }
-        }
-      },
-      "block_order": [
-        "slide_8pbpNy"
-      ],
-      "custom_css": [
-        "@media (min-width: 768px) {.ibos__box {padding: 3.5rem 4rem 2.5rem; }}"
-      ],
-      "name": "Image Banner Slider",
-      "settings": {
-        "autoplay": false,
-        "duration_seconds": 4,
-        "show_dots": false,
-        "height_desktop": "auto",
-        "height_mobile": "500px"
-      }
-    },
     "section_text_qPreGz": {
       "type": "section-text",
       "blocks": {
@@ -331,81 +294,6 @@
         "width": "wrapper--narrow",
         "padding_top": 100,
         "padding_bottom": 100
-      }
-    },
-    "image_banner_overlay_slider_dciEJr": {
-      "type": "image-banner-overlay-slider",
-      "blocks": {
-        "slide_MwMcWg": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Group_22.png",
-            "mobile_image": "shopify://shop_images/IMG_6239.jpg",
-            "alt": "Banner image",
-            "collection": "iceland",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>For every ICELAND COLLECTION print sold on our website, we are giving back to help protect & save our glorious GLACIERS</p>",
-            "show_button": true,
-            "button_label": "Shop",
-            "pos_x": 35,
-            "pos_y": 65,
-            "box_max_width": 390
-          }
-        }
-      },
-      "block_order": [
-        "slide_MwMcWg"
-      ],
-      "custom_css": [
-        "@media (min-width: 768px) {.ibos {margin-bottom: 1.2vw; } .ibos__box {padding: 3.5rem 4rem 2.5rem; }}",
-        "@media (max-width: 767px) {.ibos {margin-bottom: 1rem; }}"
-      ],
-      "name": "Image Banner Slider",
-      "settings": {
-        "autoplay": false,
-        "duration_seconds": 4,
-        "show_dots": false,
-        "height_desktop": "auto",
-        "height_mobile": "auto"
-      }
-    },
-    "image_banner_overlay_slider_eWznRT": {
-      "type": "image-banner-overlay-slider",
-      "blocks": {
-        "slide_7NAW7P": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Group_23.png",
-            "mobile_image": "shopify://shop_images/IMG_6223-2.jpg",
-            "alt": "Banner image",
-            "collection": "sea",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>For every SEA COLLECTION print sold on our website, we are giving back to help protect & save our precious OCEANS & CORAL REEFS.</p>",
-            "show_button": true,
-            "button_label": "Shop",
-            "pos_x": 65,
-            "pos_y": 65,
-            "box_max_width": 420
-          }
-        }
-      },
-      "block_order": [
-        "slide_7NAW7P"
-      ],
-      "custom_css": [
-        "@media (min-width: 768px) {.ibos__box {padding: 3.5rem 4rem 2.5rem; }}"
-      ],
-      "name": "Image Banner Slider",
-      "settings": {
-        "autoplay": false,
-        "duration_seconds": 4,
-        "show_dots": false,
-        "height_desktop": "auto",
-        "height_mobile": "auto"
       }
     },
     "section_text_Dyj87j": {
@@ -590,14 +478,11 @@
   },
   "order": [
     "main",
+    "section_banner_image_3MaANB",
     "section_text_jJzDaL",
     "section_image_with_text_jkbYpa",
     "section_text_byRFQk",
-    "image_banner_overlay_slider_YaUrKD",
-    "image_banner_overlay_slider_BdxN7t",
     "section_text_qPreGz",
-    "image_banner_overlay_slider_dciEJr",
-    "image_banner_overlay_slider_eWznRT",
     "section_text_Dyj87j",
     "image_banner_overlay_slider_wBxKN3",
     "image_banner_overlay_slider_7e8xVP",
