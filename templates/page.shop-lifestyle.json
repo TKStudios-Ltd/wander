@@ -122,7 +122,7 @@
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 120px 0 110px; }}",
         "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 90px; }}",
-        ".text-section {background: #ececea !important;}"
+        ".section-padding {background: #ECECEA !important;}"
       ],
       "name": "Text",
       "settings": {
