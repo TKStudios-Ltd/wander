@@ -29,17 +29,7 @@
         "heading_JJE9Vb": {
           "type": "heading",
           "settings": {
-            "text": "<p>Of the land. Of the sea. Of the flowers...</p>",
-            "size": 120,
-            "heading_highlight_type": "underline-hand-drawn",
-            "highlight_color": "#000000",
-            "highlight_text_color": ""
-          }
-        },
-        "heading_zURyGF": {
-          "type": "heading",
-          "settings": {
-            "text": "<p>Of the land. <br/>Of the sea. <br/>Of the flowers.</p>",
+            "text": "<p>Of the land. <br/>Of the sea. <br/>Of the flowers...</p>",
             "size": 120,
             "heading_highlight_type": "underline-hand-drawn",
             "highlight_color": "#000000",
@@ -48,12 +38,10 @@
         }
       },
       "block_order": [
-        "heading_JJE9Vb",
-        "heading_zURyGF"
+        "heading_JJE9Vb"
       ],
       "custom_css": [
-        "@media (min-width: 750px) {#BannerHeading--heading_JJE9Vb {display: none; }}",
-        "@media (max-width: 749px) {#BannerHeading--heading_zURyGF {display: none; }}"
+        "@media (min-width: 750px) {.h1 br {display: none; }}"
       ],
       "name": "Banner image",
       "settings": {
