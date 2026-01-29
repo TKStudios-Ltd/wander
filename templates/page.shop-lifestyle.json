@@ -155,7 +155,7 @@
         "slides_per_view_mobile": 1.2,
         "space_between_desktop": 24,
         "space_between_mobile": 16,
-        "show_arrows": false,
+        "show_arrows": true,
         "show_scrollbar": false,
         "loop": true,
         "autoplay": false,
