@@ -34010,6 +34010,8 @@ div.footer-title h5 {
   border: none;
   border-image: none;
   box-shadow: none;
+  filter: none;
+  aspect-ratio: 4 / 5;
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
