@@ -98,7 +98,17 @@
             "text": "<p>We live in an extraordinarily beautiful world... We hope to inspire you, to WANDER.</p>",
             "size": 100,
             "max_width": 800,
-            "margin_bottom": 16
+            "margin_bottom": 50
+          }
+        },
+        "button_VPWwJA": {
+          "type": "button",
+          "settings": {
+            "button_text": "Shop All",
+            "button_link": "",
+            "button_color": "btn--black",
+            "button_style": "btn--solid",
+            "button_size": "btn--large"
           }
         }
       },
@@ -106,7 +116,8 @@
         "subheading_CRzq6r",
         "heading_jJjJTK",
         "text_mkAd8V",
-        "text_wD4UJP"
+        "text_wD4UJP",
+        "button_VPWwJA"
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 120px 0 110px; }}",
