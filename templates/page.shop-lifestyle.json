@@ -35,10 +35,25 @@
             "highlight_color": "#000000",
             "highlight_text_color": ""
           }
+        },
+        "heading_zURyGF": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>Of the land. <br/>Of the sea. <br/>Of the flowers.</p>",
+            "size": 120,
+            "heading_highlight_type": "underline-hand-drawn",
+            "highlight_color": "#000000",
+            "highlight_text_color": ""
+          }
         }
       },
       "block_order": [
-        "heading_JJE9Vb"
+        "heading_JJE9Vb",
+        "heading_zURyGF"
+      ],
+      "custom_css": [
+        "@media (min-width: 750px) {.h1:last-child {display: none; }}",
+        "@media (max-width: 749px) {.h1:first-child {display: none; }}"
       ],
       "name": "Banner image",
       "settings": {
