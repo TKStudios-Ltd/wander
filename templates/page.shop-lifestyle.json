@@ -67,7 +67,7 @@
         "subheading_CRzq6r": {
           "type": "subheading",
           "settings": {
-            "text": "<p>JOIN US IN GIVING BACK </p>",
+            "text": "<p>LIMITED EDITION PRODUCTS</p>",
             "size": 100,
             "margin_bottom": 10
           }
@@ -75,7 +75,7 @@
         "heading_jJjJTK": {
           "type": "heading",
           "settings": {
-            "text": "<p>WANDER Giving Back</p>",
+            "text": "<p>Immerse yourself in nature & WANDER with us</p>",
             "size": 120,
             "margin_bottom": 30,
             "heading_highlight_type": "underline-hand-drawn",
@@ -86,9 +86,18 @@
         "text_mkAd8V": {
           "type": "text",
           "settings": {
-            "text": "<p>Feel good knowing that with the purchase <br/>of every print on our website, you are supporting <br/>an environmental or wildlife cause, in need.</p>",
+            "text": "<p>WANDER is an all-natural home & lifestyle brand designed to empower &<br/>lift the spirit...combining gifts from nature’s magnificent land, sand, sea, & flora.<br/>All of our products are lovingly & thoughtfully designed from the inside out, and represent our dedication to nature. Our products focus on limited edition artisan products & collaborations, using only the purest of natural materials and ingredients. They promote healthy homes and conscious living... and enhance rituals for the mind, body & soul. Designed to whisk you away & uplift your spirit, we hope our products empower you to connect deeper with yourself & the natural world.</p>",
             "size": 100,
-            "max_width": 500,
+            "max_width": 800,
+            "margin_bottom": 16
+          }
+        },
+        "text_wD4UJP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We live in an extraordinarily beautiful world... We hope to inspire you, to WANDER.</p>",
+            "size": 100,
+            "max_width": 800,
             "margin_bottom": 16
           }
         }
@@ -96,7 +105,8 @@
       "block_order": [
         "subheading_CRzq6r",
         "heading_jJjJTK",
-        "text_mkAd8V"
+        "text_mkAd8V",
+        "text_wD4UJP"
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 120px 0 110px; }}",
@@ -106,7 +116,7 @@
       "settings": {
         "custom_class": "",
         "text_position": "center",
-        "bg_color_secondary": false,
+        "bg_color_secondary": true,
         "text_color": "text-dark",
         "width": "wrapper--narrow",
         "padding_top": 110,
