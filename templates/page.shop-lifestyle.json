@@ -299,8 +299,8 @@
       "name": "Grid",
       "settings": {
         "desktop_height": "six-fifty-height",
-        "enable_mobile_height": false,
-        "mobile_height": "original-height-mobile",
+        "enable_mobile_height": true,
+        "mobile_height": "four-fifty-height-mobile",
         "heading_size": 130,
         "button_1_color": "btn--white",
         "button_1_style": "btn--text",
