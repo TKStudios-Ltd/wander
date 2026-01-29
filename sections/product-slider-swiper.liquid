@@ -7,17 +7,7 @@
   assign swym_enabled = section.settings.swym_enabled
 -%}
 
-<section
-  class="product-slider-swiper section-{{ section.id }}-padding"
-  style="
-    --pt: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    --pt-desktop: {{ section.settings.padding_top }}px;
-    --pb: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    --pb-desktop: {{ section.settings.padding_bottom }}px;
-  "
-  data-product-slider-swiper
->
-  <style>
+<style>
     .section-{{ section.id }}-padding { padding-top: var(--pt); padding-bottom: var(--pb); }
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding { padding-top: var(--pt-desktop); padding-bottom: var(--pb-desktop); }
@@ -51,8 +41,18 @@
       left: 50% !important;
       transform: translateX(-50%);
     }
-  </style>
+</style>
 
+<section
+  class="product-slider-swiper section-{{ section.id }}-padding"
+  style="
+    --pt: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    --pt-desktop: {{ section.settings.padding_top }}px;
+    --pb: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    --pb-desktop: {{ section.settings.padding_bottom }}px;
+  "
+  data-product-slider-swiper
+>
   <div class="{{ section.settings.width }}">
     {%- if title != blank or text != blank or button_text != blank -%}
       <div class="product-slider-swiper__header {{ section.settings.text_alignment }}">
@@ -110,14 +110,12 @@
     {%- endif -%}
   </div>
 
-  {%- comment -%}
-    If you truly already load Swiper globally, you can delete these 2 tags.
-    Keeping them is fine: the init below polls until Swiper exists anyway.
-  {%- endcomment -%}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+</section>
 
-  <script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+
+<script>
     (function () {
       function init() {
         if (typeof Swiper === 'undefined') {
@@ -198,8 +196,7 @@
         });
       }
     })();
-  </script>
-</section>
+</script>
 
 {% schema %}
 {
