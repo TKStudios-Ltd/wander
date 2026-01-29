@@ -171,8 +171,8 @@
 
         var spaceDesktop  = parseInt(el.getAttribute('data-space-desktop'), 10);
         var spaceMobile   = parseInt(el.getAttribute('data-space-mobile'), 10);
-        if (isNaN(spaceDesktop)) spaceDesktop = 24;
-        if (isNaN(spaceMobile)) spaceMobile = 16;
+        if (isNaN(spaceDesktop)) spaceDesktop = 20;
+        if (isNaN(spaceMobile)) spaceMobile = 20;
 
         var loop = (el.getAttribute('data-loop') === 'true');
         var autoplayEnabled = (el.getAttribute('data-autoplay') === 'true');
@@ -190,7 +190,7 @@
           watchOverflow: true,
           breakpoints: {
             750:  { slidesPerView: slidesTablet,  spaceBetween: spaceDesktop },
-            990:  { slidesPerView: slidesDesktop, spaceBetween: spaceDesktop }
+            1200:  { slidesPerView: slidesDesktop, spaceBetween: spaceDesktop }
           }
         };
 
