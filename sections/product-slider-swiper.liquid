@@ -8,9 +8,15 @@
 -%}
 
 <style>
-    .section-{{ section.id }}-padding { padding-top: var(--pt); padding-bottom: var(--pb); }
+    .section-{{ section.id }}-padding { 
+        padding-top: var(--pt); 
+        padding-bottom: var(--pb); 
+    }
     @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding { padding-top: var(--pt-desktop); padding-bottom: var(--pb-desktop); }
+      .section-{{ section.id }}-padding { 
+        padding-top: var(--pt-desktop); 
+        padding-bottom: var(--pb-desktop); 
+    }
     }
 
     .product-slider-swiper .product-slider-swiper__header{
@@ -19,6 +25,10 @@
       justify-content:space-between;
       gap:24px;
       margin-bottom:24px;
+    }
+    .product-slider-swiper__title h3 {
+        font-size: 2rem;
+        line-height: 1;
     }
     .product-slider-swiper .product-slider-swiper__header.text-center{
       align-items:center;
