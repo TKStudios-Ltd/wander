@@ -34006,12 +34006,13 @@ div.footer-title h5 {
 /* General Product */
 
 .lifestyle--product .product-card .product-card__image.with-matte img {
-  padding: 0;
+  padding: 0 !important;
   border: none;
   border-image: none !important;
   box-shadow: none;
   filter: none;
   aspect-ratio: 4 / 5;
+  border-width: 0 !important;
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
