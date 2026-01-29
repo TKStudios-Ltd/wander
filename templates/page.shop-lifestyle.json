@@ -226,6 +226,29 @@
         "padding_bottom": 100
       }
     },
+    "section_newsletter_zELBYF": {
+      "type": "section-newsletter",
+      "custom_css": [
+        ".text-dark {background: #f0efed !important;}",
+        ".text-dark {padding: 120px 0;}"
+      ],
+      "name": "Newsletter",
+      "settings": {
+        "flex_align": "align--middle-center",
+        "text_color": "text-dark",
+        "title": "Sign up & Stay Connected",
+        "text": "<p>Sign up below to be a part of our blooming WANDER community! <br/>Get access to Studio News, Exclusive Offers, Our Monthly WANDER Journal... & hear about Limited Edition/Product releases, before everyone else.</p>",
+        "mobile_text": "",
+        "extra_fields": "",
+        "button_text": "SIGN UP",
+        "bg_color": "#e0dedb",
+        "image_height": "four-fifty-height",
+        "overlay_opacity": 0,
+        "width": "wrapper",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "section_text_teWeMN": {
       "type": "section-text",
       "blocks": {
@@ -285,6 +308,7 @@
     "section_text_jJzDaL",
     "section_image_with_text_jkbYpa",
     "section_text_Dyj87j",
+    "section_newsletter_zELBYF",
     "section_text_teWeMN"
   ]
 }
