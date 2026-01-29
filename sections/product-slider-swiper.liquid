@@ -90,7 +90,7 @@
       >
         <div class="swiper-wrapper">
           {%- for product in collection.products limit: limit -%}
-            <div class="swiper-slide">
+            <div class="swiper-slide lifestyle--product">
               {%- render 'product-card', product: product, swym_enabled: swym_enabled -%}
             </div>
           {%- endfor -%}
