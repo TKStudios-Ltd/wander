@@ -140,7 +140,8 @@
       "custom_css": [
         "@media (min-width: 990px) {.image-with-text__items {background: white; } .image-with-text__image, .image-with-text__content {flex-basis: 50%; background: var(--bg) !important; } .image-with-text__content-items {max-width: 40rem !important; margin: auto; text-align: center; } .image-with-text__content {padding: 8rem 3rem !important; }}",
         ".image-with-text__content {padding: 5rem 3rem;}",
-        ".image-with-text__heading {margin: 10px 0 35px; font-size: 2.4rem; line-height: 1;}"
+        ".image-with-text__heading {margin: 10px 0 35px; font-size: 2.4rem; line-height: 1;}",
+        ".main-buttons__item {width: 100%; margin: 44px 0 0; justify-content: center;}"
       ],
       "name": "Image with text",
       "settings": {
@@ -159,7 +160,7 @@
         "heading_size": 130,
         "content": "<p>Reset your life and step into intuitive ritual with our beautiful cloth-bound journals. Exquisitely crafted in limited editions using old-time traditions, they just simply feel good in your hand. Each journal is all natural & pure — and includes a positive message etched in gold, a satin book ribbon, linen cloth and crisp unlined paper, these journals will sell out fast!</p>",
         "text_alignment": "left",
-        "button_text": "Sho",
+        "button_text": "Shop",
         "button_link": "",
         "button_color": "btn--black",
         "button_style": "btn--solid",
