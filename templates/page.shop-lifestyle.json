@@ -239,27 +239,12 @@
     "section_grid_WKkxyy": {
       "type": "section-grid",
       "blocks": {
-        "image_KcHJaJ": {
-          "type": "image",
-          "settings": {
-            "width": "33.33",
-            "overlay_opacity": 10,
-            "text_position": "center",
-            "subheading": "",
-            "title": "",
-            "text": "",
-            "button_1_text": "",
-            "button_1_link": "",
-            "button_2_text": "",
-            "button_2_link": "",
-            "overlay_text_color": "text-light"
-          }
-        },
         "image_CXLBDG": {
           "type": "image",
           "settings": {
             "width": "33.33",
-            "overlay_opacity": 10,
+            "image": "shopify://shop_images/Screenshot_2026-01-29_at_8.42.27_PM.png",
+            "overlay_opacity": 0,
             "text_position": "center",
             "subheading": "",
             "title": "",
@@ -275,7 +260,25 @@
           "type": "image",
           "settings": {
             "width": "33.33",
-            "overlay_opacity": 10,
+            "image": "shopify://shop_images/Screenshot_2026-01-29_at_8.42.53_PM.png",
+            "overlay_opacity": 0,
+            "text_position": "center",
+            "subheading": "",
+            "title": "",
+            "text": "",
+            "button_1_text": "",
+            "button_1_link": "",
+            "button_2_text": "",
+            "button_2_link": "",
+            "overlay_text_color": "text-light"
+          }
+        },
+        "image_KcHJaJ": {
+          "type": "image",
+          "settings": {
+            "width": "33.33",
+            "image": "shopify://shop_images/Screenshot_2026-01-29_at_8.44.46_PM.png",
+            "overlay_opacity": 0,
             "text_position": "center",
             "subheading": "",
             "title": "",
@@ -289,13 +292,13 @@
         }
       },
       "block_order": [
-        "image_KcHJaJ",
         "image_CXLBDG",
-        "image_frzjht"
+        "image_frzjht",
+        "image_KcHJaJ"
       ],
       "name": "Grid",
       "settings": {
-        "desktop_height": "original-height",
+        "desktop_height": "six-fifty-height",
         "enable_mobile_height": false,
         "mobile_height": "original-height-mobile",
         "heading_size": 130,
