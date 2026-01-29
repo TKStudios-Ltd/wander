@@ -141,7 +141,7 @@
       "settings": {
         "collection": "lifestyle-products",
         "text_alignment": "text-left",
-        "title": "<h2>Shop Collection</h2>",
+        "title": "<h3>Shop Collection</h3>",
         "text": "",
         "button_text": "",
         "button_link": "",
