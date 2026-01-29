@@ -32,7 +32,7 @@
             "text": "<p>Of the land. Of the sea. Of the flowers.</p>",
             "size": 120,
             "heading_highlight_type": "underline-hand-drawn",
-            "highlight_color": "#000",
+            "highlight_color": "#000000",
             "highlight_text_color": ""
           }
         }
@@ -132,6 +132,35 @@
         "text_color": "text-dark",
         "width": "wrapper--narrow",
         "padding_top": 110,
+        "padding_bottom": 100
+      }
+    },
+    "section_collection_NiYrAm": {
+      "type": "section-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "lifestyle-products",
+        "products_layout": "carousel",
+        "number_of_products": 8,
+        "products_per_row_on_desktop": 4,
+        "columns_mobile": "1",
+        "text_alignment": "text-left",
+        "title": "<p>Shop New Releases</p>",
+        "heading_highlight_type": "underline-hand-drawn",
+        "highlight_color": "#000",
+        "highlight_text_color": "",
+        "heading_size": 100,
+        "text": "",
+        "text_size": 100,
+        "button_position": "top",
+        "button_text": "",
+        "button_color": "btn--black",
+        "button_style": "btn--text",
+        "button_size": "btn--large",
+        "bg_color_secondary": false,
+        "enable_slider_mobile": true,
+        "width": "wrapper--full-padded",
+        "padding_top": 100,
         "padding_bottom": 100
       }
     },
@@ -306,6 +335,7 @@
     "main",
     "section_banner_image_3MaANB",
     "section_text_jJzDaL",
+    "section_collection_NiYrAm",
     "section_image_with_text_jkbYpa",
     "section_text_Dyj87j",
     "section_newsletter_zELBYF",
