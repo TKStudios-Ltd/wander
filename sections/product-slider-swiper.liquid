@@ -41,6 +41,40 @@
       left: 50% !important;
       transform: translateX(-50%);
     }
+    /* Prevent slide contents from overflowing on small screens */
+    .product-slider-swiper .swiper-{{ section.id }} {
+    overflow: hidden;
+    }
+
+    .product-slider-swiper .swiper-{{ section.id }} .swiper-slide {
+    overflow: hidden;
+    box-sizing: border-box;
+    }
+
+    .product-slider-swiper .swiper-{{ section.id }} .swiper-slide > * {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    }
+
+    /* Your card wrapper (based on your product-card.liquid structure) */
+    .product-slider-swiper .swiper-{{ section.id }} .swiper-slide .grid-item,
+    .product-slider-swiper .swiper-{{ section.id }} .swiper-slide .image-wrapper,
+    .product-slider-swiper .swiper-{{ section.id }} .swiper-slide .product-card,
+    .product-slider-swiper .swiper-{{ section.id }} .swiper-slide .product-card__link {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    }
+
+    /* Images should never push outside */
+    .product-slider-swiper .swiper-{{ section.id }} img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    }
+
 </style>
 
 <section
