@@ -34003,6 +34003,15 @@ div.footer-title h5 {
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2)) drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2)) drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.2));
 }
 
+/* General Product */
+
+.lifestyle--product .product-card .product-card__image.with-matte img {
+  padding: 0;
+  border: none;
+  border-image: none;
+  box-shadow: none;
+}
+
 @media (min-width: 768px) and (max-width: 1200px) {
   .product-card .product-card__image.with-matte img {
     padding: 1vw !important;
@@ -34010,12 +34019,6 @@ div.footer-title h5 {
   .product-card .product-card__image.with-frame img {
     border-width: 0.8vw !important;
   }
-  /* .search-grid .product-card .product-card__image.with-matte img {
-    padding: 0.75vw !important;
-  }
-  .search-grid .product-card .product-card__image.with-frame img {
-    border-width: 0.6vw !important;
-  } */
   .product-card .product-card__meta-list .product-meta__item {
     font-size: 0.5vw !important;
   }
