@@ -121,13 +121,14 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 120px 0 110px; }}",
-        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 90px; }}"
+        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 90px; }}",
+        ".text-section {background: #ececea !important;}"
       ],
       "name": "Text",
       "settings": {
         "custom_class": "",
         "text_position": "center",
-        "bg_color_secondary": true,
+        "bg_color_secondary": false,
         "text_color": "text-dark",
         "width": "wrapper--narrow",
         "padding_top": 110,
