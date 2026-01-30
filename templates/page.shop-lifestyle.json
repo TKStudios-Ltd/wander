@@ -460,7 +460,7 @@
         "button_style": "btn--solid",
         "button_size": "btn--small",
         "layout_mobile": "grid",
-        "width": "wrapper",
+        "width": "wrapper--full-padded",
         "padding_top": 60,
         "padding_bottom": 60
       }
