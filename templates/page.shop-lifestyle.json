@@ -444,7 +444,7 @@
         "subheading": "",
         "alignment": "center",
         "columns": 4,
-        "icons_width": 60,
+        "icons_width": 80,
         "show_vertical_borders": false,
         "show_horizontal_borders": false,
         "heading_size": 120,
