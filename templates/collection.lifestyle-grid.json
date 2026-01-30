@@ -11,6 +11,7 @@
   "sections": {
     "hero": {
       "type": "collection-image-with-title",
+      "disabled": true,
       "custom_css": [
         ".collection--title {padding: 0;}",
         "@media (min-width: 750px) {.section-padding {padding: 150px 0; }}"
