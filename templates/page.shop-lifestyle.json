@@ -394,41 +394,45 @@
         "text_Ar3fJy": {
           "type": "text",
           "settings": {
-            "icon_name": "truck",
-            "title": "Free Shipping",
-            "text": "<p>on all order over $99</p>"
+            "icon_name": "none",
+            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "title": "NON - TOXIC & PURE",
+            "text": "<p>We take pride in our deep knowledge of non toxic living. Our products are pure and natural, never adding toxic burden.</p>"
           }
         },
-        "text_mHnY9D": {
+        "text_kjn76g": {
           "type": "text",
           "settings": {
-            "icon_name": "check",
-            "title": "Free Returns",
-            "text": "<p>within 30 days of purchase</p>"
+            "icon_name": "none",
+            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "title": "CONSCIOUS LIFE-CYCLE",
+            "text": "<p>From natural materials and process, to ethical sourcing, we are conscious at every level and give back to the planet.</p>"
           }
         },
-        "text_mCdNFG": {
+        "text_MqPcrg": {
           "type": "text",
           "settings": {
-            "icon_name": "eco-friendly",
-            "title": "1% Donated",
-            "text": "<p>to forest conservation</p>"
+            "icon_name": "none",
+            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "title": "POSITIVITY FORWARD",
+            "text": "<p>Our products are designed with love, conscious intention, and beauty - raising the vibration of your life & home.</p>"
           }
         },
-        "text_ftqYxF": {
+        "text_7QYpNx": {
           "type": "text",
           "settings": {
-            "icon_name": "eco-friendly",
-            "title": "1% Donated",
-            "text": "<p>to forest conservation</p>"
+            "icon_name": "none",
+            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "title": "CREATED JUST FOR YOU",
+            "text": "<p>We are committed to small batches & limited editions—raising the quality & uniqueness, and keeping details intact & minimizing waste.</p>"
           }
         }
       },
       "block_order": [
         "text_Ar3fJy",
-        "text_mHnY9D",
-        "text_mCdNFG",
-        "text_ftqYxF"
+        "text_kjn76g",
+        "text_MqPcrg",
+        "text_7QYpNx"
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 20px 0 100px; }}",
@@ -440,7 +444,7 @@
         "subheading": "",
         "alignment": "center",
         "columns": 4,
-        "icons_width": 20,
+        "icons_width": 60,
         "show_vertical_borders": false,
         "show_horizontal_borders": false,
         "heading_size": 120,
