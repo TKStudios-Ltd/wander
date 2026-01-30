@@ -1,0 +1,201 @@
+{% stylesheet %}
+.collection-4-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.collection-4-grid .grid-item {
+  flex: 0 0 calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+/* .search-grid .grid-item.product-template-custom-landscape .product-card__image-container {
+  max-width: 20vw;
+  margin: auto; 
+}
+.search-grid .grid-item.product-template-custom-landscape { justify-content: center; }
+.collection-233-grid .grid-item.product-template-custom-landscape { width: calc(50% - 8.5rem); }
+.collection-233-grid .grid-item.product-template-custom { width: calc(33.333% - 4rem); }
+.collection-233-grid .grid-item .image-wrapper { object-fit: contain; width: -webkit-fill-available; }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .collection-233-grid, .search-grid, .search-grid .grid-item { gap: 3.5rem; }
+}
+@media (max-width: 767px) {
+  .collection-233-grid .grid-item.product-template-custom-landscape,
+  .search-grid .grid-item { width: 100%; padding: 0 1rem; }
+  .collection-233-grid .grid-item.product-template-custom { width: calc(100% - 22.5vw); padding: 0 0.75em; }
+  .search-grid .grid-item.product-template-custom .product-card__image-container { max-width: 60vw; }
+  .search-grid .grid-item.product-template-custom-landscape .product-card__image-container { max-width: 80vw; }
+} */
+{% endstylesheet %}
+
+{%- liquid
+  assign per_page = section.settings.products_per_page | default: 24
+-%}
+
+{%- paginate collection.products by per_page -%}
+  <section id="Collection4--{{ section.id }}" class="collection-grid--custom" data-collection-ajax-root>
+    <div class="wrapper" data-collection-ajax-scope>
+      <div class="blog__pagination blog__pagination_top" data-collection-pagination>
+        {%- if paginate.pages > 1 -%}
+          {%- render 'pagination', paginate: paginate -%}
+        {%- endif -%}
+      </div>
+
+      <div class="collection-4-grid lifestyle--product"
+           style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+           data-collection-grid>
+        {%- if paginate.items > 0 -%}
+          {%- for product in collection.products -%}
+            {%- render 'product-card', product: product, swym_enabled: section.settings.swym_enabled -%}
+          {%- endfor -%}
+        {%- else -%}
+          <p>No products found.</p>
+        {%- endif -%}
+      </div>
+
+      <div class="blog__pagination blog__pagination_bottom" data-collection-pagination>
+        {%- if paginate.pages > 1 -%}
+          {%- render 'pagination', paginate: paginate -%}
+        {%- endif -%}
+      </div>
+
+    </div>
+  </section>
+{%- endpaginate -%}
+
+<script>
+(() => {
+  const root    = document.querySelector('[data-collection-ajax-root]');
+  if (!root) return;
+
+  const scopeSel = '[data-collection-ajax-scope]';
+  const gridSel  = '[data-collection-grid]';
+  const pagSel   = '[data-collection-pagination]';
+
+  // Adjust for sticky header, etc.
+  const SCROLL_OFFSET = 150;
+
+  // Unique key per section so multiple sections won't clash
+  const KEY = `collScrollToGrid:${root.id || 'default'}`;
+
+  function scrollToGrid() {
+    const grid = root.querySelector(gridSel);
+    if (!grid) return;
+
+    const y = grid.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.scrollTo({ top: y, behavior: prefersReduced ? 'auto' : 'smooth' });
+    grid.setAttribute('tabindex','-1');
+    grid.focus({ preventScroll: true });
+  }
+
+  function handlePageShowOrLoad() {
+    // If we flagged a pagination navigation, scroll now and clear the flag
+    if (sessionStorage.getItem(KEY) === '1' || /[?&]page=\d+/.test(location.search)) {
+      // Run after paint so layout is ready
+      requestAnimationFrame(() => {
+        scrollToGrid();
+        sessionStorage.removeItem(KEY);
+      });
+    }
+  }
+
+  function onPaginationClick(e) {
+    const a = e.target.closest('a[href]');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (!href) return;
+
+    // Only intercept collection pagination links
+    if (!/[?&]page=\d+/.test(href)) return;
+
+    // Mark that we should scroll after the next load, then let the browser do a real navigation
+    sessionStorage.setItem(KEY, '1');
+    // Allow the default navigation; no preventDefault needed.
+    // If you prefer to force navigation (avoids target="_blank" etc.), uncomment:
+    // e.preventDefault();
+    // location.href = href;
+  }
+
+  function bindPager() {
+    root.querySelectorAll(pagSel + ' a[href]').forEach(a => {
+      a.removeEventListener('click', onPaginationClick);
+      a.addEventListener('click', onPaginationClick);
+    });
+  }
+
+  // Initial bind
+  bindPager();
+
+  // Scroll after a fresh navigation
+  window.addEventListener('load', handlePageShowOrLoad);
+  // Also handle BFCache restores
+  window.addEventListener('pageshow', handlePageShowOrLoad);
+})();
+</script>
+
+
+{% schema %}
+{
+  "name": "Collection 4 Tiles",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Swym Wishlist"
+    },
+    {
+      "type": "checkbox",
+      "id": "swym_enabled",
+      "label": "Swym Enabled (on product cards)",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Pagination"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 6,
+      "max": 48,
+      "step": 2,
+      "label": "Products per page",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    }
+  ],
+  "presets": [
+    { "name": "Collection 4 Grid" }
+  ]
+}
+{% endschema %}
