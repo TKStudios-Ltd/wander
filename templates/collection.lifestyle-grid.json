@@ -97,50 +97,12 @@
         "padding_top": 30,
         "padding_bottom": 60
       }
-    },
-    "section_custom_html_JX7EYY": {
-      "type": "section-custom-html",
-      "name": "Custom code",
-      "settings": {
-        "custom_code": "<div class=\"text-center\"><div class=\"slider__heading\">Shop Our Other Collections</div></div>",
-        "width": "wrapper",
-        "padding_top": 40,
-        "padding_bottom": 80
-      }
-    },
-    "collection_bottom_slider_QXyqaj": {
-      "type": "collection-bottom-slider",
-      "name": "Collection Bottom Slider",
-      "settings": {
-        "collections": [
-          "swimmers",
-          "wild-horses",
-          "surf",
-          "peonies",
-          "flora",
-          "colorscapes",
-          "birds-sky",
-          "iceland",
-          "italy-capri",
-          "land",
-          "sea",
-          "palms"
-        ],
-        "button_label": "Shop",
-        "show_text_pager": true,
-        "show_nav_dots": false,
-        "autoplay": true,
-        "duration": 4,
-        "transition": "slide"
-      }
     }
   },
   "order": [
     "hero",
     "subcollections",
     "collection_4_tiles_gwjM78",
-    "main",
-    "section_custom_html_JX7EYY",
-    "collection_bottom_slider_QXyqaj"
+    "main"
   ]
 }
