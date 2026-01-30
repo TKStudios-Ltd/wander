@@ -373,8 +373,9 @@
         "heading_BFKEPD"
       ],
       "custom_css": [
-        "@media screen and (min-width: 768px) {.section-padding {padding: 130px 0 120px; }}",
-        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 90px; }}"
+        "@media screen and (min-width: 768px) {.section-padding {padding: 130px 0 20px; }}",
+        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 20px; }}",
+        ".h2 {font-size: 2rem;}"
       ],
       "name": "Text",
       "settings": {
@@ -385,6 +386,78 @@
         "width": "wrapper--narrow",
         "padding_top": 100,
         "padding_bottom": 100
+      }
+    },
+    "section_icons_row_pLtNgY": {
+      "type": "section-icons-row",
+      "blocks": {
+        "text_Ar3fJy": {
+          "type": "text",
+          "settings": {
+            "icon_name": "truck",
+            "title": "Free Shipping",
+            "text": "<p>on all order over $99</p>"
+          }
+        },
+        "text_mHnY9D": {
+          "type": "text",
+          "settings": {
+            "icon_name": "check",
+            "title": "Free Returns",
+            "text": "<p>within 30 days of purchase</p>"
+          }
+        },
+        "text_mCdNFG": {
+          "type": "text",
+          "settings": {
+            "icon_name": "eco-friendly",
+            "title": "1% Donated",
+            "text": "<p>to forest conservation</p>"
+          }
+        },
+        "text_ftqYxF": {
+          "type": "text",
+          "settings": {
+            "icon_name": "eco-friendly",
+            "title": "1% Donated",
+            "text": "<p>to forest conservation</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Ar3fJy",
+        "text_mHnY9D",
+        "text_mCdNFG",
+        "text_ftqYxF"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.section-padding {padding: 20px 0 100px; }}",
+        "@media screen and (max-width: 767px) {.section-padding {padding: 20px 0 100px; }}"
+      ],
+      "name": "Icons row",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "alignment": "center",
+        "columns": 4,
+        "icons_width": 20,
+        "show_vertical_borders": false,
+        "show_horizontal_borders": false,
+        "heading_size": 120,
+        "text_size": 100,
+        "bg_color": "",
+        "text_color": "#333",
+        "box_color": "",
+        "color_border": "#333",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "layout_mobile": "grid",
+        "width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
@@ -397,6 +470,7 @@
     "product_slider_swiper_zc6FKK",
     "section_grid_WKkxyy",
     "section_newsletter_zELBYF",
-    "section_text_teWeMN"
+    "section_text_teWeMN",
+    "section_icons_row_pLtNgY"
   ]
 }
