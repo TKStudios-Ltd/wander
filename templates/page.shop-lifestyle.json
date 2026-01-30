@@ -436,7 +436,8 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 20px 0 100px; }}",
-        "@media screen and (max-width: 767px) {.section-padding {padding: 20px 0 100px; }}"
+        "@media screen and (max-width: 767px) {.section-padding {padding: 20px 0 100px; }}",
+        ".subheading-text {margin-top: 1.4rem; margin-bottom: 1.4rem;}"
       ],
       "name": "Icons row",
       "settings": {
@@ -450,9 +451,9 @@
         "heading_size": 120,
         "text_size": 100,
         "bg_color": "",
-        "text_color": "#333",
+        "text_color": "#333333",
         "box_color": "",
-        "color_border": "#333",
+        "color_border": "#333333",
         "button_text": "",
         "button_link": "",
         "button_color": "btn--black",
