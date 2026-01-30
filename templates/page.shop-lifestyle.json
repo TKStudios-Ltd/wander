@@ -436,7 +436,7 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 20px 0 100px; }}",
-        "@media screen and (max-width: 767px) {.section-padding {padding: 20px 0 60px; } .grid--mobile {margin: 0; } .icons-row-item {min-width: 0; padding: 0 0 30px; max-width: 300px; }}",
+        "@media screen and (max-width: 767px) {.section-padding {padding: 20px 0 60px; } .icons-row__slider {margin: 0 !important; } .icons-row-item {min-width: 0; padding: 0 0 30px; max-width: 300px; }}",
         ".subheading-text {margin-top: 1.4rem; margin-bottom: 1.4rem;}"
       ],
       "name": "Icons row",
