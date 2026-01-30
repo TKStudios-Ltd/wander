@@ -348,39 +348,29 @@
     "section_text_teWeMN": {
       "type": "section-text",
       "blocks": {
-        "text_iH3WH7": {
-          "type": "text",
+        "subheading_Dgji4a": {
+          "type": "subheading",
           "settings": {
-            "text": "<p>Know that you, too, are giving back...<br/>when you buy one of our WANDERINGS™ prints.</p>",
+            "text": "<p>OUR PURE & NATURAL PROMISE</p>",
             "size": 100,
-            "max_width": 500,
-            "margin_bottom": 25
+            "margin_bottom": 16
           }
         },
-        "text_AzdaH9": {
-          "type": "text",
+        "heading_BFKEPD": {
+          "type": "heading",
           "settings": {
-            "text": "<p>SHOP OUR COLLECTIONS...</p>",
+            "text": "<p>We use pure & natural materials, to create non-toxic products that support healthy & beautiful rituals, homes, and lives.</p>",
             "size": 100,
-            "max_width": 675,
-            "margin_bottom": 50
-          }
-        },
-        "button_3w9hQb": {
-          "type": "button",
-          "settings": {
-            "button_text": "Shop",
-            "button_link": "/collections",
-            "button_color": "btn--black",
-            "button_style": "btn--solid",
-            "button_size": "btn--large"
+            "margin_bottom": 16,
+            "heading_highlight_type": "underline-hand-drawn",
+            "highlight_color": "#000000",
+            "highlight_text_color": ""
           }
         }
       },
       "block_order": [
-        "text_iH3WH7",
-        "text_AzdaH9",
-        "button_3w9hQb"
+        "subheading_Dgji4a",
+        "heading_BFKEPD"
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 130px 0 120px; }}",
