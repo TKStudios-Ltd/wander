@@ -98,6 +98,49 @@
         "padding_bottom": 60
       }
     },
+    "section_text_teWeMN": {
+      "type": "section-text",
+      "blocks": {
+        "subheading_Dgji4a": {
+          "type": "subheading",
+          "settings": {
+            "text": "<p>OUR PURE & NATURAL PROMISE</p>",
+            "size": 100,
+            "margin_bottom": 16
+          }
+        },
+        "heading_BFKEPD": {
+          "type": "heading",
+          "settings": {
+            "text": "<p>We use pure & natural materials, to create non-toxic products that support healthy & beautiful rituals, homes, and lives.</p>",
+            "size": 100,
+            "margin_bottom": 16,
+            "heading_highlight_type": "underline-hand-drawn",
+            "highlight_color": "#000000",
+            "highlight_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_Dgji4a",
+        "heading_BFKEPD"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.section-padding {padding: 130px 0 20px; }}",
+        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 20px; }}",
+        ".h2 {font-size: 2rem;}"
+      ],
+      "name": "Text",
+      "settings": {
+        "custom_class": "",
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "text_color": "text-dark",
+        "width": "wrapper--narrow",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "section_icons_row_pLtNgY": {
       "type": "section-icons-row",
       "blocks": {
@@ -181,6 +224,7 @@
     "subcollections",
     "collection_4_tiles_gwjM78",
     "main",
+    "section_text_teWeMN",
     "section_icons_row_pLtNgY"
   ]
 }
