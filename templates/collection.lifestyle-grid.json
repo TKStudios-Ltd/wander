@@ -49,8 +49,8 @@
       "settings": {
         "swym_enabled": true,
         "products_per_page": 12,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "main": {
