@@ -19,7 +19,7 @@
         "text_color": "text-dark",
         "overlay_opacity": 10,
         "bg_color_secondary": false,
-        "padding_top": 0,
+        "padding_top": 100,
         "padding_bottom": 0
       }
     },
