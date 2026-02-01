@@ -48,7 +48,7 @@
       "name": "Collection 4 Grid",
       "settings": {
         "swym_enabled": true,
-        "products_per_page": 4,
+        "products_per_page": 12,
         "padding_top": 60,
         "padding_bottom": 60
       }
