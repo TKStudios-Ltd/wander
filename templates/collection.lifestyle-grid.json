@@ -213,7 +213,7 @@
         "button_style": "btn--solid",
         "button_size": "btn--small",
         "layout_mobile": "stacked",
-        "width": "wrapper--full-padded",
+        "width": "wrapper",
         "padding_top": 60,
         "padding_bottom": 60
       }
