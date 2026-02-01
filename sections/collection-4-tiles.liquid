@@ -40,7 +40,7 @@
 {%- paginate collection.products by per_page -%}
   <section id="Collection4--{{ section.id }}" class="collection-grid--custom" data-collection-ajax-root>
     <div class="wrapper" data-collection-ajax-scope>
-      <div class="blog__pagination blog__pagination_top" data-collection-pagination>
+      <div class="lifestyle--product__pagination blog__pagination blog__pagination_top" data-collection-pagination>
         {%- if paginate.pages > 1 -%}
           {%- render 'pagination', paginate: paginate -%}
         {%- endif -%}
