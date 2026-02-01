@@ -24,7 +24,7 @@
         "overlay_opacity": 10,
         "bg_color_secondary": false,
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 50
       }
     },
     "subcollections": {
@@ -48,7 +48,7 @@
       "name": "Collection 4 Grid",
       "settings": {
         "swym_enabled": true,
-        "products_per_page": 6,
+        "products_per_page": 4,
         "padding_top": 60,
         "padding_bottom": 60
       }
