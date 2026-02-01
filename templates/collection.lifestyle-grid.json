@@ -97,12 +97,90 @@
         "padding_top": 30,
         "padding_bottom": 60
       }
+    },
+    "section_icons_row_pLtNgY": {
+      "type": "section-icons-row",
+      "blocks": {
+        "text_Ar3fJy": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "title": "NON - TOXIC & PURE",
+            "text": "We take pride in our deep knowledge of non toxic living. Our products are pure and natural, never adding toxic burden."
+          }
+        },
+        "text_kjn76g": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "title": "CONSCIOUS LIFE-CYCLE",
+            "text": "From natural materials and process, to ethical sourcing, we are conscious at every level and give back to the planet."
+          }
+        },
+        "text_MqPcrg": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "title": "POSITIVITY FORWARD",
+            "text": "Our products are designed with love, conscious intention, and beauty - raising the vibration of your life & home."
+          }
+        },
+        "text_7QYpNx": {
+          "type": "text",
+          "settings": {
+            "icon_name": "none",
+            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "title": "CREATED JUST FOR YOU",
+            "text": "We are committed to small batches & limited editions, raising the quality & uniqueness, and keeping details intact & minimizing waste."
+          }
+        }
+      },
+      "block_order": [
+        "text_Ar3fJy",
+        "text_kjn76g",
+        "text_MqPcrg",
+        "text_7QYpNx"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 768px) {.section-padding {padding: 20px 0 100px; }}",
+        "@media screen and (max-width: 767px) {.section-padding {padding: 20px 0 60px; } .icons-row__wrapper {margin: 0 0 0 -20px; } .icons-row-item {min-width: 0; padding: 0 0 30px; max-width: 300px; }}",
+        ".subheading-text {margin-top: 1.4rem; margin-bottom: 1.4rem;}"
+      ],
+      "name": "Icons row",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "alignment": "center",
+        "columns": 4,
+        "icons_width": 80,
+        "show_vertical_borders": false,
+        "show_horizontal_borders": false,
+        "heading_size": 120,
+        "text_size": 100,
+        "bg_color": "",
+        "text_color": "#333333",
+        "box_color": "",
+        "color_border": "#333333",
+        "button_text": "",
+        "button_link": "",
+        "button_color": "btn--black",
+        "button_style": "btn--solid",
+        "button_size": "btn--small",
+        "layout_mobile": "stacked",
+        "width": "wrapper--full-padded",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
     "collection_general_image_with_title_c6xpGF",
     "subcollections",
     "collection_4_tiles_gwjM78",
-    "main"
+    "main",
+    "section_icons_row_pLtNgY"
   ]
 }
