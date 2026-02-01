@@ -5140,6 +5140,9 @@ input {
   .collection-grid--custom .blog__pagination_bottom {
     margin: 2rem 0 4rem;
   }
+  .lifestyle--product__pagination .blog__pagination_top {
+    margin: 0;
+  }
 }
 @media (max-width: 749px) {
   .collection-grid--custom .blog__pagination_top {
@@ -5147,6 +5150,9 @@ input {
   }
   .collection-grid--custom .blog__pagination_bottom {
     margin: 2rem 0 6rem;
+  }
+  .lifestyle--product__pagination .blog__pagination_top {
+    margin: 0;
   }
 }
 .blog__pagination_top .pagination {
