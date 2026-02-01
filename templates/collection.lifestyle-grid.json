@@ -9,22 +9,18 @@
  */
 {
   "sections": {
-    "hero": {
-      "type": "collection-image-with-title",
-      "disabled": true,
-      "custom_css": [
-        ".collection--title {padding: 0;}",
-        "@media (min-width: 750px) {.section-padding {padding: 150px 0; }}"
-      ],
+    "collection_general_image_with_title_c6xpGF": {
+      "type": "collection-general-image-with-title",
+      "name": "General Collection Hero",
       "settings": {
         "banner_height": "original-height",
         "text_position": "middle-center",
         "show_image": true,
-        "text_color": "text-light",
-        "overlay_opacity": 0,
+        "text_color": "text-dark",
+        "overlay_opacity": 10,
         "bg_color_secondary": false,
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "subcollections": {
@@ -100,7 +96,7 @@
     }
   },
   "order": [
-    "hero",
+    "collection_general_image_with_title_c6xpGF",
     "subcollections",
     "collection_4_tiles_gwjM78",
     "main"
