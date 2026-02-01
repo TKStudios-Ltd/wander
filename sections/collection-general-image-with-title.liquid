@@ -51,6 +51,9 @@
       margin-left: auto;
       margin-right: auto;
     }
+    #Text--text_LtQKFxX p {
+        max-width: 750px;
+    }
   }
 
   {% if mobile_banner_image %}
@@ -154,10 +157,10 @@
           <p class="text__subheading subheading-text">{{ collection.title }}</p>
         </div>
       </div>
-      <div id="Text--text_TAJynC" class="text__content" style="margin-bottom: 50px;">
+      <div id="Text--text_TAJynd" class="text__content" style="margin-bottom: 50px;">
         <h2>{{ collection.metafields.custom.collection_subtitle | escape }}</h2>
       </div>
-      <div id="Text--text_LtQKFx" class="text__content">
+      <div id="Text--text_LtQKFxX" class="text__content">
         {{ collection.description }}
       </div>
     </div>
