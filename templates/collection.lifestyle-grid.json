@@ -11,6 +11,10 @@
   "sections": {
     "collection_general_image_with_title_c6xpGF": {
       "type": "collection-general-image-with-title",
+      "custom_css": [
+        ".collection--title {padding: 0;}",
+        "@media (min-width: 750px) {.section-padding {padding: 150px 0 50px; }}"
+      ],
       "name": "General Collection Hero",
       "settings": {
         "banner_height": "original-height",
@@ -20,7 +24,7 @@
         "overlay_opacity": 10,
         "bg_color_secondary": false,
         "padding_top": 100,
-        "padding_bottom": 0
+        "padding_bottom": 100
       }
     },
     "subcollections": {
