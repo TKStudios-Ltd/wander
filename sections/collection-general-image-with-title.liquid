@@ -156,11 +156,11 @@
     <div class="wrapper text text-center">
       <div class="text collection--title" style="margin-bottom: 10px;">
         <div id="Text--heading_hLX8Dc" class="text__content">
-          <p class="text__subheading subheading-text">{{ collection.title }}</p>
+          <p class="text__subheading subheading-text">{{ collection.metafields.custom.collection_subtitle | escape }}</p>
         </div>
       </div>
       <div id="Text--text_TAJynd" class="text__content" style="margin-bottom: 50px;">
-        <h1>{{ collection.metafields.custom.collection_subtitle | escape }}</h1>
+        <h1>{{ collection.metafields.custom.collection_hero_title | escape }}</h1>
       </div>
       <div id="Text--text_LtQKFxX" class="text__content">
         {{ collection.description }}
