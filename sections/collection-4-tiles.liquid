@@ -34,7 +34,7 @@
 {% endstylesheet %}
 
 {%- liquid
-  assign per_page = section.settings.products_per_page | default: 24
+  assign per_page = section.settings.products_per_page | default: 4
 -%}
 
 {%- paginate collection.products by per_page -%}
