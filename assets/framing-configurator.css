@@ -354,9 +354,15 @@
 [data-size="small"] .fc-artwork     { inset: 27% 27% 27% 27%; }
 [data-size="medium"] .fc-artwork    { inset: 22.75% 22.75% 22.75% 22.75%; }
 [data-size="large"] .fc-artwork     { inset: 20% 20% 20% 20%; }
+
 [data-size="gallery"] .fc-artwork   { inset: 15% 15% 15% 15%; }
 [data-size="statement"] .fc-artwork { inset: 11% 11% 11% 11%; }
 [data-size="collector"] .fc-artwork { inset: 8% 8% 8% 8%; }
+
+.framing-configurator-landscape [data-size="gallery"] .fc-artwork   { 
+    inset: 25% 15% 25% 15%; 
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.15), inset 4px 0 10px rgba(0, 0, 0, 0.15);
+}
 
 [data-size="small"] .fc-mat-oversized .fc-artwork { inset: 31% 31% 31% 31%; }
 [data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 27.75% 27.75% 27.75% 27.75%; }
