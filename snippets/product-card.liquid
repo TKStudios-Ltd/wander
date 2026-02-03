@@ -13,7 +13,10 @@
         <div class="product-card__image-container">
           <div class="product-card__image with-frame with-matte">
             {% if product.featured_image %}
-              {{ product.featured_image | image_url: width: 400 | image_tag }}
+              {{ product.featured_image 
+  | image_url: width: 1200 
+  | image_tag: class: 'full-image'
+}}
             {% else %}
               <img src="https://media.istockphoto.com/id/485371557/photo/twilight-at-spirit-island.jpg?s=612x612&w=0&k=20&c=FSGliJ4EKFP70Yjpzso0HfRR4WwflC6GKfl4F3Hj7fk=" alt="PLACEHOLDER">
             {% endif %}
