@@ -198,7 +198,7 @@
         "subheading": "",
         "alignment": "center",
         "columns": 4,
-        "icons_width": 80,
+        "icons_width": 100,
         "show_vertical_borders": false,
         "show_horizontal_borders": false,
         "heading_size": 120,
