@@ -20863,6 +20863,11 @@ search-popdown details > summary:first-of-type {
 
 .icons-row-item__image {
   width: 100%;
+  padding-top: min(var(--icon-size), var(--icon-max-size));
+}
+
+img {
+  object-fit: contain;
 }
 
 .icons-row-item__title {
