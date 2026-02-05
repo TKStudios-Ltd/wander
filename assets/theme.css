@@ -20845,7 +20845,7 @@ search-popdown details > summary:first-of-type {
 .icons-row-item__icon {
   position: relative;
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 0;
   width: 100%;
   height: min(var(--icon-size), var(--icon-max-size));
 }
