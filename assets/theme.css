@@ -20846,7 +20846,7 @@ search-popdown details > summary:first-of-type {
   position: relative;
   display: inline-block;
   margin-bottom: 14px;
-  width: auto;
+  width: 100%;
   height: min(var(--icon-size), var(--icon-max-size));
 }
 @media only screen and (max-width: 767px) {
