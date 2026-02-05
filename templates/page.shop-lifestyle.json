@@ -395,7 +395,7 @@
           "type": "text",
           "settings": {
             "icon_name": "none",
-            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "icon_image": "shopify://shop_images/1770236030467-icons2.png",
             "title": "NON - TOXIC & PURE",
             "text": "We take pride in our deep knowledge of non toxic living. Our products are pure and natural, never adding toxic burden."
           }
@@ -404,7 +404,7 @@
           "type": "text",
           "settings": {
             "icon_name": "none",
-            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "icon_image": "shopify://shop_images/1770236030467-icons4.png",
             "title": "CONSCIOUS LIFE-CYCLE",
             "text": "From natural materials and processes, to ethical sourcing, we are conscious at every level and give back to the planet."
           }
@@ -413,7 +413,7 @@
           "type": "text",
           "settings": {
             "icon_name": "none",
-            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "icon_image": "shopify://shop_images/1770236030534-icons3.png",
             "title": "POSITIVITY FORWARD",
             "text": "Our products are designed with love, conscious intention, and beauty - raising the vibration of your life & home."
           }
@@ -422,7 +422,7 @@
           "type": "text",
           "settings": {
             "icon_name": "none",
-            "icon_image": "shopify://shop_images/Screenshot_2026-01-30_at_8.11.20_AM.png",
+            "icon_image": "shopify://shop_images/1770236030401-icons.png",
             "title": "CREATED JUST FOR YOU",
             "text": "We design in small batches & limited editions – focusing on quality, preserving fine details, and reducing waste."
           }
@@ -445,7 +445,7 @@
         "subheading": "",
         "alignment": "center",
         "columns": 4,
-        "icons_width": 80,
+        "icons_width": 100,
         "show_vertical_borders": false,
         "show_horizontal_borders": false,
         "heading_size": 120,
