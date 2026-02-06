@@ -34735,6 +34735,16 @@ main img {
   -webkit-user-select: none;
 }
 
+@media (max-width: 767px) {
+  .swym-atw-btn-wrapper.product_title_left-position, .swym-atw-btn-wrapper.product_title_right-position {
+    justify-content: start !important;
+  }
+}
+@media (min-width: 768px) {
+  .swym-atw-btn-wrapper.product_title_left-position, .swym-atw-btn-wrapper.product_title_right-position {
+    justify-content: space-between !important;
+  }
+}
 .swym-atw-button-container.align-right {
   height: 100%;
 }
