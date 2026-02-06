@@ -108,7 +108,7 @@
           "type": "button",
           "settings": {
             "button_text": "Shop All",
-            "button_link": "",
+            "button_link": "shopify://collections/lifestyle-products",
             "button_color": "btn--black",
             "button_style": "btn--solid",
             "button_size": "btn--large"
@@ -196,7 +196,7 @@
         "content": "<p>Reset your life and step into intuitive ritual with our beautiful cloth-bound journals. Exquisitely crafted in limited editions using old-time traditions, they just simply feel good in your hand. Each journal is all natural & pure — and includes a positive message etched in gold, a satin book ribbon, linen cloth and crisp unlined paper.</p>",
         "text_alignment": "left",
         "button_text": "Shop",
-        "button_link": "",
+        "button_link": "shopify://collections/journals",
         "button_color": "btn--black",
         "button_style": "btn--solid",
         "button_size": "btn--large",
