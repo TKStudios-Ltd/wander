@@ -26734,7 +26734,7 @@ search-form mark {
 }
 @media (max-width: 989px) {
   .product__form .btn--submit {
-    font-size: 14px;
+    font-size: 12px !important;
   }
 }
 .product__form .btn--submit span {
