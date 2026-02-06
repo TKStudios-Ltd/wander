@@ -34735,3 +34735,6 @@ main img {
   -webkit-user-select: none;
 }
 
+.swym-atw-button-container.align-right {
+  height: 100%;
+}
