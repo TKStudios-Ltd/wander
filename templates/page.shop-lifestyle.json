@@ -211,6 +211,7 @@
     },
     "product_slider_swiper_zc6FKK": {
       "type": "product-slider-swiper",
+      "custom_css": [],
       "name": "Product Slider (Swiper)",
       "settings": {
         "collection": "lifestyle-products",
@@ -374,7 +375,7 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 130px 0 20px; }}",
-        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 20px; }}",
+        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 20px; } .h2 {font-size: calc(2rem * 0.8) !important; }}",
         ".h2 {font-size: 2rem;}"
       ],
       "name": "Text",
