@@ -1,1 +1,268 @@
-{"sections":{"main":{"type":"product","blocks":{"breadcrumbs_cTKAyL":{"type":"breadcrumbs","settings":{"subheading":"breadcrumbs","padding_bottom":20}},"title":{"type":"title","settings":{"title_size":100,"show_wishlist":false,"padding_bottom":20}},"wishlist_plus_wishlist_pdp_button_9LbFJc":{"type":"shopify:\/\/apps\/wishlist-plus\/blocks\/wishlist-pdp-button\/80c3b1fc-3a8f-407e-8367-ffdeebb8b612","settings":{"swym_atw_button_icon":"heart","swym_atw_icon_thickness":1.3,"swym_atw_display_btn_text":false,"swym_button_position":"product_title_right","swym_atw_button_vertical_offset":0,"swym_atw_full_width":true,"swym_atw_button_alignment":"right","swym_add_to_wishlist_color":"#000000","swym_added_to_wishlist_color":"#f8f8f8","swym_button_text_color":"#000000","swym_atw_border_color":"#000000","swym_atw_border_thickness":0,"swym_atw_button_border_radius":0,"swym_enable_hover_customization":false,"swym_hover_add_to_wishlist_color":"#d02e2e","swym_hover_added_to_wishlist_color":"#d3d3d3","swym_hover_button_text_color":"#ffffff","swym_hover_atw_border_color":"#000000","swym_hover_atw_border_thickness":0,"swym_hover_atw_button_border_radius":0,"swym_custom_css":".atw-button-add, #swym-atw-pdp-button {\nbackground: none;\n}"}},"description":{"type":"description","settings":{"padding_bottom":20}},"form":{"type":"form","settings":{"show_labels":true,"show_quantity":true,"show_payment_button":false,"instructions":"","sizing":"","enable_subscriptions_selectors":false,"show_price":true,"show_price_label":true,"price_size":100,"bold_price":false,"padding_bottom":20}}},"block_order":["breadcrumbs_cTKAyL","title","wishlist_plus_wishlist_pdp_button_9LbFJc","description","form"],"custom_css":[".product__description.rte {margin-bottom: 1.5rem;}","@media (max-width: 749px) {.product__description.rte {margin: -1rem 0 0; }}"],"settings":{"product_sticky_enable":true,"image_layout":"carousel","image_width":"standard","product_image_aspect_ratio":false,"enable_zoom":false,"enable_video_looping":false,"bg_color":"","width":"wrapper","padding_top":100,"padding_bottom":100}},"tabs_nW9JLK":{"type":"tabs","blocks":{"tab_BWEk4B":{"type":"tab","settings":{"title":"DETAILS","content":"{{ product.metafields.custom.details_tab | metafield_tag }}"}},"tab_UzRQpg":{"type":"tab","settings":{"title":"SIZING & SPECS","content":"<p>{{ product.metafields.custom.sizing_spec_tab | metafield_tag }}<\/p>"}},"tab_HfanXU":{"type":"tab","settings":{"title":"MATERIALS & SUSTAINABILITY","content":"<p>{{ product.metafields.custom.materials_sustainability_tab | metafield_tag }}<\/p>"}},"tab_3fyJjx":{"type":"tab","settings":{"title":"SHIPPING & RETURNS","content":"{{ product.metafields.custom.shipping_returns_tab | metafield_tag }}"}}},"block_order":["tab_BWEk4B","tab_UzRQpg","tab_HfanXU","tab_3fyJjx"],"name":"Tabs","settings":{}},"section_recommended_products_iY3FTK":{"type":"section-recommended-products","blocks":{"product_list_UFNPkx":{"type":"product_list","settings":{"product_list":["pink-palms-4","pink-palms-5","pink-palms-6"]}}},"block_order":["product_list_UFNPkx"],"disabled":true,"name":"Recommended products","settings":{"title":"Pairs well with","swym_enabled":true,"width":"wrapper","padding_top":100,"padding_bottom":100}},"section_text_yc3dJC":{"type":"section-text","blocks":{"separator_YbdFKV":{"type":"separator","settings":{"separator_width":30,"margin_top":60,"margin_bottom":60}},"text_9bLyaH":{"type":"text","settings":{"text":"<p>WE BELIEVE IN HAVING A MINIMAL ENVIRONMENTAL FOOTPRINT.<br\/>WITH THE PURCHASE OF EVERY PRINT BOUGHT DIRECTLY ON OUR WEBSITE,<br\/>WE WILL PLANT A TREE, IN PARTNERSHIP WITH ONE TREE PLANTED.<br\/>YOU CAN READ MORE ABOUT HOW WE ARE GIVING BACK, <a href=\"\/pages\/giving-back\" target=\"_blank\" title=\"Giving Back\">HERE<\/a>.<br\/><\/p>","size":100,"max_width":1000,"margin_bottom":16}},"separator_dczE4Y":{"type":"separator","settings":{"separator_width":30,"margin_top":60,"margin_bottom":60}}},"block_order":["separator_YbdFKV","text_9bLyaH","separator_dczE4Y"],"custom_css":["p {font-family: Libre Baskerville, serif; font-size: 11px !important; text-transform: uppercase; letter-spacing: 1px; line-height: 1.8;}","@media (max-width: 749px) {p {font-size: 1.4vw !important; }}","a {text-decoration: none;}","a:hover {text-decoration: underline;}"],"name":"Text","settings":{"custom_class":"","text_position":"center","bg_color_secondary":false,"text_color":"text-dark","width":"wrapper--narrow","padding_top":60,"padding_bottom":60}},"related":{"type":"related-products","blocks":{"related_JAPgWt":{"type":"related","settings":{"title":"Pairs Well With","product_recommendations_limit":4}}},"block_order":["related_JAPgWt"],"disabled":true,"settings":{"enable_tabs":false,"columns_mobile":"1","type_style":"subheading-text","tab_heading_size":120,"bg_color":"","width":"wrapper--full-padded","padding_top":60,"padding_bottom":60}}},"order":["main","tabs_nW9JLK","section_recommended_products_iY3FTK","section_text_yc3dJC","related"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "breadcrumbs_cTKAyL": {
+          "type": "breadcrumbs",
+          "settings": {
+            "subheading": "breadcrumbs",
+            "padding_bottom": 20
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": 100,
+            "show_wishlist": false,
+            "padding_bottom": 20
+          }
+        },
+        "wishlist_plus_wishlist_pdp_button_9LbFJc": {
+          "type": "shopify://apps/wishlist-plus/blocks/wishlist-pdp-button/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+          "settings": {
+            "swym_atw_button_icon": "heart",
+            "swym_atw_icon_thickness": 1.3,
+            "swym_atw_display_btn_text": false,
+            "swym_button_position": "product_title_right",
+            "swym_atw_button_vertical_offset": 0,
+            "swym_atw_full_width": true,
+            "swym_atw_button_alignment": "right",
+            "swym_add_to_wishlist_color": "#000000",
+            "swym_added_to_wishlist_color": "#f8f8f8",
+            "swym_button_text_color": "#000000",
+            "swym_atw_border_color": "#000000",
+            "swym_atw_border_thickness": 0,
+            "swym_atw_button_border_radius": 0,
+            "swym_enable_hover_customization": false,
+            "swym_hover_add_to_wishlist_color": "#d02e2e",
+            "swym_hover_added_to_wishlist_color": "#d3d3d3",
+            "swym_hover_button_text_color": "#ffffff",
+            "swym_hover_atw_border_color": "#000000",
+            "swym_hover_atw_border_thickness": 0,
+            "swym_hover_atw_button_border_radius": 0,
+            "swym_custom_css": ".atw-button-add, #swym-atw-pdp-button {\nbackground: none;\n}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "padding_bottom": 20
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_labels": true,
+            "show_quantity": true,
+            "show_payment_button": false,
+            "instructions": "",
+            "sizing": "",
+            "enable_subscriptions_selectors": false,
+            "show_price": true,
+            "show_price_label": true,
+            "price_size": 100,
+            "bold_price": false,
+            "padding_bottom": 20
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumbs_cTKAyL",
+        "title",
+        "wishlist_plus_wishlist_pdp_button_9LbFJc",
+        "description",
+        "form"
+      ],
+      "custom_css": [
+        ".product__description.rte {margin-bottom: 1.5rem;}",
+        "@media (max-width: 749px) {.product__description.rte {margin: -1rem 0 0; }}"
+      ],
+      "settings": {
+        "product_sticky_enable": true,
+        "image_layout": "carousel",
+        "image_width": "standard",
+        "product_image_aspect_ratio": false,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "bg_color": "",
+        "width": "wrapper",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "tabs_nW9JLK": {
+      "type": "tabs",
+      "blocks": {
+        "tab_BWEk4B": {
+          "type": "tab",
+          "settings": {
+            "title": "DETAILS",
+            "content": "{{ product.metafields.custom.details_tab | metafield_tag }}"
+          }
+        },
+        "tab_UzRQpg": {
+          "type": "tab",
+          "settings": {
+            "title": "SIZING & SPECS",
+            "content": "<p>{{ product.metafields.custom.sizing_spec_tab | metafield_tag }}</p>"
+          }
+        },
+        "tab_HfanXU": {
+          "type": "tab",
+          "settings": {
+            "title": "MATERIALS & SUSTAINABILITY",
+            "content": "<p>{{ product.metafields.custom.materials_sustainability_tab | metafield_tag }}</p>"
+          }
+        },
+        "tab_3fyJjx": {
+          "type": "tab",
+          "settings": {
+            "title": "SHIPPING & RETURNS",
+            "content": "{{ product.metafields.custom.shipping_returns_tab | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "tab_BWEk4B",
+        "tab_UzRQpg",
+        "tab_HfanXU",
+        "tab_3fyJjx"
+      ],
+      "name": "Tabs",
+      "settings": {}
+    },
+    "section_recommended_products_iY3FTK": {
+      "type": "section-recommended-products",
+      "blocks": {
+        "product_list_UFNPkx": {
+          "type": "product_list",
+          "settings": {
+            "product_list": [
+              "pink-palms-4",
+              "pink-palms-5",
+              "pink-palms-6"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "product_list_UFNPkx"
+      ],
+      "disabled": true,
+      "name": "Recommended products",
+      "settings": {
+        "title": "Pairs well with",
+        "swym_enabled": true,
+        "width": "wrapper",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "section_text_yc3dJC": {
+      "type": "section-text",
+      "blocks": {
+        "separator_YbdFKV": {
+          "type": "separator",
+          "settings": {
+            "separator_width": 30,
+            "margin_top": 60,
+            "margin_bottom": 60
+          }
+        },
+        "text_9bLyaH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>WE BELIEVE IN HAVING A MINIMAL ENVIRONMENTAL FOOTPRINT.<br/>WITH THE PURCHASE OF EVERY PRINT BOUGHT DIRECTLY ON OUR WEBSITE,<br/>WE WILL PLANT A TREE, IN PARTNERSHIP WITH ONE TREE PLANTED.<br/>YOU CAN READ MORE ABOUT HOW WE ARE GIVING BACK, <a href=\"/pages/giving-back\" target=\"_blank\" title=\"Giving Back\">HERE</a>.<br/></p>",
+            "size": 100,
+            "max_width": 1000,
+            "margin_bottom": 16
+          }
+        },
+        "separator_dczE4Y": {
+          "type": "separator",
+          "settings": {
+            "separator_width": 30,
+            "margin_top": 60,
+            "margin_bottom": 60
+          }
+        }
+      },
+      "block_order": [
+        "separator_YbdFKV",
+        "text_9bLyaH",
+        "separator_dczE4Y"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "p {font-family: Libre Baskerville, serif; font-size: 11px !important; text-transform: uppercase; letter-spacing: 1px; line-height: 1.8;}",
+        "@media (max-width: 749px) {p {font-size: 1.4vw !important; }}",
+        "a {text-decoration: none;}",
+        "a:hover {text-decoration: underline;}"
+      ],
+      "name": "Text",
+      "settings": {
+        "custom_class": "",
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "text_color": "text-dark",
+        "width": "wrapper--narrow",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "related": {
+      "type": "related-products",
+      "blocks": {
+        "related_JAPgWt": {
+          "type": "related",
+          "settings": {
+            "title": "Pairs Well With",
+            "product_recommendations_limit": 4
+          }
+        }
+      },
+      "block_order": [
+        "related_JAPgWt"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_tabs": false,
+        "columns_mobile": "1",
+        "type_style": "subheading-text",
+        "tab_heading_size": 120,
+        "bg_color": "",
+        "width": "wrapper--full-padded",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "section_divider_8GL8if": {
+      "type": "section-divider",
+      "name": "Divider",
+      "settings": {
+        "show_line": false,
+        "width": "wrapper",
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "tabs_nW9JLK",
+    "section_recommended_products_iY3FTK",
+    "section_text_yc3dJC",
+    "related",
+    "section_divider_8GL8if"
+  ]
+}
