@@ -13,7 +13,7 @@
       "type": "collection-general-image-with-title",
       "custom_css": [
         ".collection--title {padding: 0;}",
-        "@media (min-width: 750px) {.section-padding {padding: 150px 0 50px; }}"
+        "@media (min-width: 750px) {.section-padding {padding: 150px 0 50px; } h1 br {display: none; }}"
       ],
       "name": "General Collection Hero",
       "settings": {
