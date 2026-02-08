@@ -117,7 +117,7 @@
           "type": "button",
           "settings": {
             "button_text": "Shop All",
-            "button_link": "shopify://collections/lifestyle-products",
+            "button_link": "shopify://collections/journals",
             "button_color": "btn--black",
             "button_style": "btn--solid",
             "button_size": "btn--large"
