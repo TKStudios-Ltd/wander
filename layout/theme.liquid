@@ -39,6 +39,9 @@
       --overlay-bg-svg: {{ loading_svg_color }};
     }
   {% endif %}
+  :root {
+    --frame-x-full-url: url({{ 'frame-x-full.png' | asset_url }});
+  }
   .no-js.page-loading .loading-overlay,
   html:not(.page-loading) .loading-overlay { opacity: 0; visibility: hidden; pointer-events: none; animation: fadeOut 1s ease; transition: visibility 0s linear 1s; }
 
