@@ -33998,7 +33998,7 @@ div.footer-title h5 {
 
 .product-card .product-card__image.with-frame img {
   border: 10px solid transparent;
-  border-image-source: url('/assets/frame-x-full.png') !important;
+  border-image-source: url('//cdn.shopify.com/s/files/1/0897/7491/5904/t/18/assets/frame-x-full.png') !important;
   border-image-slice: 120 !important;
   border-image-width: 10px !important;
   border-image-repeat: stretch !important;
