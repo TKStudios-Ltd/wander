@@ -33993,20 +33993,28 @@ div.footer-title h5 {
   width: 100%;
   height: auto;
   transition: filter 0.5s ease;
-  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.1)) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)) drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .product-card .product-card__image.with-frame img {
   border: 10px solid transparent;
+
   border-image-source: var(--frame-x-full-url) !important;
   border-image-slice: 95 !important;
-  border-image-width: 28px !important;
+
+  /* KEY FIX: multiplier so it scales with responsive border-width */
+  border-image-width: 2.8 !important;
+
   border-image-repeat: stretch !important;
+
   box-sizing: border-box;
   padding: 14px;
   background: #fff;
   background-clip: padding-box;
-  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.1)) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)) drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.1))
+          drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))
+          drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+
   box-shadow:
     inset 0 0 0 rgba(255,255,255,0.6),
     inset 3px 1px 6px rgba(0,0,0,0.25);
@@ -34014,14 +34022,19 @@ div.footer-title h5 {
 
 .search-grid .product-card .product-card__image.with-frame img {
   border-width: 8px;
-  border-image-width: 8px !important;
+
   border-image-slice: 95 !important;
+
+  /* 22px at 8px border = 2.75 multiplier */
+  border-image-width: 2.75 !important;
+
   padding: 12px;
-  filter: none;
 }
 
 .product-card a:hover .product-card__image img {
-  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2)) drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2)) drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2))
+          drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2))
+          drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.2));
 }
 
 /* General Product */
@@ -34065,6 +34078,7 @@ div.footer-title h5 {
     width: calc(50% - 4rem) !important;
   }
 }
+
 @media (max-width: 767px) {
   .product-card .product-card__image.with-frame img {
     border-width: 1.5vw !important;
@@ -34094,6 +34108,7 @@ div.footer-title h5 {
     right: 0 !important;
   }
 }
+
 
 .product-card .product-card__info {
   position: relative;
