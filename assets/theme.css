@@ -34006,7 +34006,7 @@ div.footer-title h5 {
   padding: 14px;
   background: #fff;
   background-clip: padding-box;
-  filter: none !important;
+  filter: none;
   box-shadow:
     inset 0 0 0 rgba(255,255,255,0.6),
     inset 3px 1px 6px rgba(0,0,0,0.25);
@@ -34017,7 +34017,7 @@ div.footer-title h5 {
   border-image-width: 8px !important;
   border-image-slice: 95 !important;
   padding: 12px;
-  filter: none !important;
+  filter: none;
 }
 
 .product-card a:hover .product-card__image img {
