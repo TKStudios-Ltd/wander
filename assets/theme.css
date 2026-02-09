@@ -33998,20 +33998,14 @@ div.footer-title h5 {
 
 .product-card .product-card__image.with-frame img {
   border: 10px solid transparent;
-  border-image-source: url('//cdn.shopify.com/s/files/1/0897/7491/5904/t/18/assets/frame-x_small.png') !important;
-  border-image-slice: 110 !important;
-  border-image-width: 10 !important;
+  border-image-source: url('//shopwander.com/cdn/shop/t/18/assets/frame-x.png') !important;
+  border-image-slice: 24% fill !important;
+  border-image-width: 10px !important;
   border-image-repeat: stretch !important;
   border-image-outset: 0 !important;
   box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.6), inset 3px 1px 6px rgba(0, 0, 0, 0.25);
   background-clip: padding-box;
   background-color: white;
-}
-/* Retina / iMac: swap to the full-res frame */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .product-card .product-card__image.with-frame img {
-    border-image-source: url('//shopwander.com/cdn/shop/t/18/assets/frame-x.png') !important;
-  }
 }
 .product-card .product-card__image.with-matte img {
   padding: 15px;
