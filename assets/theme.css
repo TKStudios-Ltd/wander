@@ -33999,7 +33999,7 @@ div.footer-title h5 {
 .product-card .product-card__image.with-frame img {
   border: 10px solid transparent;
 
-  border-image-source: url('{{ "frame-x-full.png" | asset_url }}') !important;
+  border-image-source: url('{{ "product-frame-full.png" | asset_url }}') !important;
   border-image-slice: 120 !important;
   border-image-width: 10px !important;
   border-image-repeat: stretch !important;
