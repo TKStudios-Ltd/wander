@@ -423,32 +423,6 @@
         "height_mobile": "auto"
       }
     },
-    "section_video_d7kgkM": {
-      "type": "section-video",
-      "name": "Video",
-      "settings": {
-        "video_height": "six-fifty-height",
-        "enable_mobile_height": false,
-        "mobile_height": "six-fifty-height-mobile",
-        "text_position": "middle-center",
-        "video_link_bg": "https://cdn.shopify.com/videos/c/o/v/6715ae7a466a4447959f9f9cc0246bc7.mp4",
-        "video_link": "",
-        "image": "shopify://shop_images/Maskgroup_2_4fd368a7-f249-4937-9d5a-ad8c7fc7c3c1.jpg",
-        "overlay_opacity": 55,
-        "text_color": "text-light",
-        "title": "",
-        "heading_highlight_type": "underline-hand-drawn",
-        "highlight_color": "#000",
-        "highlight_text_color": "",
-        "text": "",
-        "heading_size": 100,
-        "button_text": "",
-        "button_link": "",
-        "button_color": "btn--white",
-        "button_style": "btn--solid-border",
-        "button_size": "btn--small"
-      }
-    },
     "section_text_4dwJx6": {
       "type": "section-text",
       "blocks": {
@@ -1766,7 +1740,6 @@
   },
   "order": [
     "image_banner_overlay_slider_XtwLpd",
-    "section_video_d7kgkM",
     "section_text_4dwJx6",
     "section_text_EJA6PN",
     "wander_collection_thin_banner_yxQyLn",
