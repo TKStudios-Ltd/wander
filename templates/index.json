@@ -1371,8 +1371,8 @@
       ],
       "name": "Column Product Slider",
       "settings": {
-        "autoplay": false,
-        "duration_seconds": 4,
+        "autoplay": true,
+        "duration_seconds": 5,
         "show_dots": true,
         "swym_enabled": true,
         "padding_top": 100,
