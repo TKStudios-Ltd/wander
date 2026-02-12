@@ -1309,6 +1309,76 @@
         "height_mobile": "auto"
       }
     },
+    "column_product_slider_8MhcPr": {
+      "type": "column-product-slider",
+      "blocks": {
+        "slide_bkxNtW": {
+          "type": "slide",
+          "settings": {
+            "collection": "colorscapes",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "series_name": "WANDERINGS™ COLLECTION",
+            "heading": "WANDERINGSTM Fine Art Photography",
+            "products": [
+              "colorscape-no-01",
+              "colorscape-no-02",
+              "colorscape-no-03"
+            ],
+            "show_button": true,
+            "button_label": "Shop the collection"
+          }
+        },
+        "slide_Cegqph": {
+          "type": "slide",
+          "settings": {
+            "collection": "surf",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "series_name": "WANDERINGS™ COLLECTION",
+            "heading": "WANDERINGSTM Fine Art Photography",
+            "products": [
+              "a-surfer-his-dog",
+              "a-surfer-his-dog-slate",
+              "a-surfer-his-dog-golden"
+            ],
+            "show_button": true,
+            "button_label": "Shop the collection"
+          }
+        },
+        "slide_HpXGVy": {
+          "type": "slide",
+          "settings": {
+            "collection": "swimmers",
+            "title_source": "collection",
+            "manual_title": "",
+            "series_name": "WANDERINGS™ COLLECTION",
+            "heading": "WANDERINGSTM Fine Art Photography",
+            "products": [
+              "a-perfect-afternoon-2",
+              "a-perfect-afternoon-6",
+              "a-perfect-afternoon-8"
+            ],
+            "show_button": true,
+            "button_label": "Shop"
+          }
+        }
+      },
+      "block_order": [
+        "slide_bkxNtW",
+        "slide_Cegqph",
+        "slide_HpXGVy"
+      ],
+      "name": "Column Product Slider",
+      "settings": {
+        "autoplay": false,
+        "duration_seconds": 4,
+        "show_dots": true,
+        "swym_enabled": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "section_text_qmgbWJ": {
       "type": "section-text",
       "blocks": {
@@ -1746,6 +1816,7 @@
     "image_banner_overlay_slider_TXBTpN",
     "section_newsletter_zELBYF",
     "image_banner_text_above_slider_xyqJet",
+    "column_product_slider_8MhcPr",
     "section_text_qmgbWJ",
     "section_image_with_text_MqLekd",
     "section_banner_image_XDWmqC",
