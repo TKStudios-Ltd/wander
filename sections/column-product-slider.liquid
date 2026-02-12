@@ -120,9 +120,17 @@
       {%- endif -%}
     </div>
 
-    <div class="ibtps__cta-wrap">
-      <a class="btn btn--solid btn--large btn--black ibtps__cta" href="#" hidden>Shop the collection</a>
-    </div>
+    {% if block.settings.show_button and block.settings.collection != blank %}
+        <div class="ibtps__cta-wrap">
+            <a 
+            class="btn btn--solid btn--large btn--black ibtps__cta"
+            href="{{ block.settings.collection.url }}"
+            >
+            {{ block.settings.button_label | default: 'Shop' }}
+            </a>
+        </div>
+    {% endif %}
+
   </div>
 </section>
 
@@ -376,7 +384,7 @@
 
         { "type": "header", "content": "CTA" },
         { "type": "checkbox", "id": "show_button", "label": "Show CTA button for this slide", "default": true },
-        { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop the collection" }
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop" }
       ]
     }
   ],
