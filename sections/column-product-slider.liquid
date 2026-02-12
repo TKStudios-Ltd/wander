@@ -203,14 +203,15 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-    margin: 1rem 1rem 4rem;
+    margin: 1rem auto 4rem;
+    max-width: 800px;
   }
   #IBTPS--{{ section.id }} .ibtps__products_grid  .grid-item {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: calc(33.3333% - 1rem);
   }
   #IBTPS--{{ section.id }} .ibtps__products_grid  .grid-item .image-wrapper {
     object-fit: contain;
