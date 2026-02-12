@@ -25,111 +25,108 @@
 >
   <div class="ibtps__inner">
     <div class="swiper ibtps__swiper">
-      <div class="swiper-wrapper">
+        <div class="swiper-wrapper">
 
-        {%- for block in section.blocks -%}
-          {%- liquid
-            assign col = block.settings.collection
+            {%- for block in section.blocks -%}
+            {%- liquid
+                assign col = block.settings.collection
 
-            # Title
-            assign title = ''
-            if block.settings.title_source == 'collection' and col
-              assign title = col.title
-            else
-              assign title = block.settings.manual_title
-            endif
+                # Title
+                assign title = ''
+                if block.settings.title_source == 'collection' and col
+                assign title = col.title
+                else
+                assign title = block.settings.manual_title
+                endif
 
-            # Series (plain text)
-            assign series_name = block.settings.series_name
+                # Series (plain text)
+                assign series_name = block.settings.series_name
 
-            # Products (up to 3)
-            assign picked_products = block.settings.products
+                # Products (up to 3)
+                assign picked_products = block.settings.products
 
-            assign products_to_show = blank
-            if picked_products != blank and picked_products.size > 0
-              assign products_to_show = picked_products
-            elsif col != blank
-              assign products_to_show = col.products
-            endif
-          -%}
+                assign products_to_show = blank
+                if picked_products != blank and picked_products.size > 0
+                assign products_to_show = picked_products
+                elsif col != blank
+                assign products_to_show = col.products
+                endif
+            -%}
 
-          <div class="swiper-slide"
-            {{ block.shopify_attributes }}
-            data-cta-enabled="{{ block.settings.show_button | default: false }}"
-            data-cta-url="{{ col.url | default: '#' }}"
-            data-cta-label="{{ block.settings.button_label | default: 'Shop the collection' }}"
-          >
-            <div class="ibtps__slide">
-              <div class="ibtps__text">
-                <div class="ibtps__text_subheading">
-                  {%- if title != blank -%}
-                    {%- if col -%}
-                      <a class="ibtps__title subheading-text" href="{{ col.url }}">
-                        {{ title | escape }} Collection
-                      </a>
-                    {%- else -%}
-                      <div class="ibtps__title subheading-text">
-                        {{ title | escape }}
-                      </div>
-                    {%- endif -%}
-                  {%- endif -%}
+            <div class="swiper-slide"
+                {{ block.shopify_attributes }}
+                data-cta-enabled="{{ block.settings.show_button | default: false }}"
+                data-cta-url="{{ col.url | default: '#' }}"
+                data-cta-label="{{ block.settings.button_label | default: 'Shop the collection' }}"
+            >
+                <div class="ibtps__slide">
+                    <div class="ibtps__text">
+                        <div class="ibtps__text_subheading">
+                        {%- if title != blank -%}
+                            {%- if col -%}
+                            <a class="ibtps__title subheading-text" href="{{ col.url }}">
+                                {{ title | escape }} Collection
+                            </a>
+                            {%- else -%}
+                            <div class="ibtps__title subheading-text">
+                                {{ title | escape }}
+                            </div>
+                            {%- endif -%}
+                        {%- endif -%}
 
-                  {%- if series_name != blank -%}
-                    <div class="ibtps__series subheading-text">{{ series_name | escape }}</div>
-                  {%- endif -%}
-                </div>
+                        {%- if series_name != blank -%}
+                            <div class="ibtps__series subheading-text">{{ series_name | escape }}</div>
+                        {%- endif -%}
+                        </div>
 
-                {%- if block.settings.heading != blank -%}
-                  <h2>{{ block.settings.heading }}</h2>
-                {%- else -%}
-                  <h2>WANDERINGS<em>TM</em> Fine Art Photography</h2>
-                {%- endif -%}
-              </div>
-
-              <div class="ibtps__products">
-                <div class="ibtps__products_grid">
-                  {%- assign shown = 0 -%}
-
-                  {%- if products_to_show != blank and products_to_show.size > 0 -%}
-                    {%- for p in products_to_show -%}
-                      {%- if p == blank -%}{% continue %}{%- endif -%}
-
-                      {%- render 'product-card', product: p, swym_enabled: section.settings.swym_enabled -%}
-
-                      {%- assign shown = shown | plus: 1 -%}
-                      {%- if shown >= 3 -%}{% break %}{%- endif -%}
-                    {%- endfor -%}
-                  {%- endif -%}
-
-                  {%- if shown == 0 -%}
-                    <div class="ibtps__empty">
-                      Add up to 3 products to this slide (or pick a collection to auto pull 3).
+                        {%- if block.settings.heading != blank -%}
+                        <h2>{{ block.settings.heading }}</h2>
+                        {%- else -%}
+                        <h2>WANDERINGS<em>TM</em> Fine Art Photography</h2>
+                        {%- endif -%}
                     </div>
-                  {%- endif -%}
+                    <div class="ibtps__products">
+                        <div class="ibtps__products_grid">
+                        {%- assign shown = 0 -%}
+
+                        {%- if products_to_show != blank and products_to_show.size > 0 -%}
+                            {%- for p in products_to_show -%}
+                            {%- if p == blank -%}{% continue %}{%- endif -%}
+
+                            {%- render 'product-card', product: p, swym_enabled: section.settings.swym_enabled -%}
+
+                            {%- assign shown = shown | plus: 1 -%}
+                            {%- if shown >= 3 -%}{% break %}{%- endif -%}
+                            {%- endfor -%}
+                        {%- endif -%}
+
+                        {%- if shown == 0 -%}
+                            <div class="ibtps__empty">
+                            Add up to 3 products to this slide (or pick a collection to auto pull 3).
+                            </div>
+                        {%- endif -%}
+                        </div>
+                    </div>
+                    {% if block.settings.show_button and block.settings.collection != blank %}
+                        <div class="ibtps__cta-wrap">
+                            <a 
+                            class="btn btn--solid btn--large btn--black ibtps__cta"
+                            href="{{ block.settings.collection.url }}"
+                            >
+                            {{ block.settings.button_label | default: 'Shop' }}
+                            </a>
+                        </div>
+                    {% endif %}
                 </div>
-              </div>
-
             </div>
-          </div>
-        {%- endfor -%}
+            {%- endfor -%}
 
-      </div>
+        </div>
 
       {%- if show_dots -%}
         <div class="swiper-pagination"></div>
       {%- endif -%}
     </div>
-
-    {% if block.settings.show_button and block.settings.collection != blank %}
-        <div class="ibtps__cta-wrap">
-            <a 
-            class="btn btn--solid btn--large btn--black ibtps__cta"
-            href="{{ block.settings.collection.url }}"
-            >
-            {{ block.settings.button_label | default: 'Shop' }}
-            </a>
-        </div>
-    {% endif %}
 
   </div>
 </section>
