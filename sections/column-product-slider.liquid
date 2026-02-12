@@ -192,27 +192,32 @@
     width: 100%;
   }
 
-  #IBTPS--{{ section.id }} .ibtps__products_grid {
+  @media (max-width: 749px) {
+    #IBTPS--{{ section.id }} .ibtps__products_grid .grid-item {
+      width: 100% !important;
+      padding: 0 1rem;
+    }
+  }
+  #IBTPS--{{ section.id }} .ibtps__products_grid  {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 4rem;
-    margin: 0 1rem;
+    justify-content: center;
+    margin: 4rem 1rem;
   }
-
-  #IBTPS--{{ section.id }} .ibtps__products_grid > .grid-item,
-  #IBTPS--{{ section.id }} .ibtps__products_grid > .product-card,
-  #IBTPS--{{ section.id }} .ibtps__products_grid > .card-wrapper,
-  #IBTPS--{{ section.id }} .ibtps__products_grid > * {
+  #IBTPS--{{ section.id }} .ibtps__products_grid  .grid-item {
     flex: 0 0 auto;
-  }
-
-  /* Try to target common wrappers around your product-card output */
-  #IBTPS--{{ section.id }} .ibtps__products_grid .grid-item,
-  #IBTPS--{{ section.id }} .ibtps__products_grid .card-wrapper,
-  #IBTPS--{{ section.id }} .ibtps__products_grid .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: calc(33.333% - 4rem);
-    max-width: 420px;
+  }
+  #IBTPS--{{ section.id }} .ibtps__products_grid  .grid-item .image-wrapper {
+    object-fit: contain;
+    width: -webkit-fill-available;
+  }
+  #IBTPS--{{ section.id }} .ibtps__products_grid r .grid-item .image-wrapper .product-card {
+    padding: 0 0.5rem;
   }
 
   /* Keep slide content from overflowing on small screens */
