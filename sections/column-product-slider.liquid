@@ -1,0 +1,388 @@
+{% comment %}
+  Section: 3 Column Product Slider (Text above + Swiper)
+  - Each slide (block) can have:
+    - Collection (for title + CTA link)
+    - Manual title / series name
+    - Product list (pick up to 3 products)
+    - Fallback: if no products picked, uses first 3 products from the chosen collection
+  - Uses your existing 'product-card' snippet
+{% endcomment %}
+
+{%- liquid
+  assign autoplay      = section.settings.autoplay
+  assign duration_ms   = section.settings.duration_seconds | times: 1000
+  assign show_dots     = section.settings.show_dots
+  assign slides_count  = section.blocks.size
+-%}
+
+{%- if slides_count > 0 -%}
+<section
+  id="IBTPS--{{ section.id }}"
+  class="ibtps wrapper"
+  data-autoplay="{{ autoplay }}"
+  data-interval="{{ duration_ms }}"
+  style="--pt: {{ section.settings.padding_top }}px; --pb: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="ibtps__inner">
+    <div class="swiper ibtps__swiper">
+      <div class="swiper-wrapper">
+
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign col = block.settings.collection
+
+            # Title
+            assign title = ''
+            if block.settings.title_source == 'collection' and col
+              assign title = col.title
+            else
+              assign title = block.settings.manual_title
+            endif
+
+            # Series (plain text)
+            assign series_name = block.settings.series_name
+
+            # Products (up to 3)
+            assign picked_products = block.settings.products
+
+            assign products_to_show = blank
+            if picked_products != blank and picked_products.size > 0
+              assign products_to_show = picked_products
+            elsif col != blank
+              assign products_to_show = col.products
+            endif
+          -%}
+
+          <div class="swiper-slide"
+            {{ block.shopify_attributes }}
+            data-cta-enabled="{{ block.settings.show_button | default: false }}"
+            data-cta-url="{{ col.url | default: '#' }}"
+            data-cta-label="{{ block.settings.button_label | default: 'Shop the collection' }}"
+          >
+            <div class="ibtps__slide">
+              <div class="ibtps__text">
+                <div class="ibtps__text_subheading">
+                  {%- if title != blank -%}
+                    {%- if col -%}
+                      <a class="ibtps__title subheading-text" href="{{ col.url }}">
+                        {{ title | escape }} Collection
+                      </a>
+                    {%- else -%}
+                      <div class="ibtps__title subheading-text">
+                        {{ title | escape }}
+                      </div>
+                    {%- endif -%}
+                  {%- endif -%}
+
+                  {%- if series_name != blank -%}
+                    <div class="ibtps__series subheading-text">{{ series_name | escape }}</div>
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.heading != blank -%}
+                  <h2>{{ block.settings.heading }}</h2>
+                {%- else -%}
+                  <h2>WANDERINGS<em>TM</em> Fine Art Photography</h2>
+                {%- endif -%}
+              </div>
+
+              <div class="ibtps__products">
+                <div class="ibtps__products_grid">
+                  {%- assign shown = 0 -%}
+
+                  {%- if products_to_show != blank and products_to_show.size > 0 -%}
+                    {%- for p in products_to_show -%}
+                      {%- if p == blank -%}{% continue %}{%- endif -%}
+
+                      {%- render 'product-card', product: p, swym_enabled: section.settings.swym_enabled -%}
+
+                      {%- assign shown = shown | plus: 1 -%}
+                      {%- if shown >= 3 -%}{% break %}{%- endif -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+
+                  {%- if shown == 0 -%}
+                    <div class="ibtps__empty">
+                      Add up to 3 products to this slide (or pick a collection to auto pull 3).
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        {%- endfor -%}
+
+      </div>
+
+      {%- if show_dots -%}
+        <div class="swiper-pagination"></div>
+      {%- endif -%}
+    </div>
+
+    <div class="ibtps__cta-wrap">
+      <a class="btn btn--solid btn--large btn--black ibtps__cta" href="#" hidden>Shop the collection</a>
+    </div>
+  </div>
+</section>
+
+{%- style -%}
+  #IBTPS--{{ section.id }} {
+    position: relative;
+    width: 100%;
+    padding-top: var(--pt, 60px);
+    padding-bottom: var(--pb, 60px);
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__inner { width: 100%; }
+  #IBTPS--{{ section.id }} .ibtps__swiper { width: 100%; }
+  #IBTPS--{{ section.id }} .swiper-slide { position: relative; }
+  #IBTPS--{{ section.id }} .swiper-wrapper { align-items: stretch; }
+
+  #IBTPS--{{ section.id }} .ibtps__slide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__text {
+    margin: 0 auto 30px auto;
+    text-align: center;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__text em {
+    vertical-align: super;
+    font-size: 8px;
+    margin-left: 6px;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__text_subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 0;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__text .ibtps__title {
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__text .ibtps__series {
+    border-left: 1px solid currentColor;
+    margin-left: 16px;
+    padding-left: 16px;
+    line-height: 1;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__text .subheading-text {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__products {
+    width: 100%;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__products_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0 1rem;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__products_grid > .grid-item,
+  #IBTPS--{{ section.id }} .ibtps__products_grid > .product-card,
+  #IBTPS--{{ section.id }} .ibtps__products_grid > .card-wrapper,
+  #IBTPS--{{ section.id }} .ibtps__products_grid > * {
+    flex: 0 0 auto;
+  }
+
+  /* Try to target common wrappers around your product-card output */
+  #IBTPS--{{ section.id }} .ibtps__products_grid .grid-item,
+  #IBTPS--{{ section.id }} .ibtps__products_grid .card-wrapper,
+  #IBTPS--{{ section.id }} .ibtps__products_grid .product-card {
+    width: calc(33.333% - 4rem);
+    max-width: 420px;
+  }
+
+  /* Keep slide content from overflowing on small screens */
+  #IBTPS--{{ section.id }} .swiper-slide { overflow: hidden; }
+
+  @media (max-width: 749px) {
+    #IBTPS--{{ section.id }} .ibtps__text h2 { font-size: 5vw; }
+
+    #IBTPS--{{ section.id }} .ibtps__text .subheading-text {
+      font-size: 7px;
+      letter-spacing: 1px;
+    }
+
+    #IBTPS--{{ section.id }} .ibtps__text_subheading { margin-bottom: 8px; }
+
+    #IBTPS--{{ section.id }} .ibtps__products_grid {
+      gap: 2rem;
+      margin: 0;
+      padding: 0 1rem;
+    }
+
+    #IBTPS--{{ section.id }} .ibtps__products_grid .grid-item,
+    #IBTPS--{{ section.id }} .ibtps__products_grid .card-wrapper,
+    #IBTPS--{{ section.id }} .ibtps__products_grid .product-card {
+      width: 100% !important;
+      max-width: 520px;
+    }
+  }
+
+  #IBTPS--{{ section.id }} .swiper-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+  #IBTPS--{{ section.id }} .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    opacity: .5;
+    background: currentColor;
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+  }
+
+  #IBTPS--{{ section.id }} .swiper-pagination-bullet-active { opacity: 1; }
+
+  #IBTPS--{{ section.id }} .ibtps__cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  #IBTPS--{{ section.id }} .ibtps__empty {
+    text-align: center;
+    width: 100%;
+    opacity: 0.7;
+    font-size: 14px;
+    padding: 30px 10px;
+  }
+{%- endstyle -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var root = document.getElementById('IBTPS--{{ section.id }}');
+    if (!root) return;
+
+    var autoplay = root.getAttribute('data-autoplay') === 'true';
+    var interval = parseInt(root.getAttribute('data-interval'), 10) || 4000;
+
+    var swiperEl = root.querySelector('.ibtps__swiper');
+    if (!swiperEl) return;
+
+    var swiper = new Swiper(swiperEl, {
+      loop: {{ slides_count | plus: 0 }} > 1,
+      speed: 500,
+      autoplay: autoplay ? { delay: interval, disableOnInteraction: false } : false,
+      slidesPerView: 1,
+      spaceBetween: 24,
+      pagination: {
+        el: root.querySelector('.swiper-pagination'),
+        clickable: true
+      },
+      on: {
+        init: function() { updateCTA(); },
+        slideChange: function() { updateCTA(); }
+      }
+    });
+
+    function updateCTA() {
+      var btn = root.querySelector('.ibtps__cta');
+      if (!btn) return;
+
+      var active = root.querySelector('.swiper-slide.swiper-slide-active');
+      if (!active) return;
+
+      var enabled = active.getAttribute('data-cta-enabled') === 'true';
+      var url = active.getAttribute('data-cta-url') || '#';
+      var label = active.getAttribute('data-cta-label') || 'Shop the collection';
+
+      if (enabled && url && url !== '#') {
+        btn.removeAttribute('hidden');
+        btn.setAttribute('href', url);
+        btn.textContent = label;
+      } else {
+        btn.setAttribute('hidden', 'hidden');
+        btn.setAttribute('href', '#');
+        btn.textContent = label;
+      }
+    }
+  });
+</script>
+
+{%- else -%}
+  <div class="page-width">
+    <p>No slides added yet. Add blocks to “3 Column Product Slider”.</p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "3 Column Product Slider",
+  "class": "three-column-product-slider",
+  "settings": [
+    { "type": "header", "content": "Slider behavior" },
+    { "type": "checkbox", "id": "autoplay", "label": "Autoplay", "default": false },
+    { "type": "range", "id": "duration_seconds", "label": "Change slide every (sec)", "min": 2, "max": 12, "step": 1, "default": 4 },
+    { "type": "checkbox", "id": "show_dots", "label": "Show dot pagination", "default": true },
+
+    { "type": "header", "content": "Swym Wishlist" },
+    { "type": "checkbox", "id": "swym_enabled", "label": "Swym Enabled (on product cards)", "default": true },
+
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 150, "step": 2, "unit": "px", "label": "Padding top", "default": 80 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 150, "step": 2, "unit": "px", "label": "Padding bottom", "default": 80 }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type": "header", "content": "Content" },
+        { "type": "collection", "id": "collection", "label": "Collection (title + CTA link, fallback products)" },
+
+        {
+          "type": "select",
+          "id": "title_source",
+          "label": "Title source",
+          "default": "collection",
+          "options": [
+            { "value": "collection", "label": "Use collection title" },
+            { "value": "manual", "label": "Manual title" }
+          ]
+        },
+        { "type": "text", "id": "manual_title", "label": "Manual title", "default": "Custom title" },
+        { "type": "text", "id": "series_name", "label": "Series name", "default": "WANDERINGS™ COLLECTION" },
+
+        { "type": "text", "id": "heading", "label": "Heading (optional)", "default": "WANDERINGS<em>TM</em> Fine Art Photography" },
+
+        { "type": "header", "content": "Products (pick up to 3)" },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "Products"
+        },
+
+        { "type": "header", "content": "CTA" },
+        { "type": "checkbox", "id": "show_button", "label": "Show CTA button for this slide", "default": true },
+        { "type": "text", "id": "button_label", "label": "Button label", "default": "Shop the collection" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "3 Column Product Slider", "category": "Products" }
+  ],
+  "disabled_on": { "groups": ["header", "aside", "footer"] }
+}
+{% endschema %}
