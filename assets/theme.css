@@ -17361,7 +17361,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 
 .collection__filters-more {
   margin-left: 0;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .collection__filters-more > * {
   pointer-events: none;
