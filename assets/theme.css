@@ -17373,7 +17373,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   display: none;
 }
 .collection__filters-more span {
-  font-size: calc(0.8rem * var(--adjust-button));
+  font-size: 6px;
 }
 .no-js .collection__filters-more {
   display: none;
