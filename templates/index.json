@@ -824,6 +824,7 @@
         },
         "slide_RaLmwr": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_13_iceland2.jpg",
             "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_16_SAND.jpg",
