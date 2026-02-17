@@ -750,6 +750,204 @@
             "box_max_width": 480
           }
         },
+        "slide_KHkw88": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_10_BIRDS.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_10_BIRDS_BW.jpg",
+            "alt": "Banner image",
+            "collection": "birds-sky",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>A Collection of FINE ART PHOTOGRAPHY PRINTS that celebrates the magic of the sky and our wishing we could fly. With awe & deep gratitude for these graceful wings of beauty, we hope these images lift you & inspire you to soar.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 70,
+            "pos_y": 75,
+            "box_max_width": 490
+          }
+        },
+        "slide_fY3Vn8": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_11_HORSES.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_11_HORSES.jpg",
+            "alt": "Banner image",
+            "collection": "wild-horses",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>The SIGNATURE Collection of FINE ART PHOTOGRAPHY prints is dedicated to all of the wild horses that we have met along the way. Each interaction, caught by chance while wandering was a soul connection & a spirit-lifting moment in time...a true gift with these creatures of untamed beauty...never to be forgotten.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 30,
+            "pos_y": 75,
+            "box_max_width": 480
+          }
+        },
+        "slide_gDxGNi": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_12_succulents_pasteljpg.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_12_SUCCULENTS_PASTEL.jpg",
+            "alt": "Banner image",
+            "collection": "succulents",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>This Collection of WANDERINGS™ FINE ART PHOTOGRAPHY PRINTS celebrates succulents & cacti of all kinds...the unusual...the exotic...the flowering. We cannot get enough of their rare beauty! We hope that this Collection reminds you of your own amazing uniqueness. We hope it inspires you, to WANDER.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 75,
+            "pos_y": 75,
+            "box_max_width": 480
+          }
+        },
+        "slide_xVgQBm": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_13_ICELAND1.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_13_ICELAND.jpg",
+            "alt": "Banner image",
+            "collection": "iceland",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>This Collection of FINE ART PHOTOGRAPHY PRINTS is a glimpse into one of the most EPIC places on this planet. From FIRE to ICE... and everything inbetween... ICELAND is a rare & glorious gem. It's a journey to other side, and leaves an immeasurable mark on one's soul. A place to get lost... then found...again & again.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 30,
+            "pos_y": 70,
+            "box_max_width": 490
+          }
+        },
+        "slide_RaLmwr": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_13_iceland2.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_16_SAND.jpg",
+            "alt": "Banner image",
+            "collection": "iceland",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>This Collection of FINE ART PHOTOGRAPHY PRINTS is a glimpse into one of the most EPIC places on this planet. From FIRE to ICE... and everything inbetween... ICELAND is a rare & glorious gem. It's a journey to other side, and leaves an immeasurable mark on one's soul. A place to get lost... then found...again & again.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 35,
+            "pos_y": 70,
+            "box_max_width": 600
+          }
+        },
+        "slide_GCk6PU": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_14_peonies.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_14_PEONIES.jpg",
+            "alt": "Banner image",
+            "collection": "peonies",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>With thousands of peonies photographed over a decade, this SIGNATURE Collection of FINE ART PHOTOGRAPHY PRINTS showcases the PEONY, in all her glory...and in all stages of life. It illuminates a delicate balance between life & decay...capturing the flower blooming & falling, and often floating in space.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 30,
+            "pos_y": 70,
+            "box_max_width": 480
+          }
+        },
+        "slide_LkMDUd": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_15_italy_blue_float.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_15_BLUE_FLOAT_AMALFI.jpg",
+            "alt": "Banner image",
+            "collection": "italy-capri",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>From pastel villages along the cliffs, to the sacred sapphire waters of Capri... this Collection of FINE ART PHOTOGRAPHY PRINTS reminds us why Italy is a favorite place to WANDER. Forever romantic & always in style... I'Italia e bellissima!</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 40,
+            "pos_y": 75,
+            "box_max_width": 490
+          }
+        },
+        "slide_zJVeji": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_16_sand.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_16_SAND.jpg",
+            "alt": "Banner image",
+            "collection": "sand",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>In this Collection of FINE ART PHOTOGRAPHY PRINTS you will find calming plateaus, desert oases, and ocean sands you will want to sink your toes into... as we celebrate the sands, the dunes, and the vast Southwest. We hope this Collection connects you to the raw unending beauty in these barren earthly landscapes.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 30,
+            "pos_y": 70,
+            "box_max_width": 480
+          }
+        },
+        "slide_93ycF9": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_17_peonies.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_17_PEONIES.jpg",
+            "alt": "Banner image",
+            "collection": "peonies",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>With thousands of peonies photographed over a decade, this SIGNATURE Collection of FINE ART PHOTOGRAPHY PRINTS showcases the PEONY, in all her glory...and in all stages of life. It illuminates a delicate balance between life & decay...capturing the flower blooming & falling, and often floating in space.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 70,
+            "pos_y": 75,
+            "box_max_width": 480
+          }
+        },
+        "slide_3G6CLn": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_18_palms.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_18_PALMS.jpg",
+            "alt": "Banner image",
+            "collection": "palms",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>Whether it's the sound of the wind blowing overhead or simply basking in their shade...something about palm trees & their 'easy-breezy' attitude stands mile above the rest. This Collection of FINE ART PHOTOGRAPHY PRINTS will stir your soul.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 70,
+            "pos_y": 75,
+            "box_max_width": 490
+          }
+        },
+        "slide_etPjJC": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_19_Luminescence.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_19_LUMINESCENCE.jpg",
+            "alt": "Banner image",
+            "collection": "luminescence",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>A Modern Collection of ABSTRACT ART & MIXED MEDIA in bright luminescent colors. Inspired by the luminescence & phosphorescence miracles found deep within nature, each artwork celebrates the emission of light that glows from within.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 70,
+            "pos_y": 70,
+            "box_max_width": 490
+          }
+        },
         "slide_ndYchg": {
           "type": "slide",
           "settings": {
@@ -765,6 +963,42 @@
             "button_label": "Shop the collection",
             "pos_x": 70,
             "pos_y": 45,
+            "box_max_width": 490
+          }
+        },
+        "slide_AeaEgw": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_20_succulents.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_20_SUCCULENTS.jpg",
+            "alt": "Banner image",
+            "collection": "succulents",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>This Collection of WANDERINGS™ FINE ART PHOTOGRAPHY PRINTS celebrates succulents & cacti of all kinds...the unusual...the exotic...the flowering. We cannot get enough of their rare beauty! We hope that this Collection reminds you of your own amazing uniqueness. We hope it inspires you, to WANDER.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 30,
+            "pos_y": 70,
+            "box_max_width": 480
+          }
+        },
+        "slide_e69RED": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_21_island.jpg",
+            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_21_ISLANDS.jpg",
+            "alt": "Banner image",
+            "collection": "islands",
+            "title_source": "collection",
+            "manual_title": "Custom title",
+            "desc_source": "manual",
+            "manual_description": "<p>From remote huts along the sea, to palms blowing in the wind, to waves crushing the shore, and lush botanical rain forests...we have travelled far & wide to capture our ISLANDS Collection of WANDERINGS™ FINE ART PHOTOGRAPHY PRINTS.</p>",
+            "show_button": false,
+            "button_label": "Shop the collection",
+            "pos_x": 30,
+            "pos_y": 70,
             "box_max_width": 490
           }
         },
@@ -893,266 +1127,31 @@
             "pos_y": 70,
             "box_max_width": 490
           }
-        },
-        "slide_KHkw88": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_10_BIRDS.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_10_BIRDS_BW.jpg",
-            "alt": "Banner image",
-            "collection": "birds-sky",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>A Collection of FINE ART PHOTOGRAPHY PRINTS that celebrates the magic of the sky and our wishing we could fly. With awe & deep gratitude for these graceful wings of beauty, we hope these images lift you & inspire you to soar.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 70,
-            "pos_y": 75,
-            "box_max_width": 490
-          }
-        },
-        "slide_fY3Vn8": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_11_HORSES.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_11_HORSES.jpg",
-            "alt": "Banner image",
-            "collection": "wild-horses",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>The SIGNATURE Collection of FINE ART PHOTOGRAPHY prints is dedicated to all of the wild horses that we have met along the way. Each interaction, caught by chance while wandering was a soul connection & a spirit-lifting moment in time...a true gift with these creatures of untamed beauty...never to be forgotten.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 30,
-            "pos_y": 75,
-            "box_max_width": 480
-          }
-        },
-        "slide_gDxGNi": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_12_succulents_pasteljpg.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_12_SUCCULENTS_PASTEL.jpg",
-            "alt": "Banner image",
-            "collection": "succulents",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>This Collection of WANDERINGS™ FINE ART PHOTOGRAPHY PRINTS celebrates succulents & cacti of all kinds...the unusual...the exotic...the flowering. We cannot get enough of their rare beauty! We hope that this Collection reminds you of your own amazing uniqueness. We hope it inspires you, to WANDER.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 75,
-            "pos_y": 75,
-            "box_max_width": 480
-          }
-        },
-        "slide_xVgQBm": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_13_ICELAND1.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_13_ICELAND.jpg",
-            "alt": "Banner image",
-            "collection": "iceland",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>This Collection of FINE ART PHOTOGRAPHY PRINTS is a glimpse into one of the most EPIC places on this planet. From FIRE to ICE... and everything inbetween... ICELAND is a rare & glorious gem. It's a journey to other side, and leaves an immeasurable mark on one's soul. A place to get lost... then found...again & again.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 30,
-            "pos_y": 70,
-            "box_max_width": 490
-          }
-        },
-        "slide_GCk6PU": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_14_peonies.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_14_PEONIES.jpg",
-            "alt": "Banner image",
-            "collection": "peonies",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>With thousands of peonies photographed over a decade, this SIGNATURE Collection of FINE ART PHOTOGRAPHY PRINTS showcases the PEONY, in all her glory...and in all stages of life. It illuminates a delicate balance between life & decay...capturing the flower blooming & falling, and often floating in space.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 30,
-            "pos_y": 70,
-            "box_max_width": 480
-          }
-        },
-        "slide_LkMDUd": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_15_italy_blue_float.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_15_BLUE_FLOAT_AMALFI.jpg",
-            "alt": "Banner image",
-            "collection": "italy-capri",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>From pastel villages along the cliffs, to the sacred sapphire waters of Capri... this Collection of FINE ART PHOTOGRAPHY PRINTS reminds us why Italy is a favorite place to WANDER. Forever romantic & always in style... I'Italia e bellissima!</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 40,
-            "pos_y": 75,
-            "box_max_width": 490
-          }
-        },
-        "slide_RaLmwr": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_13_iceland2.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_16_SAND.jpg",
-            "alt": "Banner image",
-            "collection": "iceland",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>This Collection of FINE ART PHOTOGRAPHY PRINTS is a glimpse into one of the most EPIC places on this planet. From FIRE to ICE... and everything inbetween... ICELAND is a rare & glorious gem. It's a journey to other side, and leaves an immeasurable mark on one's soul. A place to get lost... then found...again & again.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 35,
-            "pos_y": 70,
-            "box_max_width": 600
-          }
-        },
-        "slide_zJVeji": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_16_sand.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_16_SAND.jpg",
-            "alt": "Banner image",
-            "collection": "sand",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>In this Collection of FINE ART PHOTOGRAPHY PRINTS you will find calming plateaus, desert oases, and ocean sands you will want to sink your toes into... as we celebrate the sands, the dunes, and the vast Southwest. We hope this Collection connects you to the raw unending beauty in these barren earthly landscapes.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 30,
-            "pos_y": 70,
-            "box_max_width": 480
-          }
-        },
-        "slide_93ycF9": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_17_peonies.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_17_PEONIES.jpg",
-            "alt": "Banner image",
-            "collection": "peonies",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>With thousands of peonies photographed over a decade, this SIGNATURE Collection of FINE ART PHOTOGRAPHY PRINTS showcases the PEONY, in all her glory...and in all stages of life. It illuminates a delicate balance between life & decay...capturing the flower blooming & falling, and often floating in space.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 70,
-            "pos_y": 75,
-            "box_max_width": 480
-          }
-        },
-        "slide_3G6CLn": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_18_palms.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_18_PALMS.jpg",
-            "alt": "Banner image",
-            "collection": "palms",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>Whether it's the sound of the wind blowing overhead or simply basking in their shade...something about palm trees & their 'easy-breezy' attitude stands mile above the rest. This Collection of FINE ART PHOTOGRAPHY PRINTS will stir your soul.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 70,
-            "pos_y": 75,
-            "box_max_width": 490
-          }
-        },
-        "slide_etPjJC": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_19_Luminescence.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_19_LUMINESCENCE.jpg",
-            "alt": "Banner image",
-            "collection": "luminescence",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>A Modern Collection of ABSTRACT ART & MIXED MEDIA in bright luminescent colors. Inspired by the luminescence & phosphorescence miracles found deep within nature, each artwork celebrates the emission of light that glows from within.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 70,
-            "pos_y": 70,
-            "box_max_width": 490
-          }
-        },
-        "slide_AeaEgw": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_20_succulents.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_20_SUCCULENTS.jpg",
-            "alt": "Banner image",
-            "collection": "succulents",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>This Collection of WANDERINGS™ FINE ART PHOTOGRAPHY PRINTS celebrates succulents & cacti of all kinds...the unusual...the exotic...the flowering. We cannot get enough of their rare beauty! We hope that this Collection reminds you of your own amazing uniqueness. We hope it inspires you, to WANDER.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 30,
-            "pos_y": 70,
-            "box_max_width": 480
-          }
-        },
-        "slide_e69RED": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/HOME_PAGE_MIDDLE_SLIDERS_no_titlle_-_21_island.jpg",
-            "mobile_image": "shopify://shop_images/HOME_-_MOBILE_sliders_middle_-_21_ISLANDS.jpg",
-            "alt": "Banner image",
-            "collection": "islands",
-            "title_source": "collection",
-            "manual_title": "Custom title",
-            "desc_source": "manual",
-            "manual_description": "<p>From remote huts along the sea, to palms blowing in the wind, to waves crushing the shore, and lush botanical rain forests...we have travelled far & wide to capture our ISLANDS Collection of WANDERINGS™ FINE ART PHOTOGRAPHY PRINTS.</p>",
-            "show_button": false,
-            "button_label": "Shop the collection",
-            "pos_x": 30,
-            "pos_y": 70,
-            "box_max_width": 490
-          }
         }
       },
       "block_order": [
         "slide_zrkLpy",
+        "slide_KHkw88",
+        "slide_fY3Vn8",
+        "slide_gDxGNi",
+        "slide_xVgQBm",
+        "slide_RaLmwr",
+        "slide_GCk6PU",
+        "slide_LkMDUd",
+        "slide_zJVeji",
+        "slide_93ycF9",
+        "slide_3G6CLn",
+        "slide_etPjJC",
         "slide_ndYchg",
+        "slide_AeaEgw",
+        "slide_e69RED",
         "slide_Qz8ihW",
         "slide_AzDTyU",
         "slide_dfTUKe",
         "slide_KVabDf",
         "slide_Tp9qxw",
         "slide_gg3qDB",
-        "slide_AUrhrL",
-        "slide_KHkw88",
-        "slide_fY3Vn8",
-        "slide_gDxGNi",
-        "slide_xVgQBm",
-        "slide_GCk6PU",
-        "slide_LkMDUd",
-        "slide_RaLmwr",
-        "slide_zJVeji",
-        "slide_93ycF9",
-        "slide_3G6CLn",
-        "slide_etPjJC",
-        "slide_AeaEgw",
-        "slide_e69RED"
+        "slide_AUrhrL"
       ],
       "name": "Image Banner Slider",
       "settings": {
