@@ -289,6 +289,33 @@
     const entry = (CFG.frame_colors || []).find(c => c.token === colorTok);
     return entry && entry.tier === 'blacklabel';
   }
+  function isCanvasSelected(){
+    return optionToken === 'frame' && matToken === 'canvas';
+  }
+
+  function applyCanvasRestrictions(){
+    const swatchesWrap = pillsFrame.querySelector('.fc-swatch-cards');
+    if (!swatchesWrap) return;
+
+    const canvasOn = isCanvasSelected();
+
+    // Toggle disabled state depending on whether canvas is selected
+    swatchesWrap.querySelectorAll('.fc-swatch-card').forEach(card => {
+      const tok = card.getAttribute('data-value');
+      const disable = canvasOn && tok && isBlackLabel(tok);
+      card.classList.toggle('is-disabled', disable);
+      card.setAttribute('aria-disabled', disable ? 'true' : 'false');
+    });
+
+    // If canvas is selected and current color is blacklabel, force to standard
+    if (canvasOn && colorToken && isBlackLabel(colorToken)) {
+      const firstStandard = (CFG.frame_colors || []).find(c => c.token !== naToken && c.tier !== 'blacklabel');
+      colorToken = firstStandard ? firstStandard.token : 'natural';
+    }
+
+    if (pillsFrame._setActive) pillsFrame._setActive(colorToken);
+  }
+
   // Returns cents (number) or null
   function currentPriceCents(sz, opt, mat){
     const key = `${opt}|${mat}`;
@@ -492,6 +519,9 @@
         targetColorToken = lastColorBeforeUnframed || ((CFG.frame_colors||[]).find(c=>c.token!=='na')||{}).token || 'na';
       }
     }
+
+    applyCanvasRestrictions();
+    targetColorToken = colorToken;
 
     // ✅ Write price immediately so it shows even if image is slow/404
     renderPrice(targetSizeToken, targetOptionToken, targetMatToken);
@@ -756,6 +786,7 @@
   if (pillsOption._check) pillsOption._check(optionToken, matToken);
   if (pillsSize._checkSizeRadio) pillsSize._checkSizeRadio(sizeToken);
   if (colorToken !== naToken && pillsFrame._setActive) pillsFrame._setActive(colorToken);
+  applyCanvasRestrictions();
   setSizeAvailabilityForOption(sizeToken, optionToken, matToken);
 
   // ----- View in Room toggle -----
@@ -860,6 +891,11 @@
 
     form.addEventListener('submit', async (e)=>{
       const priceCents = currentPriceCents(sizeToken, optionToken, matToken);
+      if (optionToken === 'frame' && matToken === 'canvas' && isBlackLabel(colorToken)) {
+        e.preventDefault();
+        alert('Canvas is not available in Whitewash, Grey Ash, or Pale Ash.');
+        return;
+      }
       if (priceCents == null) {
         e.preventDefault();
         alert('This configuration is not available.');
