@@ -66,11 +66,10 @@
               </picture>
             </div>
 
-            {%- if block.settings.label != blank -%}
-              <div class="ibps__label">
+            <div class="ibps__label">
                 A LIMITED EDITION <em>WANDERINGS</em>™ SIGNATURE COLLECTION
-              </div>
-            {%- endif -%}
+            </div>
+            
           </div>
         </div>
       {%- endfor -%}
@@ -115,8 +114,8 @@
 
   #IBPS--{{ section.id }} .ibps__label {
     position: absolute;
-    right: 7vw;
-    top: 70%;
+    right: 0;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 2;
     background: #000;
