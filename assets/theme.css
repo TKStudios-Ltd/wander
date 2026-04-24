@@ -17373,7 +17373,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   display: none;
 }
 .collection__filters-more span {
-  font-size: 6px;
+  font-size: 7px;
 }
 .no-js .collection__filters-more {
   display: none;
@@ -22287,13 +22287,20 @@ search-popdown details > summary:first-of-type {
   font-size: 8px;
   letter-spacing: 2px;
 }
+.collection__peonies__title {
+  font-family: "Libre Baskerville", serif;
+  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
 @media (min-width: 750px) {
   .collection__box__title {
     padding: 18px 40px 16px !important;
   }
 }
 @media (min-width: 749px) {
-  .collection__box__title {
+  .collection__box__title,
+  .collection__peonies__title {
     transform: scale(0.85);
   }
 }

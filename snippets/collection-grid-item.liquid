@@ -280,9 +280,15 @@
         data-aos-delay="{{ animation_delay | times: 150 }}"
       {% endif %}>
 
-      <span class="collection__box__title">
-        <em>WANDERINGS</em>™ COLLECTION:&nbsp;<b style="font-weight: 700;">{{- default_title -}}</b>
-      </span>
+      {% if page.handle == 'shop-all-peonies' %}
+        <span class="collection__box__title">
+          <em>WANDERINGS</em>™ PEONIES COLLECTION:&nbsp;<b style="font-weight: 700;">{{- default_title -}}</b>
+        </span>
+      {% else %}
+        <span class="collection__peonies__title">
+          <em>WANDERINGS</em>™ COLLECTION:&nbsp;<b style="font-weight: 700;">{{- default_title -}}</b>
+        </span>
+      {% endif %}
 
       <span class="h3 list-collections__item__title{% if type_style %} {{ type_style }}{% endif %}" style="max-width: calc({{ heading_max_width }}px + 150px);">
         {%- if custom_title != blank -%}
