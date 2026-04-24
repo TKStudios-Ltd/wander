@@ -310,6 +310,85 @@
         "section_text_color": "",
         "width": "wrapper--full-padded",
         "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "section_list_collection_mQmGhn": {
+      "type": "section-list-collection",
+      "blocks": {
+        "collection_9MwdWL": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-13-fallen",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P14.jpg",
+            "heading": "Each flower & petal was kept to the end, beyond the point where most would be forgotten. Beauty is in the eye of the beholder—as wrinkles & decay bear impressions of a life well-lived. The end of life is surrendered to and witnessed— honoring the full circle of life and the beauty, grace, & resilience found deep within each peony, even up to its’ final hour. ",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_mfR3ye": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-14-flowers-grow-after-it-rains",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P15.jpg",
+            "heading": "“PART 14 - FLOWERS GROW AFTER IT RAINS” is an abstract art series within the PEONIES COLLECTION. It follows the process after death—and reflects on the delicate balance of life after death, growth after hardship, light after darkness, and joy after grief.  It gently reminds us that time often heals...that beauty and vibrancy re-emerge...and that flowers always grow, after it rains.",
+            "max_width": 510,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_9yY8dM": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-11-wild-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P12.jpg",
+            "heading": "\"PART 11 - WILD BEAUTY\" celebrates the later stages of each peony's life — as wild, organic & unusual forms take shape. Caught in the stillness bearing the passage of time, it's as if age itself has loosened its grip. Beauty lingers not in perfection, but within wilted, fallen petals and an unapologetic allure. Each flower speaks with a voice that refuses to fade.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_i3pwn8": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-12-ageless-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P13.jpg",
+            "heading": "With photographs shot when most flowers would be discarded, Part 12 embraces the elegance of aging, illuminating the confidence & wisdom that emerge over time. Rather than chasing youth, it honors what remains, as each flower tells its own evolving story. Transcending physical decay & the passage of time, this work reflects a deeper truth: that aging is not something to resist, but to embody.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        }
+      },
+      "block_order": [
+        "collection_9MwdWL",
+        "collection_mfR3ye",
+        "collection_9yY8dM",
+        "collection_i3pwn8"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "",
+        "heading_size": 100,
+        "layout": "grid",
+        "alignment": "center",
+        "collections_per_row": 2,
+        "columns_mobile": "1",
+        "image_shape": "square",
+        "image_aspect_ratio": 1.1,
+        "enable_product_count": false,
+        "text_size": 115,
+        "overlay_text": false,
+        "enable_slider_mobile": false,
+        "section_bg_color": "",
+        "section_text_color": "",
+        "width": "wrapper--full-padded",
+        "padding_top": 8,
         "padding_bottom": 16
       }
     }
@@ -318,6 +397,7 @@
     "main",
     "section_image_RYxa68",
     "section_text_8MUdPj",
-    "section_list_collection_UnD6ej"
+    "section_list_collection_UnD6ej",
+    "section_list_collection_mQmGhn"
   ]
 }
