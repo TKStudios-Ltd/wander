@@ -80,15 +80,15 @@
             "text": "<p>Within the photographic process, what ultimately emerged was a ‘light’ glowing from within each flower—no matter how much it looked ready to be forgotten. It was both poetic and profound. Each flower had something to say—at every stage of life.</p>",
             "size": 100,
             "max_width": 675,
-            "margin_bottom": 16
+            "margin_bottom": 25
           }
         },
         "separator_8jCiMT": {
           "type": "separator",
           "settings": {
             "separator_width": 30,
-            "margin_top": 40,
-            "margin_bottom": 40
+            "margin_top": 50,
+            "margin_bottom": 50
           }
         },
         "text_KHGkie": {
