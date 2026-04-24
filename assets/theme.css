@@ -22302,6 +22302,9 @@ search-popdown details > summary:first-of-type {
   .collection__box__title {
     transform: scale(0.85);
   }
+  body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title {
+    font-size: 18px;
+  }
 }
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child {
   background-color: #FFFFFF;
