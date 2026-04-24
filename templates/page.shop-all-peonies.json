@@ -173,8 +173,32 @@
           "type": "collection",
           "settings": {
             "collection": "part-4-bold-beautiful",
-            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P4.jpg",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P4_ebb6f679-c4ae-4520-ba09-e68928902d93.jpg",
             "heading": "Photographed during the bud & the bloom stages, \"PART 4 - BOLD & BEAUTIFUL\" plays with light, dark and bright colors, creating bold intriguing visuals. Using concepts of duality, contrast, and unexpected colors & hues, the flowers take on new perspectives of beauty. Both strength and fragility are explored, revealing a delicate tension between resilience and vulnerability.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_jmQxXz": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-5-vibrant-blooms",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P5.jpg",
+            "heading": "\"PART 5 - VIBRANT BLOOMS\" is a comprehensive collection of various fine art photos & series that showcase the Peony in full bloom. Perfect blooms, vibrant colors and ethereal lightnes—with the full richness of expansion. Classic beauty is celebrated—as each peony floats & dances in the light. It's as if each flower knows this is its' moment to shine. ",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_wDFRFz": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-5-vibrant-blooms",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P5.jpg",
+            "heading": "\"PART 5 - VIBRANT BLOOMS\" is a comprehensive collection of various fine art photos & series that showcase the Peony in full bloom. Perfect blooms, vibrant colors and ethereal lightnes—with the full richness of expansion. Classic beauty is celebrated—as each peony floats & dances in the light. It's as if each flower knows this is its' moment to shine. ",
             "max_width": 500,
             "block_text_color": "",
             "bg_color": "",
@@ -186,7 +210,9 @@
         "collection_LVzNKe",
         "collection_cYKWnD",
         "collection_KderwA",
-        "collection_a87k4e"
+        "collection_a87k4e",
+        "collection_jmQxXz",
+        "collection_wDFRFz"
       ],
       "name": "Collection list",
       "settings": {
