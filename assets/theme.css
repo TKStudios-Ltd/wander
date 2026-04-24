@@ -22304,7 +22304,11 @@ search-popdown details > summary:first-of-type {
   }
   body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title {
     font-size: 18px;
+    line-height: 1.5;
   }
+}
+body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title {
+  font-size: 15px;
 }
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child {
   background-color: #FFFFFF;
