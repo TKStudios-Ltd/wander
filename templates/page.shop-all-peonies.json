@@ -50,7 +50,7 @@
           "settings": {
             "text": "<p><em>WANDERINGS™ </em>Collection: <strong>PEONIES</strong></p>",
             "size": 60,
-            "margin_bottom": 40,
+            "margin_bottom": 50,
             "heading_highlight_type": "highlight-color",
             "highlight_color": "#000000",
             "highlight_text_color": ""
