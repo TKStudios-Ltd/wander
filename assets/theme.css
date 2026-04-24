@@ -22290,7 +22290,7 @@ search-popdown details > summary:first-of-type {
 .collection__peonies__title {
   font-family: "Libre Baskerville", serif;
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: 7px;
   letter-spacing: 2px;
 }
 @media (min-width: 750px) {
@@ -22298,14 +22298,9 @@ search-popdown details > summary:first-of-type {
     padding: 18px 40px 16px !important;
   }
 }
-@media (min-width: 749px) {
+@media (min-width: 750px) {
   .collection__box__title {
     transform: scale(0.85);
-  }
-}
-@media (max-width: 900px) {
-  .collection__peonies__title {
-    font-size: 7px;
   }
 }
 
