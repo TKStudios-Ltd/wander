@@ -1,0 +1,262 @@
+{%- liquid
+  assign autoplay      = section.settings.autoplay
+  assign duration_ms   = section.settings.duration_seconds | times: 1000
+  assign show_dots     = section.settings.show_dots
+  assign slides_count  = section.blocks.size
+
+  assign MAX_DESKTOP_W = 2400
+  assign MAX_MOBILE_W  = 1200
+-%}
+
+{%- if slides_count > 0 -%}
+<section
+  id="IBPS--{{ section.id }}"
+  class="ibps"
+  data-autoplay="{{ autoplay }}"
+  data-interval="{{ duration_ms }}"
+>
+  <div class="swiper ibps__swiper">
+    <div class="swiper-wrapper">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign d_img = block.settings.desktop_image
+          assign m_img = block.settings.mobile_image | default: d_img
+
+          assign load_eager = false
+          if forloop.index0 == 0 and section.index < 3
+            assign load_eager = true
+          endif
+
+          assign loading_attr = 'lazy'
+          assign fetchpriority_attr = 'auto'
+
+          if load_eager
+            assign loading_attr = 'eager'
+            assign fetchpriority_attr = 'high'
+          endif
+        -%}
+
+        <div class="swiper-slide" {{ block.shopify_attributes }}>
+          <div class="ibps__slide">
+            <div class="ibps__media">
+              <picture>
+                {%- if d_img != blank -%}
+                  <source
+                    media="(min-width: 750px)"
+                    srcset="{{ d_img | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
+                            {{ d_img | image_url: width: 2000 }} 2000w,
+                            {{ d_img | image_url: width: 1600 }} 1600w,
+                            {{ d_img | image_url: width: 1200 }} 1200w"
+                    sizes="100vw">
+                {%- endif -%}
+
+                {%- if m_img != blank -%}
+                  <img
+                    class="ibps__img"
+                    alt="{{ block.settings.alt | escape }}"
+                    loading="{{ loading_attr }}"
+                    fetchpriority="{{ fetchpriority_attr }}"
+                    src="{{ m_img | image_url: width: MAX_MOBILE_W }}"
+                    srcset="{{ m_img | image_url: width: MAX_MOBILE_W }} {{ MAX_MOBILE_W }}w,
+                            {{ m_img | image_url: width: 900 }} 900w,
+                            {{ m_img | image_url: width: 700 }} 700w,
+                            {{ m_img | image_url: width: 500 }} 500w"
+                    sizes="100vw">
+                {%- endif -%}
+              </picture>
+            </div>
+
+            {%- if block.settings.label != blank -%}
+              <div class="ibps__label">
+                {{ block.settings.label }}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if show_dots -%}
+      <div class="swiper-pagination"></div>
+    {%- endif -%}
+  </div>
+</section>
+
+{%- style -%}
+  #IBPS--{{ section.id }} {
+    position: relative;
+    width: 100%;
+    overflow: clip;
+  }
+
+  #IBPS--{{ section.id }} .ibps__swiper,
+  #IBPS--{{ section.id }} .swiper-wrapper,
+  #IBPS--{{ section.id }} .swiper-slide,
+  #IBPS--{{ section.id }} .ibps__slide,
+  #IBPS--{{ section.id }} .ibps__media,
+  #IBPS--{{ section.id }} picture {
+    width: 100%;
+    min-height: 100vh;
+    max-height: 2000px;
+  }
+
+  #IBPS--{{ section.id }} .ibps__slide {
+    position: relative;
+  }
+
+  #IBPS--{{ section.id }} .ibps__img {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 2000px;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  #IBPS--{{ section.id }} .ibps__label {
+    position: absolute;
+    right: 7vw;
+    top: 70%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: #000;
+    color: #fff;
+    padding: 13px 34px;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-style: italic;
+  }
+
+  #IBPS--{{ section.id }} .swiper-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+  #IBPS--{{ section.id }} .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    opacity: .6;
+    background: white;
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+  }
+
+  #IBPS--{{ section.id }} .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  @media (max-width: 749px) {
+    #IBPS--{{ section.id }} .ibps__label {
+      right: 50%;
+      top: 76%;
+      transform: translate(50%, -50%);
+      width: calc(100% - 40px);
+      max-width: 360px;
+      text-align: center;
+      white-space: normal;
+      line-height: 1.4;
+      padding: 12px 20px;
+      font-size: 8px;
+      letter-spacing: 0.25em;
+    }
+  }
+{%- endstyle -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var root = document.getElementById('IBPS--{{ section.id }}');
+    if (!root) return;
+
+    var autoplay = root.getAttribute('data-autoplay') === 'true';
+    var interval = parseInt(root.getAttribute('data-interval'), 10) || 4000;
+
+    new Swiper(root.querySelector('.ibps__swiper'), {
+      loop: {% if slides_count > 1 %}true{% else %}false{% endif %},
+      speed: 500,
+      autoplay: autoplay ? { delay: interval, disableOnInteraction: false } : false,
+      pagination: {
+        el: root.querySelector('.swiper-pagination'),
+        clickable: true
+      }
+    });
+  });
+</script>
+{%- else -%}
+  <div class="page-width">
+    <p>No slides added yet. Add blocks to “Image Banner Peonies Slider”.</p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Hero Peonies Slider",
+  "class": "image-banner-peonies-slider",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "duration_seconds",
+      "label": "Change slide every (sec)",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show dot pagination",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image optional"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Image alt text",
+          "default": "Peonies banner image"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Black label text",
+          "default": "A LIMITED EDITION WANDERINGS™ SIGNATURE COLLECTION"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Peonies Slider",
+      "category": "Image"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "aside", "footer"]
+  }
+}
+{% endschema %}
