@@ -204,6 +204,30 @@
             "bg_color": "",
             "overlay_opacity": 100
           }
+        },
+        "collection_RNzPtr": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-7-eternal-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P7.jpg",
+            "heading": "With photographs shot when most flowers would be discarded, \"PART 7 - ETERNAL BEAUTY\" celebrates the mid- to later stages of each peony's life. Vibrant, colorful and still very much full-of-life—organic fluid forms take shape, and light illuminates. Colors & light create unusual perspectives, echoing an eternal resonance, universal beauty & permanence—defying the passage of time.",
+            "max_width": 520,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_hkz4HC": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-6-inner-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P6.jpg",
+            "heading": "With the beauty of light & expansion, \"PART 6 - INNER BEAUTY\" showcases the peony — with delicate transparent blooms that dance in the light & glow from within. Suspended in air, they are weightless, soft, fleeting, & quietly radiant. The interplay of light & form highlights their delicacy—emphasizing a quiet, suspended stillness, and revealing a soft, luminous presence.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
         }
       },
       "block_order": [
@@ -212,7 +236,9 @@
         "collection_KderwA",
         "collection_a87k4e",
         "collection_jmQxXz",
-        "collection_wDFRFz"
+        "collection_wDFRFz",
+        "collection_RNzPtr",
+        "collection_hkz4HC"
       ],
       "name": "Collection list",
       "settings": {
