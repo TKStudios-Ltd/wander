@@ -276,6 +276,53 @@
             "bg_color": "",
             "overlay_opacity": 100
           }
+        },
+        "collection_Rbyyhr": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-13-fallen",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P14.jpg",
+            "heading": "Each flower & petal was kept to the end, beyond the point where most would be forgotten. Beauty is in the eye of the beholder—as wrinkles & decay bear impressions of a life well-lived. The end of life is surrendered to and witnessed— honoring the full circle of life and the beauty, grace, & resilience found deep within each peony, even up to its’ final hour. ",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_dtdBct": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-14-flowers-grow-after-it-rains",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P15.jpg",
+            "heading": "“PART 14 - FLOWERS GROW AFTER IT RAINS” is an abstract art series within the PEONIES COLLECTION. It follows the process after death—and reflects on the delicate balance of life after death, growth after hardship, light after darkness, and joy after grief.  It gently reminds us that time often heals...that beauty and vibrancy re-emerge...and that flowers always grow, after it rains.",
+            "max_width": 510,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_yMJytd": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-15-fragments",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P16.jpg",
+            "heading": "This mixed media abstract art FRAGMENTS Collection represents the final stage of that exploration — an inquiry into the concepts of death, the afterlife, and the pieces that remain thereafter. Memories, impressions, and fragments are left behind with those we love, and imprinted in the Collective. As parts of a larger whole, each soul and species leaves an echo — and a light that endures.We are a constellation of species and souls. Forever connected. Forever shaping each other.",
+            "max_width": 520,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_mnQQy9": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Not all available artwork is featured & sold on this website.If you would like to see the full WANDERINGS™ PEONIES Collection, please email us at hello@shopwander.com to get accessto our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs,which contain all Artwork & Collections, in full.",
+            "max_width": 550,
+            "block_text_color": "",
+            "bg_color": "#ffffff",
+            "overlay_opacity": 100
+          }
         }
       },
       "block_order": [
@@ -290,7 +337,11 @@
         "collection_m3B9TX",
         "collection_dwKmPr",
         "collection_RxgDcL",
-        "collection_a7jWnW"
+        "collection_a7jWnW",
+        "collection_Rbyyhr",
+        "collection_dtdBct",
+        "collection_yMJytd",
+        "collection_mnQQy9"
       ],
       "name": "Collection list",
       "settings": {
@@ -312,91 +363,12 @@
         "padding_top": 8,
         "padding_bottom": 8
       }
-    },
-    "section_list_collection_mQmGhn": {
-      "type": "section-list-collection",
-      "blocks": {
-        "collection_9MwdWL": {
-          "type": "collection",
-          "settings": {
-            "collection": "part-13-fallen",
-            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P14.jpg",
-            "heading": "Each flower & petal was kept to the end, beyond the point where most would be forgotten. Beauty is in the eye of the beholder—as wrinkles & decay bear impressions of a life well-lived. The end of life is surrendered to and witnessed— honoring the full circle of life and the beauty, grace, & resilience found deep within each peony, even up to its’ final hour. ",
-            "max_width": 500,
-            "block_text_color": "",
-            "bg_color": "",
-            "overlay_opacity": 100
-          }
-        },
-        "collection_mfR3ye": {
-          "type": "collection",
-          "settings": {
-            "collection": "part-14-flowers-grow-after-it-rains",
-            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P15.jpg",
-            "heading": "“PART 14 - FLOWERS GROW AFTER IT RAINS” is an abstract art series within the PEONIES COLLECTION. It follows the process after death—and reflects on the delicate balance of life after death, growth after hardship, light after darkness, and joy after grief.  It gently reminds us that time often heals...that beauty and vibrancy re-emerge...and that flowers always grow, after it rains.",
-            "max_width": 510,
-            "block_text_color": "",
-            "bg_color": "",
-            "overlay_opacity": 100
-          }
-        },
-        "collection_9yY8dM": {
-          "type": "collection",
-          "settings": {
-            "collection": "part-15-fragments",
-            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P16.jpg",
-            "heading": "This mixed media abstract art FRAGMENTS Collection represents the final stage of that exploration — an inquiry into the concepts of death, the afterlife, and the pieces that remain thereafter. Memories, impressions, and fragments are left behind with those we love, and imprinted in the Collective. As parts of a larger whole, each soul and species leaves an echo — and a light that endures.We are a constellation of species and souls. Forever connected. Forever shaping each other.",
-            "max_width": 520,
-            "block_text_color": "",
-            "bg_color": "",
-            "overlay_opacity": 100
-          }
-        },
-        "collection_i3pwn8": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "heading": "Not all available artwork is featured & sold on this website.If you would like to see the full WANDERINGS™ PEONIES Collection, please email us at hello@shopwander.com to get accessto our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs,which contain all Artwork & Collections, in full.",
-            "max_width": 550,
-            "block_text_color": "",
-            "bg_color": "#ffffff",
-            "overlay_opacity": 100
-          }
-        }
-      },
-      "block_order": [
-        "collection_9MwdWL",
-        "collection_mfR3ye",
-        "collection_9yY8dM",
-        "collection_i3pwn8"
-      ],
-      "name": "Collection list",
-      "settings": {
-        "title": "",
-        "heading_size": 100,
-        "layout": "grid",
-        "alignment": "center",
-        "collections_per_row": 2,
-        "columns_mobile": "1",
-        "image_shape": "square",
-        "image_aspect_ratio": 1.1,
-        "enable_product_count": false,
-        "text_size": 115,
-        "overlay_text": false,
-        "enable_slider_mobile": false,
-        "section_bg_color": "",
-        "section_text_color": "",
-        "width": "wrapper--full-padded",
-        "padding_top": 8,
-        "padding_bottom": 16
-      }
     }
   },
   "order": [
     "main",
     "section_image_RYxa68",
     "section_text_8MUdPj",
-    "section_list_collection_UnD6ej",
-    "section_list_collection_mQmGhn"
+    "section_list_collection_UnD6ej"
   ]
 }
