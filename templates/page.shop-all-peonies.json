@@ -32,16 +32,32 @@
             "desktop_image": "shopify://shop_images/1_10.jpg",
             "alt": "Peonies banner image"
           }
+        },
+        "slide_Qm4QjX": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_11.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_RLMyGp": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_12.jpg",
+            "alt": "Peonies banner image"
+          }
         }
       },
       "block_order": [
-        "slide_rYxN89"
+        "slide_rYxN89",
+        "slide_Qm4QjX",
+        "slide_RLMyGp"
       ],
       "name": "Hero Peonies Slider",
       "settings": {
-        "autoplay": false,
+        "autoplay": true,
         "duration_seconds": 4,
-        "show_dots": true
+        "show_dots": false
       }
     },
     "section_text_8MUdPj": {
