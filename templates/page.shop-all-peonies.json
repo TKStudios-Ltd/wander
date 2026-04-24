@@ -228,6 +228,30 @@
             "bg_color": "",
             "overlay_opacity": 100
           }
+        },
+        "collection_m3B9TX": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-9-the-space-in-between",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P9.jpg",
+            "heading": "With photographs taken at a stage in life when most flowers would be discarded,  “PART 9 - THE SPACE IN BETWEEN” explores the space in between life & death, matter & air, weight & weightlessness. Floating in space and illuminated by light, each form carries an ethereal presence and glass-like translucency—with shapes that bend, curl, and twist into organic, fluid and often fantastical forms. ",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_dwKmPr": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-10-unsung-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P10.jpg",
+            "heading": "With windswept petals that feel suspended in time, the images in “PART 10 - UNSUNG BEAUTY” illuminate an inherent beauty & light within—even in the final stages of life.  Flowers float, and wrinkles are celebrated—and age seems to be forgotten with a mantra of “forever young”. A delicate beauty emerges, and time seems to stand still. We are reminded that age can be beautiful.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
         }
       },
       "block_order": [
@@ -238,7 +262,9 @@
         "collection_jmQxXz",
         "collection_wDFRFz",
         "collection_RNzPtr",
-        "collection_hkz4HC"
+        "collection_hkz4HC",
+        "collection_m3B9TX",
+        "collection_dwKmPr"
       ],
       "name": "Collection list",
       "settings": {
