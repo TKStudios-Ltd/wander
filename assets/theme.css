@@ -22305,7 +22305,12 @@ search-popdown details > summary:first-of-type {
 }
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child {
   background-color: #FFFFFF;
+}
+body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer {
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .btn,
