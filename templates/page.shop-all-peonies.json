@@ -23,23 +23,25 @@
         "padding_bottom": 60
       }
     },
-    "section_image_RYxa68": {
-      "type": "section-image",
-      "name": "Image",
+    "image_banner_peonies_slider_49Fxka": {
+      "type": "image-banner-peonies-slider",
+      "blocks": {
+        "slide_rYxN89": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_10.jpg",
+            "alt": "Peonies banner image"
+          }
+        }
+      },
+      "block_order": [
+        "slide_rYxN89"
+      ],
+      "name": "Hero Peonies Slider",
       "settings": {
-        "image": "shopify://shop_images/Wander_ShopAll_Hero.jpg",
-        "mobile_image": "shopify://shop_images/WANDER_ShopAll_HeroMob.jpg",
-        "allow_mobile_zoom": false,
-        "custom_id": "",
-        "height": "full-height",
-        "enable_mobile_height": true,
-        "mobile_height": "one-half-height-mobile",
-        "enable_stretch": true,
-        "image_position": "center",
-        "bg_color_secondary": false,
-        "width": "wrapper--full",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "autoplay": false,
+        "duration_seconds": 4,
+        "show_dots": true
       }
     },
     "section_text_8MUdPj": {
@@ -367,7 +369,7 @@
   },
   "order": [
     "main",
-    "section_image_RYxa68",
+    "image_banner_peonies_slider_49Fxka",
     "section_text_8MUdPj",
     "section_list_collection_UnD6ej"
   ]
