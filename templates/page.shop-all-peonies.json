@@ -318,7 +318,7 @@
           "settings": {
             "collection": "",
             "heading": "Not all available artwork is featured & sold on this website.If you would like to see the full WANDERINGS™ PEONIES Collection, please email us at hello@shopwander.com to get accessto our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs,which contain all Artwork & Collections, in full.",
-            "max_width": 550,
+            "max_width": 500,
             "block_text_color": "",
             "bg_color": "#ffffff",
             "overlay_opacity": 100
@@ -361,7 +361,7 @@
         "section_text_color": "",
         "width": "wrapper--full-padded",
         "padding_top": 8,
-        "padding_bottom": 8
+        "padding_bottom": 16
       }
     }
   },
