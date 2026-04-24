@@ -160,9 +160,9 @@
         "collection_KderwA": {
           "type": "collection",
           "settings": {
-            "collection": "surf",
-            "custom_collection_image": "shopify://shop_images/SHOP_ALL_SURF.jpg",
-            "heading": "A Collection of FINE ART PHOTOGRAPHY PRINTS that celebrates the Coastal lifestyle of the SEA & SURF, and our love for the ocean & rolling waves. We hope these images inspire you to jump in...and find peace in the waters of the deep blue.",
+            "collection": "part-3-forever-blooming",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P3.jpg",
+            "heading": "Photographed during each flower's \"prime\", \"PART 3 - FOREVER BLOOMING\" is a celebration of expansion and joie de vivre—featuring grand, breathtaking blooms in their fullest expression. Bold, vibrant, and unapologetically open, they overflow with life, and radiate joy in every petal. There's a sense of freedom in their openness—a kind of beauty that doesn't ask for permission.",
             "max_width": 500,
             "block_text_color": "",
             "bg_color": "",
