@@ -137,7 +137,7 @@
           "type": "collection",
           "settings": {
             "collection": "part-1-buds-blooms",
-            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_1.jpg",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P1.jpg",
             "heading": "Photographed during the stages of bud & bloom, \"PART 1 - BUDS & BLOOMS\" is a comprehensive collection of fine art photos & series that showcase the Peony in the early stages of life. Crisp petals, vibrant colors, perfect symmetry—all hallmarks of their youth.  Petals glow with vibrancy, softness & weightlessness —with a fleeting feeling of newness, as everything opens wide.",
             "max_width": 490,
             "block_text_color": "",
@@ -148,9 +148,9 @@
         "collection_cYKWnD": {
           "type": "collection",
           "settings": {
-            "collection": "peonies",
-            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES.jpg",
-            "heading": "With thousands of peonies photographed over a decade, this SIGNATURE Collection of FINE ART PHOTOGRAPHY PRINTS showcases the Peony, in all her glory and stages of life, as it illuminates a delicate balance between life & decay.",
+            "collection": "part-2-she-blooms",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P2.jpg",
+            "heading": "Photographed during the most expansive blooms, \"PART 2 - SHE BLOOMS\" captures the peony in full glorious blooms—bursting with color, beauty, & joy. Overlapping peonies compete for the limelight. Bursting, billowing and dripping with life, these photographs spill beyond the frame & into the room—commanding a presence that's impossible to ignore.",
             "max_width": 500,
             "block_text_color": "",
             "bg_color": "",
