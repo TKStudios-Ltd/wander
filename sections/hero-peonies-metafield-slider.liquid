@@ -144,20 +144,21 @@
         <p id="Text--heading_hLX8Dc" class="text__heading h2 text-highlight-wrapper text-highlight-wrapper--highlight-color">
           <span class="text-highlight__break">
             <text-highlight class="text-highlight" style="--icon-url: none;--icon-color: #000000;" data-highlight-type="highlight-color">
-              <span class="text-highlight__string" data-highlight-holder="">WANDERINGS™ Collection:</span>
+              <span class="text-highlight__string" data-highlight-holder=""><em>WANDERINGS™</em> Peonies Collection:</span>
             </text-highlight> <b style="font-weight: 700;">{{ collection.title }}</b>
           </span>
         </p>
       </div>
       <div id="Text--text_TAJynC" class="text__content">
-        <p>{{ collection.metafields.custom.collection_subtitle | escape }}</p>
+        {% comment %} <p>{{ collection.metafields.custom.collection_subtitle | escape }}</p> {% endcomment %}
+         <p>With thousands of peonies photographed over a decade, our Signature Limited Edition WANDERINGS™ PEONIES Collection showcases the peony in all her glory—from bud to bloom to later stages of life.</p>
       </div>
       <hr style="margin: 40px auto;">
       <div id="Text--text_LtQKFx" class="text__content">
         <p>{{ collection.description }}</p>
       </div>
       <div id="Text--text_KHGkie" class="text__content">
-        <p>ALL FINE ART PHOTOGRAPHY by WANDER founder, Renee Cara David</p>
+        <p>ALL FINE ART / PHOTOGRAPHY by WANDER founder, Renee Cara David.<br>© 2026 WANDER. All Rights Reserved</p>
       </div>
     </div>
   </div>
