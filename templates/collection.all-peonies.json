@@ -132,6 +132,585 @@
         "duration": 4,
         "transition": "slide"
       }
+    },
+    "image_banner_peonies_slider_49Fxka": {
+      "type": "image-banner-peonies-slider",
+      "blocks": {
+        "slide_rYxN89": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_10.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_Qm4QjX": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_11.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_RLMyGp": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_12.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_nA7mLa": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_13.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_pC4mdg": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_14.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_ByT3EA": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_15.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_BVHx7C": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_16.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_C7WEXh": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/2_9.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_qDrqPw": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/5_2.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_6tTCXh": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/6A_2.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_3gx74Y": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/7_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_z7ChKk": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/8_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_PrabF9": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/9_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_gbExyT": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/10_2.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_btxDLA": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/10_3.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_CkJQxh": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/11_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_F43Pac": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/16_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_wBccKe": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/17_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_9JGaiY": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/20_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_P8nRm3": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/21_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_rkNihx": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/22_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_QYCfTa": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/23_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_97dCiJ": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/25_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_z4QChk": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/26_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_49WgKC": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/28_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_Ww4Fin": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/30_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_hrdndC": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/31_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_rG3X7Y": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/32_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_AwBgeF": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/33_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        }
+      },
+      "block_order": [
+        "slide_rYxN89",
+        "slide_Qm4QjX",
+        "slide_RLMyGp",
+        "slide_nA7mLa",
+        "slide_pC4mdg",
+        "slide_ByT3EA",
+        "slide_BVHx7C",
+        "slide_C7WEXh",
+        "slide_qDrqPw",
+        "slide_6tTCXh",
+        "slide_3gx74Y",
+        "slide_z7ChKk",
+        "slide_PrabF9",
+        "slide_gbExyT",
+        "slide_btxDLA",
+        "slide_CkJQxh",
+        "slide_F43Pac",
+        "slide_wBccKe",
+        "slide_9JGaiY",
+        "slide_P8nRm3",
+        "slide_rkNihx",
+        "slide_QYCfTa",
+        "slide_97dCiJ",
+        "slide_z4QChk",
+        "slide_49WgKC",
+        "slide_Ww4Fin",
+        "slide_hrdndC",
+        "slide_rG3X7Y",
+        "slide_AwBgeF"
+      ],
+      "name": "Hero Peonies Slider",
+      "settings": {
+        "autoplay": true,
+        "duration_seconds": 4,
+        "show_dots": false
+      }
+    },
+    "section_text_8MUdPj": {
+      "type": "section-text",
+      "blocks": {
+        "heading_hLX8Dc": {
+          "type": "heading",
+          "settings": {
+            "text": "<p><em>WANDERINGS™ </em>Collection: <strong>PEONIES</strong></p>",
+            "size": 60,
+            "margin_bottom": 50,
+            "heading_highlight_type": "highlight-color",
+            "highlight_color": "#000000",
+            "highlight_text_color": ""
+          }
+        },
+        "text_TAJynC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With thousands of peonies photographed over a decade, our Signature Limited Edition WANDERINGS™ PEONIES Collection showcases the peony in all her glory — from bud to bloom to later stages of life.</p>",
+            "size": 100,
+            "max_width": 575,
+            "margin_bottom": 25
+          }
+        },
+        "text_XrhBnt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The WANDERINGS™ PEONIES Collection pushes boundaries, to celebrate each flower’s entire lifecycle, illuminating the delicate balance between life and decay. It captures the bloom and the fall, as colors and forms shift, and new perspectives emerge. In doing so, it reflects upon the circle of life, and challenges a society obsessed with perfection.</p>",
+            "size": 100,
+            "max_width": 675,
+            "margin_bottom": 25
+          }
+        },
+        "text_gxC6p8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Within the photographic process, what ultimately emerged was a ‘light’ glowing from within each flower—no matter how much it looked ready to be forgotten. It was both poetic and profound. Each flower had something to say—at every stage of life.</p>",
+            "size": 100,
+            "max_width": 675,
+            "margin_bottom": 25
+          }
+        },
+        "separator_8jCiMT": {
+          "type": "separator",
+          "settings": {
+            "separator_width": 30,
+            "margin_top": 50,
+            "margin_bottom": 50
+          }
+        },
+        "text_KHGkie": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Due to the large body of work, the WANDERINGS™ PEONIES Collection is presented in 15 approachable Parts. Like the flowers themselves, each Part of this PEONIES Collection is made up of many artworks and series that both stand alone, as well as unfold chronologically as a cohesive body of work. Forming a continuous narrative when experienced together, the entire Collection follows hundreds of flowers’ journeys.</p>",
+            "size": 100,
+            "max_width": 700,
+            "margin_bottom": 25
+          }
+        },
+        "text_LtQKFx": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not all available artwork is featured on this website. If you would like to see the full WANDERINGS™ PEONIES Collection, please email us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a> to get access to our WANDERINGS™ Catalogs, which contain the entire Collections, in full.</p>",
+            "size": 100,
+            "max_width": 1000,
+            "margin_bottom": 25
+          }
+        }
+      },
+      "block_order": [
+        "heading_hLX8Dc",
+        "text_TAJynC",
+        "text_XrhBnt",
+        "text_gxC6p8",
+        "separator_8jCiMT",
+        "text_KHGkie",
+        "text_LtQKFx"
+      ],
+      "name": "Text",
+      "settings": {
+        "custom_class": "shop_all__hero_intro",
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "text_color": "text-dark",
+        "width": "wrapper",
+        "padding_top": 120,
+        "padding_bottom": 100
+      }
+    },
+    "section_list_collection_UnD6ej": {
+      "type": "section-list-collection",
+      "blocks": {
+        "collection_LVzNKe": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-1-buds-blooms",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P1.jpg",
+            "heading": "Photographed during the stages of bud & bloom, \"PART 1 - BUDS & BLOOMS\" is a comprehensive collection of fine art photos & series that showcase the Peony in the early stages of life. Crisp petals, vibrant colors, perfect symmetry—all hallmarks of their youth.  Petals glow with vibrancy, softness & weightlessness —with a fleeting feeling of newness, as everything opens wide.",
+            "max_width": 490,
+            "block_text_color": "",
+            "bg_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_cYKWnD": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-2-she-blooms",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P2_10f39193-002f-4b13-a1d4-1ed25dd93734.jpg",
+            "heading": "Photographed during the most expansive blooms, \"PART 2 - SHE BLOOMS\" captures the peony in full glorious blooms—bursting with color, beauty, & joy. Overlapping peonies compete for the limelight. Bursting, billowing and dripping with life, these photographs spill beyond the frame & into the room—commanding a presence that's impossible to ignore.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_KderwA": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-3-forever-blooming",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P3.jpg",
+            "heading": "Photographed during each flower's \"prime\", \"PART 3 - FOREVER BLOOMING\" is a celebration of expansion and joie de vivre—featuring grand, breathtaking blooms in their fullest expression. Bold, vibrant, and unapologetically open, they overflow with life, and radiate joy in every petal. There's a sense of freedom in their openness—a kind of beauty that doesn't ask for permission.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_a87k4e": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-4-bold-beautiful",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P4_ebb6f679-c4ae-4520-ba09-e68928902d93.jpg",
+            "heading": "Photographed during the bud & the bloom stages, \"PART 4 - BOLD & BEAUTIFUL\" plays with light, dark and bright colors, creating bold intriguing visuals. Using concepts of duality, contrast, and unexpected colors & hues, the flowers take on new perspectives of beauty. Both strength and fragility are explored, revealing a delicate tension between resilience and vulnerability.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_jmQxXz": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-5-vibrant-blooms",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P5.jpg",
+            "heading": "\"PART 5 - VIBRANT BLOOMS\" is a comprehensive collection of various fine art photos & series that showcase the Peony in full bloom. Perfect blooms, vibrant colors and ethereal lightnes—with the full richness of expansion. Classic beauty is celebrated—as each peony floats & dances in the light. It's as if each flower knows this is its' moment to shine. ",
+            "max_width": 480,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_wDFRFz": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-6-inner-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P6.jpg",
+            "heading": "With the beauty of light & expansion, \"PART 6 - INNER BEAUTY\" showcases the peony — with delicate transparent blooms that dance in the light & glow from within. Suspended in air, they are weightless, soft, fleeting, & quietly radiant. The interplay of light & form highlights their delicacy—emphasizing a quiet, suspended stillness, and revealing a soft, luminous presence.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_RNzPtr": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-7-eternal-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P7.jpg",
+            "heading": "With photographs shot when most flowers would be discarded, \"PART 7 - ETERNAL BEAUTY\" celebrates the mid- to later stages of each peony's life. Vibrant, colorful and still very much full-of-life—organic fluid forms take shape, and light illuminates. Colors & light create unusual perspectives, echoing an eternal resonance, universal beauty & permanence—defying the passage of time.",
+            "max_width": 520,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_hkz4HC": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-8-lightness-of-being",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P8.jpg",
+            "heading": "Floating in space and illuminated by light, each artwork in “PART 8 - LIGHTNESS OF BEING” reveals an unsung beauty & lightness found in the later stages of each flower’s life.  Ethereal, light, and often otherworldly, the images are both relaxing and unusual. With photographs shot when most flowers would be discarded, a new perspective of beauty is challenged—Wrinkles, fallen petals, & age are celebrated.",
+            "max_width": 520,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_m3B9TX": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-9-the-space-in-between",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P9.jpg",
+            "heading": "With photographs taken at a stage in life when most flowers would be discarded,  “PART 9 - THE SPACE IN BETWEEN” explores the space in between life & death, matter & air, weight & weightlessness. Floating in space and illuminated by light, each form carries an ethereal presence and glass-like translucency—with shapes that bend, curl, and twist into organic, fluid and often fantastical forms. ",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_dwKmPr": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-10-unsung-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P10.jpg",
+            "heading": "With windswept petals that feel suspended in time, the images in “PART 10 - UNSUNG BEAUTY” illuminate an inherent beauty & light within—even in the final stages of life.  Flowers float, and wrinkles are celebrated—and age seems to be forgotten with a mantra of “forever young”. A delicate beauty emerges, and time seems to stand still. We are reminded that age can be beautiful.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_RxgDcL": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-11-wild-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P12.jpg",
+            "heading": "\"PART 11 - WILD BEAUTY\" celebrates the later stages of each peony's life — as wild, organic & unusual forms take shape. Caught in the stillness bearing the passage of time, it's as if age itself has loosened its grip. Beauty lingers not in perfection, but within wilted, fallen petals and an unapologetic allure. Each flower speaks with a voice that refuses to fade.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_a7jWnW": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-12-ageless-beauty",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P13.jpg",
+            "heading": "With photographs shot when most flowers would be discarded, Part 12 embraces the elegance of aging, illuminating the confidence & wisdom that emerge over time. Rather than chasing youth, it honors what remains, as each flower tells its own evolving story. Transcending physical decay & the passage of time, this work reflects a deeper truth: that aging is not something to resist, but to embody.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_Rbyyhr": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-13-fallen",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P14.jpg",
+            "heading": "Each flower & petal was kept to the end, beyond the point where most would be forgotten. Beauty is in the eye of the beholder—as wrinkles & decay bear impressions of a life well-lived. The end of life is surrendered to and witnessed— honoring the full circle of life and the beauty, grace, & resilience found deep within each peony, even up to its’ final hour. ",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_dtdBct": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-14-flowers-grow-after-it-rains",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P15.jpg",
+            "heading": "“PART 14 - FLOWERS GROW AFTER IT RAINS” is an abstract art series within the PEONIES COLLECTION. It follows the process after death—and reflects on the delicate balance of life after death, growth after hardship, light after darkness, and joy after grief.  It gently reminds us that time often heals...that beauty and vibrancy re-emerge...and that flowers always grow, after it rains.",
+            "max_width": 510,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_yMJytd": {
+          "type": "collection",
+          "settings": {
+            "collection": "part-15-fragments",
+            "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P16.jpg",
+            "heading": "This mixed media abstract art FRAGMENTS Collection represents the final stage of that exploration — an inquiry into the concepts of death, the afterlife, and the pieces that remain thereafter. Memories, impressions, and fragments are left behind with those we love, and imprinted in the Collective. As parts of a larger whole, each soul and species leaves an echo — and a light that endures.We are a constellation of species and souls. Forever connected. Forever shaping each other.",
+            "max_width": 520,
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_mnQQy9": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Not all available artwork is featured & sold on this website.If you would like to see the full WANDERINGS™ PEONIES Collection, please email us at hello@shopwander.com to get accessto our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs,which contain all Artwork & Collections, in full.",
+            "max_width": 500,
+            "block_text_color": "",
+            "bg_color": "#ffffff",
+            "overlay_opacity": 100
+          }
+        }
+      },
+      "block_order": [
+        "collection_LVzNKe",
+        "collection_cYKWnD",
+        "collection_KderwA",
+        "collection_a87k4e",
+        "collection_jmQxXz",
+        "collection_wDFRFz",
+        "collection_RNzPtr",
+        "collection_hkz4HC",
+        "collection_m3B9TX",
+        "collection_dwKmPr",
+        "collection_RxgDcL",
+        "collection_a7jWnW",
+        "collection_Rbyyhr",
+        "collection_dtdBct",
+        "collection_yMJytd",
+        "collection_mnQQy9"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "",
+        "heading_size": 100,
+        "layout": "grid",
+        "alignment": "center",
+        "collections_per_row": 2,
+        "columns_mobile": "1",
+        "image_shape": "square",
+        "image_aspect_ratio": 1.1,
+        "enable_product_count": false,
+        "text_size": 115,
+        "overlay_text": false,
+        "enable_slider_mobile": false,
+        "section_bg_color": "",
+        "section_text_color": "",
+        "width": "wrapper--full-padded",
+        "padding_top": 8,
+        "padding_bottom": 16
+      }
     }
   },
   "order": [
@@ -140,6 +719,9 @@
     "collection_233_tiles_Lwpbnk",
     "main",
     "section_custom_html_JX7EYY",
-    "collection_bottom_slider_QXyqaj"
+    "collection_bottom_slider_QXyqaj",
+    "image_banner_peonies_slider_49Fxka",
+    "section_text_8MUdPj",
+    "section_list_collection_UnD6ej"
   ]
 }
