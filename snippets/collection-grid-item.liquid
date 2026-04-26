@@ -287,6 +287,9 @@
       {% if collection.handle == 'peonies' %}
         {% assign is_peonies = true %}
       {% endif %}
+      {% if request.path == '/collections/peonies' %}
+        {% assign is_peonies = true %}
+      {% endif %}
 
       {% if is_peonies %}
         <span class="collection__peonies__title">
