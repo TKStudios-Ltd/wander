@@ -26,6 +26,15 @@
         "padding_bottom": 100
       }
     },
+    "hero_peonies_metafield_slider_gGatJC": {
+      "type": "hero-peonies-metafield-slider",
+      "name": "Metafield Image Slider",
+      "settings": {
+        "autoplay": false,
+        "duration_seconds": 4,
+        "show_dots": true
+      }
+    },
     "subcollections": {
       "type": "subcollections",
       "disabled": true,
@@ -136,6 +145,7 @@
   },
   "order": [
     "hero",
+    "hero_peonies_metafield_slider_gGatJC",
     "subcollections",
     "collection_233_tiles_Lwpbnk",
     "main",
