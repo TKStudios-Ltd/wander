@@ -1,0 +1,325 @@
+{%- liquid
+  assign autoplay = section.settings.autoplay
+  assign duration_ms = section.settings.duration_seconds | times: 1000
+  assign show_dots = section.settings.show_dots
+  assign selected_collection = section.settings.collection
+  assign metafield_images = selected_collection.metafields.custom.peonies_slider_images.value
+
+  assign MAX_DESKTOP_W = 2400
+  assign MAX_MOBILE_W = 1200
+-%}
+
+{%- if metafield_images != blank or section.blocks.size > 0 -%}
+<section
+  id="IBPS--{{ section.id }}"
+  class="ibps"
+  data-autoplay="{{ autoplay }}"
+  data-interval="{{ duration_ms }}"
+>
+  <div class="swiper ibps__swiper">
+    <div class="swiper-wrapper">
+
+      {%- if metafield_images != blank -%}
+        {%- for image in metafield_images -%}
+          {%- liquid
+            assign load_eager = false
+            if forloop.index0 == 0 and section.index < 3
+              assign load_eager = true
+            endif
+
+            assign loading_attr = 'lazy'
+            assign fetchpriority_attr = 'auto'
+
+            if load_eager
+              assign loading_attr = 'eager'
+              assign fetchpriority_attr = 'high'
+            endif
+          -%}
+
+          <div class="swiper-slide">
+            <div class="ibps__slide">
+              <div class="ibps__media">
+                <picture>
+                  <source
+                    media="(min-width: 750px)"
+                    srcset="{{ image | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
+                            {{ image | image_url: width: 2000 }} 2000w,
+                            {{ image | image_url: width: 1600 }} 1600w,
+                            {{ image | image_url: width: 1200 }} 1200w"
+                    sizes="100vw">
+
+                  <img
+                    class="ibps__img"
+                    alt="{{ selected_collection.title | escape }}"
+                    loading="{{ loading_attr }}"
+                    fetchpriority="{{ fetchpriority_attr }}"
+                    src="{{ image | image_url: width: MAX_MOBILE_W }}"
+                    srcset="{{ image | image_url: width: MAX_MOBILE_W }} {{ MAX_MOBILE_W }}w,
+                            {{ image | image_url: width: 900 }} 900w,
+                            {{ image | image_url: width: 700 }} 700w,
+                            {{ image | image_url: width: 500 }} 500w"
+                    sizes="100vw">
+                </picture>
+              </div>
+
+              <div class="ibps__label">
+                <span class="collection__box__title">
+                  A LIMITED EDITION <em>WANDERINGS</em>™ SIGNATURE COLLECTION
+                </span>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+
+      {%- else -%}
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign d_img = block.settings.desktop_image
+            assign m_img = block.settings.mobile_image | default: d_img
+
+            assign load_eager = false
+            if forloop.index0 == 0 and section.index < 3
+              assign load_eager = true
+            endif
+
+            assign loading_attr = 'lazy'
+            assign fetchpriority_attr = 'auto'
+
+            if load_eager
+              assign loading_attr = 'eager'
+              assign fetchpriority_attr = 'high'
+            endif
+          -%}
+
+          <div class="swiper-slide" {{ block.shopify_attributes }}>
+            <div class="ibps__slide">
+              <div class="ibps__media">
+                <picture>
+                  {%- if d_img != blank -%}
+                    <source
+                      media="(min-width: 750px)"
+                      srcset="{{ d_img | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
+                              {{ d_img | image_url: width: 2000 }} 2000w,
+                              {{ d_img | image_url: width: 1600 }} 1600w,
+                              {{ d_img | image_url: width: 1200 }} 1200w"
+                      sizes="100vw">
+                  {%- endif -%}
+
+                  {%- if m_img != blank -%}
+                    <img
+                      class="ibps__img"
+                      alt="{{ block.settings.alt | escape }}"
+                      loading="{{ loading_attr }}"
+                      fetchpriority="{{ fetchpriority_attr }}"
+                      src="{{ m_img | image_url: width: MAX_MOBILE_W }}"
+                      srcset="{{ m_img | image_url: width: MAX_MOBILE_W }} {{ MAX_MOBILE_W }}w,
+                              {{ m_img | image_url: width: 900 }} 900w,
+                              {{ m_img | image_url: width: 700 }} 700w,
+                              {{ m_img | image_url: width: 500 }} 500w"
+                      sizes="100vw">
+                  {%- endif -%}
+                </picture>
+              </div>
+
+              <div class="ibps__label">
+                <span class="collection__box__title">
+                  A LIMITED EDITION <em>WANDERINGS</em>™ SIGNATURE COLLECTION
+                </span>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+
+    </div>
+
+    {%- if show_dots -%}
+      <div class="swiper-pagination"></div>
+    {%- endif -%}
+  </div>
+</section>
+
+{%- style -%}
+  #IBPS--{{ section.id }} {
+    position: relative;
+    width: 100%;
+    overflow: clip;
+  }
+
+  #IBPS--{{ section.id }} .ibps__swiper,
+  #IBPS--{{ section.id }} .swiper-wrapper,
+  #IBPS--{{ section.id }} .swiper-slide,
+  #IBPS--{{ section.id }} .ibps__slide,
+  #IBPS--{{ section.id }} .ibps__media,
+  #IBPS--{{ section.id }} picture {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 1600px;
+  }
+
+  #IBPS--{{ section.id }} .ibps__slide {
+    position: relative;
+  }
+
+  #IBPS--{{ section.id }} .ibps__img {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 1600px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #IBPS--{{ section.id }} .ibps__label {
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: #000;
+    color: #fff;
+    padding: 20px 60px;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0.35em;
+    white-space: nowrap;
+    font-family: "Libre Baskerville", serif;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  #IBPS--{{ section.id }} .ibps__label .collection__box__title {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+  }
+
+  #IBPS--{{ section.id }} .swiper-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+  #IBPS--{{ section.id }} .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    opacity: .6;
+    background: white;
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+  }
+
+  #IBPS--{{ section.id }} .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  @media (max-width: 1199px) {
+    #IBPS--{{ section.id }} .ibps__label {
+      font-size: 9px;
+      padding: 16px 32px;
+    }
+  }
+
+  @media (max-width: 749px) {
+    #IBPS--{{ section.id }} .ibps__label {
+      font-size: 7px;
+      padding: 12px 24px;
+    }
+  }
+{%- endstyle -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var root = document.getElementById('IBPS--{{ section.id }}');
+    if (!root) return;
+
+    var autoplay = root.getAttribute('data-autoplay') === 'true';
+    var interval = parseInt(root.getAttribute('data-interval'), 10) || 4000;
+    var slides = root.querySelectorAll('.swiper-slide');
+
+    new Swiper(root.querySelector('.ibps__swiper'), {
+      loop: slides.length > 1,
+      speed: 500,
+      autoplay: autoplay ? { delay: interval, disableOnInteraction: false } : false,
+      pagination: {
+        el: root.querySelector('.swiper-pagination'),
+        clickable: true
+      }
+    });
+  });
+</script>
+{%- else -%}
+  <div class="page-width">
+    <p>No images found. Select a collection with Peonies slider images, or add manual slide blocks.</p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Metafield Image Slider",
+  "class": "image-banner-peonies-slider",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection to pull slider images from"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "duration_seconds",
+      "label": "Change slide every (sec)",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show dot pagination",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Fallback slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "desktop_image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image optional"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Image alt text",
+          "default": "Peonies banner image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Metafield Image Slider",
+      "category": "Image"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "aside", "footer"]
+  }
+}
+{% endschema %}
