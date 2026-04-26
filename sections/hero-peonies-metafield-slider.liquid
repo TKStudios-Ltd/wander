@@ -149,12 +149,12 @@
           </span>
         </p>
       </div>
-      <div id="Text--text_TAJynC" class="text__content">
+      <div id="Peonies-Text--Subtitle" class="text__content">
         {% comment %} <p>{{ collection.metafields.custom.collection_subtitle | escape }}</p> {% endcomment %}
          <p>With thousands of peonies photographed over a decade, our Signature Limited Edition WANDERINGS™ PEONIES Collection showcases the peony in all her glory—from bud to bloom to later stages of life.</p>
       </div>
       <hr style="margin: 40px auto;">
-      <div id="Text--text_LtQKFx" class="text__content">
+      <div id="Peonies-Text--Description" class="text__content">
         <p>{{ collection.description }}</p>
       </div>
       <div id="Text--text_KHGkie" class="text__content">
@@ -240,6 +240,14 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 9px;
+    }
+    .peonies__hero_intro #Peonies-Text--Subtitle p {
+        max-width: 600px;
+        margin: auto;
+    }
+    .peonies__hero_intro #Peonies-Text--Description p {
+        max-width: 750px;
+        margin: auto;
     }
     @media screen and (min-width: 750px) {
         .peonies__hero_intro .text__content p {
