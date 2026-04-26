@@ -280,7 +280,15 @@
         data-aos-delay="{{ animation_delay | times: 150 }}"
       {% endif %}>
 
-      {% if page and page.handle == 'shop-all-peonies' or collection and collection.handle == 'peonies' %}
+      {% assign is_peonies = false %}
+      {% if page.handle == 'shop-all-peonies' %}
+        {% assign is_peonies = true %}
+      {% endif %}
+      {% if collection.handle == 'peonies' %}
+        {% assign is_peonies = true %}
+      {% endif %}
+
+      {% if is_peonies %}
         <span class="collection__peonies__title">
           <em>WANDERINGS</em>™ PEONIES COLLECTION:&nbsp;<b style="font-weight: 700;">{{- default_title -}}</b>
         </span>
