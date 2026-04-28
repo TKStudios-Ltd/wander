@@ -94,9 +94,9 @@
           -%}
 
           {%- capture product_badges -%}
-            {%- if custom_badge_metafield and show_custom_badge -%}
+            {%- if show_custom_badge_tag -%}
               <div class="product__badge__item product__badge__item--custom">
-                <span>{{ custom_badge_metafield_text }}</span>
+                <span>{{ custom_badge_text }}</span>
               </div>
             {%- endif -%}
 
