@@ -27045,7 +27045,7 @@ search-form mark {
 .variant--soldout .product__submit__holder--notification .product__submit__add,
 .variant--soldout .product__submit__holder--notification .product__submit__add:hover {
   cursor: pointer;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .variant--unavailabe .product__price {
