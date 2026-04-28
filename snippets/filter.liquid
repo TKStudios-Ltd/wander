@@ -144,6 +144,11 @@
           -%}
 
           {%- for filter_value in filter.values -%}
+
+            {%- comment %} Skip values starting with * {% endcomment -%}
+            {%- if filter_value.label contains '*' and filter_value.label | slice: 0, 1 == '*' -%}
+              {%- continue -%}
+            {%- endif -%}
             {%- liquid
               capture filter_classes
                 echo 'collection__filter-tag'
