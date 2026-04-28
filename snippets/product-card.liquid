@@ -6,11 +6,15 @@
   endif
 
   assign sold_out = false
-  assign custom_badge_metafield = false
-  if product.metafields.theme.badge != blank and product.metafields.theme.badge.type == 'single_line_text_field'
-    assign custom_badge_metafield = true
-    assign custom_badge_metafield_text = product.metafields.theme.badge.value
-  endif
+  assign show_custom_badge_tag = false
+  assign custom_badge_text = ''
+
+  for tag in product.tags
+    if tag == '*coming-soon'
+      assign show_custom_badge_tag = true
+      assign custom_badge_text = 'In Stores Soon'
+    endif
+  endfor
   unless product.available
     assign sold_out = true
   endunless
