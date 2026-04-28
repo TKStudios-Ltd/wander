@@ -243,6 +243,27 @@
             </div>
           </div>
         {%- endif -%}
+
+        {%- assign first_tag_character = '' -%}
+        {%- assign custom_badge_text = '' -%}
+        {%- assign show_custom_badge_tag = false -%}
+
+        {%- for tag in product.tags -%}
+          {%- assign first_tag_character = tag | slice: 0, 1 -%}
+          {%- if first_tag_character == '*' -%}
+            {%- assign show_custom_badge_tag = true -%}
+            {%- assign custom_badge_text = tag | remove_first: '*' | replace: '-', ' ' | capitalize -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if show_custom_badge_tag -%}
+          <div class="product__badge product-single__badge" data-product-badge>
+            <div class="product__badge__item product__badge__item--custom">
+              <span>{{ custom_badge_text }}</span>
+            </div>
+          </div>
+        {%- endif -%}
       </div>
 
       {%- if first_3d_model -%}
