@@ -1424,6 +1424,11 @@
           data-aos-order="{{ animation_order }}"
           {%- assign animation_order = animation_order | plus: 1 -%}
         {% endif %}>
+        {% if product.tags contains 'coming-soon' %}
+          <a href="#popup--popup-0" class="btn {{ atc_button_color }} {{ atc_button_style }} btn--large btn--submit product__submit__add">
+            Notify Me When Available
+          </a>
+        {% else %}
         <button
           type="submit"
           name="add"
@@ -1459,6 +1464,7 @@
 
           <em class="loader loader--line"><em class="loader-indeterminate"></em></em>
         </button>
+        {% endif %}
       </div>
 
       {%- if show_payment_button -%}
