@@ -144,11 +144,21 @@
           -%}
 
           {%- for filter_value in filter.values -%}
-
-            {%- comment %} Skip values starting with * {% endcomment -%}
-            {%- if filter_value.label contains '*' and filter_value.label | slice: 0, 1 == '*' -%}
+            {%- assign first_character = filter_value.label | slice: 0, 1 -%}
+            {%- if first_character == '*' -%}
               {%- continue -%}
             {%- endif -%}
+
+            {%- liquid
+              capture filter_classes
+                echo 'collection__filter-tag'
+                if is_swatch
+                  echo ' collection__filter-tag--swatch'
+                else
+                  echo ' collection__filter-tag--default'
+                endif
+              endcapture
+            -%}
             {%- liquid
               capture filter_classes
                 echo 'collection__filter-tag'
