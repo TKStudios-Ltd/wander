@@ -1444,7 +1444,8 @@
             {%- elsif current_variant.available -%}
               {{ 'products.product.add_to_cart' | t }}
             {%- else -%}
-              {{ sold_out_text }}
+              {% comment %} {{ sold_out_text }} {% endcomment %}
+              Sold Out
             {%- endif -%}
 
             {%- if settings.atc_show_product_price -%}
