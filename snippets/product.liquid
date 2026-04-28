@@ -3311,6 +3311,11 @@
 <div class="product__submit__holder{% if show_payment_button %} product__submit__holder--spb{% endif %}">
   <div class="product__submit__buttons">
     <div class="product__submit__item">
+      {% if product.tags contains '*coming-soon' %}
+          <a href="#popup--popup-0" class="btn {{ atc_button_color }} {{ atc_button_style }} btn--notify btn--medium btn--submit product__submit__add">
+            Notify Me When Available
+          </a>
+        {% else %}
       <button
         type="submit"
         name="add"
@@ -3323,7 +3328,8 @@
           {%- elsif current_variant.available -%}
             {{ 'products.product.add_to_cart' | t }}
           {%- else -%}
-            {{ sold_out_text }}
+            {% comment %} {{ sold_out_text }} {% endcomment %}
+             Sold Out
           {%- endif -%}
 
           {%- if settings.atc_show_product_price -%}
@@ -3343,6 +3349,7 @@
 
         <em class="loader loader--line"><em class="loader-indeterminate"></em></em>
       </button>
+      {%- endif -%}
     </div>
 
     {%- if show_payment_button -%}
