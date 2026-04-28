@@ -4,6 +4,17 @@
   if product.template_suffix != blank
     assign tpl_class = 'product-template-' | append: product.template_suffix
   endif
+
+  assign sold_out = false
+  assign custom_badge_metafield = false
+  if product.metafields.theme.badge != blank and product.metafields.theme.badge.type == 'single_line_text_field'
+    assign custom_badge_metafield = true
+    assign custom_badge_metafield_text = product.metafields.theme.badge.value
+  endif
+  unless product.available
+    assign sold_out = true
+  endunless
+  assign current_variant = product.selected_or_first_available_variant
 -%}
 
 <div class="grid-item {{ tpl_class }}">
@@ -21,6 +32,95 @@
               <img src="https://media.istockphoto.com/id/485371557/photo/twilight-at-spirit-island.jpg?s=612x612&w=0&k=20&c=FSGliJ4EKFP70Yjpzso0HfRR4WwflC6GKfl4F3Hj7fk=" alt="PLACEHOLDER">
             {% endif %}
           </div>
+
+          {%- liquid
+            assign show_sale_badge = settings.show_sale_badge
+            assign show_custom_badge = settings.show_custom_badge
+            assign show_sold_badge = settings.show_sold_badge
+            assign show_saving_badge = settings.show_saving_badge
+            assign sold_out_text = 'products.product.sold_out' | t
+            assign sale_text = 'products.product.sale' | t
+
+            assign on_sale = false
+            if product.compare_at_price > product.price
+              assign on_sale = true
+            endif
+
+            if settings.show_saving_badge
+              assign price = current_variant.price
+              assign price_compare = current_variant.compare_at_price
+              assign price_difference = price_compare | minus: price
+              assign test_variants = product.variants | where: 'compare_at_price' | where: 'available', true
+
+              if test_variants.size > 0
+                for variant in test_variants
+                  assign variant_price_difference = variant.compare_at_price | minus: variant.price
+
+                  if variant_price_difference > price_difference
+                    assign price = variant.price
+                    assign price_compare = variant.compare_at_price
+                    assign price_difference = variant_price_difference
+                  endif
+                endfor
+              endif
+
+              if settings.currency_code_enable
+                assign discount = price_difference | money_without_trailing_zeros | append: ' ' | append: cart.currency.iso_code
+              else
+                assign discount = price_difference | money_without_trailing_zeros
+              endif
+
+              if settings.saving_badge_type == 'percentage'
+                assign percent_off = price_difference | times: 1.00 | divided_by: price_compare | times: 100
+                assign discount = percent_off | floor | append: '%'
+              endif
+
+              if product.variants.size == 1 and price_difference > 0
+                assign saving_badge_text = 'products.product.save_badge_html' | t: discount: discount
+              endif
+
+              if product.variants.size > 1 and price_difference > 0
+                assign saving_badge_text = 'products.product.save_badge_up_to_html' | t: discount: discount
+              endif
+
+              if saving_badge_text == blank
+                assign show_saving_badge = false
+              endif
+            endif
+          -%}
+
+          {%- capture product_badges -%}
+            {%- if custom_badge_metafield and show_custom_badge -%}
+              <div class="product__badge__item product__badge__item--custom">
+                <span>{{ custom_badge_metafield_text }}</span>
+              </div>
+            {%- endif -%}
+
+            {%- if sold_out and show_sold_badge -%}
+              <div class="product__badge__item product__badge__item--sold">
+                <span>{{ sold_out_text }}</span>
+              </div>
+            {%- endif -%}
+
+            {%- if on_sale and show_sale_badge and sold_out == false and show_saving_badge == false -%}
+              <div class="product__badge__item product__badge__item--sale">
+                <span>{{ sale_text }}</span>
+              </div>
+            {%- endif -%}
+
+            {%- if show_saving_badge -%}
+              <div class="product__badge__item product__badge__item--saving">
+                <span>{{ saving_badge_text }}</span>
+              </div>
+            {%- endif -%}
+          {%- endcapture -%}
+
+          {%- unless product_badges == blank -%}
+            <div class="product__badge" data-product-badge>
+              {{- product_badges -}}
+            </div>
+          {%- endunless -%}
+
         </div>
 
         <div class="product-card__info {% if swym_enabled %}swym-enabled{% endif %}">
