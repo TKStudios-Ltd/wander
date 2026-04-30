@@ -25821,11 +25821,11 @@ search-form mark {
 .product-single__media-slider--single {
   margin: 0;
 }
-@media only screen and (max-width: 1023px) {
+/* @media only screen and (max-width: 1023px) {
   .product-single__media-slider--single .product__badge {
     left: 0 !important;
   }
-}
+} */
 
 .product-single__media-slide--placeholder {
   display: block;
