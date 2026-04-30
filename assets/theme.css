@@ -16833,6 +16833,11 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     bottom: 1rem;
     right: 2rem;
   }
+  .product-single__gallery .product__badge__item {
+    font-size: 1.2vw;
+    width: 10vw;
+    height: 10vw;
+  }
 }
 @media (min-width: 1200px) {
   .product-single__gallery .product-single__badge {
