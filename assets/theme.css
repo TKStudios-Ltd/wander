@@ -16823,10 +16823,22 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   border-radius: 100%;
 }
 .product-single__gallery .product-single__badge {
-  bottom: 2rem;
-  right: 4rem;
   top: auto;
   left: auto;
+  bottom: 1rem;
+  right: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .product-single__gallery .product-single__badge {
+    bottom: 1rem;
+    right: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .product-single__gallery .product-single__badge {
+    bottom: 2rem;
+    right: 4rem;
+  }
 }
 @media only screen and (max-width: 479px) {
   .product__badge__item {
