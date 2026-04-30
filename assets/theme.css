@@ -16822,7 +16822,26 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   justify-content: center;
   border-radius: 100%;
 }
+.product-card .product__badge__item {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  transition: opacity .15s ease;
+  padding: 6px;
+  display: flex;
+  height: 120px;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
 .product-single__gallery .product-single__badge {
+  top: auto;
+  left: auto;
+  bottom: 1rem;
+  right: 2rem;
+}
+.product-card .product-single__badge {
   top: auto;
   left: auto;
   bottom: 1rem;
