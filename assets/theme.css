@@ -16844,8 +16844,8 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 .product-card .product__badge {
   top: auto;
   left: auto;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 2.5rem;
+  right: 1.5rem;
 }
 @media (max-width: 767px) {
   .product-single__gallery .product__badge__item {
