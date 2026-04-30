@@ -16802,12 +16802,19 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 .product__badge__item {
   background-color: var(--sale-bg);
   color: var(--sale-text);
-  text-align: left;
-  font-size: calc(0.6875rem * var(--adjust-badges));
+  text-align: center;
+  font-size: 14px;
   line-height: 1.2;
-  transition: opacity 0.15s ease;
-  padding: 6px 8px;
-  height: auto;
+  transition: opacity .15s ease;
+  padding: 6px;
+  display: flex;
+  height: 120px;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+.product-single__gallery .product__badge__item {
 }
 @media only screen and (max-width: 479px) {
   .product__badge__item {
