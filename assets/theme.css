@@ -16826,13 +16826,16 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   top: auto;
   left: auto;
   bottom: 1rem;
-  right: 1rem;
+  right: 2rem;
+}
+@media (max-width: 767px) {
+  .product-single__gallery .product__badge__item {
+    font-size: 2.4vw;
+    width: 20vw;
+    height: 20vw;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
-  .product-single__gallery .product-single__badge {
-    bottom: 1rem;
-    right: 2rem;
-  }
   .product-single__gallery .product__badge__item {
     font-size: 1.2vw;
     width: 10vw;
