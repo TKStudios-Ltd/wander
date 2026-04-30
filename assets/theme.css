@@ -16827,10 +16827,10 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   font-size: 12px;
   line-height: 1.2;
   transition: opacity .15s ease;
-  padding: 10px;
+  padding: 8px;
   display: flex;
-  height: 100px;
-  width: 100px;
+  height: 90px;
+  width: 90px;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
@@ -16844,7 +16844,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 .product-card .product__badge {
   top: auto;
   left: auto;
-  bottom: 2.5rem;
+  bottom: 3rem;
   right: 1.5rem;
 }
 @media (max-width: 767px) {
