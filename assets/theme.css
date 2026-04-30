@@ -16840,7 +16840,8 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 
 .product__badge__item--sold {
   background-color: var(--sold-bg);
-  color: var(--sold-text);
+  color: white;
+  /* color: var(--sold-text); */
 }
 
 .product__badge__item--custom {
