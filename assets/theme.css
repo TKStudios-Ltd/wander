@@ -16824,13 +16824,13 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 }
 .product-card .product__badge__item {
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.2;
   transition: opacity .15s ease;
   padding: 6px;
   display: flex;
-  height: 120px;
-  width: 120px;
+  height: 60px;
+  width: 60px;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
