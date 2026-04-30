@@ -16823,8 +16823,8 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   border-radius: 100%;
 }
 .product-single__gallery .product-single__badge {
-  bottom: 1.6rem;
-  right: 3.2rem;
+  bottom: 2rem;
+  right: 4rem;
   top: auto;
   left: auto;
 }
