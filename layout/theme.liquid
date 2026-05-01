@@ -282,9 +282,13 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
 
   <!-- And above this comment line ================================================== -->
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('[data-year]').forEach(function(el) {
-      el.textContent = new Date().getFullYear();
+  document.addEventListener('DOMContentLoaded', function () {
+    var year = new Date().getFullYear();
+
+    document.querySelectorAll('body *').forEach(function (el) {
+      if (el.children.length === 0 && el.textContent.includes('CURRENT_YEAR')) {
+        el.textContent = el.textContent.replace('CURRENT_YEAR', year);
+      }
     });
   });
   </script>
