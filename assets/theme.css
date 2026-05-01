@@ -22351,14 +22351,26 @@ search-popdown details > summary:first-of-type {
 .list-collections__item__image .ibps__label {
   background: #000;
   color: #fff;
-  padding: 20px 60px;
-  font-size: 10px;
+  padding: 18px 40px;
+  font-size: 9px;
   line-height: 1;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   white-space: nowrap;
   font-family: "Libre Baskerville", serif;
   text-transform: uppercase;
+}
+@media (max-width: 1199px) {
+  .list-collections__item__image .ibps__label {
+    font-size: 8px;
+    padding: 16px 32px;
+  }
+}
+@media (max-width: 749px) {
+  .list-collections__item__image .ibps__label {
+    font-size: 7px;
+    padding: 12px 24px;
+  }
 }
 
 .list-collections__item__content {
