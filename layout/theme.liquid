@@ -281,6 +281,13 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
   <!-- Paste marketing code or third party scripts below this comment line ============== -->
 
   <!-- And above this comment line ================================================== -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.js-current-year').forEach(function(el) {
+      el.textContent = new Date().getFullYear();
+    });
+  });
+  </script>
 
 </body>
 </html>
