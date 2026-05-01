@@ -281,16 +281,19 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
   <!-- Paste marketing code or third party scripts below this comment line ============== -->
 
   <!-- And above this comment line ================================================== -->
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var year = new Date().getFullYear();
+ <script>
+  (function () {
+    function updateCurrentYear() {
+      var el = document.querySelector('#Text--text_gi4zhn');
 
-    document.querySelectorAll('body *').forEach(function (el) {
-      if (el.children.length === 0 && el.textContent.includes('CURRENT_YEAR')) {
-        el.textContent = el.textContent.replace('CURRENT_YEAR', year);
-      }
-    });
-  });
+      if (!el) return;
+
+      el.innerHTML = el.innerHTML.replace(/CURRENT_YEAR/g, new Date().getFullYear());
+    }
+
+    document.addEventListener('DOMContentLoaded', updateCurrentYear);
+    document.addEventListener('shopify:section:load', updateCurrentYear);
+  })();
   </script>
 
 </body>
