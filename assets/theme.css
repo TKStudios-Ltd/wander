@@ -16784,6 +16784,10 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   z-index: 2;
 }
 
+.product-card__image-container {
+  position: relative;
+}
+
 .product__badge {
   position: absolute;
   z-index: 1;
