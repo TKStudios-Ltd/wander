@@ -140,7 +140,7 @@
         "text_gi4zhn": {
           "type": "text",
           "settings": {
-            "text": "<p>All fine art photography & artwork is the sole ownership of WANDER & Renee Cara David.<br/>Contact us at <a>hello@shopwander.com</a> for possible licensing or collaborations.<br/>© &lt;span class=\"js-current-year\"&gt;&lt;/span&gt; WANDER DESIGN, Inc. , All Rights Reserved</p>",
+            "text": "<p>All fine art photography & artwork is the sole ownership of WANDER & Renee Cara David.<br/>Contact us at <a>hello@shopwander.com</a> for possible licensing or collaborations.<br/>© &lt;span data-year&gt;&lt;/span&gt; WANDER DESIGN, Inc. , All Rights Reserved</p>",
             "size": 100,
             "max_width": 1000,
             "margin_bottom": 16
