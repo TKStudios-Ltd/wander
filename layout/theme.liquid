@@ -283,7 +283,7 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
   <!-- And above this comment line ================================================== -->
   <script>
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('.js-current-year').forEach(function(el) {
+    document.querySelectorAll('[data-year]').forEach(function(el) {
       el.textContent = new Date().getFullYear();
     });
   });
