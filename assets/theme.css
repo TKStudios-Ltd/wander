@@ -22336,6 +22336,31 @@ search-popdown details > summary:first-of-type {
   object-fit: cover;
 }
 
+.list-collections__item__image .ibps__label_outer {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-collections__item__image .ibps__label {
+  background: #000;
+  color: #fff;
+  padding: 20px 60px;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: "Libre Baskerville", serif;
+  text-transform: uppercase;
+}
+
 .list-collections__item__content {
   display: block;
   padding: 75px 0;
