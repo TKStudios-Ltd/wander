@@ -10,9 +10,12 @@
   assign custom_badge_text = ''
 
   for tag in product.tags
-    if tag == '*in-stores-soon'
+    assign first_tag_character = tag | slice: 0, 1
+
+    if first_tag_character == '*'
       assign show_custom_badge_tag = true
-      assign custom_badge_text = 'In Stores Soon'
+      assign custom_badge_text = tag | remove_first: '*' | replace: '-', ' ' | capitalize
+      break
     endif
   endfor
   unless product.available
