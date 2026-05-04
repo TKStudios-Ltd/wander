@@ -16890,6 +16890,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 .product__badge__item--custom {
   background-color: var(--custom-bg);
   color: var(--custom-text);
+  border: 1px solid var(--custom-text);
 }
 
 .product__badge__item--saving {
