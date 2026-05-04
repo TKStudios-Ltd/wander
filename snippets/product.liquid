@@ -257,14 +257,17 @@
           assign sold_out_text = 'products.product.sold_out' | t
           assign sale_text = 'products.product.sale' | t
 
-          assign custom_badge_tag = false
+          assign show_custom_badge_tag = false
           assign custom_badge_text = ''
+          assign custom_badge_handle = ''
 
           for tag in product.tags
             assign first_tag_character = tag | slice: 0, 1
+
             if first_tag_character == '*'
-              assign custom_badge_tag = true
-              assign custom_badge_text = tag | remove_first: '*' | replace: '-', ' ' | capitalize
+              assign show_custom_badge_tag = true
+              assign custom_badge_text = tag | remove_first: '*' | replace: '-', ' ' | strip
+              assign custom_badge_handle = tag | remove_first: '*' | handle
               break
             endif
           endfor
