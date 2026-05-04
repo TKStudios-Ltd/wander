@@ -75,17 +75,25 @@
   endif
 
   assign sold_out = false
-  assign custom_badge_metafield = false
+  assign show_custom_badge_tag = false
+  assign custom_badge_text = ''
+  assign custom_badge_handle = ''
 
   assign single_variant = false
   if product.variants.size == 1 and product.selling_plan_groups.size == 0
     assign single_variant = true
   endif
 
-  if product.metafields.theme.badge != blank and product.metafields.theme.badge.type == 'single_line_text_field'
-    assign custom_badge_metafield = true
-    assign custom_badge_metafield_text = product.metafields.theme.badge.value
-  endif
+  for tag in product.tags
+    assign first_tag_character = tag | slice: 0, 1
+
+    if first_tag_character == '*'
+      assign show_custom_badge_tag = true
+      assign custom_badge_text = tag | remove_first: '*' | replace: '-', ' ' | strip
+      assign custom_badge_handle = tag | remove_first: '*' | handle
+      break
+    endif
+  endfor
 
   unless product.available
     assign sold_out = true
@@ -469,10 +477,8 @@
 -%}
 
 {%- capture product_badges -%}
-  {%- if show_custom_badge_tag -%}
-    {%- assign badge_class = custom_badge_text | handle -%}
-
-    <div class="product__badge__item product__badge__item--custom product__badge--{{ badge_class }}">
+  {%- if show_custom_badge_tag and show_custom_badge -%}
+    <div class="product__badge__item product__badge__item--custom product__badge--{{ custom_badge_handle }}">
       <span>{{ custom_badge_text }}</span>
     </div>
   {%- endif -%}
