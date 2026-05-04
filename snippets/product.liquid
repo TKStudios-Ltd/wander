@@ -318,8 +318,10 @@
         -%}
 
         {%- capture product_badges -%}
-          {%- if custom_badge_tag and show_custom_badge -%}
-            <div class="product__badge__item product__badge__item--custom">
+          {%- if show_custom_badge_tag -%}
+            {%- assign badge_class = custom_badge_text | handle -%}
+
+            <div class="product__badge__item product__badge__item--custom product__badge--{{ badge_class }}">
               <span>{{ custom_badge_text }}</span>
             </div>
           {%- endif -%}
