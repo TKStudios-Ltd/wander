@@ -16834,7 +16834,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 }
 .product-card .product__badge__item {
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.2;
   transition: opacity .15s ease;
   padding: 10px 8px 8px;
