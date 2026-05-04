@@ -16826,6 +16826,12 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   justify-content: center;
   border-radius: 100%;
 }
+.product__badge--product-launch-coming-soon {
+  font-size: 12px !important;
+}
+.product__badge--coming-soon {
+  font-size: 13px !important;
+}
 .product-card .product__badge__item {
   text-align: center;
   font-size: 12px;
@@ -16853,16 +16859,28 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 }
 @media (max-width: 767px) {
   .product-single__gallery .product__badge__item {
-    font-size: 2.4vw;
+    font-size: 2.5vw;
     width: 20vw;
     height: 20vw;
+  }
+  .product__badge--coming-soon {
+    font-size: 3vw !important;
+  }
+  .product__badge--product-launch-coming-soon {
+    font-size: 2vw !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .product-single__gallery .product__badge__item {
-    font-size: 1.2vw;
+    font-size: 1.3vw;
     width: 10vw;
     height: 10vw;
+  }
+  .product__badge--coming-soon {
+    font-size: 1.5vw !important;
+  }
+  .product__badge--product-launch-coming-soon {
+    font-size: 1vw !important;
   }
 }
 @media (min-width: 1200px) {
@@ -16873,7 +16891,13 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 }
 @media only screen and (max-width: 479px) {
   .product__badge__item {
-    font-size: calc(0.825rem * var(--adjust-badges));
+    font-size: calc(0.8rem * var(--adjust-badges));
+  }
+  .product__badge--coming-soon {
+    font-size: calc(1rem * var(--adjust-badges)) !important;
+  }
+  .product__badge--product-launch-coming-soon {
+    font-size: calc(0.6rem * var(--adjust-badges)) !important;
   }
 }
 
