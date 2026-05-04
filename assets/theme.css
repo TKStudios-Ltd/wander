@@ -16818,7 +16818,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   font-size: 14px;
   line-height: 1.2;
   transition: opacity .15s ease;
-  padding: 8px;
+  padding: 8px 10px;
   display: flex;
   height: 120px;
   width: 120px;
@@ -16837,7 +16837,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   font-size: 12px;
   line-height: 1.2;
   transition: opacity .15s ease;
-  padding: 10px 12px 8px;
+  padding: 10px 8px 8px;
   display: flex;
   height: 90px;
   width: 90px;
