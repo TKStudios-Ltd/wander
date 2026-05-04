@@ -16827,17 +16827,17 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   border-radius: 100%;
 }
 .product__badge--product-launch-coming-soon {
-  font-size: 12px !important;
+  font-size: 10px !important;
 }
 .product__badge--coming-soon {
-  font-size: 13px !important;
+  font-size: 16px !important;
 }
 .product-card .product__badge__item {
   text-align: center;
   font-size: 12px;
   line-height: 1.2;
   transition: opacity .15s ease;
-  padding: 8px;
+  padding: 10px 8px 8px;
   display: flex;
   height: 90px;
   width: 90px;
@@ -16867,7 +16867,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     font-size: 3vw !important;
   }
   .product__badge--product-launch-coming-soon {
-    font-size: 2vw !important;
+    font-size: 1.5vw !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
