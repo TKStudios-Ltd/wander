@@ -22431,41 +22431,41 @@ search-popdown details > summary:first-of-type {
   .collection__box__title {
     transform: scale(0.85);
   }
-  /* body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
-  body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title, */
-  .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title {
+  body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
+  body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
+  section#listCollections--template--25561598132544__section_list_collection_3MtgQH .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title {
     font-size: 18px !important;
     line-height: 1.5;
   }
 }
-/* body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
-body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title, */
-.list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title {
+body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
+body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
+section#listCollections--template--25561598132544__section_list_collection_3MtgQH .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title {
   font-size: 15px;
 }
-/* body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child,
-body#peonies .list-collections-section .grid__container .list-collections__item:last-child, */
-.list-collections-section .grid__container .list-collections__item:last-child {
+body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child,
+body#peonies .list-collections-section .grid__container .list-collections__item:last-child,
+section#listCollections--template--25561598132544__section_list_collection_3MtgQH .list-collections-section .grid__container .list-collections__item:last-child {
   background-color: #FFFFFF;
 }
-/* body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer, 
-body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer,  */
-.list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer {
+body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer, 
+body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer, 
+section#listCollections--template--25561598132544__section_list_collection_3MtgQH .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: none;
 }
-/* body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
+body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .btn,
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .btn,
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image,
-body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image, */
-.list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
-.list-collections-section .grid__container .list-collections__item:last-child .btn,
-.list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image {
+body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image,
+section#listCollections--template--25561598132544__section_list_collection_3MtgQH .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
+section#listCollections--template--25561598132544__section_list_collection_3MtgQH .list-collections-section .grid__container .list-collections__item:last-child .btn,
+section#listCollections--template--25561598132544__section_list_collection_3MtgQH .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image {
   display: none;
 }
 
