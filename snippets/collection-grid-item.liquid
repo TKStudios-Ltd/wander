@@ -117,6 +117,8 @@
     assign show_bg_color = true
   endif
 
+  assign card_title_override = block.settings.card_title_override | strip
+
   assign custom_bg_color_brightness = custom_bg_color | color_brightness | round
   if custom_bg_color_brightness > 153
     assign custom_bg_color_lighten_darken = custom_bg_color | color_darken: 10
