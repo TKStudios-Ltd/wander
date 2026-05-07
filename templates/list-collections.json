@@ -324,6 +324,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_BIRDS_SKY.jpg",
             "heading": "A Collection of FINE ART PHOTOGRAPHY PRINTS that celebrates the magic of the sky...and our wishing we could fly. With awe & deep gratitude for these graceful wings of beauty, we hope these images lift you & inspire you to soar.",
             "max_width": 500,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "rgba(0,0,0,0)",
             "overlay_opacity": 0
@@ -336,6 +337,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES.jpg",
             "heading": "With thousands of peonies photographed over a decade, this SIGNATURE Collection of FINE ART PHOTOGRAPHY PRINTS showcases the Peony, in all her glory and stages of life, as it illuminates a delicate balance between life & decay.",
             "max_width": 500,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 0
@@ -348,6 +350,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_SURF.jpg",
             "heading": "A Collection of FINE ART PHOTOGRAPHY PRINTS that celebrates the Coastal lifestyle of the SEA & SURF, and our love for the ocean & rolling waves. We hope these images inspire you to jump in...and find peace in the waters of the deep blue.",
             "max_width": 510,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -360,6 +363,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_SWIMMERS.jpg",
             "heading": "A Collection of WANDERINGS™ FINE ART PHOTOGRAPHY PRINTS with a light & ethereal feel. Bright, colorful, playful & illusive, the irresistible waters will make you want to dive right in. It’s a bold addition to any room.",
             "max_width": 500,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -484,6 +488,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_SAND.jpg",
             "heading": "In this Collection of FINE ART PHOTOGRAPHY PRINTS you will find calming plateaus, desert oases, and ocean sands you will want to sink your toes into... as we celebrate the raw unending beauty in these barren earthly landscapes.",
             "max_width": 500,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -496,6 +501,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_SEA.jpg",
             "heading": "As lovers of the sea, this WANDERINGS™ FINE ART PHOTOGRAPHY PRINT Collection is a tribute to our reverence to the ocean. We hope this artwork connects you to the boundless beauty of our oceans...and inspires you to protect them.",
             "max_width": 510,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -508,6 +514,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_FLORA.jpg",
             "heading": "Inspired by time wandering among the flowers...this Collection of FINE ART PHOTOGRAPHY PRINTS is a flower lover’s dream. With flora & fauna of all kinds...it celebrates the endless beauty & intricate details of Mother Nature.",
             "max_width": 500,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -520,6 +527,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_COLORSCAPES.jpg",
             "heading": "Inspired by the ombré colorscapes found in nature...from sunsets, to skyscapes, oceans, and sands...this Modern Collection of Abstract Mixed Media prints blends vibrant & subdued colors into ethereal hues...bringing joy & calm to your world.",
             "max_width": 500,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -532,6 +540,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_PALMS.jpg",
             "heading": "Whether it’s the sound of the wind blowing overhead...or simply basking in their shade...something about palm trees & their ‘easy-breezy’ attitude stands miles above the rest. This Collection of FINE ART PHOTOGRAPHY PRINTS will stir your soul.",
             "max_width": 520,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -544,6 +553,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_ITALY.jpg",
             "heading": "From pastel villages along the cliffs, to the sacred sapphire waters of Capri...this Collection of FINE ART PHOTOGRAPHY PRINTS reminds us why Italy is a favorite place to WANDER. Forever romantic & always in style...l’Italia è bellissima!",
             "max_width": 510,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -556,6 +566,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_ISLANDS.jpg",
             "heading": "From remote huts along the sea, to palms blowing in the wind, to waves crushing the shore...and lush botanical rain forests...we have travelled far & wide to capture our ISLANDS Collection of WANDERINGS™ FINE ART PHOTOGRAPHY PRINTS.",
             "max_width": 520,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -568,6 +579,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_LAND.jpg",
             "heading": "From vast landscapes...to majestic rock formations...to expanses far & wide...this Collection of WANDERINGS™ FINE ART PHOTOGRAPHY celebrates the LAND, in all its Mighty. We hope it connects & grounds you to the raw beauty of Mother Earth.",
             "max_width": 530,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -580,6 +592,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_HORSES.jpg",
             "heading": "This SIGNATURE Collection of FINE ART PHOTOGRAPHY prints is dedicated to all of the wild horses that we have met along the way. Each interaction, caught by chance while wandering, was a soul connection & a spirit-lifting moment in time...a true gift with these creatures of untamed beauty...never to be forgotten.",
             "max_width": 500,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -592,6 +605,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_SUCCULENTS.jpg",
             "heading": "This Collection of WANDERINGS™ FINE ART PHOTOGRAPHY PRINTS celebrates succulents & cacti of all kinds...the unusual...the exotic...the flowering. We cannot get enough of their rare beauty! We hope that this Collection reminds you of your own amazing uniqueness. We hope it inspires you, to WANDER.",
             "max_width": 510,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -604,6 +618,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_ICELAND.jpg",
             "heading": "This Collection of FINE ART PHOTOGRAPHY PRINTS is a glimpse into one of the most EPIC places on this planet. From FIRE to ICE...and everything in between... ICELAND is a rare & glorious gem. It’s a journey to the other side, and leaves an immeasurable mark on one’s soul. A place to get lost...then found...again & again.",
             "max_width": 500,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -616,6 +631,7 @@
             "custom_collection_image": "shopify://shop_images/WANDER__Coastal_Feature.jpg",
             "heading": "Featuring pastel tones & subdued hues, the WANDERINGS™ COASTAL COLLECTION draws inspiration from the charming seaside towns of California and beyond—and captures the timeless allure of coastal living. Let it evoke the relaxed vibe of your favorite seaside spot!",
             "max_width": 440,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -667,6 +683,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_FINE_ART_SERIES.jpg",
             "heading": "Our WANDERINGS™ FINE ART SERIES Collection uses mixed media, and is inspired by flowers, beauty, and the patterns found in nature. This Signature Collection is available as Limited Editions...perfect for someone wanting a truly one-of-a-kind collectible piece.",
             "max_width": 440,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -679,6 +696,7 @@
             "custom_collection_image": "shopify://shop_images/WANDER__Butterflies_Feature.jpg",
             "heading": "As a symbol of transformation & rebirth, the butterfly goes thru an immense amount of struggle throughout it's lifetime...changing form, and blossoming into a beautiful winged creature. The WANDERINGS™ BUTTERFLIES Collection celebrates their vibrancy, beauty and magic.",
             "max_width": 440,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -691,6 +709,7 @@
             "custom_collection_image": "shopify://shop_images/WANDER__Lumin_Feature.jpg",
             "heading": "Inspired by luminescence & phosphorescence miracles found deep within nature, each artwork in this Fine Art Collection celebrates the emission of light that glows from within. Bright, bold and with depths of color, each piece is a modern addition to any room.",
             "max_width": 440,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -703,6 +722,7 @@
             "custom_collection_image": "shopify://shop_images/WANDER__Black_White_Feature.jpg",
             "heading": "Black & white photography distills the visual down to its purest form... emphasizing light, shadow, and texture. Stripped of color, each image invites a deeper emotional connection, and complements both modern and traditional interiors.",
             "max_width": 440,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -715,6 +735,7 @@
             "custom_collection_image": "shopify://shop_images/IMG_5172_3.jpg",
             "heading": "The WANDERINGS™ CITIES & TOWNS COLLECTION celebrates architecture & culture around the world —while capturing the energy, character, and charm of both urban and village life. From bustling streets, to quiet corners, to iconic bridges and more— each image offers a window into the unique stories of the places explored.",
             "max_width": 440,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -727,6 +748,7 @@
             "custom_collection_image": "shopify://shop_images/words.jpg",
             "heading": "The WANDERINGS™ WORDS COLLECTION transforms language into visual art, celebrating the power & beauty of words. Each piece highlights text as both form and meaning, inviting you to pause, reflect, and feel the impact of language in a new way. Whether bold and striking or subtle and delicate, these artworks turn letters into a landscape of expression.",
             "max_width": 460,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -739,6 +761,7 @@
             "custom_collection_image": "shopify://shop_images/SHOP_ALL_PEONIES_P16.jpg",
             "heading": "This mixed media abstract art FRAGMENTS Collection represents the final stage of that exploration — an inquiry into the concepts of death, the afterlife, and the pieces that remain thereafter. Memories, impressions, and fragments are left behind with those we love, and imprinted in the Collective. As parts of a larger whole, each soul and species leaves an echo — and a light that endures. We are a constellation of species and souls. Forever connected. Forever shaping each other.",
             "max_width": 520,
+            "card_title_override": "Fragments",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -750,6 +773,7 @@
             "collection": "",
             "heading": "Not all available artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ PEONIES Collection, please email us at hello@shopwander.com to get accessto our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.",
             "max_width": 500,
+            "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
