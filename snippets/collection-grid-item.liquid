@@ -301,7 +301,14 @@
         </span>
       {% else %}
         <span class="collection__box__title">
-          <em>WANDERINGS</em>™ COLLECTION:&nbsp;<b style="font-weight: 700;">{{- default_title -}}</b>
+          <em>WANDERINGS</em>™ COLLECTION:&nbsp;
+          <b style="font-weight: 700;">
+            {% if card_title_override != blank %}
+              {{ card_title_override }}
+            {% else %}
+              {{ default_title }}
+            {% endif %}
+          </b>
         </span>
       {% endif %}
 
