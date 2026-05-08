@@ -11919,9 +11919,8 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
 
 .custom-options .radio__legend {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
-
 .custom-options .radio__legend__label {
   font-family: var(--FONT-STACK-SUBHEADING);
   font-size: 12px;
