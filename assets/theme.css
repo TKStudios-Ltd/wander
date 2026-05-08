@@ -11924,31 +11924,27 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
 
 .custom-options .radio__legend__label {
   font-family: var(--FONT-STACK-SUBHEADING);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #000;
 }
-
 .custom-options .fc-option-radios {
   display: flex;
   flex-wrap: wrap;
   gap: .5rem 1rem;
 }
-
 .custom-options .fc-radio {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
   user-select: none;
 }
-
 .custom-options .fc-radio input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
-
 .custom-options .radio__label {
   display: inline-flex;
   align-items: center;
@@ -11961,7 +11957,6 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   text-transform: uppercase;
   color: #000;
 }
-
 .custom-options .radio__label .ring {
   width: 10px;
   height: 10px;
@@ -11973,7 +11968,6 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   transition: border-color .15s ease, background .15s ease;
   flex-shrink: 0;
 }
-
 .custom-options .radio__label .ring::after {
   content: "";
   display: block;
@@ -11983,12 +11977,10 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   background: transparent;
   transition: background .15s ease;
 }
-
 .custom-options .radio__input:checked + .radio__label .ring,
 .custom-options .swatch__input:checked + .swatch__label .ring {
   border-color: #000;
 }
-
 .custom-options .radio__input:checked + .radio__label .ring::after,
 .custom-options .swatch__input:checked + .swatch__label .ring::after {
   background: #000;
