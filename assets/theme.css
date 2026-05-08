@@ -11985,6 +11985,11 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
 .custom-options .swatch__input:checked + .swatch__label .ring::after {
   background: #000;
 }
+@media (min-width: 990px) {
+  .custom-options .radio__label {
+    font-size: 10px !important;
+  }
+}
 
 .select__fieldset .radio__legend__label,
 .select__fieldset .select__label {
