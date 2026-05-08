@@ -11947,7 +11947,7 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
 .custom-options .radio__label {
   display: inline-flex;
   align-items: center;
-  gap: .25rem;
+  gap: .5rem;
   cursor: pointer;
   user-select: none;
   font-family: var(--FONT-STACK-SUBHEADING);
@@ -11956,7 +11956,7 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   text-transform: uppercase;
   color: #000;
   border: none;
-  padding: 0 10px 0 0;
+  padding: 0;
 }
 .custom-options .radio__label .ring {
   width: 10px;
