@@ -11955,6 +11955,8 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #000;
+  border: none;
+  padding: 0 10px 0 0;
 }
 .custom-options .radio__label .ring {
   width: 10px;
