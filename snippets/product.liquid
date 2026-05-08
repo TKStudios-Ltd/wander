@@ -1125,7 +1125,7 @@
               
               <div class="custom-options custom-options--{{ option.name |  handleize }}">
                 <fieldset class="{{ radio_fieldset_class }}"{% if is_swatch_option or is_native_swatch_option %}{% unless color_swatch_variant_image and show_variant_image %} data-swatches-container{% endunless %}{% endif %}>
-                  {% assign show_label = false %}
+                  {% assign show_label = true %}
                   {% if show_label %}
                     <legend class="radio__legend"{% if is_swatch_option or is_native_swatch_option %}{% unless color_swatch_variant_image and show_variant_image %} data-swatches-label{% endunless %}{% endif %}>
                       <span class="radio__legend__label label-typography">{{ option_name_label }}</span>
@@ -1134,7 +1134,7 @@
                   {% endif %}
 
 
-                  <div class="radio__buttons" data-variant-buttons>
+                  <div class="radio__buttons fc-option-radios" data-variant-buttons>
                     {%- for value in option.values -%}
                       {%- capture input_id -%}{{ unique }}-{{ product.id }}-{{ option.name | escape_once }}-{{ value | handle }}{%- endcapture -%}
 
