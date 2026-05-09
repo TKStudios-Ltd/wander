@@ -25980,7 +25980,8 @@ search-form mark {
 }
 .product-single__media-slider .flickity-button {
   z-index: 1;
-  background: var(--bg);
+  /* background: var(--bg); */
+  background: rgba(255, 255, 255, 0.2);
 }
 .product-single__media-slider:not(.has-media-active) .flickity-button {
   transition-delay: 0.15s !important;
