@@ -26256,6 +26256,17 @@ search-form mark {
   }
 }
 
+.custom-options--amount .radio__label,
+.custom-options--design .radio__label {
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 768px) {
+  .custom-options--amount .radio__label,
+  .custom-options--design .radio__label {
+    min-width: inherit;
+  }
+}
+
 .product-single__thumbnails:not(.flickity-enabled) {
   display: flex;
   flex-flow: row nowrap;
