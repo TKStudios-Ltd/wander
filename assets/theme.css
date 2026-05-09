@@ -26260,10 +26260,10 @@ search-form mark {
 .custom-options--design .radio__label {
   justify-content: flex-start;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
   .custom-options--amount .radio__label,
   .custom-options--design .radio__label {
-    min-width: inherit;
+    min-width: inherit !important;
   }
 }
 
