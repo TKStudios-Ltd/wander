@@ -26264,6 +26264,7 @@ search-form mark {
   .custom-options--amount .radio__label,
   .custom-options--design .radio__label {
     min-width: inherit !important;
+    font-size: 9px !important;
   }
 }
 
