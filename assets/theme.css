@@ -26248,11 +26248,11 @@ search-form mark {
 }
 
 .product-single__thumbnails {
-  margin: 10px 0 5px;
+  margin: 25px 0 5px;
 }
 @media only screen and (max-width: 1023px) {
   .product-single__thumbnails {
-    margin: 5px calc(var(--gutter-mobile) * -1);
+    margin: 25px 0 5px;
   }
 }
 
