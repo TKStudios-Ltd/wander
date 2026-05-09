@@ -25655,6 +25655,8 @@ search-form mark {
 
 .product-single {
   background: var(--bg);
+  position: relative;
+  z-index: 0;
 }
 @media (max-width: 749px) {
   .product-single {
