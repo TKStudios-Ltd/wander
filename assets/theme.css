@@ -17004,8 +17004,8 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 }
 .product__badge--new-arrival .product__badge-image {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 50%;
 }
