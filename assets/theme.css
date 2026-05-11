@@ -16997,6 +16997,20 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   color: var(--saving-text);
 }
 
+.product__badge--new-arrival {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.product__badge--new-arrival .product__badge-image {
+  display: block;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
 .progress-bar {
   position: absolute;
   bottom: 0;

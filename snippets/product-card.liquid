@@ -101,7 +101,16 @@
               {%- assign badge_class = custom_badge_text | handle -%}
 
               <div class="product__badge__item product__badge__item--custom product__badge--{{ badge_class }}">
-                <span>{{ custom_badge_text }}</span>
+                {%- if badge_class == 'new-arrival' -%}
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0897/7491/5904/files/WANDER_New-Arrival.png"
+                    alt="New Arrival"
+                    class="product__badge-image"
+                    loading="lazy"
+                  >
+                {%- else -%}
+                  <span>{{ custom_badge_text }}</span>
+                {%- endif -%}
               </div>
             {%- endif -%}
 
