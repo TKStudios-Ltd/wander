@@ -76,15 +76,7 @@
       <div class="giftcard__border{% if gift_card.expired or gift_card.enabled != true %} disabled{% endif %}">
         <div class="giftcard__content">
 
-          <div class="giftcard__header">
-          {% comment %}
-          You can add your shop logo in the <img> element below by copying and pasting its url.
-          Just uncomment out the line of code below (but leave this comment)
-          {% endcomment %}
-            <!--
-              <a href="{{ shop.url }}" itemprop="url">
-              <img src="ADD LINK HERE" alt="{{ shop.name }}" itemprop="logo">
-            -->
+          {% comment %} <div class="giftcard__header">
             <h2 class="h2 giftcard__title text-center">{{ shop.name }} {{ 'gift_cards.issued.gift_card' | t }}</h2>
             {%- unless gift_card.enabled -%}
               <span class="giftcard__tag">{{ 'gift_cards.issued.disabled' | t }}</span>
@@ -96,7 +88,7 @@
             {%- if gift_card.expired != true and gift_card.expires_on and gift_card.enabled -%}
               <span class="giftcard__tag giftcard__tag--active">{{ 'gift_cards.issued.active' | t: expiry: gift_card_expiry_date }}</span>
             {%- endif -%}
-          </div>
+          </div> {% endcomment %}
 
           <div class="giftcard__wrap">
             <img src="{{ gift_card_image }}" alt="Gift card illustration">
