@@ -79,7 +79,7 @@
 
 .giftcard__amount {
   position: static;
-  padding: 40px 40px 0;
+  padding: 60px 40px 0;
   text-align: center;
   color: var(--gift-text);
   font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
@@ -92,7 +92,7 @@
 .giftcard__code {
   position: static;
   width: auto;
-  padding: 40px 40px 0;
+  padding: 20px 40px 0;
   text-align: center;
 }
 
