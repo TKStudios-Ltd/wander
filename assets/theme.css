@@ -17002,11 +17002,10 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   border: 0;
   padding: 0;
 }
-
 .product__badge--new-arrival .product__badge-image {
   display: block;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 50%;
 }
