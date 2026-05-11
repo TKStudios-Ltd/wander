@@ -12,6 +12,30 @@
     assign formatted_initial_value_stripped = formatted_initial_value | strip_html
   endif
 -%}
+{%- liquid
+  assign gift_card_design = ''
+  assign gift_card_image = 'https://cdn.shopify.com/s/files/1/0897/7491/5904/files/WANDER_Gift-Card_Default.jpg'
+-%}
+
+{%- for property in gift_card.properties -%}
+  {%- if property.first == 'Design' -%}
+    {%- assign gift_card_design = property.last -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- case gift_card_design -%}
+  {%- when 'NATURAL' -%}
+    {%- assign gift_card_image = 'https://cdn.shopify.com/s/files/1/0897/7491/5904/files/WANDER_Gift-Card_Default.jpg' -%}
+  {%- when 'THE SEA' -%}
+    {%- assign gift_card_image = 'https://cdn.shopify.com/s/files/1/0897/7491/5904/files/WANDER_Gift-Card_Sea-Black.jpg' -%}
+  {%- when 'THE SKY' -%}
+    {%- assign gift_card_image = 'https://cdn.shopify.com/s/files/1/0897/7491/5904/files/WANDER_Gift-Card_Sky-Beige.jpg' -%}
+  {%- when 'WATER' -%}
+    {%- assign gift_card_image = 'https://cdn.shopify.com/s/files/1/0897/7491/5904/files/WANDER_Gift-Card_Sea-Turq.jpg' -%}
+  {%- when 'LUMINESCENCE' -%}
+    {%- assign gift_card_image = 'https://cdn.shopify.com/s/files/1/0897/7491/5904/files/WANDER_Gift-Card_Luminescence.jpg' -%}
+{%- endcase -%}
+
 <!doctype html>
 <!--[if IE 8]><html class="template-giftcard no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="ie9 template-giftcard no-js"> <![endif]-->
@@ -75,7 +99,7 @@
           </div>
 
           <div class="giftcard__wrap">
-            <img src="{{ 'gift-card/card.jpg' | shopify_asset_url }}" alt="Gift card illustration">
+            <img src="{{ gift_card_image }}" alt="Gift card illustration">
 
             {%- assign initial_value_size = formatted_initial_value | size -%}
             {%- assign gift_card_balance = gift_card.balance -%}
