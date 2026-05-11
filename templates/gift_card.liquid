@@ -139,9 +139,12 @@
           {%- endif -%}
 
           <div class="giftcard__actions">
-            <a href="{{ shop.url }}" class="btn btn--primary btn--solid" target="_blank">{{ 'gift_cards.issued.shop_link' | t }}</a>
-            <a href="#" class="action-link" onclick="window.print();">
-              <i class="action-link__print"></i>{{ 'gift_cards.issued.print' | t }}
+            <a href="#" class="btn btn--secondary" onclick="window.print(); return false;">
+              PRINT
+            </a>
+
+            <a href="{{ shop.url }}" class="btn btn--primary btn--solid" target="_blank">
+              {{ 'gift_cards.issued.shop_link' | t }}
             </a>
           </div>
         </div>
