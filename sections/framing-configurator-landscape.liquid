@@ -116,13 +116,13 @@
                 data-product-url="{{ shop.url }}{{ product.url }}">
               </button>
             </div>
-            <div class="product__block product__description product__description_top rte">
+            {% comment %} <div class="product__block product__description product__description_top rte">
                 {%- unless product == blank -%}
                   {{- product.description -}}
                 {%- else -%}
                   <p>{{ 'homepage.onboarding.single_product_description' | t }}</p>
                 {%- endunless -%}
-            </div>
+            </div> {% endcomment %}
             <div class="product__description rte size-chart-trigger__icon-flex">
                 <span class="ruler-icon"></span><a href="/pages/size-guide" title="Size Guide" class="size-chart-trigger lb-regular" target="_blank" aria-expanded="false">Size Guide</a>
             </div>
