@@ -16942,7 +16942,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     font-size: 3vw !important;
   }
   .product-card .product__badge--product-launch-coming-soon {
-    font-size: 1.5vw !important;
+    font-size: 1.75vw !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -16972,7 +16972,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     font-size: calc(1rem * var(--adjust-badges)) !important;
   }
   .product-card .product__badge--product-launch-coming-soon {
-    font-size: calc(0.6rem * var(--adjust-badges)) !important;
+    font-size: calc(0.8rem * var(--adjust-badges)) !important;
   }
 }
 
