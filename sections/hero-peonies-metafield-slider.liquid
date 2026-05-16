@@ -4,6 +4,7 @@
   assign show_dots = section.settings.show_dots
   assign selected_collection = collection
   assign metafield_images = collection.metafields.custom.hero_slider_images.value
+  assign metafield_desktop_images = collection.metafields.custom.hero_slider_desktop_images.value
 
   assign MAX_DESKTOP_W = 2400
   assign MAX_MOBILE_W = 1200
@@ -22,6 +23,16 @@
       {%- if metafield_images != blank -%}
         {%- for image in metafield_images -%}
           {%- liquid
+            assign desktop_image = image
+
+            if metafield_desktop_images != blank
+              assign desktop_image = metafield_desktop_images[forloop.index0]
+            endif
+
+            if desktop_image == blank
+              assign desktop_image = image
+            endif
+
             assign load_eager = false
             if forloop.index0 == 0 and section.index < 3
               assign load_eager = true
@@ -42,10 +53,10 @@
                 <picture>
                   <source
                     media="(min-width: 750px)"
-                    srcset="{{ image | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
-                            {{ image | image_url: width: 2000 }} 2000w,
-                            {{ image | image_url: width: 1600 }} 1600w,
-                            {{ image | image_url: width: 1200 }} 1200w"
+                    srcset="{{ desktop_image | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
+                            {{ desktop_image | image_url: width: 2000 }} 2000w,
+                            {{ desktop_image | image_url: width: 1600 }} 1600w,
+                            {{ desktop_image | image_url: width: 1200 }} 1200w"
                     sizes="100vw">
 
                   <img
@@ -63,7 +74,7 @@
               </div>
 
               <div class="ibps__label">
-                  A LIMITED EDITION <em>WANDERINGS</em>™ SIGNATURE COLLECTION
+                A LIMITED EDITION <em>WANDERINGS</em>™ SIGNATURE COLLECTION
               </div>
             </div>
           </div>
