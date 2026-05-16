@@ -89,6 +89,14 @@
             "alt": "Peonies banner image"
           }
         },
+        "slide_6tTCXh": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/desktopmain4.jpg",
+            "mobile_image": "shopify://shop_images/6A_2.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
         "slide_3gx74Y": {
           "type": "slide",
           "settings": {
@@ -102,6 +110,29 @@
           "settings": {
             "desktop_image": "shopify://shop_images/desktopmain6.jpg",
             "mobile_image": "shopify://shop_images/1_11.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_gbExyT": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/desktopmain7.jpg",
+            "mobile_image": "shopify://shop_images/10_2.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_z7ChKk": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/desktopmain13.jpg",
+            "mobile_image": "shopify://shop_images/8_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_rkNihx": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/22_1.jpg",
             "alt": "Peonies banner image"
           }
         },
@@ -121,6 +152,30 @@
             "alt": "Peonies banner image"
           }
         },
+        "slide_CkJQxh": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/desktopmain14_128d111a-c74b-4196-9677-f53b48218fc1.jpg",
+            "mobile_image": "shopify://shop_images/11_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_btxDLA": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/desktopmain15.jpg",
+            "mobile_image": "shopify://shop_images/10_3.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
+        "slide_PrabF9": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/desktopmain18.jpg",
+            "mobile_image": "shopify://shop_images/9_1.jpg",
+            "alt": "Peonies banner image"
+          }
+        },
         "slide_RLMyGp": {
           "type": "slide",
           "settings": {
@@ -137,87 +192,27 @@
             "alt": "Peonies banner image"
           }
         },
-        "slide_6tTCXh": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/6A_2.jpg",
-            "alt": "Peonies banner image"
-          }
-        },
-        "slide_qDrqPw": {
-          "type": "slide",
-          "settings": {
-            "mobile_image": "shopify://shop_images/5_2.jpg",
-            "alt": "Peonies banner image"
-          }
-        },
-        "slide_z7ChKk": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/8_1.jpg",
-            "alt": "Peonies banner image"
-          }
-        },
-        "slide_PrabF9": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/9_1.jpg",
-            "alt": "Peonies banner image"
-          }
-        },
-        "slide_gbExyT": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/10_2.jpg",
-            "alt": "Peonies banner image"
-          }
-        },
-        "slide_btxDLA": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/10_3.jpg",
-            "alt": "Peonies banner image"
-          }
-        },
-        "slide_CkJQxh": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/11_1.jpg",
-            "alt": "Peonies banner image"
-          }
-        },
         "slide_F43Pac": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/16_1.jpg",
-            "alt": "Peonies banner image"
-          }
-        },
-        "slide_wBccKe": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/17_1.jpg",
+            "desktop_image": "shopify://shop_images/desktopmain21.jpg",
+            "mobile_image": "shopify://shop_images/16_1.jpg",
             "alt": "Peonies banner image"
           }
         },
         "slide_9JGaiY": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/20_1.jpg",
+            "desktop_image": "shopify://shop_images/desktopmain32.jpg",
+            "mobile_image": "shopify://shop_images/20_1.jpg",
             "alt": "Peonies banner image"
           }
         },
         "slide_P8nRm3": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/21_1.jpg",
-            "alt": "Peonies banner image"
-          }
-        },
-        "slide_rkNihx": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/22_1.jpg",
+            "desktop_image": "shopify://shop_images/desktopmain8.jpg",
+            "mobile_image": "shopify://shop_images/21_1.jpg",
             "alt": "Peonies banner image"
           }
         },
@@ -225,6 +220,7 @@
           "type": "slide",
           "settings": {
             "desktop_image": "shopify://shop_images/23_1.jpg",
+            "mobile_image": "shopify://shop_images/23_1.jpg",
             "alt": "Peonies banner image"
           }
         },
@@ -281,24 +277,22 @@
       "block_order": [
         "slide_rYxN89",
         "slide_C7WEXh",
+        "slide_6tTCXh",
         "slide_3gx74Y",
         "slide_Qm4QjX",
+        "slide_gbExyT",
+        "slide_z7ChKk",
+        "slide_rkNihx",
         "slide_nA7mLa",
         "slide_ByT3EA",
+        "slide_CkJQxh",
+        "slide_btxDLA",
+        "slide_PrabF9",
         "slide_RLMyGp",
         "slide_BVHx7C",
-        "slide_6tTCXh",
-        "slide_qDrqPw",
-        "slide_z7ChKk",
-        "slide_PrabF9",
-        "slide_gbExyT",
-        "slide_btxDLA",
-        "slide_CkJQxh",
         "slide_F43Pac",
-        "slide_wBccKe",
         "slide_9JGaiY",
         "slide_P8nRm3",
-        "slide_rkNihx",
         "slide_QYCfTa",
         "slide_97dCiJ",
         "slide_z4QChk",
