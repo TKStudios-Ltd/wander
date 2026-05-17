@@ -155,6 +155,7 @@
         },
         "slide_CkJQxh": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "desktop_image": "shopify://shop_images/desktopmain14_128d111a-c74b-4196-9677-f53b48218fc1.jpg",
             "mobile_image": "shopify://shop_images/11_1.jpg",
