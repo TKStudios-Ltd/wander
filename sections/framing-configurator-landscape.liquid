@@ -551,7 +551,7 @@
       root.setAttribute('data-size', myLoad.targetSizeToken);
       root.setAttribute('data-mode', myLoad.targetOptionToken + '-' + (myLoad.targetOptionToken==='noframe' ? 'border' : myLoad.targetMatToken));
       imgPrev.src = myLoad.url;
-      if (fnLabel) fnLabel.textContent = myLoad.filename;
+      fnLabel.textContent = myLoad.filename;
 
       updatePreviewClasses(previewFrame, {
         sizeTok:  myLoad.targetSizeToken,
