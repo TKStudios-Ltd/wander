@@ -504,12 +504,13 @@
   }
 
   async function sync(){
-    const targetSizeToken   = sizeToken;
-    const targetOptionToken = optionToken;
-    const targetMatToken    = matToken;
-    let   targetColorToken  = colorToken;
+    let targetSizeToken   = sizeToken;
+    let targetOptionToken = optionToken;
+    let targetMatToken    = matToken;
+    let targetColorToken  = colorToken;
 
     setSizeAvailabilityForOption(targetSizeToken, targetOptionToken, targetMatToken);
+    targetSizeToken = sizeToken;
 
     const isUnframed = targetOptionToken === 'noframe';
     if (isUnframed) {
