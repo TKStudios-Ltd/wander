@@ -20,7 +20,15 @@
     {%- else -%}
     {%- assign crumb_collection = collection -%}
     {%- if crumb_collection == blank -%}
-        {%- assign crumb_collection = product.collections | first -%}
+      {%- assign excluded_collections = 'black-white' | split: ',' -%}
+      {%- assign crumb_collection = blank -%}
+
+      {%- for product_collection in product.collections -%}
+        {%- unless excluded_collections contains product_collection.handle -%}
+          {%- assign crumb_collection = product_collection -%}
+          {%- break -%}
+        {%- endunless -%}
+      {%- endfor -%}
     {%- endif -%}
         <nav class="breadcrumb__list hide-desk" role="navigation" aria-label="breadcrumbs">
             {%- if product.type != blank -%}
