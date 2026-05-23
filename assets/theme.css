@@ -34291,7 +34291,7 @@ div.footer-title h5 {
     height: 520px;
   }
 }
-@media (min-width: 768px) and (max-width: 1399px) {
+@media (min-width: 990px) and (max-width: 1399px) {
   .product-template-custom-landscape .product-card .product-card__image img {
     width: 35vw;
     height: 100%;
@@ -34299,6 +34299,16 @@ div.footer-title h5 {
   .product-template-custom .product-card .product-card__image img {
     width: 100%;
     height: 35vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 989px) {
+  .product-template-custom-landscape .product-card .product-card__image img {
+    width: 32vw;
+    height: 100%;
+  }
+  .product-template-custom .product-card .product-card__image img {
+    width: 100%;
+    height: 32vw;
   }
 }
 
