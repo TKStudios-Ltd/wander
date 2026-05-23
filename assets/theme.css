@@ -22449,6 +22449,9 @@ search-popdown details > summary:first-of-type {
   object-fit: cover;
 }
 
+body#peonies .list-collections__item__image .ibps__label_outer {
+  display: none !important;
+}
 .list-collections__item__image .ibps__label_outer {
   position: absolute;
   z-index: 1;
