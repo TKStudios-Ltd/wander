@@ -34530,11 +34530,20 @@ div.footer-title h5 {
   border-style: solid;
 }
 .scroll__heading {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
   font-family: "urw-din-semi-condensed";
   font-size: 12px;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
-  display: inline-flex;
+  color: inherit;
+}
+.scroll__heading svg {
+  width: 20px;
+  height: 24px;
 }
 
 @media (max-width: 749px) {
