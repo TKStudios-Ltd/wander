@@ -298,7 +298,7 @@
       ],
       "name": "Image",
       "settings": {
-        "image": "shopify://shop_images/image_98.jpg",
+        "image": "shopify://shop_images/Group_381_fcb95a62-a179-4069-b3ee-ff3fb20024dd.png",
         "allow_mobile_zoom": true,
         "custom_id": "full-bleed-framing",
         "height": "original-height",
@@ -318,7 +318,7 @@
         "subheading_kbE6Rx": {
           "type": "subheading",
           "settings": {
-            "text": "<p>* PLEASE NOTE:<strong> </strong>(1) We offer certain images at even larger “Exhibition” & “Giant” sizes, in limited editions of 50 and 25 respectively. Contact us if you are interested in these larger limited edition sizes or a custom size. (2) Given the advancements in camera technology, not all older images/artwork can be printed perfectly at the larger sizes. While this doesn’t happen frequently, if we believe there may be an issue/concern with resolution of a specific print ordered, we will notify you. (3) Occasionally we have an image that does not fit proportionally well into our exact sizes listed above. If this is the case, we reserve the right to crop/edit the size of the print by 1”-2” on any given dimension in order to preserve the creative integrity of the original image/print. (4) Given the fact that we supply various frames and colors, which have various face widths & depths, these sizes listed may vary slightly by 1”-1.5” depending on frame. (5) For additional sizing/matting/framing questions, email us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a></p>",
+            "text": "<p>PLEASE NOTE: (1) We offer certain images at even larger \"Exhibition\" & \"Giant\" sizes, in limited editions of 50 and 25 respectively. Contact us if you are interested in these larger limited edition sizes or a custom size. (2) Given the advancements in camera technology, not all older images/artwork can be printed at the larger sizes. (3) Occasionally we have an image that does not fit proportionally into our exact sizes listed above. If this is the case, we reserve the right to crop/edit/enlarge the size of the print by 1–2\" on any given dimension in order to preserve the integrity of the original artwork. (4) Due to frame selection, sizes listed above may vary by 1–2\". (5) For additional sizing/matting/framing questions or a custom size, email us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a></p>",
             "size": 100,
             "margin_bottom": 0
           }
@@ -328,7 +328,7 @@
         "subheading_kbE6Rx"
       ],
       "custom_css": [
-        "p {letter-spacing: 1px; font-size: 10px; max-width: 1000px; margin: 4rem auto 6rem; font-style: italic;}",
+        "p {letter-spacing: 1px; font-size: 10px; max-width: 900px; margin: 4rem auto 6rem; font-style: italic;}",
         "@media (max-width: 989px) {p {font-size: 1.8vw; margin: 2rem auto 3rem; }}"
       ],
       "name": "Text",
