@@ -243,3 +243,20 @@ document.addEventListener('page:load', initBackToTop); // for Turbo
     init();
   }
 })();
+
+
+/* Scroll Down Section */
+
+document.getElementById('scroll-next').addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const currentSection = this.closest('.shopify-section');
+  const nextSection = currentSection?.nextElementSibling;
+
+  if (nextSection) {
+    nextSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+});
