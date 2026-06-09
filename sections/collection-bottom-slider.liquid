@@ -198,53 +198,104 @@
   document.addEventListener('DOMContentLoaded', function() {
     var root = document.getElementById('CollectionBottomSlider--{{ section.id }}');
     if (!root) return;
-
     var effect = root.getAttribute('data-effect') || 'slide';
     var autoplay = root.getAttribute('data-autoplay') === 'true';
     var interval = parseInt(root.getAttribute('data-interval'), 10) || 4000;
-
     // Use Swiper's 'fade' when we're doing wipe; we add our own clip-path animation.
     var swiperEffect = (effect === 'wipe') ? 'fade' : effect;
-
+    function preloadImage(img) {
+      if (!img) return;
+      img.loading = 'eager';
+      img.fetchPriority = 'high';
+      var src = img.currentSrc || img.src;
+      if (!src) return;
+      var preload = new Image();
+      if (img.sizes) {
+        preload.sizes = img.sizes;
+      }
+      if (img.srcset) {
+        preload.srcset = img.srcset;
+      }
+      preload.src = src;
+      if (preload.decode) {
+        preload.decode().catch(function() {});
+      }
+    }
+    function preloadSlide(slide) {
+      if (!slide) return;
+      var img = slide.querySelector('img.cbs__image');
+      if (!img) return;
+      preloadImage(img);
+    }
+    function preloadAroundActive(swiperInstance) {
+      if (!swiperInstance || !swiperInstance.slides) return;
+      var activeIndex = swiperInstance.activeIndex;
+      preloadSlide(swiperInstance.slides[activeIndex]);
+      preloadSlide(swiperInstance.slides[activeIndex + 1]);
+      preloadSlide(swiperInstance.slides[activeIndex + 2]);
+      preloadSlide(swiperInstance.slides[activeIndex - 1]);
+    }
+    function runWipeAnimation() {
+      if (effect !== 'wipe') return;
+      var slides = root.querySelectorAll('.swiper-slide');
+      slides.forEach(function(slide) {
+        var pane = slide.querySelector('.cbs__pane');
+        if (pane) pane.classList.remove('is-wiping');
+      });
+      var active = root.querySelector('.swiper-slide.swiper-slide-active .cbs__pane');
+      if (active) {
+        active.classList.remove('is-wiping');
+        void active.offsetWidth;
+        active.classList.add('is-wiping');
+      }
+    }
     var swiper = new Swiper(root.querySelector('.cbs__swiper'), {
       loop: {% if slides_count > 1 %}true{% else %}false{% endif %},
       speed: 500,
       effect: swiperEffect,
       fadeEffect: { crossFade: true },
-
-      preloadImages: false,
+      preloadImages: true,
+      updateOnImagesReady: true,
       watchSlidesProgress: true,
-
+      observer: true,
+      observeParents: true,
       autoplay: autoplay ? { delay: interval, disableOnInteraction: false } : false,
-
       pagination: {
         el: root.querySelector('.swiper-pagination'),
         clickable: true
       },
       on: {
+        init: function () {
+          preloadAroundActive(this);
+        },
+        imagesReady: function () {
+          preloadAroundActive(this);
+        },
+        touchStart: function () {
+          preloadAroundActive(this);
+        },
+        slideChange: function () {
+          preloadAroundActive(this);
+        },
         slideChangeTransitionStart: function () {
-          if (effect !== 'wipe') return;
-          // Add wipe animation to the active slide's pane
-          var slides = root.querySelectorAll('.swiper-slide');
-          slides.forEach(function(s){ var p = s.querySelector('.cbs__pane'); if (p) p.classList.remove('is-wiping'); });
-          var active = root.querySelector('.swiper-slide.swiper-slide-active .cbs__pane');
-          if (active) {
-            // restart animation
-            active.classList.remove('is-wiping');
-            // force reflow to restart CSS animation
-            void active.offsetWidth;
-            active.classList.add('is-wiping');
-          }
+          preloadAroundActive(this);
+          runWipeAnimation();
         }
       }
     });
-
+    preloadAroundActive(swiper);
     // BACK | NEXT in-column pager
     root.addEventListener('click', function(e) {
       var prev = e.target.closest('[data-cbs-prev]');
       var next = e.target.closest('[data-cbs-next]');
-      if (prev) { swiper.slidePrev(); }
-      if (next) { swiper.slideNext(); }
+      if (prev) {
+        preloadAroundActive(swiper);
+        swiper.slidePrev();
+      }
+      if (next) {
+        preloadAroundActive(swiper);
+        swiper.slideNext();
+      }
     }, { passive: true });
   });
 </script>
