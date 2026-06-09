@@ -158,7 +158,16 @@
         "text_xah8gt": {
           "type": "text",
           "settings": {
-            "text": "<p>All Sizes listed are outer border dimensions. On “Unframed” prints, we include a 1”-5” border for ample framing.</p>",
+            "text": "<p>Every print comes with a Certificate of Authenticity. All framed photography comes with hanging hardware.</p>",
+            "size": 100,
+            "max_width": 875,
+            "margin_bottom": 0
+          }
+        },
+        "text_7AYd6H": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All Sizes listed are outer dimensions. Depending on Frame Selection, sizes listed below may vary by 1-2”.</p>",
             "size": 100,
             "max_width": 875,
             "margin_bottom": 0
@@ -167,50 +176,24 @@
         "text_rKbiwp": {
           "type": "text",
           "settings": {
-            "text": "<p>Dimensions listed below are identical for horizontal-formatted photography, but the dimensions are flipped.</p>",
+            "text": "<p>Sizes are identical for horizontal-formatted photography, but the dimensions are flipped.</p>",
             "size": 100,
-            "max_width": 900,
-            "margin_bottom": 0
-          }
-        },
-        "text_gVBXJd": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We currently do not offer our “Oversized Mat Framing” option on horizontal-formatted photography.</p>",
-            "size": 100,
-            "max_width": 800,
-            "margin_bottom": 0
-          }
-        },
-        "text_8fV96G": {
-          "type": "text",
-          "settings": {
-            "text": "<p>All framed photography comes with hanging hardware. Every print comes with a Certificate of Authenticity.</p>",
-            "size": 100,
-            "max_width": 875,
-            "margin_bottom": 0
-          }
-        },
-        "text_Y7BtUG": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We currently do not offer our “Oversized Mat Framing” option on horizontal-formatted photography.</p>",
-            "size": 100,
-            "max_width": 800,
+            "max_width": 700,
             "margin_bottom": 0
           }
         },
         "text_kWLGn7": {
           "type": "text",
           "settings": {
-            "text": "<p>For any questions, please contact us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a></p>",
+            "text": "<p>For Framed Canvas, use Full-Bleed framing sizing as a guide. For custom sizing or additional questions, contact us at <a>hello@shopwander.com</a>*</p>",
             "size": 100,
-            "max_width": 800,
+            "max_width": 625,
             "margin_bottom": 35
           }
         },
         "subheading_rhripi": {
           "type": "subheading",
+          "disabled": true,
           "settings": {
             "text": "<p>WE HAVE DONE OUR BEST TO SUPPLY SIZES, BUT GIVEN THE FACT THAT WE OFFER VARIOUS FRAMES & COLORS IN EACH SIZE, WHICH HAVE VARIOUS FACE WIDTHS, THESE SIZES LISTED MAY VARY SLIGHTLY BY 1-2” DEPENDING ON FRAME SELECTION.</p>",
             "size": 100,
@@ -222,10 +205,8 @@
         "text_aRT9Jx",
         "text_q8UWYJ",
         "text_xah8gt",
+        "text_7AYd6H",
         "text_rKbiwp",
-        "text_gVBXJd",
-        "text_8fV96G",
-        "text_Y7BtUG",
         "text_kWLGn7",
         "subheading_rhripi"
       ],
