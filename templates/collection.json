@@ -178,7 +178,9 @@
           "reflections",
           "luminescence",
           "butterflies",
-          "coastal"
+          "coastal",
+          "black-white",
+          "cities-towns"
         ],
         "button_label": "Shop",
         "show_text_pager": true,
