@@ -211,7 +211,12 @@
       speed: 500,
       effect: swiperEffect,
       fadeEffect: { crossFade: true },
+
+      preloadImages: false,
+      watchSlidesProgress: true,
+
       autoplay: autoplay ? { delay: interval, disableOnInteraction: false } : false,
+
       pagination: {
         el: root.querySelector('.swiper-pagination'),
         clickable: true
