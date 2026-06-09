@@ -391,7 +391,7 @@
 
 [data-size="small"] .fc-mat-oversized .fc-artwork { inset: 33% 33% 33% 33%; }
 [data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 30% 30% 30% 30%; }
-[data-size="large"] .fc-mat-oversized .fc-artwork { inset: 28% 28% 28% 28%; }
+[data-size="large"] .fc-mat-oversized .fc-artwork { inset: 27.5% 27.5% 27.5% 27.5%; }
 
 /* ------------------------------
    VIEW IN ROOM FUNCTION
