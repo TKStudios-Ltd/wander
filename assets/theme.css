@@ -34529,6 +34529,13 @@ div.footer-title h5 {
   border-width: 1px;
   border-style: solid;
 }
+.scroll__heading {
+  font-family: "urw-din-semi-condensed";
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+}
 
 @media (max-width: 749px) {
   .hide-mob {
