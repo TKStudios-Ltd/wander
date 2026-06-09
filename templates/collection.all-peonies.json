@@ -386,7 +386,17 @@
         "text_color": "text-dark",
         "width": "wrapper",
         "padding_top": 120,
-        "padding_bottom": 100
+        "padding_bottom": 60
+      }
+    },
+    "section_custom_html_x3DLPm": {
+      "type": "section-custom-html",
+      "name": "Custom code",
+      "settings": {
+        "custom_code": "<a href=\"#\" class=\"scroll__heading\">\n  Scroll to Shop Peonies\n\n  <span class=\"svg-wrapper\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\"\n         width=\"20\"\n         height=\"24\"\n         viewBox=\"0 0 24 24\"\n         fill=\"none\"\n         stroke=\"currentColor\"\n         stroke-width=\"1\"\n         stroke-linecap=\"round\"\n         stroke-linejoin=\"round\"\n         aria-hidden=\"true\">\n      <line x1=\"12\" y1=\"0\" x2=\"12\" y2=\"14\"></line>\n      <polyline points=\"6 10 12 16 18 10\"></polyline>\n    </svg>\n  </span>\n</a>",
+        "width": "wrapper",
+        "padding_top": 0,
+        "padding_bottom": 60
       }
     },
     "section_list_collection_UnD6ej": {
@@ -645,6 +655,7 @@
     "main",
     "image_banner_peonies_slider_49Fxka",
     "section_text_8MUdPj",
+    "section_custom_html_x3DLPm",
     "section_list_collection_UnD6ej"
   ]
 }
