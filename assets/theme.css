@@ -34547,13 +34547,13 @@ div.footer-title h5 {
 }
 @media (max-width: 749px) {
   .scroll__heading {
-  gap: 8px;
-  font-size: 10px;
-}
-.scroll__heading svg {
-  width: 15px;
-  height: 18px;
-}
+    gap: 8px;
+    font-size: 10px;
+  }
+  /* .scroll__heading svg {
+    width: 15px;
+    height: 18px;
+  } */
 }
 
 @media (max-width: 749px) {
