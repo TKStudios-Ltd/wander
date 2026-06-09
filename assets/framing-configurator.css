@@ -64,6 +64,9 @@
 .framing-configurator-landscape .fc-preview__frame.fc-mat-oversized.fc-size-medium img[data-role="preview"] {
     transform: scale(0.85) rotate(-90deg) scaleX(-1);
 }
+.fc-preview__frame.fc-mat-full.fc-size-medium .fc-artwork {
+    transform: scale(0.95);
+}
 /* LARGE */
 .fc-preview__frame.fc-option-noframe.fc-size-large img[data-role="preview"],
 .fc-preview__frame.fc-mat-border.fc-size-large img[data-role="preview"],
