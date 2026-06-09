@@ -361,7 +361,9 @@
               .replace("[color]", c)
               .replace("[size]", sizeToken);
   }
-  function resolveSrc(fn){ return assetsBase + fn; }
+  function resolveSrc(fn){
+    return assetsBase + fn + '?v=1';
+  }
   function setPressed(parent, value){
     parent.querySelectorAll('.fc-pill').forEach(btn=>{
       btn.setAttribute('aria-pressed', btn.getAttribute('data-value')===value ? 'true' : 'false');
