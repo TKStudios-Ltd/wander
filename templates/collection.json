@@ -175,7 +175,8 @@
           "land",
           "sea",
           "palms",
-          "reflections"
+          "reflections",
+          "luminescence"
         ],
         "button_label": "Shop",
         "show_text_pager": true,
