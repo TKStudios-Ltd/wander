@@ -34533,7 +34533,7 @@ div.footer-title h5 {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "urw-din-semi-condensed";
@@ -34547,7 +34547,7 @@ div.footer-title h5 {
 }
 @media (max-width: 749px) {
   .scroll__heading {
-  gap: 10px;
+  gap: 8px;
   font-size: 10px;
 }
 .scroll__heading svg {
