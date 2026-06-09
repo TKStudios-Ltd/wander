@@ -34545,6 +34545,16 @@ div.footer-title h5 {
   width: 20px;
   height: 24px;
 }
+@media (max-width: 749px) {
+  .scroll__heading {
+  gap: 10px;
+  font-size: 10px;
+}
+.scroll__heading svg {
+  width: 15px;
+  height: 18px;
+}
+}
 
 @media (max-width: 749px) {
   .hide-mob {
