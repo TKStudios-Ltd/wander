@@ -255,6 +255,7 @@
 
   // ---------------- Core config & DOM ----------------
   const CFG = {{ cfg.value | json }};
+  const IS_OLD = {% if product.tags contains '!OLD' %}true{% else %}false{% endif %};
   const assetsBase = "{{ 'asset-probe.js' | asset_url }}".split('asset-probe.js')[0];
 
   const pillsSize   = root.querySelector('[data-role="size"]');
@@ -441,15 +442,24 @@
   }
 
   // ---------- Canvas availability ----------
-    function getAllowedSizesFor(optTok, matTok){
-    // Check per-option allowed_sizes first
-    const opt = (CFG.framing_options || []).find(o => o.token===optTok && o.mat_token===matTok);
-    if (opt && Array.isArray(opt.allowed_sizes)) return opt.allowed_sizes;
-
-    // Fallback to global allowed_sizes map
+  function getAllowedSizesFor(optTok, matTok){
     const key = `${optTok}|${matTok}`;
-    if (CFG.allowed_sizes && Array.isArray(CFG.allowed_sizes[key])) return CFG.allowed_sizes[key];
+    if (IS_OLD) {
+      const oldRules = {
+        'noframe|full': ['small', 'medium', 'large'],
+        'frame|full': ['small', 'medium', 'large'],
+        'frame|border': ['small', 'medium', 'large'],
+        'frame|oversized': ['small', 'medium', 'large', 'gallery', 'statement'],
+        'frame|canvas': []
+      };
 
+      if (Array.isArray(oldRules[key])) return oldRules[key];
+    }
+    // Check per-option allowed_sizes first
+    const opt = (CFG.framing_options || []).find(o => o.token === optTok && o.mat_token === matTok);
+    if (opt && Array.isArray(opt.allowed_sizes)) return opt.allowed_sizes;
+    // Fallback to global allowed_sizes map
+    if (CFG.allowed_sizes && Array.isArray(CFG.allowed_sizes[key])) return CFG.allowed_sizes[key];
     return null; // null => all sizes allowed
   }
   function setSizeAvailabilityForOption(sizeTok, optTok, matTok){
@@ -902,6 +912,11 @@
 
     form.addEventListener('submit', async (e)=>{
       const priceCents = currentPriceCents(sizeToken, optionToken, matToken);
+      if (allowedForCurrent && !allowedForCurrent.includes(sizeToken)) {
+        e.preventDefault();
+        alert('This size is not available for the selected framing option.');
+        return;
+      }
       if (optionToken === 'frame' && matToken === 'canvas' && isBlackLabel(colorToken)) {
         e.preventDefault();
         alert('Canvas is not available in Whitewash, Grey Ash, or Pale Ash.');
