@@ -393,8 +393,8 @@
 [data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 30% 30% 30% 30%; }
 [data-size="large"] .fc-mat-oversized .fc-artwork { inset: 27.5% 27.5% 27.5% 27.5%; }
 [data-size="gallery"] .fc-mat-oversized .fc-artwork   { inset: 26% 26% 26% 26%; }
-[data-size="statement"] .fc-mat-oversized .fc-artwork   { inset: 15% 15% 15% 15%; }
-[data-size="collector"] .fc-mat-oversized .fc-artwork   { inset: 15% 15% 15% 15%; }
+[data-size="statement"] .fc-mat-oversized .fc-artwork   { inset: 24% 24% 24% 24%; }
+[data-size="collector"] .fc-mat-oversized .fc-artwork   { inset: 21% 21% 21% 21%; }
 
 /* ------------------------------
    VIEW IN ROOM FUNCTION
