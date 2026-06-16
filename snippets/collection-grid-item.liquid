@@ -254,9 +254,9 @@
       {% if page.handle == 'shop-all-peonies' %}
         {% assign is_peonies = true %}
       {% endif %}
-      {% if collection.handle == 'peonies' %}
+      {% comment %} {% if collection.handle == 'peonies' %}
         {% assign is_peonies = true %}
-      {% endif %}
+      {% endif %} {% endcomment %}
       {% if request.path == '/collections/peonies' %}
         {% assign is_peonies = true %}
       {% endif %}
