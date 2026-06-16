@@ -260,6 +260,16 @@
       {% if request.path == '/collections/peonies' %}
         {% assign is_peonies = true %}
       {% endif %}
+    {% assign is_signature = false %}
+      {% if page.handle == 'shop-all-peonies' %}
+        {% assign is_signature = true %}
+      {% endif %}
+      {% if collection.handle == 'peonies' %}
+        {% assign is_signature = true %}
+      {% endif %}
+      {% if request.path == '/collections/peonies' %}
+        {% assign is_signature = true %}
+      {% endif %}
   <a href="{{ collection_url }}" class="list-collections__item__outer{% if section_buttons %} btn--primary{% endif %}">
     <div class="list-collections__item__image"
       data-product-media-container
@@ -283,7 +293,7 @@
       {%- else -%}
         <div class="background-size-cover {{ item_bg_class }}"></div>
       {%- endunless -%}
-      {% if is_peonies %}
+      {% if is_signature %}
         <div class="ibps__label_outer">
           <div class="ibps__label">A LIMITED EDITION <em>WANDERINGS</em>™ SIGNATURE COLLECTION</div>
         </div>
