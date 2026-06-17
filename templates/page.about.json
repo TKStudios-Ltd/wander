@@ -150,7 +150,7 @@
       ],
       "custom_css": [
         "@media (min-width: 768px) and (max-width: 989px) {.wrapper {padding: 0 40px; }}",
-        ".text #about-wander {--PT: 100px; --PB: 60px;}"
+        ".section-padding {--PT: 100px; --PB: 60px;}"
       ],
       "settings": {
         "custom_class": "para-left-only",
@@ -242,7 +242,7 @@
       ],
       "custom_css": [
         "@media (min-width: 768px) and (max-width: 989px) {.wrapper {padding: 0 40px; }}",
-        ".text #about-prints {--PT: 100px; --PB: 60px;}"
+        ".section-padding {--PT: 100px; --PB: 60px;}"
       ],
       "settings": {
         "custom_class": "para-left-only",
