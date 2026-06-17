@@ -10,6 +10,7 @@
   assign animation_anchor = '#Text--' | append: unique
   assign animation_delay = 150
   assign custom_class = section.settings.custom_class
+  assign custom_id = section.settings.custom_id
 
 
   capture section_class
@@ -28,7 +29,8 @@
   }
 {%- endstyle -%}
 
-<section id="Text--{{ unique }}"
+<section
+  id="{% if custom_id != blank %}{{ custom_id }}{% else %}Text--{{ unique }}{% endif %}"
   class="section-padding {{ section_class }}{% if bg_color_secondary %} bg-secondary{% endif %}"
   data-section-id="{{ unique }}"
   data-section-type="text">
@@ -507,6 +509,12 @@
       "id": "custom_class",
       "label": "Custom class for styling",
       "info": "Do not modify"
+    },
+    {
+      "type": "text",
+      "id": "custom_id",
+      "label": "Custom ID override",
+      "info": "Optional. Overrides the default section ID."
     },
     {
       "type": "header",
