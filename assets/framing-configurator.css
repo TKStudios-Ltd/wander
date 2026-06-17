@@ -466,7 +466,7 @@
     transform: translateY(-20%) scale(0.6);
 }
 .framing-configurator-landscape [data-room-name="Background 1"].framing-configurator__preview_background.is-vir .fc-preview__frame {
-    transform: translateY(-20%) scale(0.6);
+    transform: translateY(-12%) scale(0.6);
 }
 /* Background 2 */
 [data-room-name="Background 2"].framing-configurator__preview_background.is-vir .fc-preview__frame {
