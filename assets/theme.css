@@ -34345,7 +34345,7 @@ div.footer-title h5 {
     max-width: 200px;
   }
 }
-@media (min-width: 990px) and (max-width: 1599px) {
+@media (min-width: 768px) and (max-width: 1599px) {
   .search-grid .product-template-custom .product-card .product-card__image img {
     height: 20vw;
   }
