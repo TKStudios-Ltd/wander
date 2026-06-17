@@ -47,7 +47,7 @@
           "settings": {
             "name": "ABOUT WANDER",
             "collection": "",
-            "anchor_override": "Text--template--25091967058240__text",
+            "anchor_override": "about-wander",
             "full_url": ""
           }
         },
@@ -56,7 +56,7 @@
           "settings": {
             "name": "ABOUT PRINTS & PRODUCTS",
             "collection": "",
-            "anchor_override": "shopify-section-template--25091967058240__section_text_enwCrA",
+            "anchor_override": "about-prints",
             "full_url": ""
           }
         },
@@ -65,7 +65,7 @@
           "settings": {
             "name": "MEET THE ARTIST",
             "collection": "",
-            "anchor_override": "shopify-section-template--25091967058240__cdb3be2a-9d5e-47f0-9431-04f739f3c7cc",
+            "anchor_override": "meet-the-artist",
             "full_url": ""
           }
         }
@@ -153,6 +153,7 @@
       ],
       "settings": {
         "custom_class": "para-left-only",
+        "custom_id": "about-wander",
         "text_position": "center",
         "bg_color_secondary": false,
         "text_color": "text-dark",
@@ -244,6 +245,7 @@
       ],
       "settings": {
         "custom_class": "para-left-only",
+        "custom_id": "about-prints",
         "text_position": "center",
         "bg_color_secondary": false,
         "text_color": "text-dark",
