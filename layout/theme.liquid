@@ -235,7 +235,7 @@
     to
     <script src="{{ 'theme.dev.js' | asset_url }}" defer="defer"></script>
   {%- endcomment -%}
-
+ 
   {{ content_for_header }}
 </head>{%- capture body_classes -%}
 template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
