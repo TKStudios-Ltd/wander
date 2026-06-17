@@ -7,19 +7,24 @@
   assign bg_color_secondary = section.settings.bg_color_secondary
   assign show_spacer_lines = settings.show_spacer_lines
   assign animations_enabled = settings.animations_enabled
-  assign animation_anchor = '#Text--' | append: unique
   assign animation_delay = 150
   assign custom_class = section.settings.custom_class
-  assign custom_id = section.settings.custom_id
+  assign custom_id = section.settings.custom_id | strip
 
+  if custom_id != blank
+    assign section_id = custom_id
+  else
+    assign section_id = 'Text--' | append: unique
+  endif
+
+  assign animation_anchor = '#' | append: section_id
 
   capture section_class
     echo 'text-section ' | append: text_color
-    if custom_class
+    if custom_class != blank
       echo ' ' | append: custom_class
     endif
   endcapture
-
 -%}
 
 {%- style -%}
@@ -38,7 +43,7 @@
 {%- endstyle -%}
 
 <section
-  id="{% if custom_id != blank %}{{ custom_id }}{% else %}Text--{{ unique }}{% endif %}"
+  id="{{ section_id }}"
   class="section-padding {{ section_class }}{% if bg_color_secondary %} bg-secondary{% endif %}"
   data-section-id="{{ unique }}"
   data-section-type="text">
