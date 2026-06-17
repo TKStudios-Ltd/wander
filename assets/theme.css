@@ -3289,6 +3289,9 @@ search-form[loading] .predictive-search__loader {
     --padding-top: 60px !important;
     --padding-bottom: 100px !important;
   }
+  .text-highlight__break {
+    display: none !important;
+  }
 }
 
 [data-scroll-locked] .has-scrolled .site-header {
