@@ -35159,11 +35159,11 @@ main img {
 }
 
 @media screen and (min-width: 768px) {
-  #about-wander.section-padding {
+  #about-wander {
     --padding-top: 100px !important;
     --padding-bottom: 60px !important;
   }
-  #about-prints.section-padding {
+  #about-prints {
     --padding-top: 60px !important;
     --padding-bottom: 100px !important;
   }
