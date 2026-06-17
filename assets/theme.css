@@ -35157,3 +35157,12 @@ main img {
 .swym-atw-button-container.align-right {
   height: 100%;
 }
+
+#about-prints.section-padding {
+  --PT: 100px;
+  --PB: 60px;
+}
+#about-prints.section-padding {
+  --PT: 60px;
+  --PB: 100px;
+}
