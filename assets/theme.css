@@ -3280,6 +3280,17 @@ search-form[loading] .predictive-search__loader {
   margin-left: 0;
 }
 
+@media screen and (min-width: 768px) {
+  #about-wander {
+    --padding-top: 100px !important;
+    --padding-bottom: 60px !important;
+  }
+  #about-prints {
+    --padding-top: 60px !important;
+    --padding-bottom: 100px !important;
+  }
+}
+
 [data-scroll-locked] .has-scrolled .site-header {
   padding-right: var(--scrollbar-width);
 }
@@ -35156,15 +35167,4 @@ main img {
 }
 .swym-atw-button-container.align-right {
   height: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  #about-wander {
-    --padding-top: 100px !important;
-    --padding-bottom: 60px !important;
-  }
-  #about-prints {
-    --padding-top: 60px !important;
-    --padding-bottom: 100px !important;
-  }
 }
