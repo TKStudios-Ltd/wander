@@ -242,7 +242,7 @@
       ],
       "custom_css": [
         "@media (min-width: 768px) and (max-width: 989px) {.wrapper {padding: 0 40px; }}",
-        "@media screen and (min-width: 768px) {.section-padding {--padding-top: 60px !important; --padding-bottom: 100px !important; }}"
+        "@media screen and (min-width: 768px) {.text {padding-top: 60px !important; padding-bottom: 100px !important; }}"
       ],
       "settings": {
         "custom_class": "para-left-only",
