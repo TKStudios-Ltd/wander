@@ -27,7 +27,8 @@
   assign bg_color_set = false
   assign items_layout_class = ''
   assign unique = section.id
-  assign id = 'ImageWithText--' | append: section.id
+  assign custom_id = section.settings.custom_id
+  assign id = custom_id | default: 'ImageWithText--' | append: section.id
   assign selector_id = '#' | append: id
   assign animation_anchor = selector_id
   assign animations_enabled = settings.animations_enabled
@@ -525,6 +526,12 @@
     "name": "Image with text",
     "class": "supports-transparent-header",
     "settings": [
+      {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom ID override",
+        "info": "Optional. Overrides the default section ID."
+      },
       {
         "type": "header",
         "content": "Layout"
