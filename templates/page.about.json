@@ -265,6 +265,7 @@
         "@media (max-width: 989px) {.image-with-text__content-items {padding: 1rem 0 3rem; } img {padding: 0 4vw 0 10vw; } .image-with-text__image {padding-top: 75%; } .image-with-text__content, .image-with-text__image {flex-basis: 100%; padding-left: 0; }}"
       ],
       "settings": {
+        "custom_id": "meet-the-artist",
         "section_height": "six-fifty-height",
         "layout": "inline",
         "image_location": "left",
