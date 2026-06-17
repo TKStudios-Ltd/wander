@@ -248,7 +248,7 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
 {%- endcapture -%}
 {%- assign body_classes = body_classes | strip_newlines | strip -%}
 
-<body id="{{ page_title | handle }}" class="{{ body_classes }}" data-tom-test="12345">
+<body id="{{ page_title | handle }}" class="{{ body_classes }}">
   {%- render 'loading' -%}
 
   <a class="in-page-link skip-link" data-skip-content href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
@@ -298,13 +298,6 @@ template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}
     document.addEventListener('DOMContentLoaded', updateCurrentYear);
     document.addEventListener('shopify:section:load', updateCurrentYear);
   })();
-  </script>
-
-  <script>
-  console.log('THEME TEST 17 JUNE 2026 14:30');
-  </script>
-  <script>
-  alert('THEME TEST');
   </script>
 
 </body>
