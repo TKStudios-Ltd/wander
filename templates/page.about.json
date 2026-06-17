@@ -241,9 +241,8 @@
         "text_WyAFd6"
       ],
       "custom_css": [
-        ".wrapper {margin-bottom: 40px;}",
         "@media (min-width: 768px) and (max-width: 989px) {.wrapper {padding: 0 40px; }}",
-        "#about-prints {--PT: 100px; --PB: 100px;}"
+        "#about-prints {--PT: 60px; --PB: 100px;}"
       ],
       "settings": {
         "custom_class": "para-left-only",
