@@ -27,7 +27,7 @@
   assign bg_color_set = false
   assign items_layout_class = ''
   assign unique = section.id
-  assign custom_id = section.settings.custom_id
+  assign custom_id = section.settings.custom_id | strip
   if custom_id != blank
     assign id = custom_id
   else
