@@ -270,3 +270,13 @@
     }
 }
 /* //////// End newsletter //////// */
+
+
+#about-wander {
+    --padding-top: 100px !important;
+    --padding-bottom: 60px !important;
+  }
+  #about-prints {
+    --padding-top: 60px !important;
+    --padding-bottom: 100px !important;
+  }
