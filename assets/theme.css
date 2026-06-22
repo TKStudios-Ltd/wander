@@ -3557,15 +3557,6 @@ search-form[loading] .predictive-search__loader {
   }
 }
 
-@media only screen and (max-width: 991px) {
-  .grid--tablet-vert {
-    gap: 10px;
-    display: grid;
-    grid-template-columns: var(--grid-tablet);
-    padding-left: var(--gutter-mobile);
-    padding-right: var(--gutter-mobile);
-  }
-}
 @media only screen and (max-width: 767px) {
   .grid--mobile,
   .stacked--mobile {
