@@ -30,7 +30,7 @@
         {%- endunless -%}
       {%- endfor -%}
     {%- endif -%}
-        <nav class="breadcrumb__list hide-desk" role="navigation" aria-label="breadcrumbs">
+        <nav class="breadcrumb__list hide-l-desk" role="navigation" aria-label="breadcrumbs">
             {%- if product.type != blank -%}
             <span class="breadcrumb__item">
                 <a href="{{ shop.url }}/collections/all/{{ product.type | handleize }}">
