@@ -153,9 +153,10 @@
           -%}
 
           <div class="product-card__meta-list">
-            {%- if collection_title != blank and collection_title != 'Flowers Grow After It Rains' -%}
+            {%- assign hidden_collections = 'Flowers Grow After It Rains|The Space in Between' | split: '|' -%}
+            {%- unless collection_title == blank or hidden_collections contains collection_title -%}
               <span class="product-meta__item product-meta__collection">{{ collection_title | escape }}</span>
-            {%- endif -%}
+            {%- endunless -%}
 
             {%- if location_text != blank -%}
               <span class="product-meta__item product-meta__location hide-mob">{{ location_text | escape }}</span>

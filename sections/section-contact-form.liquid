@@ -230,15 +230,13 @@
         Success message
       {%- endcomment -%}
       {%- if form.posted_successfully? -%}
-        <div class="contact-form__message" data-form-message>
-          <div class="wrapper">
-            <p class="note form-success">
-              {{- 'contact.form.post_success' | t -}}
-            </p>
+        <div class="newsletter-popup-overlay contact-popup-overlay"></div>
+        <div class="note form-success popup-success contact-popup-success">
+          {% render 'icon-close' %}
 
-            <button type="button" class="contact-form__message__close" data-form-message-close aria-label="{{ 'general.accessibility.close_form_message' | t }}">
-              {%- render 'icon-close' -%}
-            </button>
+          <div class="success-popup">
+            <img src="https://cdn.shopify.com/s/files/1/0897/7491/5904/files/wander_logo.jpg?v=1736094129">
+            <p class="popup-success__text">Thank you for reaching out.<br>We’ll get back to you shortly.</p>
           </div>
         </div>
       {%- elsif form.errors -%}

@@ -916,6 +916,7 @@
 
     form.addEventListener('submit', async (e)=>{
       const priceCents = currentPriceCents(sizeToken, optionToken, matToken);
+      const allowedForCurrent = getAllowedSizesFor(optionToken, matToken);
       if (allowedForCurrent && !allowedForCurrent.includes(sizeToken)) {
         e.preventDefault();
         alert('This size is not available for the selected framing option.');

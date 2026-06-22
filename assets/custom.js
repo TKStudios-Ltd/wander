@@ -9,36 +9,33 @@
 
 
 (function() {
-  // Add custom code below this line
+  // Close custom success popups
 
-
-  const popupToggle = () => {
-    const popupCtr = document.querySelector('.popup-success');
-    const popupCtrOverlay = document.querySelector('.newsletter-popup-overlay');
-    const popupCloseBtn = document.querySelector('.newsletter-section .form-success.popup-success .icon-close');
-  
-    if (sessionStorage.getItem('popupClosed') === 'true') {
-      popupCtr?.remove();
-      popupCtrOverlay?.remove();
-      return;
-    }
-  
-    const closePopup = () => {
-      popupCtr?.remove();
-      popupCtrOverlay?.remove();
-      sessionStorage.setItem('popupClosed', 'true')
-    };
-  
-    popupCtrOverlay?.addEventListener('click', closePopup);
-    popupCloseBtn?.addEventListener('click', closePopup);
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        closePopup();
-      }
+  const closeSuccessPopup = () => {
+    document.querySelectorAll('.form-success.popup-success').forEach(popup => {
+      popup.remove();
     });
-  }
-  
-  popupToggle();
+
+    document.querySelectorAll('.newsletter-popup-overlay, .contact-popup-overlay').forEach(overlay => {
+      overlay.remove();
+    });
+  };
+
+  document.addEventListener('click', (event) => {
+    if (
+      event.target.closest('.form-success.popup-success .icon-close') ||
+      event.target.closest('.newsletter-popup-overlay') ||
+      event.target.closest('.contact-popup-overlay')
+    ) {
+      closeSuccessPopup();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeSuccessPopup();
+    }
+  });
 
 })();
 
@@ -69,54 +66,58 @@ customElements.define('tabs-component', TabsComponent);
 
 
 (function () {
-  console.log('[Popup Debug] loader');
 
   function openPopupById(id) {
     const popup = document.getElementById(id);
-    if (!popup) return console.warn('[Popup Debug] no #'+id);
+    if (!popup) return console.warn('[Popup Debug] no #' + id);
 
-    // Some themes wrap the popup inside a [data-popup] holder
     const holder = popup.closest('[data-popup]');
 
-    // Make sure any “hide popups while notification shown” class is removed
-    if (document.body.classList.contains('notification-visible')) {
-      document.body.classList.remove('notification-visible');
-    }
+    document.body.classList.remove('notification-visible');
 
-    // Theme expects .popup--visible on the .popup element
     popup.classList.add('popup--visible');
     popup.removeAttribute('hidden');
     popup.style.display = 'block';
     popup.setAttribute('aria-hidden', 'false');
 
-    // Some themes also want holder flags (harmless if no-op)
-    if (holder) holder.classList.add('popup--visible', 'is-active', 'open');
+    if (holder) {
+      holder.classList.add('popup--visible', 'is-active', 'open');
+    }
 
     document.body.classList.add('popup-open');
   }
 
   function closeAllPopups() {
-    document.querySelectorAll('.popup.popup--visible').forEach(p => {
+    document.querySelectorAll('.popup').forEach(p => {
       p.classList.remove('popup--visible', 'is-active', 'open', 'active');
       p.style.display = '';
       p.setAttribute('aria-hidden', 'true');
     });
+
     document.querySelectorAll('[data-popup]').forEach(h => {
       h.classList.remove('popup--visible', 'is-active', 'open', 'active');
+      h.style.display = '';
     });
-    document.body.classList.remove('popup-open');
+
+    document.body.classList.remove(
+      'popup-open',
+      'notification-visible',
+      'js-drawer-open',
+      'js-drawer-open-lock',
+      'scroll-lock',
+      'no-scroll',
+      'overflow-hidden'
+    );
   }
 
-  // Open when clicking links like #popup--popup-0
   document.addEventListener('click', function (e) {
     const link = e.target.closest('a[href^="#popup--"]');
     if (!link) return;
+
     e.preventDefault();
-    const id = link.getAttribute('href').slice(1);
-    openPopupById(id);
+    openPopupById(link.getAttribute('href').slice(1));
   });
 
-  // Close on underlay or close button
   document.addEventListener('click', function (e) {
     if (e.target.closest('[data-popup-close]') || e.target.closest('[data-popup-underlay]')) {
       e.preventDefault();
@@ -124,10 +125,24 @@ customElements.define('tabs-component', TabsComponent);
     }
   });
 
-  // ESC to close
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeAllPopups();
+    if (e.key === 'Escape') {
+      closeAllPopups();
+    }
   });
+
+  // Re-open the popup after successful newsletter submit
+  window.addEventListener('load', function () {
+    const params = new URLSearchParams(window.location.search);
+
+    if (
+      params.get('customer_posted') === 'true' &&
+      window.location.hash === '#NewsletterForm--popup-0'
+    ) {
+      openPopupById('popup--popup_with_image_haEQhW');
+    }
+  });
+
 })();
 
 

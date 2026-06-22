@@ -2,7 +2,9 @@
   <div class="wander-homepage-header">
     <div class="wander-homepage-header__inner">
       {% if section.settings.image != blank %}
+        <a href="/">
         {{ section.settings.image | image_url: width: 295 | image_tag }}
+        </a>
       {% endif %}
       {% if section.settings.heading != blank %}
         <h1 class="wander-homepage-header__heading">{{ section.settings.heading }}</h1>
