@@ -1,1 +1,134 @@
-{"type":"aside","name":"Overlay","sections":{"popup":{"type":"popup","blocks":{"popup-0":{"type":"popup-with-image","settings":{"position":"center-center","height":"original-height","title":"Sign up & Stay Connected","preheading":"","subtitle":"","text":"<p>Sign up below to be a part of our blooming WANDER community! Get access to Studio News, Exclusive Offers, our WANDERlife Journal... and hear about Limited Edition\/Product releases, before everyone else.<\/p>","show_newsletter_form":true,"extra_fields":"","button_text":"Sign Up","trigger":"idle","target_url_enabled":false,"target_url":"","manual_trigger_id":"","allow_manual_trigger_only":false,"target_referrer_enabled":false,"target_referrer":"","target_device_enabled":false,"target_device":"mobile","bg_color":"#f0efed","text_color":"text-dark"}},"popup_with_image_YjhCci":{"type":"popup-with-image","disabled":true,"settings":{"position":"center-center","height":"original-height","title":"Enjoy 10% off","preheading":"For a limited time...","subtitle":"Your first purchase when you join our list","text":"<p>Sign up below to be a part of our blooming WANDER community! Get access to Studio News, Exclusive Offers, our WANDERlife Journal... and hear about Limited Edition\/Product releases, before everyone else.<\/p>","show_newsletter_form":true,"extra_fields":"","button_text":"Sign Up","trigger":"idle","target_url_enabled":false,"target_url":"","manual_trigger_id":"","allow_manual_trigger_only":false,"target_referrer_enabled":false,"target_referrer":"","target_device_enabled":false,"target_device":"mobile","bg_color":"#f0efed","text_color":"text-dark"}},"popup_with_image_haEQhW":{"type":"popup-with-image","settings":{"position":"center-center","image":"shopify:\/\/shop_images\/logo_42e44e33-154e-444f-ac53-7ec392df105f.svg","height":"original-height","title":"","preheading":"","subtitle":"","text":"<p>Welcome to our blooming WANDER community...<br\/>We are so happy you're here!<br\/><br\/>Now that you're on the list, you'll get access to Studio News, Exclusive Offers, our WANDERlife Journal, And Limited Edition\/Product releases, before everyone else.<br\/><br\/>As a special gift for a limited time, take 10% Off your first purchase within the next 30 days with a code we sent to your email address.<\/p>","show_newsletter_form":false,"extra_fields":"","button_text":"Sign Up","trigger":"always","target_url_enabled":false,"target_url":"","manual_trigger_id":"newsletter_thank_you","allow_manual_trigger_only":true,"target_referrer_enabled":false,"target_referrer":"","target_device_enabled":false,"target_device":"mobile","bg_color":"#f0efed","text_color":"text-dark"}},"popup_with_image_dhgYKy":{"type":"popup-with-image","settings":{"position":"center-center","image":"shopify:\/\/shop_images\/logo_42e44e33-154e-444f-ac53-7ec392df105f.svg","height":"original-height","title":"","preheading":"","subtitle":"","text":"<p>© WANDER DESIGN, INC. All rights reserved. All pages on this website, as well as all photographs, design, artwork, products, logos, etc seen on this website, www.shopwander.com, or social media @wander.brand.co, @reese_cara are copyrighted and protected, and are of the sole ownership and copyright of WANDER DESIGN, INC. Do not copy, disperse, distribute or sell anything on this site, without direct permission from WANDER. Unless you obtain permission to sell or reproduce our images, it is a breach of copyright. Please email us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com<\/a>, about any collaborations, or for acquiring possible permission to sell\/use\/reproduce anything on this site.<\/p>","show_newsletter_form":false,"extra_fields":"","button_text":"","trigger":"always","target_url_enabled":false,"target_url":"","manual_trigger_id":"copyright_open","allow_manual_trigger_only":true,"target_referrer_enabled":false,"target_referrer":"","target_device_enabled":false,"target_device":"mobile","bg_color":"#f0efed","text_color":"text-dark"}}},"block_order":["popup-0","popup_with_image_YjhCci","popup_with_image_haEQhW","popup_with_image_dhgYKy"],"settings":{}}},"order":["popup"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "aside",
+  "name": "Overlay",
+  "sections": {
+    "popup": {
+      "type": "popup",
+      "blocks": {
+        "popup-0": {
+          "type": "popup-with-image",
+          "settings": {
+            "position": "center-center",
+            "height": "original-height",
+            "title": "Sign up & Stay Connected",
+            "preheading": "",
+            "subtitle": "",
+            "text": "<p>Sign up below to be a part of our blooming WANDER community! Get access to Studio News, Exclusive Offers, our WANDERlife Journal... and hear about Limited Edition/Product releases, before everyone else.</p>",
+            "show_newsletter_form": true,
+            "extra_fields": "",
+            "button_text": "Sign Up",
+            "trigger": "idle",
+            "target_url_enabled": false,
+            "target_url": "",
+            "manual_trigger_id": "",
+            "allow_manual_trigger_only": false,
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile",
+            "bg_color": "#f0efed",
+            "text_color": "text-dark"
+          }
+        },
+        "popup_with_image_YjhCci": {
+          "type": "popup-with-image",
+          "disabled": true,
+          "settings": {
+            "position": "center-center",
+            "height": "original-height",
+            "title": "Enjoy 10% off",
+            "preheading": "For a limited time...",
+            "subtitle": "Your first purchase when you join our list",
+            "text": "<p>Sign up below to be a part of our blooming WANDER community! Get access to Studio News, Exclusive Offers, our WANDERlife Journal... and hear about Limited Edition/Product releases, before everyone else.</p>",
+            "show_newsletter_form": true,
+            "extra_fields": "",
+            "button_text": "Sign Up",
+            "trigger": "idle",
+            "target_url_enabled": false,
+            "target_url": "",
+            "manual_trigger_id": "",
+            "allow_manual_trigger_only": false,
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile",
+            "bg_color": "#f0efed",
+            "text_color": "text-dark"
+          }
+        },
+        "popup_with_image_haEQhW": {
+          "type": "popup-with-image",
+          "settings": {
+            "position": "center-center",
+            "image": "shopify://shop_images/logo_42e44e33-154e-444f-ac53-7ec392df105f.svg",
+            "height": "original-height",
+            "title": "",
+            "preheading": "",
+            "subtitle": "",
+            "text": "<p>Welcome to our blooming WANDER community...<br/>We are so happy you're here!<br/><br/>Now that you're on the list, you'll get access to Studio News, Exclusive Offers, our WANDERlife Journal, And Limited Edition/Product releases, before everyone else.<br/><br/>As a special gift for a limited time, take 10% Off your first purchase within the next 30 days with a code we sent to your email address.</p>",
+            "show_newsletter_form": false,
+            "extra_fields": "",
+            "button_text": "Sign Up",
+            "trigger": "always",
+            "target_url_enabled": false,
+            "target_url": "",
+            "manual_trigger_id": "newsletter_thank_you",
+            "allow_manual_trigger_only": true,
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile",
+            "bg_color": "#f0efed",
+            "text_color": "text-dark"
+          }
+        },
+        "popup_with_image_dhgYKy": {
+          "type": "popup-with-image",
+          "settings": {
+            "position": "center-center",
+            "image": "shopify://shop_images/logo_42e44e33-154e-444f-ac53-7ec392df105f.svg",
+            "height": "original-height",
+            "title": "",
+            "preheading": "",
+            "subtitle": "",
+            "text": "<p>© WANDER DESIGN, INC. All rights reserved. All pages on this website, as well as all photographs, design, artwork, products, logos, etc seen on this website, www.shopwander.com, or social media @wander.brand.co, @reese_cara are copyrighted and protected, and are of the sole ownership and copyright of WANDER DESIGN, INC. Do not copy, disperse, distribute or sell anything on this site, without direct permission from WANDER. Unless you obtain permission to sell or reproduce our images, it is a breach of copyright. Please email us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a>, about any collaborations, or for acquiring possible permission to sell/use/reproduce anything on this site.</p>",
+            "show_newsletter_form": false,
+            "extra_fields": "",
+            "button_text": "",
+            "trigger": "always",
+            "target_url_enabled": false,
+            "target_url": "",
+            "manual_trigger_id": "copyright_open",
+            "allow_manual_trigger_only": true,
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile",
+            "bg_color": "#f0efed",
+            "text_color": "text-dark"
+          }
+        }
+      },
+      "block_order": [
+        "popup-0",
+        "popup_with_image_YjhCci",
+        "popup_with_image_haEQhW",
+        "popup_with_image_dhgYKy"
+      ],
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "popup"
+  ]
+}
