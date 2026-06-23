@@ -153,7 +153,7 @@
           -%}
 
           <div class="product-card__meta-list">
-            {%- assign hidden_collections = 'Flowers Grow After It Rains|The Space in Between' | split: '|' -%}
+            {%- assign hidden_collections = 'Flowers Grow After It Rains|The Space in Between|Lightness of Being' | split: '|' -%}
             {%- unless collection_title == blank or hidden_collections contains collection_title -%}
               <span class="product-meta__item product-meta__collection">{{ collection_title | escape }}</span>
             {%- endunless -%}
