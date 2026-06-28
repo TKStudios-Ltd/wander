@@ -751,6 +751,12 @@
     pillsOption.appendChild(wrap);
 
     (CFG.framing_options || []).forEach(o => {
+
+      // Hide Framed Canvas for !OLD products
+      if (IS_OLD && o.token === 'frame' && o.mat_token === 'canvas') {
+        return;
+      }
+      
       const id = `fc-opt-{{ section.id }}-${o.token}-${o.mat_token}`;
 
       const label = document.createElement('label');
