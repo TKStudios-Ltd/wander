@@ -301,7 +301,7 @@
     flex:auto;
 }
 .fc-size-card.is-disabled {
-    opacity: .35;
+    opacity: 0.3;
 }
 .fc-size-card.is-disabled:has(input:checked) .fc-size-img {
     border: none;
