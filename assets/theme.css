@@ -34328,10 +34328,11 @@ div.footer-title h5 {
     height: 35vw;
   }
   .recommended-products__wrapper .product-template-custom .product-card .product-card__image img {
-    height: 32vw;
+    height: 30vw;
+    width: 20vw;
   }
   .recommended-products__wrapper .product-template-custom-landscape .product-card .product-card__image img {
-    width: 32vw;
+    width: 30vw;
   }
 }
 @media (min-width: 768px) and (max-width: 989px) {
@@ -34344,7 +34345,8 @@ div.footer-title h5 {
     height: 32vw;
   }
   .recommended-products__wrapper .product-template-custom .product-card .product-card__image img {
-    height: 32vw;
+    height: 40vw;
+    width: 28vw;
   }
   .recommended-products__wrapper .product-template-custom-landscape .product-card .product-card__image img {
     width: 32vw;
