@@ -303,6 +303,9 @@
 .fc-size-card.is-disabled {
     opacity: .45;
 }
+.fc-size-card.is-disabled:has(input:checked) .fc-size-img {
+    border: none;
+}
 .fc-size-card input[type=radio]{position:absolute;inset:0;opacity:0;pointer-events:none}
 .fc-size-img{
     display: block;
