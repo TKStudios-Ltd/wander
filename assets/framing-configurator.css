@@ -517,7 +517,7 @@
    PER-SIZE FIT RULES (tuned insets)
    ------------------------------ */
 
-[data-size="small"] .fc-artwork     { inset: 29% 28% 28% 29%; }
+[data-size="small"] .fc-artwork     { inset: 28% 28% 28% 29%; }
 [data-size="medium"] .fc-artwork    { inset: 24.5% 23% 23% 24.5%; }
 [data-size="large"] .fc-artwork     { inset: 21% 20% 20% 21%; }
 
