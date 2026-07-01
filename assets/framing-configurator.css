@@ -629,10 +629,10 @@
 }
 /* Background 2 */
 [data-room-name="Background 2"].framing-configurator__preview_background.is-vir .fc-preview__frame {
-    transform: translateY(-20%) scale(0.6);
+    transform: translateY(-22%) translateX(-4%) scale(0.55);
 }
 .framing-configurator-landscape [data-room-name="Background 2"].framing-configurator__preview_background.is-vir .fc-preview__frame {
-    transform: translateY(-20%) scale(0.6);
+    transform: translateY(-22%) translateX(-4%) scale(0.55);
 }
 /* Background 3 */
 [data-room-name="Background 3"].framing-configurator__preview_background.is-vir .fc-preview__frame {
