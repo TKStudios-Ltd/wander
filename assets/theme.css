@@ -34433,6 +34433,9 @@ div.footer-title h5 {
   .search-grid .product-card .product-card__meta-list .product-meta__item {
     font-size: 0.5vw !important;
   }
+  .lifestyle--product .product-card .product-card__meta-list .product-meta__item {
+    font-size: 6px !important;
+  }
   .product-card .product-card__info {
     padding: 0 !important;
   }
