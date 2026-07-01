@@ -35169,3 +35169,7 @@ main img {
 .swym-atw-button-container.align-right {
   height: 100%;
 }
+
+.product-single__details .atw-button {
+  padding: 6px 0 !important;
+}
