@@ -16906,7 +16906,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   font-size: 10px !important;
 }
 .product-card .product__badge--coming-soon {
-  font-size: 15px !important;
+  font-size: 13px !important;
 }
 .product-card .product__badge__item {
   text-align: center;
