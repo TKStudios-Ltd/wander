@@ -31,8 +31,8 @@
       "type": "hero-peonies-metafield-slider",
       "name": "Metafield Image Slider",
       "settings": {
-        "autoplay": false,
-        "duration_seconds": 4,
+        "autoplay": true,
+        "duration_seconds": 5,
         "show_dots": false
       }
     },
