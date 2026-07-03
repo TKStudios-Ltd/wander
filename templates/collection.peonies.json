@@ -32,7 +32,7 @@
       "name": "Metafield Image Slider",
       "settings": {
         "autoplay": true,
-        "duration_seconds": 5,
+        "duration_seconds": 3,
         "show_dots": false
       }
     },
