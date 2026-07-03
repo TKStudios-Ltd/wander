@@ -1,27 +1,27 @@
 /*
 * Palo Alto Theme
 *
-* Use this file to add custom Javascript to Palo Alto.
+* Use this file to add custom Javascript to Palo Alto.  Keeping your custom
+* Javascript in this fill will make it easier to update Palo Alto. In order
+* to use this file you will need to open layout/theme.liquid and uncomment
+* the custom.js script import line near the bottom of the file.
 */
 
-(function () {
-  /*
-  ------------------------------------------------------------
-  Close custom success popups
-  ------------------------------------------------------------
-  */
 
-  function closeSuccessPopup() {
-    document.querySelectorAll('.form-success.popup-success').forEach(function (popup) {
+(function() {
+  // Close custom success popups
+
+  const closeSuccessPopup = () => {
+    document.querySelectorAll('.form-success.popup-success').forEach(popup => {
       popup.remove();
     });
 
-    document.querySelectorAll('.newsletter-popup-overlay, .contact-popup-overlay').forEach(function (overlay) {
+    document.querySelectorAll('.newsletter-popup-overlay, .contact-popup-overlay').forEach(overlay => {
       overlay.remove();
     });
-  }
+  };
 
-  document.addEventListener('click', function (event) {
+  document.addEventListener('click', (event) => {
     if (
       event.target.closest('.form-success.popup-success .icon-close') ||
       event.target.closest('.newsletter-popup-overlay') ||
@@ -31,76 +31,72 @@
     }
   });
 
-  document.addEventListener('keydown', function (event) {
+  document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       closeSuccessPopup();
     }
   });
+
 })();
-
-
-
-/*
-------------------------------------------------------------
-Tabs
-------------------------------------------------------------
-*/
 
 class TabsComponent extends HTMLElement {
   constructor() {
     super();
-
+    
     this.querySelectorAll('.tab-link').forEach((tab) => {
       tab.addEventListener('click', (e) => {
         e.preventDefault();
-
         const target = e.target.getAttribute('href');
-
         this.querySelectorAll('.tab-link').forEach((link) => {
           link.classList.remove('active');
         });
-
         this.querySelectorAll('.tab-content').forEach((content) => {
           content.classList.remove('active');
         });
-
         e.target.classList.add('active');
-
-        const targetEl = this.querySelector(target);
-        if (targetEl) {
-          targetEl.classList.add('active');
-        }
+        this.querySelector(target).classList.add('active');
       });
     });
   }
+
 }
-
-if (!customElements.get('tabs-component')) {
-  customElements.define('tabs-component', TabsComponent);
-}
+customElements.define('tabs-component', TabsComponent);
 
 
 
-/*
-------------------------------------------------------------
-Theme/manual popups + newsletter success popup
-------------------------------------------------------------
-*/
 
 (function () {
-  const NEWSLETTER_SUCCESS_TRIGGER_ID = 'popup-0';
 
-  function closeThemePopups() {
-    document.querySelectorAll('[data-popup]').forEach(function (wrapper) {
-      wrapper.classList.remove('popup--visible', 'is-active', 'open', 'active');
-      wrapper.setAttribute('aria-hidden', 'true');
+  function openPopupById(id) {
+    const popup = document.getElementById(id);
+    if (!popup) return console.warn('[Popup Debug] no #' + id);
+
+    const holder = popup.closest('[data-popup]');
+
+    document.body.classList.remove('notification-visible');
+
+    popup.classList.add('popup--visible');
+    popup.removeAttribute('hidden');
+    popup.style.display = 'block';
+    popup.setAttribute('aria-hidden', 'false');
+
+    if (holder) {
+      holder.classList.add('popup--visible', 'is-active', 'open');
+    }
+
+    document.body.classList.add('popup-open');
+  }
+
+  function closeAllPopups() {
+    document.querySelectorAll('.popup').forEach(p => {
+      p.classList.remove('popup--visible', 'is-active', 'open', 'active');
+      p.style.display = '';
+      p.setAttribute('aria-hidden', 'true');
     });
 
-    document.querySelectorAll('.popup').forEach(function (popup) {
-      popup.classList.remove('popup--visible', 'is-active', 'open', 'active');
-      popup.setAttribute('aria-hidden', 'true');
-      popup.setAttribute('hidden', '');
-      popup.style.display = '';
+    document.querySelectorAll('[data-popup]').forEach(h => {
+      h.classList.remove('popup--visible', 'is-active', 'open', 'active');
+      h.style.display = '';
     });
 
     document.body.classList.remove(
@@ -114,98 +110,46 @@ Theme/manual popups + newsletter success popup
     );
   }
 
-  function findPopup(target) {
-    let popup = document.getElementById('popup--' + target) || document.getElementById(target);
-
-    if (popup) {
-      return popup;
-    }
-
-    const wrapper = document.querySelector('[data-popup][data-manual-trigger-id="' + target + '"]');
-
-    if (wrapper) {
-      return wrapper.querySelector('.popup');
-    }
-
-    return null;
-  }
-
-  function openPopup(target) {
-    const popup = findPopup(target);
-
-    if (!popup) {
-      console.warn('[Popup Debug] no popup for:', target);
-      return;
-    }
-
-    closeThemePopups();
-
-    const wrapper = popup.closest('[data-popup]');
-
-    if (wrapper) {
-      wrapper.classList.add('popup--visible', 'is-active', 'open');
-      wrapper.removeAttribute('hidden');
-      wrapper.setAttribute('aria-hidden', 'false');
-    }
-
-    popup.classList.add('popup--visible', 'is-active', 'open');
-    popup.removeAttribute('hidden');
-    popup.removeAttribute('aria-hidden');
-    popup.style.display = '';
-
-    document.body.classList.add('notification-visible', 'popup-open');
-  }
-
   document.addEventListener('click', function (e) {
     const link = e.target.closest('a[href^="#popup--"]');
     if (!link) return;
 
     e.preventDefault();
-
-    const target = link.getAttribute('href').replace('#popup--', '');
-    openPopup(target);
+    openPopupById(link.getAttribute('href').slice(1));
   });
 
   document.addEventListener('click', function (e) {
-    if (
-      e.target.closest('[data-popup-close]') ||
-      e.target.closest('[data-popup-underlay]') ||
-      e.target.closest('.popup__close')
-    ) {
+    if (e.target.closest('[data-popup-close]') || e.target.closest('[data-popup-underlay]')) {
       e.preventDefault();
-      closeThemePopups();
+      closeAllPopups();
     }
   });
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
-      closeThemePopups();
+      closeAllPopups();
     }
   });
 
+  // Re-open the popup after successful newsletter submit
   window.addEventListener('load', function () {
     const params = new URLSearchParams(window.location.search);
 
-    if (params.get('customer_posted') === 'true') {
-      setTimeout(function () {
-        openPopup(NEWSLETTER_SUCCESS_TRIGGER_ID);
-      }, 500);
+    if (
+      params.get('customer_posted') === 'true' &&
+      window.location.hash === '#NewsletterForm--popup-0'
+    ) {
+      openPopupById('popup--popup_with_image_haEQhW');
     }
   });
+
 })();
 
-
-/*
-------------------------------------------------------------
-Back to top
-------------------------------------------------------------
-*/
 
 function initBackToTop() {
   document.querySelectorAll('.back-to-top').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-
       window.scrollTo({
         top: 0,
         left: 0,
@@ -215,17 +159,79 @@ function initBackToTop() {
   });
 }
 
+// Standard load
 document.addEventListener('DOMContentLoaded', initBackToTop);
+
+// For Shopify themes using Turbo / AJAX page transitions
 document.addEventListener('shopify:section:load', initBackToTop);
-document.addEventListener('page:load', initBackToTop);
+document.addEventListener('page:load', initBackToTop); // for Turbo
 
 
 
-/*
-------------------------------------------------------------
-Copyright popup trigger
-------------------------------------------------------------
-*/
+
+(function() {
+  // --- OPEN POPUP PROGRAMMATICALLY ---------------------------------
+  function openPopupEl(wrapper) {
+    if (!wrapper) return;
+
+    // find the inner popup node
+    var popupEl = wrapper.querySelector('.popup');
+    if (!popupEl) return;
+
+    // show popup
+    popupEl.classList.add('popup--visible');
+
+    // lock body / prevent background scroll (theme convention)
+    document.body.classList.add('notification-visible');
+  }
+
+  // listen for manual trigger events like:
+  // window.dispatchEvent(new CustomEvent('openPopup', { detail: 'newsletter_thank_you' }));
+  window.addEventListener('openPopup', function(e) {
+    var triggerId = e.detail;
+    if (!triggerId) return;
+
+    // match popup block with the same manual trigger id
+    var selector = '[data-popup][data-manual-trigger-id="' + triggerId + '"]';
+    var popupWrapper = document.querySelector(selector);
+
+    if (popupWrapper) {
+      openPopupEl(popupWrapper);
+    }
+  });
+
+  // prevent auto-open on "manual only" popups
+  document.querySelectorAll('[data-popup][data-manual-only="true"]').forEach(function(p) {
+    p.setAttribute('data-popup-delay', '');
+  });
+
+
+  // --- NEWSLETTER SUCCESS HANDLER ---------------------------------
+  // This part is ONLY needed if you want to open the popup
+  // after a successful AJAX newsletter submit instead of on click.
+  document.addEventListener('submit', function(e) {
+    var form = e.target;
+
+    // only catch newsletter forms you care about
+    if (!form.matches('[data-newsletter-form]')) return;
+
+    // At this point the form is being submitted.
+    // For themes that AJAX-submit and stay on page:
+    // after the theme finishes and shows "success", we fire popup.
+    setTimeout(function() {
+      var successMsg = form.querySelector(
+        '[data-newsletter-success], .form-status--success, .newsletter-form__message--success'
+      );
+
+      if (successMsg) {
+        window.dispatchEvent(new CustomEvent('openPopup', { detail: 'newsletter_thank_you' }));
+      }
+    }, 500);
+  }, true);
+})();
+
+
+/* Copyright */
 
 (function () {
   var TRIGGER_SELECTOR = '.js-copyright-trigger';
@@ -241,9 +247,11 @@ Copyright popup trigger
     var popup = wrapper.querySelector('.popup[id]');
     if (!popup) return;
 
+    // Set href ONCE so the theme can fully manage open + close
     trigger.setAttribute('href', '#' + popup.id);
   }
 
+  // Run after DOM is ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
@@ -252,28 +260,18 @@ Copyright popup trigger
 })();
 
 
+/* Scroll Down Section */
 
-/*
-------------------------------------------------------------
-Scroll down section
-------------------------------------------------------------
-*/
+document.getElementById('scroll-next').addEventListener('click', function(e) {
+  e.preventDefault();
 
-(function () {
-  const scrollButton = document.getElementById('scroll-next');
-  if (!scrollButton) return;
+  const currentSection = this.closest('.shopify-section');
+  const nextSection = currentSection?.nextElementSibling;
 
-  scrollButton.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const currentSection = this.closest('.shopify-section');
-    const nextSection = currentSection?.nextElementSibling;
-
-    if (nextSection) {
-      nextSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-})();
+  if (nextSection) {
+    nextSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+});
