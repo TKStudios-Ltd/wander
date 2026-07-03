@@ -34407,7 +34407,7 @@ div.footer-title h5 {
 }
 
 .search-grid .product-card .product-card__image.with-frame img {
-  border-width: 0.5vw;
+  border-width: 0.5vw !important;
   border-image-slice: 95 !important;
   /* 22px at 8px border = 2.75 multiplier */
   border-image-width: 2.75 !important;
