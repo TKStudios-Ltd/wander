@@ -83,7 +83,7 @@ if (!customElements.get('tabs-component')) {
 
 /*
 ------------------------------------------------------------
-Theme popups + newsletter success popup
+Newsletter success popup only
 ------------------------------------------------------------
 */
 
@@ -91,17 +91,10 @@ Theme popups + newsletter success popup
   const NEWSLETTER_SUCCESS_POPUP_ID = 'popup--popup_with_image_haEQhW';
 
   function closeThemePopups() {
-    document.querySelectorAll('[data-popup]').forEach(function (wrapper) {
-      wrapper.classList.remove('popup--visible', 'is-active', 'open', 'active');
-      wrapper.style.display = 'none';
-      wrapper.setAttribute('aria-hidden', 'true');
-    });
-
-    document.querySelectorAll('.popup').forEach(function (popup) {
-      popup.classList.remove('popup--visible', 'is-active', 'open', 'active');
-      popup.style.display = 'none';
-      popup.setAttribute('aria-hidden', 'true');
-      popup.setAttribute('hidden', '');
+    document.querySelectorAll('[data-popup], .popup').forEach(function (el) {
+      el.classList.remove('popup--visible', 'is-active', 'open', 'active');
+      el.style.display = '';
+      el.setAttribute('aria-hidden', 'true');
     });
 
     document.body.classList.remove(
@@ -116,25 +109,19 @@ Theme popups + newsletter success popup
   }
 
   function openPopupById(id) {
-    closeThemePopups();
-
     const popup = document.getElementById(id);
+    if (!popup) return console.warn('[Popup Debug] no #' + id);
 
-    if (!popup) {
-      console.warn('[Popup Debug] no #' + id);
-      return;
-    }
+    closeThemePopups();
 
     const wrapper = popup.closest('[data-popup]');
 
     if (wrapper) {
-      wrapper.style.display = '';
       wrapper.classList.add('popup--visible', 'is-active', 'open');
       wrapper.removeAttribute('hidden');
       wrapper.setAttribute('aria-hidden', 'false');
     }
 
-    popup.style.display = '';
     popup.classList.add('popup--visible', 'is-active', 'open');
     popup.removeAttribute('hidden');
     popup.setAttribute('aria-hidden', 'false');
@@ -142,37 +129,6 @@ Theme popups + newsletter success popup
     document.body.classList.add('notification-visible', 'popup-open');
   }
 
-  // Open popup links, e.g. <a href="#popup--example">
-  document.addEventListener('click', function (e) {
-    const link = e.target.closest('a[href^="#popup--"]');
-    if (!link) return;
-
-    e.preventDefault();
-
-    const popupId = link.getAttribute('href').slice(1);
-    openPopupById(popupId);
-  });
-
-  // Close popup
-  document.addEventListener('click', function (e) {
-    if (
-      e.target.closest('[data-popup-close]') ||
-      e.target.closest('[data-popup-underlay]') ||
-      e.target.closest('.popup__close') ||
-      e.target.closest('.popup__close__button')
-    ) {
-      e.preventDefault();
-      closeThemePopups();
-    }
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      closeThemePopups();
-    }
-  });
-
-  // Newsletter success redirect
   window.addEventListener('load', function () {
     const params = new URLSearchParams(window.location.search);
 
