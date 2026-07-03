@@ -34407,14 +34407,11 @@ div.footer-title h5 {
 }
 
 .search-grid .product-card .product-card__image.with-frame img {
-  border-width: 8px;
-
+  border-width: 0.5vw;
   border-image-slice: 95 !important;
-
   /* 22px at 8px border = 2.75 multiplier */
   border-image-width: 2.75 !important;
-
-  padding: 12px;
+  padding: 0.8vw;
 }
 
 .product-card a:hover .product-card__image img {
@@ -34441,9 +34438,6 @@ div.footer-title h5 {
   }
   .product-card .product-card__image.with-frame img {
     border-width: 0.8vw !important;
-  }
-  .search-grid .product-card .product-card__image.with-frame img {
-    border-width: 0.5vw !important;
   }
   .product-card .product-card__meta-list .product-meta__item {
     font-size: 0.5vw !important;
