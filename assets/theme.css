@@ -34442,6 +34442,9 @@ div.footer-title h5 {
   .product-card .product-card__image.with-frame img {
     border-width: 0.8vw !important;
   }
+  .search-grid .product-card .product-card__image.with-frame img {
+    border-width: 0.5vw !important;
+  }
   .product-card .product-card__meta-list .product-meta__item {
     font-size: 0.5vw !important;
   }
