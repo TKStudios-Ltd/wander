@@ -518,7 +518,7 @@
    ------------------------------ */
 
 [data-size="small"] .fc-artwork     { inset: 28% 28% 28% 29%; }
-[data-size="medium"] .fc-artwork    { inset: 24.5% 23% 23% 24.5%; }
+[data-size="medium"] .fc-artwork    { inset: 23% 23% 23% 23%; }
 [data-size="large"] .fc-artwork     { inset: 21% 20% 20% 21%; }
 
 [data-size="gallery"] .fc-artwork   { inset: 15% 15% 15% 15%; }
