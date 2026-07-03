@@ -17569,7 +17569,10 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   display: none;
 }
 .collection__filters-more span {
-  font-size: 7px;
+  font-family: urw-din-semi-condensed;
+  text-transform: uppercase;
+  font-size: 8px;
+  letter-spacing: 1.5px;
 }
 .no-js .collection__filters-more {
   display: none;
