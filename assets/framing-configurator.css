@@ -234,7 +234,7 @@
 .fc-preview__frame.fc-mat-border.fc-size-statement .fc-artwork {
     transform: scale(0.95);
 }
-.framing-configurator-landscape .fc-preview__frame.fc-mat-border.fc-size-statement img[data-role="preview"]] {
+.framing-configurator-landscape .fc-preview__frame.fc-mat-border.fc-size-statement img[data-role="preview"] {
     transform: scale(0.95) rotate(-90deg) scaleX(-1);
 }
 
