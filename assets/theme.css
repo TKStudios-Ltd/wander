@@ -5383,6 +5383,11 @@ hr.hr--full {
   display: table;
   clear: both;
 }
+@media only screen and (min-width: 768px) {
+  .wrapper--full-padded {
+    padding: 0 40px;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .wrapper--full-padded {
     padding: 0 var(--gutter);
@@ -5399,6 +5404,11 @@ hr.hr--full {
   content: "";
   display: table;
   clear: both;
+}
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    padding: 0 40px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .wrapper {
