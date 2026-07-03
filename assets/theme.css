@@ -17572,6 +17572,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   font-family: urw-din-semi-condensed;
   text-transform: uppercase;
   font-size: 8px;
+  font-weight: 400;
   letter-spacing: 1.5px;
 }
 .no-js .collection__filters-more {
