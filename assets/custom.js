@@ -90,56 +90,38 @@ Newsletter success popup only
 (function () {
   const NEWSLETTER_SUCCESS_POPUP_ID = 'popup--popup_with_image_haEQhW';
 
-  function closeThemePopups() {
-    document.querySelectorAll('[data-popup], .popup').forEach(function (el) {
-      el.classList.remove('popup--visible', 'is-active', 'open', 'active');
-      el.style.display = '';
-      el.setAttribute('aria-hidden', 'true');
-    });
+  function openNewsletterPopup() {
+    const popup = document.getElementById(NEWSLETTER_SUCCESS_POPUP_ID);
 
-    document.body.classList.remove(
-      'popup-open',
-      'notification-visible',
-      'js-drawer-open',
-      'js-drawer-open-lock',
-      'scroll-lock',
-      'no-scroll',
-      'overflow-hidden'
-    );
-  }
-
-  function openPopupById(id) {
-    const popup = document.getElementById(id);
-    if (!popup) return console.warn('[Popup Debug] no #' + id);
-
-    closeThemePopups();
+    if (!popup) {
+      console.warn('[Newsletter Popup] Could not find #' + NEWSLETTER_SUCCESS_POPUP_ID);
+      return;
+    }
 
     const wrapper = popup.closest('[data-popup]');
 
+    popup.removeAttribute('hidden');
+    popup.removeAttribute('aria-hidden');
+    popup.classList.add('popup--visible');
+
     if (wrapper) {
-      wrapper.classList.add('popup--visible', 'is-active', 'open');
       wrapper.removeAttribute('hidden');
-      wrapper.setAttribute('aria-hidden', 'false');
+      wrapper.removeAttribute('aria-hidden');
+      wrapper.classList.add('popup--visible', 'is-active', 'open');
     }
 
-    popup.classList.add('popup--visible', 'is-active', 'open');
-    popup.removeAttribute('hidden');
-    popup.setAttribute('aria-hidden', 'false');
-
-    document.body.classList.add('notification-visible', 'popup-open');
+    document.body.classList.add('notification-visible');
   }
 
   window.addEventListener('load', function () {
     const params = new URLSearchParams(window.location.search);
 
     if (params.get('customer_posted') === 'true') {
-      setTimeout(function () {
-        openPopupById(NEWSLETTER_SUCCESS_POPUP_ID);
-      }, 300);
+      setTimeout(openNewsletterPopup, 500);
+      setTimeout(openNewsletterPopup, 1000);
     }
   });
 })();
-
 
 
 /*
