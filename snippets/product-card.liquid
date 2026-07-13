@@ -159,7 +159,7 @@
             {%- endunless -%}
 
             {%- if location_text != blank -%}
-              <span class="product-meta__item product-meta__location hide-mob">{{ location_text | escape }}</span>
+              <span class="product-meta__item product-meta__location hide-mob hide-tablet">{{ location_text | escape }}</span>
             {%- endif -%}
 
             <span class="product-meta__item product-card__title">“{{ product.title | escape }}”</span>
