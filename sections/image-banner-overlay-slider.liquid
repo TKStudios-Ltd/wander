@@ -86,12 +86,12 @@
             {%- comment -%} Overlay white box (desktop uses X/Y, mobile centered) {%- endcomment -%}
             <div class="ibos__overlay"
                  style="--x: {{ block.settings.pos_x | default: 50 }}%; --y: {{ block.settings.pos_y | default: 50 }}%; --maxw: {{ block.settings.box_max_width | default: 640 }}px;">
-              <div class="ibos__box">
+              <a class="ibos__box" href="{{ col.url }}">
                 {%- if title != blank -%}
                   {%- if col -%}
-                    <a class="cbs__title collection__box__title" href="{{ col.url }}">
+                    <div class="cbs__title collection__box__title">
                       <em>WANDERINGS</em>™ COLLECTION:&nbsp;<b style="font-weight:700;">{{ title | escape }}</b>
-                    </a>
+                    </div>
                   {%- else -%}
                     <span class="cbs__title collection__box__title">
                       <em>WANDERINGS</em>™ COLLECTION:&nbsp;<b style="font-weight:700;">{{ title | escape }}</b>
@@ -110,7 +110,7 @@
                     <a class="btn btn--solid btn--large btn--black" href="{{ col.url }}">{{ block.settings.button_label | default: 'Shop the collection' }}</a>
                   </div>
                 {%- endif -%}
-              </div>
+              </a>
             </div>
 
           </div>
