@@ -100,7 +100,7 @@
         "highlight_color": "#000000",
         "highlight_text_color": "",
         "heading_size": 130,
-        "content": "<p>We know how integral artwork can be in a room. And in fact, we know that quite often, some designers like to let the artwork set the mood, tone, & entire vision for the space. <br/><br/>Our WANDER Trade Program was created to connect you to personalized service... and we are here to help. Whether it’s curating a custom collection for you, or simply giving you personalized support for your vision...we have hundreds of WANDERINGS™ FINE ART PHOTOGRAPHY prints to choose from, to elevate your walls. <br/><br/>With a myriad of additional fine art photography/artwork series & collections still not released our website...the WANDER Trade Program was also designed to give you access to this artwork. If you have a color palette or theme in mind, we can work with you to curate a special collection for your space. Want custom sizing & framing? No Problem. And you’ll be the first to hear about Exclusive Limited Edition releases, prior to the general public.<br/><br/>We are passionate about working with other creatives in the field, to help build sophisticated interiors that connect people to nature...and inspire everyone, to WANDER. Our WANDER Trade Program is open to interior designers, contractors, art buyers, galleries, home stagers & other creative professionals in the trade. <br/><br/>Apply TODAY to get started on your journey with us.<br/></p>",
+        "content": "<p>We know how integral artwork can be in a room. And in fact, we know that quite often, some designers like to let the artwork set the mood, tone, & entire vision for the space. <br/><br/>Our WANDER Trade Program was created to connect you to personalized service... and we are here to help. Whether it’s curating a custom collection for you, or simply giving you personalized support for your vision...we have hundreds of WANDERINGS™ FINE ART PHOTOGRAPHY prints to choose from, to elevate your walls. <br/><br/>With a myriad of additional fine art photography/artwork series & collections still not released our website...the WANDER Trade Program was also designed to give you access to this artwork. If you have a color palette or theme in mind, we can work with you to curate a special collection for your space. Want custom sizing & framing? No Problem. And you’ll be the first to hear about Exclusive Limited Edition releases, prior to the general public.<br/><br/>We are passionate about working with other creatives in the field, to help build sophisticated interiors that connect people to nature...and inspire everyone, to WANDER. Our WANDER Trade Program is open to interior designers, contractors, art buyers, galleries, home stagers & other creative professionals in the trade. <br/><br/>Apply TODAY to get started on your journey with us.</p>",
         "text_alignment": "left",
         "button_text": "Apply Now",
         "button_link": "shopify://pages/join-trade-program",
@@ -203,8 +203,8 @@
         "text_block_eNP6cE"
       ],
       "custom_css": [
-        "@media(min-width:990px){&{margin:1.2vw 0;background:#ececea}.section__heading{font-size:2.4rem;margin-bottom:3rem}}",
-        "@media(max-width:989px){&{margin:1rem 0;background:#ececea}.section__heading{font-size:2rem;margin-bottom:2.5rem}}"
+        "@media (min-width: 990px) {& {margin: 1.2vw 0; background: #ececea; } .section__heading {font-size: 2.4rem; margin-bottom: 3rem; }}",
+        "@media (max-width: 989px) {& {margin: 1rem 0; background: #ececea; } .section__heading {font-size: 2rem; margin-bottom: 2.5rem; }}"
       ],
       "name": "Text columns with images",
       "settings": {
