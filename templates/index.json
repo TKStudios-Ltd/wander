@@ -1170,7 +1170,7 @@
       "custom_css": [
         ".text-dark {background: #f0efed !important;}",
         ".text-dark {padding: 120px 0;}",
-        ".newsletter-form .errors, .newsletter-form .form-success {margin: var(--form-margin) auto; width: max-content;}"
+        ".newsletter-form .errors,.newsletter-form .form-success {margin: var(--form-margin) auto; width: max-content;}"
       ],
       "name": "Newsletter",
       "settings": {
@@ -1359,9 +1359,9 @@
             "series_name": "WANDERINGS™ COLLECTION",
             "heading": "WANDERINGS™ Fine Art Photography",
             "products": [
-              "a-perfect-afternoon-2",
-              "a-perfect-afternoon-6",
-              "a-perfect-afternoon-8"
+              "sea-of-jewels",
+              "sea-of-jewels-2",
+              "sea-of-jewels-3"
             ],
             "show_button": true,
             "button_label": "Shop"
