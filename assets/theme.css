@@ -14351,7 +14351,7 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   letter-spacing: 0.8px;
 }
 
-@media (max-width: 989px) {
+@media (max-width: 767px) {
   .blog__post-excerpt-link .rte {
     font-size: 10px !important;
     line-height: 1.4;
