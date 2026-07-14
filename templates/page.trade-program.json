@@ -203,8 +203,8 @@
         "text_block_eNP6cE"
       ],
       "custom_css": [
-        "@media(min-width:990px){.section-columns{margin:1.2vw 0!important;background:#ececea}.section-columns .section__heading{font-size:2.4rem;margin:0 0 3rem}}",
-        "@media(max-width:989px){.section-columns{margin:1rem 0!important;background:#ececea}.section-columns .section__heading{font-size:2rem;margin:0 0 2.5rem}.section-columns__slider{display:grid!important;grid-template-columns:1fr;gap:44px}.section-columns .column-item{width:100%!important;min-width:0;max-width:none!important}}"
+        "@media(min-width:990px){&{margin:1.2vw 0;background:#ececea}.section__heading{font-size:2.4rem;margin-bottom:3rem}}",
+        "@media(max-width:989px){&{margin:1rem 0;background:#ececea}.section__heading{font-size:2rem;margin-bottom:2.5rem}}"
       ],
       "name": "Text columns with images",
       "settings": {
