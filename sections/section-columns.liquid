@@ -70,6 +70,28 @@
       {{ selector_id }} .carousel--mobile { --item-width-mobile: calc(90% / {{ columns_mobile }} - var(--grid-gutter)); }
     {%- endif -%}
   }
+  .section-columns .section-columns__slider{
+    display:grid;
+    width:100%;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:20px;
+  }
+  .section-columns .column-item{
+    width:100%;
+    min-width:0;
+    max-width:none;
+  }
+  @media screen and (max-width:989px){
+    .section-columns .section-columns__slider{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:44px 18px;
+    }
+    .section-columns .grid--mobile > :last-child:nth-child(odd){
+      grid-column:1/-1;
+      justify-self:center;
+      width:50%;
+    }
+  }
 {%- endstyle -%}
 
 <div id="{{ id }}"
