@@ -97,9 +97,9 @@
       </div>
     {%- endif -%}
 
-    <div class="section-columns__wrapper carousel__container">
+    <div class="section-columns__wrapper">
       {%- if section.blocks.size > 0 -%}
-        <div class="section-columns__slider carousel{{ mobile_class }}" data-slider role="group">
+        <div class="section-columns__slider{% if layout_mobile == 'grid' %} grid--mobile{% elsif layout_mobile == 'stacked' %} stacked--mobile{% endif %}" role="group">  
           {%- for block in section.blocks -%}
             {%- liquid
               assign button_link = block.settings.button_link
@@ -154,7 +154,7 @@
               assign sizes = '(min-width: 1024px) ' | append: img_width_lg | append: ', (min-width: 768px) ' | append: img_width_md | append: ', ' | append: img_width_sm
             -%}
 
-            <div class="column-item carousel__item {{ item_width }} {{ mobile_width }}{%- render 'button-fallback-classes', primary_color: button_color, bg_color_secondary: bg_color_secondary -%}{% if show_borders %} column-item--border{% endif %}{% if show_images %} column-item--image{% endif %}"
+            <div class="column-item {{ item_width }} {{ mobile_width }}{%- render 'button-fallback-classes', primary_color: button_color, bg_color_secondary: bg_color_secondary -%}{% if show_borders %} column-item--border{% endif %}{% if show_images %} column-item--image{% endif %}"
               {{ block.shopify_attributes }}
               data-slider-item
               {% if animations_enabled %}
