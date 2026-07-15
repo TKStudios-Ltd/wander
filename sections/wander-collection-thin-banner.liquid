@@ -198,7 +198,7 @@
   function scrollToId(id) {
     const el = document.getElementById(id);
     if (!el) return;
-    const y = el.getBoundingClientRect().top + window.pageYOffset - headerHeight() - 80;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - headerHeight() - 100;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
   const root = document.getElementById('{{ id }}');
