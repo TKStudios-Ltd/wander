@@ -14878,8 +14878,10 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   /* font-family: "swym-font" !important; */
   display: none;
 }
-.swym-button.swym-add-to-wishlist-view-product.swym-heart:after {
-  font-size: 18px;
+@media (min-width: 990px) {
+  .swym-button.swym-add-to-wishlist-view-product.swym-heart:after {
+    font-size: 24px;
+  }
 }
 
 .cart__items .cart__item__content {
