@@ -141,13 +141,20 @@
       height: 100vw;
     }
     #CollectionBottomSlider--{{ section.id }} .cbs__content .cbs__description {
-        font-size: 11px;
+      font-size: 13px;
+      line-height: 1.5;
     }
     #CollectionBottomSlider--{{ section.id }} .cbs__pager { 
       display: none !important; 
     }
     .collection__box__title {
       font-size: 7px !important;
+    }
+  }
+  @media (max-width: 767px) {
+    #CollectionBottomSlider--{{ section.id }} .cbs__content .cbs__description {
+      font-size: 12px;
+      line-height: 1.4;
     }
   }
 
