@@ -13387,15 +13387,18 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
 }
 @media screen and (max-width: 767px) {
   .section-header--article h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
   .article__content {
     padding: 0 20px;
   }
+  .para-left-only .text__content p {
+    font-size: 16px !important;
+  }
 }
 
 .article__content p {
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: .8px;
 }
 
