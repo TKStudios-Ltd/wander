@@ -195,7 +195,7 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 120px 0 110px; }}",
-        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 90px; } p {font-size: 16px !important; } .h2 {font-size: 28px !important; }}"
+        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 90px; } p {font-size: 16px !important; } .h2 {font-size: 24px !important; }}"
       ],
       "name": "Text",
       "settings": {
