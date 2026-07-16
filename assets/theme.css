@@ -22634,7 +22634,7 @@ body#peonies .list-collections-section .grid__container .list-collections__item:
 
 @media only screen and (max-width: 767px) {
   .list-collections__item__title {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.5;
     padding: 0 50px;
     margin: 1.5rem auto;
