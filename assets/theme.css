@@ -13386,8 +13386,9 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   }
 }
 @media screen and (max-width: 767px) {
-  .section-header--article h1 {
-    font-size: 28px;
+  .section-header--article h1,
+  .text-section h2.text__heading {
+    font-size: 28px !important;
   }
   .article__content {
     padding: 0 20px;
