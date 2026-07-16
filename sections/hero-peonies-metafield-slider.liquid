@@ -58,7 +58,7 @@
             <div class="ibps__media">
               <picture>
                 <source
-                  media="(min-width: 750px)"
+                  media="(min-width: 768px)"
                   srcset="{{ desktop_image | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
                           {{ desktop_image | image_url: width: 2000 }} 2000w,
                           {{ desktop_image | image_url: width: 1600 }} 1600w,
@@ -112,7 +112,7 @@
                 <picture>
                   {%- if d_img != blank -%}
                     <source
-                      media="(min-width: 750px)"
+                      media="(min-width: 768px)"
                       srcset="{{ d_img | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
                               {{ d_img | image_url: width: 2000 }} 2000w,
                               {{ d_img | image_url: width: 1600 }} 1600w,
@@ -266,7 +266,7 @@
         max-width: 900px;
         margin: 0 auto 60px;
     }
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 768px) {
         .peonies__hero_intro .text__content p {
             font-size: 18px;  
         }

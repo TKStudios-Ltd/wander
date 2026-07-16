@@ -73,7 +73,7 @@
                         <picture>
                         {%- if d_img != blank -%}
                             <source
-                            media="(min-width: 750px)"
+                            media="(min-width: 768px)"
                             srcset="{{ d_img | image_url: width: 2400 }} 2400w,
                                     {{ d_img | image_url: width: 2000 }} 2000w,
                                     {{ d_img | image_url: width: 1600 }} 1600w,
@@ -174,7 +174,7 @@
       margin-bottom: 8px;
     }
   }
-  @media (min-width: 750px) {
+  @media (min-width: 768px) {
     #IBTAS--{{ section.id }} .ibtas__img { 
       height: var(--height-desktop, auto); 
       padding: 0 4rem;

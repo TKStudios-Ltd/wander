@@ -57,7 +57,7 @@
               <picture>
                 {%- if d_img != blank -%}
                   <source
-                    media="(min-width: 750px)"
+                    media="(min-width: 768px)"
                     srcset="{{ d_img | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
                             {{ d_img | image_url: width: 1600 }} 1600w,
                             {{ d_img | image_url: width: 1200 }} 1200w,
@@ -183,7 +183,7 @@
   }
   #IBOS--{{ section.id }} .swiper-pagination-bullet-active { opacity: 1; }
 
-  @media (min-width: 750px) {
+  @media (min-width: 768px) {
     #IBOS--{{ section.id }} .ibos__img {
       height: var(--height-desktop, auto);
       max-height: 880px;
@@ -194,7 +194,7 @@
       transform: translate(-50%, -55%) scale(0.9) !important;
     }
   }
-  @media (min-width: 750px) and (max-width: 989px) {
+  @media (min-width: 768px) and (max-width: 989px) {
     #IBOS--{{ section.id }} .ibos__box {
       transform: translate(-50%, -55%) scale(0.75) !important;
     }
@@ -261,12 +261,12 @@
       "type": "select",
       "id": "height_mobile",
       "label": "Mobile height",
-      "default": "750px",
+      "default": "768px",
       "options": [
         { "value": "auto", "label": "Adapt to image" },
         { "value": "400px", "label": "Small (400px)" },
         { "value": "600px", "label": "Medium (600px)" },
-        { "value": "750px", "label": "Large (750px)" }
+        { "value": "768px", "label": "Large (768px)" }
       ]
     }
   ],

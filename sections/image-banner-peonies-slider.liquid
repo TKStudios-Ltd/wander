@@ -42,7 +42,7 @@
               <picture>
                 {%- if d_img != blank -%}
                   <source
-                    media="(min-width: 750px)"
+                    media="(min-width: 768px)"
                     srcset="{{ d_img | image_url: width: MAX_DESKTOP_W }} {{ MAX_DESKTOP_W }}w,
                             {{ d_img | image_url: width: 2000 }} 2000w,
                             {{ d_img | image_url: width: 1600 }} 1600w,

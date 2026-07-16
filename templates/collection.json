@@ -13,7 +13,7 @@
       "type": "collection-image-with-title",
       "custom_css": [
         ".collection--title {padding: 0;}",
-        "@media (min-width: 750px) {.section-padding {padding: 150px 0; }}"
+        "@media (min-width: 768px) {.section-padding {padding: 150px 0; }}"
       ],
       "settings": {
         "banner_height": "original-height",
@@ -143,7 +143,7 @@
         "text_6VUppM"
       ],
       "custom_css": [
-        "@media screen and (min-width: 750px) {.text p {font-size: 18px !important; } .text hr {margin: 40px auto !important; width: 125px !important; }}",
+        "@media screen and (min-width: 768px) {.text p {font-size: 18px !important; } .text hr {margin: 40px auto !important; width: 125px !important; }}",
         ".text p {font-size: 14px;}",
         "@media (max-width: 767px) {.text hr {margin: 30px auto !important; width: 100px !important; }}"
       ],
