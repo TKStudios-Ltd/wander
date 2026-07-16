@@ -21887,7 +21887,7 @@ search-popdown details > summary:first-of-type {
     font-size: calc(0.7rem * var(--adjust-heading));
   }
   .image-with-text__heading.h2 {
-    font-size: calc(2rem * 0.8) !important;
+    font-size: 24px !important;
   }
 }
 
