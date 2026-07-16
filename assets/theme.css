@@ -35185,7 +35185,7 @@ main img {
 
 @media (max-width: 767px) {
   .swym-atw-btn-wrapper.product_title_left-position, .swym-atw-btn-wrapper.product_title_right-position {
-    justify-content: start !important;
+    justify-content: space-between !important;
   }
 }
 @media (min-width: 768px) {
