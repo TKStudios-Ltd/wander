@@ -22641,8 +22641,14 @@ body#peonies .list-collections-section .grid__container .list-collections__item:
     max-width: 530px !important;
   }
   .ibos__box .list-collections__item__title {
-    font-size: 16px !important;
+    font-size: 18px !important;
     line-height: 1.5 !important;
+  }
+  .ibos__box .collection__box__title {
+    font-size: 10px !important;
+  }
+  .ibos__box .ibos__cta .btn {
+    font-size: 10px;
   }
   .list-collections__item__content {
     padding: 65px 0 60px;
