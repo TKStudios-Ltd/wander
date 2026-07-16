@@ -13393,7 +13393,7 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   .article__content {
     padding: 0 20px;
   }
-  .para-left-only .text__content p {
+  .text-section .text__content p {
     font-size: 16px !important;
   }
 }
