@@ -13387,7 +13387,7 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
 }
 @media screen and (max-width: 767px) {
   .section-header--article h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
   .article__content {
     padding: 0 20px;
@@ -13395,7 +13395,7 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
 }
 
 .article__content p {
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: .8px;
 }
 
