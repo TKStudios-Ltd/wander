@@ -121,10 +121,12 @@
 /* Newsletter */
 .newsletter-section .newsletter-section__entry h2 {
     margin-bottom: 25px;
-}
-
-.newsletter-section .newsletter-section__entry h2 {
     letter-spacing: .1px;
+}
+@media (max-width: 767px) {
+    .newsletter-section .newsletter-section__entry h2 {
+        font-size: 28px;
+    }
 }
 
 .newsletter-section .newsletter-section__entry p {
