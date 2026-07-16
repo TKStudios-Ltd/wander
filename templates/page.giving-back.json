@@ -67,6 +67,7 @@
       "name": "Text",
       "settings": {
         "custom_class": "",
+        "custom_id": "",
         "text_position": "center",
         "bg_color_secondary": false,
         "text_color": "text-dark",
@@ -84,6 +85,7 @@
       ],
       "name": "Image with text",
       "settings": {
+        "custom_id": "",
         "section_height": "seven-fifty-height",
         "layout": "inline",
         "image_location": "left",
@@ -193,11 +195,12 @@
       ],
       "custom_css": [
         "@media screen and (min-width: 768px) {.section-padding {padding: 120px 0 110px; }}",
-        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 90px; } p {font-size: 12px !important; } .h2 {font-size: 22px !important; }}"
+        "@media screen and (max-width: 767px) {.section-padding {padding: 100px 0 90px; } p {font-size: 16px !important; } .h2 {font-size: 28px !important; }}"
       ],
       "name": "Text",
       "settings": {
         "custom_class": "",
+        "custom_id": "",
         "text_position": "center",
         "bg_color_secondary": false,
         "text_color": "text-dark",
@@ -325,6 +328,7 @@
       "name": "Text",
       "settings": {
         "custom_class": "",
+        "custom_id": "",
         "text_position": "center",
         "bg_color_secondary": false,
         "text_color": "text-dark",
@@ -452,6 +456,7 @@
       "name": "Text",
       "settings": {
         "custom_class": "",
+        "custom_id": "",
         "text_position": "center",
         "bg_color_secondary": false,
         "text_color": "text-dark",
@@ -579,6 +584,7 @@
       "name": "Text",
       "settings": {
         "custom_class": "",
+        "custom_id": "",
         "text_position": "center",
         "bg_color_secondary": false,
         "text_color": "text-dark",
