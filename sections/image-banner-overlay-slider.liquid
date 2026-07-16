@@ -107,7 +107,7 @@
 
                 {%- if block.settings.show_button and col -%}
                   <div class="ibos__cta">
-                    <a class="btn btn--solid btn--large btn--black" href="{{ col.url }}">{{ block.settings.button_label | default: 'Shop the collection' }}</a>
+                    <span class="btn btn--solid btn--large btn--black">{{ block.settings.button_label | default: 'Shop the collection' }}</span>
                   </div>
                 {%- endif -%}
               </a>
