@@ -14883,7 +14883,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   display: none;
 }
 
-.swym-button.swym-add-to-wishlist-view-product.swym-heart:after {
+.framing-configurator__product-info .swym-button.swym-add-to-wishlist-view-product.swym-heart:after {
   font-size: 22px;
 }
 .framing-configurator__product-info .product__title {
