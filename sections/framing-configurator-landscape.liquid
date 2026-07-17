@@ -621,7 +621,7 @@
     cardsWrap.innerHTML = '';
 
     const assetsBase2 = "{{ 'asset-probe.js' | asset_url }}".split('asset-probe.js')[0];
-    const svgSrcFor = (sizeToken) => assetsBase2 + `size-landscape-${sizeToken}.svg`;
+    const svgSrcFor = (sizeToken) => assetsBase2 + `size-landscape-${sizeToken}.svg?v=1`;
 
     (CFG.sizes || []).forEach(s => {
       const token = s.token;
