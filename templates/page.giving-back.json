@@ -81,7 +81,8 @@
       "custom_css": [
         "@media (min-width: 990px) {.image-with-text__items {gap: 1.2vw; background: white; } .image-with-text__image, .image-with-text__content {flex-basis: calc(50% - 0.6vw); background: var(--bg) !important; } .image-with-text__content-items {max-width: 36rem !important; margin: auto; } .image-with-text__content {padding: 8rem 3rem !important; }}",
         ".image-with-text__content {padding: 5rem 3rem;}",
-        ".image-with-text__heading {margin: 10px 0 35px; font-size: 2.4rem; line-height: 1;}"
+        ".image-with-text__heading {margin: 10px 0 35px; font-size: 2.4rem; line-height: 1;}",
+        "@media (max-width: 98px) {.image-with-text__content {text-align: center; }}"
       ],
       "name": "Image with text",
       "settings": {
