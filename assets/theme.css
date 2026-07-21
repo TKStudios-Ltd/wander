@@ -14290,6 +14290,11 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   padding-right: 0;
   --grid-mobile: repeat(2, minmax(0, 1fr));
 }
+@media only screen and (min-width: 500px) {
+  .blog__post {
+    --grid-mobile: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
 @media only screen and (min-width: 768px) {
   .blog__post {
     grid-template-columns: var(--grid);
