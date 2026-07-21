@@ -29817,7 +29817,7 @@ body:not(.no-outline) .product-grid-item__image:focus-within {
     --full-height: 100vh;
     top: 0;
     margin-top: calc(-1 * var(--collection-sticky-bar-height));
-    z-index: 3;
+    z-index: 2;
   }
 }
 @media only screen and (min-width: 768px) {
