@@ -270,19 +270,10 @@
         "text_qzQrRh": {
           "type": "text",
           "settings": {
-            "text": "<p>Take advantage of TRADE DISCOUNTS, EXCLUSIVE ACCESS, CUSTOMIZATION, PERSONALIZED SERVICE, TAX EXEMPTIONS & MORE by applying for our WANDER TRADE PROGRAM. Get started today on your journey with us.</p>",
+            "text": "<p>Take advantage of TRADE DISCOUNTS, EXCLUSIVE ACCESS, CUSTOMIZATION, PERSONALIZED SERVICE, TAX EXEMPTIONS & MORE by applying for our WANDER TRADE PROGRAM. Get started today on your journey with us. Let’s WANDER, together.</p>",
             "size": 100,
-            "max_width": 650,
-            "margin_bottom": 25
-          }
-        },
-        "text_HaeMb4": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Let’s WANDER, together.</p>",
-            "size": 100,
-            "max_width": 675,
-            "margin_bottom": 50
+            "max_width": 700,
+            "margin_bottom": 40
           }
         },
         "button_YUXTtp": {
@@ -298,7 +289,6 @@
       },
       "block_order": [
         "text_qzQrRh",
-        "text_HaeMb4",
         "button_YUXTtp"
       ],
       "custom_css": [
