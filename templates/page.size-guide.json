@@ -123,7 +123,7 @@
         ".collection-anchor-nav__scroll {justify-content: center !important; padding-left: 0;}",
         ".collection-anchor-nav__inner {margin: 2rem auto;}",
         ".collection-anchor-nav__item:first-child + .collection-anchor-nav__item {border-left: none; margin-left: 0; padding-left: 0;}",
-        "@media (max-width: 749px) {.collection-anchor-nav__item + .collection-anchor-nav__item {padding: 0 0 10px 0; margin: 0 0 10px 0; border-left: none; } .collection-anchor-nav__list {flex-direction: column; align-items: center; }}"
+        "@media (max-width: 767px) {.collection-anchor-nav__item + .collection-anchor-nav__item {padding: 0 0 6px 0; margin: 0 0 6px 0; border-left: none; } .collection-anchor-nav__list {flex-direction: column; align-items: center; }}"
       ],
       "name": "Collection anchor nav",
       "settings": {
