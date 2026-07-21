@@ -48,7 +48,7 @@
         "text_mkAd8V": {
           "type": "text",
           "settings": {
-            "text": "<p>Feel good knowing that with the purchase <br/>of every print on our website, you are supporting <br/>an environmental or wildlife cause, in need.</p>",
+            "text": "<p>Feel good knowing that with the purchase <br/>of every print on our website, you are supporting an environmental or wildlife cause, in need.</p>",
             "size": 100,
             "max_width": 500,
             "margin_bottom": 16
