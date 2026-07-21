@@ -14290,9 +14290,12 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   padding-right: 0;
   --grid-mobile: repeat(2, minmax(0, 1fr));
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 767px) {
   .blog__post {
     --grid-mobile: repeat(1, minmax(0, 1fr)) !important;
+  }
+  .blog__post_main .blog__post-content .breadcrumb__list .breadcrumb__item {
+    font-size: 7px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -14367,7 +14370,7 @@ body:not(.no-outline) .selector-wrapper--swatches .radio__fieldset:focus-within,
   }
   .blog__post-title {
     margin: 0 0 8px 0;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.2;
   }
 }
