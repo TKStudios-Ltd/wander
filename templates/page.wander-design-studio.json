@@ -47,10 +47,19 @@
             "margin_bottom": 25
           }
         },
+        "text_Mm4YWR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you are interested in a collaboration, hiring us for a brand, product  or another design project, or licensing our fine art/photography,  please fill out the form to contact us directly. </p>",
+            "size": 100,
+            "max_width": 525,
+            "margin_bottom": 25
+          }
+        },
         "text_CgMi9t": {
           "type": "text",
           "settings": {
-            "text": "<p>If you are interested in a collaboration, hiring us for a brand, product  or another design project, or licensing our fine art/photography,  please fill out the form to contact us directly.  <br/>We’d love to hear from you!</p>",
+            "text": "<p>We’d love to hear from you!</p>",
             "size": 100,
             "max_width": 525,
             "margin_bottom": 0
@@ -61,11 +70,12 @@
         "image_m3dd6n",
         "separator_6niMB6",
         "text_LyhPjM",
+        "text_Mm4YWR",
         "text_CgMi9t"
       ],
       "custom_css": [
-        "@media (min-width: 750px) {hr {margin: 40px auto 80px !important; width: 125px !important; } img {margin-bottom: 15px; }}",
-        "@media (max-width: 749px) {hr {margin: 55px auto 65px !important; width: 100px !important; } img {margin-bottom: 10px; }}"
+        "@media (min-width: 768px) {hr {margin: 40px auto 80px !important; width: 125px !important; } img {margin-bottom: 15px; }}",
+        "@media (max-width: 767px) {hr {margin: 55px auto 65px !important; width: 100px !important; } img {margin-bottom: 10px; }}"
       ],
       "name": "Text",
       "settings": {
