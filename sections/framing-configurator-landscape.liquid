@@ -617,6 +617,7 @@
       propAsset.value  = myLoad.filename;
 
       setPressed(pillsSize, sizeToken);
+
       setPressed(pillsOption, optionToken + '|' + matToken);
       if (colorToken !== naToken && pillsFrame._setActive) pillsFrame._setActive(colorToken);
 
@@ -818,21 +819,65 @@
   }
   buildOptionRadios();
 
-  // Defaults — Collector / Natural / Framed w/ Mat (border)
-  sizeToken = 'collector';
-  const framedBorder = (CFG.framing_options || []).find(o => o.token === 'frame' && o.mat_token === 'border')
-                    || (CFG.framing_options || []).find(o => o.token === 'frame')
-                    || (CFG.framing_options || [])[0];
+  // Defaults
+  if (IS_PEONIES) {
+    // Peonies default:
+    // Statement / Oversized Mat / Natural
+    // Forever Blooming + Inner Beauty use Whitewash
+    sizeToken = 'statement';
 
-  optionToken = framedBorder ? framedBorder.token : 'frame';
-  matToken    = framedBorder ? framedBorder.mat_token : 'border';
+    const oversizedMat =
+      (CFG.framing_options || []).find(
+        o => o.token === 'frame' && o.mat_token === 'oversized'
+      ) ||
+      (CFG.framing_options || []).find(o => o.token === 'frame') ||
+      (CFG.framing_options || [])[0];
 
-  const natural = (CFG.frame_colors || []).find(c => c.token === 'natural');
-  colorToken = natural ? 'natural' : (
-    ((CFG.frame_colors || []).find(c => c.token !== naToken) || {}).token || naToken
-  );
+    optionToken = oversizedMat ? oversizedMat.token : 'frame';
+    matToken = oversizedMat ? oversizedMat.mat_token : 'oversized';
+
+    const preferredColor =
+      (IS_FOREVER_BLOOMING || IS_INNER_BEAUTY)
+        ? 'whitewash'
+        : 'natural';
+
+    const preferredColorEntry =
+      (CFG.frame_colors || []).find(c => c.token === preferredColor);
+
+    const naturalEntry =
+      (CFG.frame_colors || []).find(c => c.token === 'natural');
+
+    colorToken = preferredColorEntry
+      ? preferredColor
+      : naturalEntry
+        ? 'natural'
+        : (((CFG.frame_colors || []).find(c => c.token !== naToken) || {}).token || naToken);
+
+  } else {
+    // Standard default:
+    // Collector / Framed with Mat / Natural
+    sizeToken = 'collector';
+
+    const framedBorder =
+      (CFG.framing_options || []).find(
+        o => o.token === 'frame' && o.mat_token === 'border'
+      ) ||
+      (CFG.framing_options || []).find(o => o.token === 'frame') ||
+      (CFG.framing_options || [])[0];
+
+    optionToken = framedBorder ? framedBorder.token : 'frame';
+    matToken = framedBorder ? framedBorder.mat_token : 'border';
+
+    const natural =
+      (CFG.frame_colors || []).find(c => c.token === 'natural');
+
+    colorToken = natural
+      ? 'natural'
+      : (((CFG.frame_colors || []).find(c => c.token !== naToken) || {}).token || naToken);
+  }
 
   setPressed(pillsSize, sizeToken);
+
   if (pillsOption._check) pillsOption._check(optionToken, matToken);
   if (pillsSize._checkSizeRadio) pillsSize._checkSizeRadio(sizeToken);
   if (colorToken !== naToken && pillsFrame._setActive) pillsFrame._setActive(colorToken);
