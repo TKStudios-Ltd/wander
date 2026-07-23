@@ -257,6 +257,25 @@
   // ---------------- Core config & DOM ----------------
   const CFG = {{ cfg.value | json }};
   const IS_OLD = {% if product.tags contains '!OLD' %}true{% else %}false{% endif %};
+
+  const IS_PEONIES = {% liquid
+    assign is_peonies = false
+    if collection and collection.template_suffix == 'peonies'
+      assign is_peonies = true
+    endif
+    unless is_peonies
+      for product_collection in product.collections
+        if product_collection.template_suffix == 'peonies'
+          assign is_peonies = true
+          break
+        endif
+      endfor
+    endunless
+    echo is_peonies
+  %};
+  const IS_FOREVER_BLOOMING = {% if product.tags contains 'Forever Blooming' %}true{% else %}false{% endif %};
+  const IS_INNER_BEAUTY = {% if product.tags contains 'Inner Beauty' %}true{% else %}false{% endif %};
+
   const assetsBase = "{{ 'asset-probe.js' | asset_url }}".split('asset-probe.js')[0];
 
   const pillsSize   = root.querySelector('[data-role="size"]');
