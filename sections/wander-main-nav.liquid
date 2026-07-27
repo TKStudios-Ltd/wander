@@ -949,7 +949,7 @@ ul.pushNav {
       }, 120);
     });
 
-    $searchToggle.on('click touchstart', function (e) {
+    $searchToggle.on('click', function (e) {
       e.preventDefault();
       if ($win.width() < RESIZE_BREAKPOINT) {
         $topNav.hasClass('isOpen') ? closePushNav() : openPushNav();
@@ -960,13 +960,13 @@ ul.pushNav {
       }
     });
 
-    $burger.on('click touchstart', function (e) {
+    $burger.on('click', function (e) {
       e.preventDefault();
       $topNav.hasClass('isOpen') ? closePushNav() : openPushNav();
     });
 
     // Open next level when tapping the text row (ignore clicks on the plus button itself)
-    $(document).on('click touchstart', '.js-openLevel .open-wrapper', function (e) {
+    $(document).on('click', '.js-openLevel .open-wrapper', function (e) {
       if ($(e.target).closest('.toggle-plus').length) return;
       var $row = $(this);
       var $li = $row.closest('li');
@@ -979,7 +979,7 @@ ul.pushNav {
     });
 
     // Plus button toggles its sibling level
-    $(document).on('click touchstart', '.toggle-plus', function (e) {
+    $(document).on('click', '.toggle-plus', function (e) {
       e.preventDefault();
       e.stopPropagation();
       var $btn = $(this);
