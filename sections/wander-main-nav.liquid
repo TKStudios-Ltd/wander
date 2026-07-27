@@ -815,7 +815,12 @@ ul.pushNav {
                     <div class="open-wrapper">
                         <div>{{ link.title }}</div>
                         <div class="open-close-wrapper">
-                        <button type="button" class="toggle-plus" aria-expanded="false" aria-label="Expand {{ link.title }}">
+                        <button
+                            type="button"
+                            class="toggle-plus{% if link.title == 'Shop' %} is-open{% endif %}"
+                            aria-expanded="{% if link.title == 'Shop' %}true{% else %}false{% endif %}"
+                            aria-label="Expand {{ link.title }}"
+                        >
                             <span class="toggle-plus__line"></span>
                             <span class="toggle-plus__line"></span>
                         </button>
@@ -824,7 +829,7 @@ ul.pushNav {
                     </div>
 
                     <!-- LEVEL 2 list (direct child of the same LI) -->
-                    <ul class="pushNav pushNav_level js-pushNavLevel level-2">
+                    <ul class="pushNav pushNav_level js-pushNavLevel level-2{% if link.title == 'Shop' %} isOpen{% endif %}">
                     {% for sublink in link.links %}
                         <li>
                         {% if sublink.links.size > 0 %}
