@@ -842,7 +842,12 @@ ul.pushNav {
                             <div class="open-wrapper">
                                 <div>{{ sublink.title }}</div>
                                 <div class="open-close-wrapper">
-                                <button type="button" class="toggle-plus" aria-expanded="false" aria-label="Expand {{ sublink.title }}">
+                                <button
+                                    type="button"
+                                    class="toggle-plus{% if open_shop_all %} is-open{% endif %}"
+                                    aria-expanded="{% if open_shop_all %}true{% else %}false{% endif %}"
+                                    aria-label="Expand {{ sublink.title }}"
+                                >
                                     <span class="toggle-plus__line"></span>
                                     <span class="toggle-plus__line"></span>
                                 </button>
