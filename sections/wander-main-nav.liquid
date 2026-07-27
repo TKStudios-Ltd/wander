@@ -738,11 +738,6 @@ ul.pushNav {
                                         
                                             <li class="dropdown-item sans-serif">
 
-                                                {% assign open_shop_all = false %}
-                                                {% if link.title == 'Shop' and sublink.title contains 'Shop All Fine Art Photography' %}
-                                                    {% assign open_shop_all = true %}
-                                                {% endif %}
-
                                                 <!-- LEVEL 2 -->
                                                 <a href="{{ sublink.url }}">{{ sublink.title }}</a>
                                                     {% if sublink.links %}
@@ -836,6 +831,10 @@ ul.pushNav {
                     <!-- LEVEL 2 list (direct child of the same LI) -->
                     <ul class="pushNav pushNav_level js-pushNavLevel level-2{% if link.title == 'Shop' %} isOpen{% endif %}">
                     {% for sublink in link.links %}
+                        {% assign open_shop_all = false %}
+                        {% if link.title == 'Shop' and sublink.title contains 'Shop All Fine Art Photography' %}
+                            {% assign open_shop_all = true %}
+                        {% endif %}
                         <li>
                         {% if sublink.links.size > 0 %}
                             <!-- LEVEL 2 row (with toggle) -->
