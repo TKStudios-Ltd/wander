@@ -469,7 +469,7 @@
         "text_6Lq8k4"
       ],
       "custom_css": [
-        "@media (max-width: 749px) {.section-padding {padding-top: 100px; padding-bottom: 100px; }}"
+        "@media (max-width: 767px) {.section-padding {padding-top: 100px; padding-bottom: 100px; }}"
       ],
       "name": "Text",
       "settings": {
@@ -657,6 +657,9 @@
         "collection_xPcYEJ",
         "collection_6QLpEq"
       ],
+      "custom_css": [
+        "@media only screen and (min-width: 768px) and (max-width: 991px) {.grid--mobile {display: flex; flex-direction: column; gap: 16px; } .grid--mobile .grid__item {width: 100%; flex-basis: 100%; }}"
+      ],
       "name": "Collection list",
       "settings": {
         "title": "",
@@ -793,6 +796,9 @@
         "collection_xpFqpQ",
         "collection_hCGaha",
         "collection_4PhGTj"
+      ],
+      "custom_css": [
+        "@media only screen and (min-width: 768px) and (max-width: 991px) {.grid--mobile {display: flex; flex-direction: column; gap: 16px; } .grid--mobile .grid__item {width: 100%; flex-basis: 100%; }}"
       ],
       "name": "Collection list",
       "settings": {
