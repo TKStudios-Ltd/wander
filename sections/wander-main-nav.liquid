@@ -944,10 +944,21 @@ ul.pushNav {
     var RESIZE_BREAKPOINT = 990;
 
     function openPushNav() {
-      $topNav.addClass('isOpen');
-      $body.addClass('pushNavIsOpen');
-      $('.wander-main-nav > .pushNav').show();
-      $burger.addClass('is-open').attr({'aria-expanded': 'true', 'aria-label': 'Close menu'});
+        window.scrollTo({
+            top: $('.wander-main-nav').offset().top,
+            behavior: 'smooth'
+        });
+        setTimeout(function () {
+            $topNav.addClass('isOpen');
+            $body.addClass('pushNavIsOpen');
+            $('.wander-main-nav > .pushNav').show();
+            $burger
+            .addClass('is-open')
+            .attr({
+                'aria-expanded': 'true',
+                'aria-label': 'Close menu'
+            });
+        }, 200);
     }
     function closePushNav() {
       $topNav.removeClass('isOpen');
