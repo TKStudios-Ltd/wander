@@ -833,8 +833,11 @@ ul.pushNav {
                     <ul class="pushNav pushNav_level js-pushNavLevel level-2{% if link.title == 'Shop' %} isOpen{% endif %}">
                     {% for sublink in link.links %}
                         {% assign open_shop_all = false %}
-                        {% if link.title == 'Shop' and sublink.title contains 'Shop All Fine Art Photography' %}
-                            {% assign open_shop_all = true %}
+                        {% if link.title == 'Shop' %}
+                            {% if sublink.title contains 'Shop All Fine Art Photography'
+                                or sublink.title contains 'Shop Fine Art / Mixed Media' %}
+                                {% assign open_shop_all = true %}
+                            {% endif %}
                         {% endif %}
                         <li>
                         {% if sublink.links.size > 0 %}
