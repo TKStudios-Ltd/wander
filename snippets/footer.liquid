@@ -131,15 +131,15 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 1rem;
-    position: absolute;
-    top: -45px;
-    right: 20px;
+    position: relative;
   }
   @media screen and (max-width: 767px) {
     #Footer-{{ section.id }}.footer-btt {
       justify-content: flex-start !important;
       margin-bottom: 2rem !important;
+      position: absolute;
       top: 20px !important;
+      right: 20px;
     }
   }
 {%- endstyle -%}
