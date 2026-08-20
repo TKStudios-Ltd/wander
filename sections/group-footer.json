@@ -62,7 +62,7 @@
       ],
       "custom_css": [
         "@media (max-width: 767px) {#FooterMinimal {padding-top: 100px; }}",
-        "@media (min-width: 768px) {#FooterMinimal {padding-top: 120px; }}"
+        "@media (min-width: 768px) {#FooterMinimal {padding-top: 100px; }}"
       ],
       "name": "Footer Minimal",
       "settings": {
