@@ -235,16 +235,7 @@
                         {% endif %}>
 
                         {%- assign unique_id = section.id | append: '-' | append: block.id -%}
-                        {%- render 'circle-text' with
-                          unique_id: unique_id,
-                          show: block.settings.show_circle,
-                          hide_on_mobile: block.settings.hide_on_mobile,
-                          text: block.settings.circle_text,
-                          color: block.settings.circle_text_color,
-                          image: block.settings.circle_image,
-                          rotate_animation: block.settings.circle_rotate_animation,
-                          size: block.settings.circle_size,
-                          word_spacing: block.settings.circle_word_spacing -%}
+                        {%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle, hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text, color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation: block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing: block.settings.circle_word_spacing -%}
                       </div>
 
                       {% if animations_enabled %}
@@ -367,16 +358,7 @@
                           {% endif %}>
 
                           {%- assign unique_id = section.id | append: '-' | append: block.id -%}
-                          {%- render 'circle-text' with
-                            unique_id: unique_id,
-                            show: block.settings.show_circle,
-                            hide_on_mobile: block.settings.hide_on_mobile,
-                            text: block.settings.circle_text,
-                            color: block.settings.circle_text_color,
-                            image: block.settings.circle_image,
-                            rotate_animation: block.settings.circle_rotate_animation,
-                            size: block.settings.circle_size,
-                            word_spacing: block.settings.circle_word_spacing -%}
+                          {%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle, hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text, color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation: block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing: block.settings.circle_word_spacing -%}
                         </div>
 
                         {% if animations_enabled %}
@@ -561,16 +543,7 @@
                               {% endif %}>
 
                               {%- assign unique_id = section.id | append: '-' | append: block.id -%}
-                              {%- render 'circle-text' with
-                                unique_id: unique_id,
-                                show: block.settings.show_circle,
-                                hide_on_mobile: block.settings.hide_on_mobile,
-                                text: block.settings.circle_text,
-                                color: block.settings.circle_text_color,
-                                image: block.settings.circle_image,
-                                rotate_animation: block.settings.circle_rotate_animation,
-                                size: block.settings.circle_size,
-                                word_spacing: block.settings.circle_word_spacing -%}
+                              {%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle, hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text, color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation: block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing: block.settings.circle_word_spacing -%}
                             </div>
 
                             {% if animations_enabled %}
@@ -1075,3 +1048,61 @@
   }
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%- render 'circle-text' with
+                              unique_id: unique_id,
+                              show: block.settings.show_circle,
+                              hide_on_mobile: block.settings.hide_on_mobile,
+                              text: block.settings.circle_text,
+                              color: block.settings.circle_text_color,
+                              image: block.settings.circle_image,
+                              rotate_animation: block.settings.circle_rotate_animation,
+                              size: block.settings.circle_size,
+                              word_spacing: block.settings.circle_word_spacing -%}
+  to: "{%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle,
+    hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text,
+    color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation:
+    block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing:
+    block.settings.circle_word_spacing -%}"
+  position: 10541..10940
+- from: |-
+    {%- render 'circle-text' with
+                                unique_id: unique_id,
+                                show: block.settings.show_circle,
+                                hide_on_mobile: block.settings.hide_on_mobile,
+                                text: block.settings.circle_text,
+                                color: block.settings.circle_text_color,
+                                image: block.settings.circle_image,
+                                rotate_animation: block.settings.circle_rotate_animation,
+                                size: block.settings.circle_size,
+                                word_spacing: block.settings.circle_word_spacing -%}
+  to: "{%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle,
+    hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text,
+    color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation:
+    block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing:
+    block.settings.circle_word_spacing -%}"
+  position: 17237..17636
+- from: |-
+    {%- render 'circle-text' with
+                                    unique_id: unique_id,
+                                    show: block.settings.show_circle,
+                                    hide_on_mobile: block.settings.hide_on_mobile,
+                                    text: block.settings.circle_text,
+                                    color: block.settings.circle_text_color,
+                                    image: block.settings.circle_image,
+                                    rotate_animation: block.settings.circle_rotate_animation,
+                                    size: block.settings.circle_size,
+                                    word_spacing: block.settings.circle_word_spacing -%}
+  to: "{%- render 'circle-text' with unique_id, unique_id: unique_id, show: block.settings.show_circle,
+    hide_on_mobile: block.settings.hide_on_mobile, text: block.settings.circle_text,
+    color: block.settings.circle_text_color, image: block.settings.circle_image, rotate_animation:
+    block.settings.circle_rotate_animation, size: block.settings.circle_size, word_spacing:
+    block.settings.circle_word_spacing -%}"
+  position: 27444..27843
+{% endcomment %}

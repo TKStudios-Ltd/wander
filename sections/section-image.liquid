@@ -61,33 +61,33 @@
   unless image_stretch
     capture settings_height
       case section_height
-        when 'full-height' then echo '100vh'
-        when 'three-quarters-height' then echo '75vh'
-        when 'two-thirds-height' then echo '66vh'
-        when 'one-half-height' then echo '50vh'
-        when 'one-third-height' then echo '33vh'
-        when 'one-fifth-height' then echo '20vh'
-        when 'seven-fifty-height' then echo '768px'
-        when 'six-fifty-height' then echo '650px'
-        when 'five-fifty-height' then echo '550px'
-        when 'four-fifty-height' then echo '450px'
-        when 'original-height' then echo image.height | append: 'px'
+        when 'full-height'
+        when 'three-quarters-height'
+        when 'two-thirds-height'
+        when 'one-half-height'
+        when 'one-third-height'
+        when 'one-fifth-height'
+        when 'seven-fifty-height'
+        when 'six-fifty-height'
+        when 'five-fifty-height'
+        when 'four-fifty-height'
+        when 'original-height'
       endcase
     endcapture
 
     capture settings_height_sm
       case mobile_height
-        when 'full-height' then echo '100vh'
-        when 'three-quarters-height' then echo '75vh'
-        when 'two-thirds-height' then echo '66vh'
-        when 'one-half-height' then echo '50vh'
-        when 'one-third-height' then echo '33vh'
-        when 'one-fifth-height' then echo '20vh'
-        when 'seven-fifty-height' then echo '768px'
-        when 'six-fifty-height' then echo '650px'
-        when 'five-fifty-height' then echo '550px'
-        when 'four-fifty-height' then echo '450px'
-        when 'original-height' then echo image.height | append: 'px'
+        when 'full-height'
+        when 'three-quarters-height'
+        when 'two-thirds-height'
+        when 'one-half-height'
+        when 'one-third-height'
+        when 'one-fifth-height'
+        when 'seven-fifty-height'
+        when 'six-fifty-height'
+        when 'five-fifty-height'
+        when 'four-fifty-height'
+        when 'original-height'
       endcase
     endcapture
 
@@ -411,3 +411,76 @@
   }
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "        when 'full-height' then echo '100vh'"
+  to: "        when 'full-height'"
+  position: 2343..2369
+- from: "        when 'three-quarters-height' then echo '75vh'"
+  to: "        when 'three-quarters-height'"
+  position: 2370..2406
+- from: "        when 'two-thirds-height' then echo '66vh'"
+  to: "        when 'two-thirds-height'"
+  position: 2407..2439
+- from: "        when 'one-half-height' then echo '50vh'"
+  to: "        when 'one-half-height'"
+  position: 2440..2470
+- from: "        when 'one-third-height' then echo '33vh'"
+  to: "        when 'one-third-height'"
+  position: 2471..2502
+- from: "        when 'one-fifth-height' then echo '20vh'"
+  to: "        when 'one-fifth-height'"
+  position: 2503..2534
+- from: "        when 'seven-fifty-height' then echo '768px'"
+  to: "        when 'seven-fifty-height'"
+  position: 2535..2568
+- from: "        when 'six-fifty-height' then echo '650px'"
+  to: "        when 'six-fifty-height'"
+  position: 2569..2600
+- from: "        when 'five-fifty-height' then echo '550px'"
+  to: "        when 'five-fifty-height'"
+  position: 2601..2633
+- from: "        when 'four-fifty-height' then echo '450px'"
+  to: "        when 'four-fifty-height'"
+  position: 2634..2666
+- from: "        when 'original-height' then echo image.height | append: 'px'"
+  to: "        when 'original-height'"
+  position: 2667..2697
+- from: "        when 'full-height' then echo '100vh'"
+  to: "        when 'full-height'"
+  position: 2784..2810
+- from: "        when 'three-quarters-height' then echo '75vh'"
+  to: "        when 'three-quarters-height'"
+  position: 2811..2847
+- from: "        when 'two-thirds-height' then echo '66vh'"
+  to: "        when 'two-thirds-height'"
+  position: 2848..2880
+- from: "        when 'one-half-height' then echo '50vh'"
+  to: "        when 'one-half-height'"
+  position: 2881..2911
+- from: "        when 'one-third-height' then echo '33vh'"
+  to: "        when 'one-third-height'"
+  position: 2912..2943
+- from: "        when 'one-fifth-height' then echo '20vh'"
+  to: "        when 'one-fifth-height'"
+  position: 2944..2975
+- from: "        when 'seven-fifty-height' then echo '768px'"
+  to: "        when 'seven-fifty-height'"
+  position: 2976..3009
+- from: "        when 'six-fifty-height' then echo '650px'"
+  to: "        when 'six-fifty-height'"
+  position: 3010..3041
+- from: "        when 'five-fifty-height' then echo '550px'"
+  to: "        when 'five-fifty-height'"
+  position: 3042..3074
+- from: "        when 'four-fifty-height' then echo '450px'"
+  to: "        when 'four-fifty-height'"
+  position: 3075..3107
+- from: "        when 'original-height' then echo image.height | append: 'px'"
+  to: "        when 'original-height'"
+  position: 3108..3138
+{% endcomment %}

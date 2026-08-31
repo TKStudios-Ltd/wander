@@ -1099,7 +1099,7 @@
             {% if animations_enabled %}
               data-aos="hero"
               data-aos-anchor="{{ animation_anchor }}"
-              data-aos-order="{{ [animation_order_variable] }}"
+              data-aos-order="{{ self[animation_order_variable] }}"
             {% endif %}>
             {%- if enable_variant_boxes or is_swatch_option or is_native_swatch_option -%}
               {%- liquid
@@ -3526,3 +3526,13 @@
 {%- endunless -%}
 
 {%- render 'size-drawer' -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{ [animation_order_variable] }}"
+  to: "{{ self[animation_order_variable] }}"
+  position: 44690..44726
+{% endcomment %}

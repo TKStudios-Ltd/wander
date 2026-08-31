@@ -22,7 +22,7 @@
           {%- assign link_title_lowercase = sub_link.title | downcase | strip_html | escape -%}
 
           {%- capture link_image_markup -%}
-            {%- render 'header-link-image' with enable: show_links_images, link: sub_link, aspect_ratio: links_images_aspect_ratio -%}
+            {%- render 'header-link-image' with enable, enable: show_links_images, link: sub_link, aspect_ratio: links_images_aspect_ratio -%}
           {%- endcapture -%}
 
           <li class="mobile-menu__item mobile-menu__item--level-2{% if sub_link.levels == 1 %} mobile-menu__item--has-items{% endif %}{% if sub_link.active %} mobile-menu__item--active{% endif %}" {% if sub_link.levels == 1 %}aria-haspopup="true"{% endif %}>
@@ -81,4 +81,15 @@
       {%- endif -%}
     </a>
   </li>
-{%- endif -%}
+{%- endif -%}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- render 'header-link-image' with enable: show_links_images, link: sub_link,
+    aspect_ratio: links_images_aspect_ratio -%}"
+  to: "{%- render 'header-link-image' with enable, enable: show_links_images, link:
+    sub_link, aspect_ratio: links_images_aspect_ratio -%}"
+  position: 1846..1976
+{%- endcomment -%}
