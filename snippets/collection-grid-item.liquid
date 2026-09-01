@@ -250,29 +250,33 @@
     {% endif %}
   {%- endstyle -%}
 
-    {% assign is_peonies = false %}
-      {% if page.handle == 'shop-all-peonies' %}
-        {% assign is_peonies = true %}
-      {% endif %}
-      {% comment %} {% if collection.handle == 'peonies' %}
-        {% assign is_peonies = true %}
-      {% endif %} {% endcomment %}
-      {% if request.path == '/collections/peonies' %}
-        {% assign is_peonies = true %}
-      {% endif %}
-    {% assign is_signature = false %}
-      {% if page.handle == 'shop-all-peonies' %}
-        {% assign is_signature = true %}
-      {% endif %}
-      {% if collection.handle == 'peonies' %}
-        {% assign is_signature = true %}
-      {% endif %}
-      {% if collection.handle == 'reflections' %}
-        {% assign is_signature = true %}
-      {% endif %}
-      {% if request.path == '/collections/peonies' %}
-        {% assign is_signature = true %}
-      {% endif %}
+  {% assign is_peonies = false %}
+  {% if page.handle == 'shop-all-peonies' %}
+    {% assign is_peonies = true %}
+  {% endif %}
+  {% if request.path == '/collections/peonies' %}
+    {% assign is_peonies = true %}
+  {% endif %}
+
+  {% assign is_palms = false %}
+  {% if page.handle == 'shop-all-palms' %}
+    {% assign is_palms = true %}
+  {% endif %}
+  {% if request.path == '/collections/palms' %}
+    {% assign is_palms = true %}
+  {% endif %}
+
+  {% assign is_signature = false %}
+  {% if page.handle == 'shop-all-peonies' or page.handle == 'shop-all-palms' %}
+    {% assign is_signature = true %}
+  {% endif %}
+  {% if collection.handle == 'peonies' or collection.handle == 'palms' or collection.handle == 'reflections' %}
+    {% assign is_signature = true %}
+  {% endif %}
+  {% if request.path == '/collections/peonies' or request.path == '/collections/palms' %}
+    {% assign is_signature = true %}
+  {% endif %}
+
   <a href="{{ collection_url }}" class="list-collections__item__outer{% if section_buttons %} btn--primary{% endif %}">
     <div class="list-collections__item__image"
       data-product-media-container
@@ -313,6 +317,17 @@
       {% if is_peonies %}
         <span class="collection__peonies__title">
           PEONIES COLLECTION:&nbsp;
+          <b style="font-weight: 700;">
+            {% if card_title_override != blank %}
+              {{ card_title_override }}
+            {% else %}
+              {{ default_title }}
+            {% endif %}
+          </b>
+        </span>
+      {% elsif is_palms %}
+        <span class="collection__palms__title">
+          PALMS COLLECTION:&nbsp;
           <b style="font-weight: 700;">
             {% if card_title_override != blank %}
               {{ card_title_override }}
