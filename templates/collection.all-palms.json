@@ -306,7 +306,7 @@
         "heading_hLX8Dc": {
           "type": "heading",
           "settings": {
-            "text": "<p><em>WANDERINGS™ </em>Collection: <strong>PEONIES</strong></p>",
+            "text": "<p><em>WANDERINGS™ </em>Collection: <strong>PALMS</strong></p>",
             "size": 60,
             "margin_bottom": 50,
             "heading_highlight_type": "highlight-color",
@@ -317,16 +317,16 @@
         "text_TAJynC": {
           "type": "text",
           "settings": {
-            "text": "<p>With thousands of peonies photographed over a decade, our Signature Limited Edition WANDERINGS™ PEONIES Collection showcases the peony in all her glory — from bud to bloom to later stages of life.</p>",
+            "text": "<p>As a California Coastal brand, we are never short of palm trees to photograph.<br/>And honestly, we can’t seem to get enough of their towering fronds. Whether it’s the sound of the wind blowing overhead…or simply basking in their shade…something about palm trees and their ‘easy-breezy' attitude stands miles above the rest.</p>",
             "size": 100,
-            "max_width": 575,
+            "max_width": 650,
             "margin_bottom": 25
           }
         },
         "text_XrhBnt": {
           "type": "text",
           "settings": {
-            "text": "<p>The WANDERINGS™ PEONIES Collection pushes boundaries, to celebrate each flower’s entire lifecycle, illuminating the delicate balance between life and decay. It captures the bloom and the fall, as colors and forms shift, and new perspectives emerge. In doing so, it reflects upon the circle of life, and challenges a society obsessed with perfection.</p>",
+            "text": "<p>The WANDERINGS™ PALMS COLLECTION is inspired by endless time spent wandering coastal shores and tropical Islands, far & wide.</p>",
             "size": 100,
             "max_width": 675,
             "margin_bottom": 25
@@ -335,7 +335,7 @@
         "text_gxC6p8": {
           "type": "text",
           "settings": {
-            "text": "<p>Within the photographic process, what ultimately emerged was a ‘light’ glowing from within each flower—no matter how much it looked ready to be forgotten. It was both poetic and profound. Each flower had something to say—at every stage of life.</p>",
+            "text": "<p>In this PALMS Collection, you will find palms in all kinds & colors—from deep earthy greens, to pastel sunset hues—to dark moody palms, and simple blacks & whites.<br/>We hope these images relax you and whisk you away. <br/>We hope they inspire you…to WANDER</p>",
             "size": 100,
             "max_width": 675,
             "margin_bottom": 25
@@ -352,7 +352,7 @@
         "text_KHGkie": {
           "type": "text",
           "settings": {
-            "text": "<p>Due to the large body of work, the WANDERINGS™ PEONIES Collection is presented in 15 approachable Parts. Like the flowers themselves, each Part of this PEONIES Collection is made up of many artworks and series that both stand alone, as well as unfold chronologically as a cohesive body of work. Forming a continuous narrative when experienced together, the entire Collection follows hundreds of flowers’ journeys.</p>",
+            "text": "<p>The WANDERINGS™ PALMS Collection<br/>is presented in 9 Series/Parts.</p>",
             "size": 100,
             "max_width": 700,
             "margin_bottom": 25
@@ -397,7 +397,7 @@
       ],
       "name": "Custom code",
       "settings": {
-        "custom_code": "<a href=\"#\" class=\"scroll__heading\" id=\"scroll-next\">\n  Scroll to Shop Peonies\n\n  <span class=\"svg-wrapper\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\"\n         width=\"20\"\n         height=\"24\"\n         viewBox=\"0 0 24 24\"\n         fill=\"none\"\n         stroke=\"currentColor\"\n         stroke-width=\"1\"\n         stroke-linecap=\"round\"\n         stroke-linejoin=\"round\"\n         aria-hidden=\"true\">\n      <line x1=\"12\" y1=\"0\" x2=\"12\" y2=\"14\"></line>\n      <polyline points=\"6 10 12 16 18 10\"></polyline>\n    </svg>\n  </span>\n</a>",
+        "custom_code": "<a href=\"#\" class=\"scroll__heading\" id=\"scroll-next\">\n  Scroll to Shop Palms\n\n  <span class=\"svg-wrapper\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\"\n         width=\"20\"\n         height=\"24\"\n         viewBox=\"0 0 24 24\"\n         fill=\"none\"\n         stroke=\"currentColor\"\n         stroke-width=\"1\"\n         stroke-linecap=\"round\"\n         stroke-linejoin=\"round\"\n         aria-hidden=\"true\">\n      <line x1=\"12\" y1=\"0\" x2=\"12\" y2=\"14\"></line>\n      <polyline points=\"6 10 12 16 18 10\"></polyline>\n    </svg>\n  </span>\n</a>",
         "width": "wrapper",
         "padding_top": 0,
         "padding_bottom": 60
