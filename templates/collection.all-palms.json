@@ -463,11 +463,11 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "heading": "Elegant forms, graceful lines, timeless simplicity — the SCULPTURAL PALMS Collection explores the palm as a natural work of art. Through shape, scale, and form, these photographs celebrate the abstract beauty and sculptural presence found throughout the natural world.",
+            "heading": "Not all artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ PEONIES Collection, please email us at hello@shopwander.com to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.",
             "max_width": 520,
             "card_title_override": "",
             "block_text_color": "",
-            "bg_color": "",
+            "bg_color": "#FFFFFF",
             "overlay_opacity": 100
           }
         }
