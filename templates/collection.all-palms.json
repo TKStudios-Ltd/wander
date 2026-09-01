@@ -240,7 +240,7 @@
       ],
       "name": "Col Overview Slider",
       "settings": {
-        "autoplay": false,
+        "autoplay": true,
         "duration_seconds": 4,
         "show_dots": true
       }
