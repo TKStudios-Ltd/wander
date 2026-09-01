@@ -11,7 +11,7 @@
 -%}
 
 {% assign is_signature = true %}
-{% if collection.handle == 'palms' %}
+{% if collection.handle contains 'palms' %}
   {% assign is_signature = false %}
 {% endif %}
 
