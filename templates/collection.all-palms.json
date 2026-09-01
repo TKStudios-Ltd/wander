@@ -72,6 +72,172 @@
     },
     "image_banner_col_overview_slider_4gLxxQ": {
       "type": "image-banner-col-overview-slider",
+      "blocks": {
+        "slide_MGKYr4": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_32.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-3.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_acPzh9": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/2_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-13.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_VEDyh7": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/4_12.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-4.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_ypjkDV": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/5_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-5.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_4xpmtJ": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/6_13.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-6.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_3pYHh9": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/7_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-7.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_qLKQzJ": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/8_12.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-8.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_dFYD36": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/9_27.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-9.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_YxAJpn": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/10_33.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-10.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_PawqrF": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/11_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-11.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_UkC7m8": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/12_19.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-12.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_xbnXmC": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/14_15.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-14.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_JHgzU6": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/15_3.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-15.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_ARtNz6": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/16_23.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-16.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_XjL98M": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/17_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-17.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_EBVkpR": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Mask_group.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-18.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_gjcwfT": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/19_16.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-19.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_PqM4eW": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/20_16.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-20.png",
+            "alt": "Collection banner image"
+          }
+        }
+      },
+      "block_order": [
+        "slide_MGKYr4",
+        "slide_acPzh9",
+        "slide_VEDyh7",
+        "slide_ypjkDV",
+        "slide_4xpmtJ",
+        "slide_3pYHh9",
+        "slide_qLKQzJ",
+        "slide_dFYD36",
+        "slide_YxAJpn",
+        "slide_PawqrF",
+        "slide_UkC7m8",
+        "slide_xbnXmC",
+        "slide_JHgzU6",
+        "slide_ARtNz6",
+        "slide_XjL98M",
+        "slide_EBVkpR",
+        "slide_gjcwfT",
+        "slide_PqM4eW"
+      ],
       "name": "Col Overview Slider",
       "settings": {
         "autoplay": false,
