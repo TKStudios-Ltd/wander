@@ -143,11 +143,13 @@
                 </picture>
               </div>
 
+              {% if is_signature %}
               <div class="ibps__label">
                 <span class="collection__box__title">
                   A LIMITED EDITION <em>WANDERINGS</em>™ SIGNATURE COLLECTION
                 </span>
               </div>
+              {% endif %}
             </div>
           </div>
         {%- endfor -%}
@@ -168,7 +170,13 @@
         <p id="Text--heading_hLX8Dc" class="text__heading h2 text-highlight-wrapper text-highlight-wrapper--highlight-color">
           <span class="text-highlight__break">
             <text-highlight class="text-highlight" style="--icon-url: none;--icon-color: #000000;" data-highlight-type="highlight-color">
-              <span class="text-highlight__string" data-highlight-holder=""><em>WANDERINGS™</em> Peonies Collection:</span>
+              <span class="text-highlight__string" data-highlight-holder=""><em>WANDERINGS™</em> 
+              {% if is_signature %}
+                Peonies Collection:
+                {% else %}
+                Palms Collection:
+              {% endif %}
+            </span>
             </text-highlight> <b style="font-weight: 700;">{{ collection.title }}</b>
           </span>
         </p>
