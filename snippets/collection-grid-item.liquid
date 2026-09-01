@@ -267,13 +267,10 @@
   {% endif %}
 
   {% assign is_signature = false %}
-  {% if page.handle == 'shop-all-peonies' %}
+  {% if is_peonies %}
     {% assign is_signature = true %}
   {% endif %}
-  {% if collection.handle == 'peonies' or collection.handle == 'reflections' %}
-    {% assign is_signature = true %}
-  {% endif %}
-  {% if request.path == '/collections/peonies' %}
+  {% if collection.handle == 'reflections' %}
     {% assign is_signature = true %}
   {% endif %}
 
