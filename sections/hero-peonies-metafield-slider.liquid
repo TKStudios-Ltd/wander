@@ -10,6 +10,30 @@
   assign MAX_MOBILE_W = 1200
 -%}
 
+{% assign is_peonies = false %}
+  {% if page.handle == 'shop-all-peonies' %}
+    {% assign is_peonies = true %}
+  {% endif %}
+  {% if request.path == '/collections/peonies' %}
+    {% assign is_peonies = true %}
+  {% endif %}
+
+  {% assign is_palms = false %}
+  {% if page.handle == 'shop-all-palms' %}
+    {% assign is_palms = true %}
+  {% endif %}
+  {% if request.path == '/collections/palms' %}
+    {% assign is_palms = true %}
+  {% endif %}
+
+  {% assign is_signature = false %}
+  {% if is_peonies %}
+    {% assign is_signature = true %}
+  {% endif %}
+  {% if collection.handle == 'reflections' %}
+    {% assign is_signature = true %}
+  {% endif %}
+
 {%- if metafield_images != blank or section.blocks.size > 0 -%}
 <section
   id="IBPS--{{ section.id }}"
@@ -79,9 +103,11 @@
               </picture>
             </div>
 
+            {% if is_signature %}
             <div class="ibps__label">
               A LIMITED EDITION <em>WANDERINGS</em>™ SIGNATURE COLLECTION
             </div>
+            {% endif %}
           </div>
         </div>
       {%- endfor -%}
