@@ -22563,6 +22563,7 @@ body#peonies .list-collections__item__image .ibps__label_outer {
   }
   body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
   body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
+  body#palms .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
   .list-collections-section#listCollections--template--25561598132544__section_list_collection_3MtgQH .grid__container .list-collections__item:last-child .list-collections__item__title {
     font-size: 18px !important;
     line-height: 1.5;
@@ -22570,16 +22571,19 @@ body#peonies .list-collections__item__image .ibps__label_outer {
 }
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
+body#palms .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__title,
 .list-collections-section#listCollections--template--25561598132544__section_list_collection_3MtgQH .grid__container .list-collections__item:last-child .list-collections__item__title {
   font-size: 15px;
 }
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child,
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child,
+body#palms .list-collections-section .grid__container .list-collections__item:last-child,
 .list-collections-section#listCollections--template--25561598132544__section_list_collection_3MtgQH .grid__container .list-collections__item:last-child {
   background-color: #FFFFFF;
 }
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer, 
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer, 
+body#palms .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__outer, 
 .list-collections-section#listCollections--template--25561598132544__section_list_collection_3MtgQH .grid__container .list-collections__item:last-child .list-collections__item__outer {
   height: 100%;
   display: flex;
@@ -22589,10 +22593,13 @@ body#peonies .list-collections-section .grid__container .list-collections__item:
 }
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
+body#palms .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .btn,
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .btn,
+body#palms .list-collections-section .grid__container .list-collections__item:last-child .btn,
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image,
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image,
+body#palms .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image,
 .list-collections-section#listCollections--template--25561598132544__section_list_collection_3MtgQH .grid__container .list-collections__item:last-child .collection__box__title,
 .list-collections-section#listCollections--template--25561598132544__section_list_collection_3MtgQH .grid__container .list-collections__item:last-child .btn,
 .list-collections-section#listCollections--template--25561598132544__section_list_collection_3MtgQH .grid__container .list-collections__item:last-child .list-collections__item__image {
