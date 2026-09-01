@@ -29,12 +29,165 @@
         "slide_rijV9x": {
           "type": "slide",
           "settings": {
-            "alt": "Peonies banner image"
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-1.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_tVCW8x": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-2.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_4TDGpe": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-3.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_yXEDNY": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-4.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_tfCyDJ": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-5.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_GTAG4D": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-6.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_NnzmXi": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-7.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_9FBcWf": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-8.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_x4GRrH": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-9.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_DJBXdx": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-10.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_DqBzAR": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-11.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_YhgCqC": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-12.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_pnXy49": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-13.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_UxxpDr": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-14.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_UUjbjW": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-15.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_TxyFcT": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-16.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_NbbMGN": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-17.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_7TM8pQ": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-18.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_wchMrU": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-19.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_f4fiDy": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/WANDER_All-Palms-Slider-20.png",
+            "alt": "Collection banner image"
           }
         }
       },
       "block_order": [
-        "slide_rijV9x"
+        "slide_rijV9x",
+        "slide_tVCW8x",
+        "slide_4TDGpe",
+        "slide_yXEDNY",
+        "slide_tfCyDJ",
+        "slide_GTAG4D",
+        "slide_NnzmXi",
+        "slide_9FBcWf",
+        "slide_x4GRrH",
+        "slide_DJBXdx",
+        "slide_DqBzAR",
+        "slide_YhgCqC",
+        "slide_pnXy49",
+        "slide_UxxpDr",
+        "slide_UUjbjW",
+        "slide_TxyFcT",
+        "slide_NbbMGN",
+        "slide_7TM8pQ",
+        "slide_wchMrU",
+        "slide_f4fiDy"
       ],
       "name": "Col Overview Slider",
       "settings": {
