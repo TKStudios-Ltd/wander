@@ -73,17 +73,188 @@
     "image_banner_col_overview_slider_4gLxxQ": {
       "type": "image-banner-col-overview-slider",
       "blocks": {
-        "slide_MGKYr4": {
+        "slide_QGAzf8": {
           "type": "slide",
           "settings": {
-            "desktop_image": "shopify://shop_images/1_32.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-3.png",
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-1.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-1.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_BMf4kc": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-2.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-2.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_X8x36W": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-3.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-3.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_cmqyYy": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-4.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-4.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_BpXJXa": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-5.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-5.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_afhEhM": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-6.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-6.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_mw6DPR": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-7.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-7.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_9FrKbw": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-8.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-8.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_wrQgaG": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-9.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-9.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_N6JeYp": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-10.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-10.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_9c3fMM": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-11.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-11.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_dTPWan": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-12.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-12.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_Xp48xA": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-13.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-13.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_qLb7dC": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/16b_1.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-14.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_p3wpJN": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-15.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-15.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_AgVLJi": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-16.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-16.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_BhUNhX": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-17.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-17.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_f6YGpi": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-18.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-18.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_CahzhG": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/24_5.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-19.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_DK3NLy": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Italy-Overview-Slide-20.png",
+            "mobile_image": "shopify://shop_images/Italy-Overview-Mob-Slide-20.png",
             "alt": "Collection banner image"
           }
         }
       },
       "block_order": [
-        "slide_MGKYr4"
+        "slide_QGAzf8",
+        "slide_BMf4kc",
+        "slide_X8x36W",
+        "slide_cmqyYy",
+        "slide_BpXJXa",
+        "slide_afhEhM",
+        "slide_mw6DPR",
+        "slide_9FrKbw",
+        "slide_wrQgaG",
+        "slide_N6JeYp",
+        "slide_9c3fMM",
+        "slide_dTPWan",
+        "slide_Xp48xA",
+        "slide_qLb7dC",
+        "slide_p3wpJN",
+        "slide_AgVLJi",
+        "slide_BhUNhX",
+        "slide_f6YGpi",
+        "slide_CahzhG",
+        "slide_DK3NLy"
       ],
       "name": "Col Overview Slider",
       "settings": {
