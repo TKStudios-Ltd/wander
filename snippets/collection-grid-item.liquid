@@ -266,6 +266,14 @@
     {% assign is_palms = true %}
   {% endif %}
 
+  {% assign is_palms = false %}
+  {% if page.handle == 'shop-all-italy' %}
+    {% assign is_palms = true %}
+  {% endif %}
+  {% if request.path == '/collections/italy' %}
+    {% assign is_palms = true %}
+  {% endif %}
+
   {% assign is_signature = false %}
   {% if is_peonies %}
     {% assign is_signature = true %}
@@ -325,6 +333,17 @@
       {% elsif is_palms %}
         <span class="collection__peonies__title">
           PALMS COLLECTION:&nbsp;
+          <b style="font-weight: 700;">
+            {% if card_title_override != blank %}
+              {{ card_title_override }}
+            {% else %}
+              {{ default_title }}
+            {% endif %}
+          </b>
+        </span>
+        {% elsif is_italy %}
+        <span class="collection__peonies__title">
+          ITALY & CAPRI COLLECTION:&nbsp;
           <b style="font-weight: 700;">
             {% if card_title_override != blank %}
               {{ card_title_override }}
