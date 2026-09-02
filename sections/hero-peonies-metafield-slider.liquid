@@ -183,9 +183,11 @@
               <span class="text-highlight__string" data-highlight-holder=""><em>WANDERINGS™</em> 
               {% if is_signature %}
                 Peonies Collection:
-              {% elsif is_palms %}
+              {% endif %}
+              {% if is_palms %}
                 Palms Collection:
-              {% elsif is_italy %}
+              {% endif %}
+              {% if is_italy %}
                 Italy & Capri Collection:
               {% endif %}
             </span>
