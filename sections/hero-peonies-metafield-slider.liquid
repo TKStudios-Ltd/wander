@@ -20,7 +20,8 @@
 
 {% if template.suffix == 'palms' %}
   {% assign is_palms = true %}
-{% elsif template.suffix == 'italy' %}
+{% endif %}
+{% if template.suffix == 'italy' %}
   {% assign is_italy = true %}
 {% endif %}
 
