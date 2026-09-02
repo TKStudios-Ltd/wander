@@ -201,9 +201,8 @@
         "collection_LVzNKe": {
           "type": "collection",
           "settings": {
-            "collection": "modern-palms",
-            "custom_collection_image": "shopify://shop_images/1_MODERN.jpg",
-            "heading": "Bold silhouettes, graphic lines, unexpected color — the MODERN PALMS Collection explores the striking geometry found within nature, where oversized fronds reveal their sculptural beauty. Through shape, color, and movement, these photographs celebrate the unexpected artistry of the natural world.",
+            "collection": "stone-sea",
+            "heading": "Where ancient stone meets the endless sea, our WANDERINGS™ ITALY & CAPRI COLLECTION – STONE + SEA explores coastal mediterranean landscapes shaped by centuries of sun, salt, and stories. With weathered stone, luminous waters and whitewashed horizons, it celebrates the breathtaking dance found only in the Mediterranean. ",
             "max_width": 440,
             "card_title_override": "",
             "block_text_color": "",
@@ -214,9 +213,8 @@
         "collection_cYKWnD": {
           "type": "collection",
           "settings": {
-            "collection": "island-palms",
-            "custom_collection_image": "shopify://shop_images/2_ISLANDS.jpg",
-            "heading": "Sweeping horizons and paths to faraway places—the ISLAND PALMS Collection explores the beauty of tropical landscapes, where secluded shores and swaying palms evoke a sense of endless escape. Through airy compositions, subtle color, and relaxed coastal moments, these photographs celebrate the effortless beauty and peaceful rhythm of the natural world.",
+            "collection": "stone-sea-noir",
+            "heading": "WANDERINGS™ ITALY & CAPRI COLLECTION – STONE + SEA NOIR explores Italy through a neutral palette and a dramatic lens. Sculptural coastlines, ancient stone, and moody Mediterranean tones are highlighted— a study of shadow, texture, and the timeless beauty that exists beyond the postcard view.",
             "max_width": 490,
             "card_title_override": "",
             "block_text_color": "",
@@ -227,9 +225,8 @@
         "collection_KderwA": {
           "type": "collection",
           "settings": {
-            "collection": "architectural-palms",
-            "custom_collection_image": "shopify://shop_images/3_ARCHITECTURAL.jpg",
-            "heading": "Clean lines, organic patterns, unexpected perspective — the ARCHITECTURAL PALMS Collection explores the visual rhythm found within the palm. Through bold angles, layered forms, and balanced compositions, these photographs celebrate the quiet artistry found in nature’s design.",
+            "collection": "sapphire-waters-of-capri",
+            "heading": "From iconic Faraglioni, to the striped umbrellas of Fontelina, our WANDERINGS™ ITALY & CAPRI Collection — SAPPHIRE WATERS OF CAPRI captures the intoxicating allure of an italian summer— where swimmers linger, boats drift, and every moment is drenched in la dolce vita. Each photograph is an invitation into the romance of Capri.",
             "max_width": 500,
             "card_title_override": "",
             "block_text_color": "",
@@ -240,10 +237,21 @@
         "collection_a87k4e": {
           "type": "collection",
           "settings": {
-            "collection": "iconic-palms",
-            "custom_collection_image": "shopify://shop_images/4_ICONIC.jpg",
-            "heading": "Classic silhouettes, graceful stature, enduring allure — the ICONIC PALMS Collection celebrates the Palm as nature’s star. Standing tall against the sky, these photographs reveal their unique character, elegance, and timeless presence, in the limelight.",
+            "collection": "tyrrhenian-teal",
+            "heading": "There’s magic in the waters of the Tyrrhenian Sea—an ever-changing canvas of gemstone waters shifting from brilliant teal to sapphire, emerald, and deep lapis. Our WANDERINGS™ ITALY & CAPRI COLLECTION – TYRRHENIAN TEAL is a study of the Mediterranean’s remarkable palette, and the ever-changing beauty of the sea.  ",
             "max_width": 450,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_RNzPtr": {
+          "type": "collection",
+          "settings": {
+            "collection": "pastel-amalfi-coast",
+            "heading": "Our WANDERINGS™ ITALY & CAPRI COLLECTION – PASTEL AMALFI COAST captures the iconic Amalfi Coast in a dreamlike palette. From pastel villages on the cliffs, to teal coastal coves, to towns & cliffs bathed in the Mediterranean sun, this series will transport you to a place you won’t want to leave.",
+            "max_width": 520,
             "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
@@ -253,9 +261,8 @@
         "collection_jmQxXz": {
           "type": "collection",
           "settings": {
-            "collection": "desert-palms",
-            "custom_collection_image": "shopify://shop_images/5_DESERT.jpg",
-            "heading": "Vast landscapes, quiet horizons, unexpected beauty — the DESERT PALMS Collection explores the graceful presence of palms within the raw simplicity of the desert. Through open skies, earthy tones, and moments of contrast, these photographs celebrate the remarkable beauty found in one of nature’s most expansive places.",
+            "collection": "sunwashed-amalfi",
+            "heading": "Our WANDERINGS™ ITALY & CAPRI COLLECTION – SUNWASHED AMALFI captures the coastal beauty of sunbleached colors, salt-worn umbrellas, and quiet moments along the shore. Light, airy, and sophisticated, each artwork is an invitation to soften into the relaxed elegance of Italian coastal life —a dreamy world on a sunlit day.",
             "max_width": 520,
             "card_title_override": "",
             "block_text_color": "",
@@ -266,49 +273,9 @@
         "collection_wDFRFz": {
           "type": "collection",
           "settings": {
-            "collection": "windswept-palms",
-            "custom_collection_image": "shopify://shop_images/6_WINDSWEPT2.jpg",
-            "heading": "Movement, rhythm, effortless grace — the WINDSWEPT PALMS Collection explores the beauty of palms transformed by wind and motion. Through flowing forms, shifting silhouettes, and moments of natural movement, these photographs celebrate the freedom, romance, and quiet poetry found within the natural world.",
+            "collection": "amalfis-golden-hour",
+            "heading": "There’s a fleeting moment along the Amalfi Coast when everything turns to gold. The cliffs glow, the sea softens, and the villages hold the warmth of the setting sun. Our WANDERINGS™ ITALY & CAPRI COLLECTION – AMALFI’s GOLDEN HOUR captures Italy’s most dreamy hour, revealing the coast at its most captivating light. ",
             "max_width": 520,
-            "card_title_override": "",
-            "block_text_color": "",
-            "bg_color": "",
-            "overlay_opacity": 100
-          }
-        },
-        "collection_RNzPtr": {
-          "type": "collection",
-          "settings": {
-            "collection": "moonlit-palms",
-            "custom_collection_image": "shopify://shop_images/8_MOONLIT.jpg",
-            "heading": "Night skies, luminous forms, unexpected magic — the MOONLIT PALMS Collection explores the transformation of the Palm, beneath the glow of moonlight. Through contrast, illumination, and silhouette, these photographs celebrate the quiet wonder and enchantment revealed when when nature is seen in a new light.",
-            "max_width": 520,
-            "card_title_override": "",
-            "block_text_color": "",
-            "bg_color": "",
-            "overlay_opacity": 100
-          }
-        },
-        "collection_hkz4HC": {
-          "type": "collection",
-          "settings": {
-            "collection": "flowering-palms",
-            "custom_collection_image": "shopify://shop_images/7_FLOWERING.jpg",
-            "heading": "Brilliant color, organic movement, joyful expression — the FLOWERING PALMS Collection explores the vivid beauty found within tropical botanical palms. Through bold hues, unexpected forms, and colorful details, these photographs celebrate the energy, vibrancy, and natural allure of the flowering world.",
-            "max_width": 500,
-            "card_title_override": "",
-            "block_text_color": "",
-            "bg_color": "",
-            "overlay_opacity": 100
-          }
-        },
-        "collection_WjWBpL": {
-          "type": "collection",
-          "settings": {
-            "collection": "sculptural-palms",
-            "custom_collection_image": "shopify://shop_images/9_SCULPTURAL.jpg",
-            "heading": "Elegant forms, graceful lines, timeless simplicity — the SCULPTURAL PALMS Collection explores the palm as a natural work of art. Through shape, scale, and form, these photographs celebrate the abstract beauty and sculptural presence found throughout the natural world.",
-            "max_width": 490,
             "card_title_override": "",
             "block_text_color": "",
             "bg_color": "",
@@ -333,11 +300,9 @@
         "collection_cYKWnD",
         "collection_KderwA",
         "collection_a87k4e",
+        "collection_RNzPtr",
         "collection_jmQxXz",
         "collection_wDFRFz",
-        "collection_RNzPtr",
-        "collection_hkz4HC",
-        "collection_WjWBpL",
         "collection_JGGmFE"
       ],
       "custom_css": [
