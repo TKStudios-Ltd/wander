@@ -15,6 +15,15 @@
   {% assign is_signature = false %}
 {% endif %}
 
+{% assign is_palms = false %}
+{% assign is_italy = false %}
+
+{% if template.suffix == 'palms' %}
+  {% assign is_palms = true %}
+{% elsif template.suffix == 'italy' %}
+  {% assign is_italy = true %}
+{% endif %}
+
 {%- if metafield_images != blank or section.blocks.size > 0 -%}
 <section
   id="IBPS--{{ section.id }}"
@@ -173,8 +182,10 @@
               <span class="text-highlight__string" data-highlight-holder=""><em>WANDERINGS™</em> 
               {% if is_signature %}
                 Peonies Collection:
-                {% else %}
-                {{ section.settings.collection_name | escape }}
+              {% elsif is_palms %}
+                Palms Collection:
+              {% elsif is_italy %}
+                Italy & Capri Collection:
               {% endif %}
             </span>
             </text-highlight> <b style="font-weight: 700;">{{ collection.title }}</b>
@@ -347,12 +358,6 @@
   "name": "Metafield Image Slider",
   "class": "image-banner-peonies-slider",
   "settings": [
-    {
-      "type": "text",
-      "id": "collection_name",
-      "label": "Collection name",
-      "default": "Collection name"
-    },
     {
       "type": "checkbox",
       "id": "autoplay",
