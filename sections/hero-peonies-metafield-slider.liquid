@@ -11,7 +11,7 @@
 -%}
 
 {% assign is_signature = true %}
-{% if collection.handle contains 'palms' %}
+{% if collection.handle contains 'palms' or collection.handle contains 'italy-capri' %}
   {% assign is_signature = false %}
 {% endif %}
 
@@ -174,7 +174,7 @@
               {% if is_signature %}
                 Peonies Collection:
                 {% else %}
-                Palms Collection:
+                {{ section.settings.collection_name | escape }}
               {% endif %}
             </span>
             </text-highlight> <b style="font-weight: 700;">{{ collection.title }}</b>
@@ -347,6 +347,12 @@
   "name": "Metafield Image Slider",
   "class": "image-banner-peonies-slider",
   "settings": [
+    {
+      "type": "text",
+      "id": "collection_name",
+      "label": "Collection name",
+      "default": "Collection name"
+    },
     {
       "type": "checkbox",
       "id": "autoplay",
