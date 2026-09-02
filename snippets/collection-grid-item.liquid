@@ -266,12 +266,12 @@
     {% assign is_palms = true %}
   {% endif %}
 
-  {% assign is_palms = false %}
+  {% assign is_italy = false %}
   {% if page.handle == 'shop-all-italy' %}
-    {% assign is_palms = true %}
+    {% assign is_italy = true %}
   {% endif %}
   {% if request.path == '/collections/italy' %}
-    {% assign is_palms = true %}
+    {% assign is_italy = true %}
   {% endif %}
 
   {% assign is_signature = false %}
