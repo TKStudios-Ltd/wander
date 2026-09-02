@@ -1,0 +1,529 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "subcollections": {
+      "type": "subcollections",
+      "disabled": true,
+      "settings": {
+        "subcollections": [],
+        "limit": 8,
+        "layout": "grid",
+        "image_source": "collection",
+        "image_aspect_ratio": 0.6,
+        "image_overlay_opacity": 10,
+        "bg_color": "",
+        "text_color": "text-light",
+        "padding_top": 30,
+        "padding_bottom": 14
+      }
+    },
+    "main": {
+      "type": "collection",
+      "blocks": {
+        "96343c36-f832-4740-8cd6-2a90dcf9e4d9": {
+          "type": "promo",
+          "settings": {
+            "collection": "",
+            "position": 5,
+            "width": "half",
+            "title": "<p>Promotion title</p>",
+            "heading_highlight_type": "circle",
+            "highlight_color": "#fbcaff",
+            "highlight_text_color": "#ffffff",
+            "heading_size": 100,
+            "content": "Advertise a promotion or a sale",
+            "text_size": 100,
+            "text_color": "text-light",
+            "text_position": "bottom-left",
+            "layout": "stacked",
+            "overlay_opacity": 10,
+            "bg_color": "#f5f4f1",
+            "button_text": "",
+            "button_link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--solid-border",
+            "button_size": "btn--small"
+          }
+        }
+      },
+      "block_order": [
+        "96343c36-f832-4740-8cd6-2a90dcf9e4d9"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_breadcrumbs": true,
+        "enable_sorting": true,
+        "enable_filters": true,
+        "filters_layout": "open",
+        "show_more": true,
+        "filter_mode": "default",
+        "bg_color": "",
+        "padding_top": 30,
+        "padding_bottom": 60
+      }
+    },
+    "image_banner_col_overview_slider_4gLxxQ": {
+      "type": "image-banner-col-overview-slider",
+      "blocks": {
+        "slide_MGKYr4": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/1_32.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-3.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_acPzh9": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/2_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-13.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_VEDyh7": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/4_12.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-4.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_ypjkDV": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/5_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-5.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_4xpmtJ": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/6_13.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-6.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_3pYHh9": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/7_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-7.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_qLKQzJ": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/8_12.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-8.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_dFYD36": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/9_27.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-9.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_YxAJpn": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/10_33.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-10.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_PawqrF": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/11_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-11.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_UkC7m8": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/12_19.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-12.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_xbnXmC": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/14_15.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-14.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_JHgzU6": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/15_3.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-15.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_ARtNz6": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/16_23.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-16.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_XjL98M": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/17_11.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-17.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_EBVkpR": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Mask_group.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-18.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_gjcwfT": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/19_16.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-19.png",
+            "alt": "Collection banner image"
+          }
+        },
+        "slide_PqM4eW": {
+          "type": "slide",
+          "settings": {
+            "desktop_image": "shopify://shop_images/20_16.png",
+            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-20.png",
+            "alt": "Collection banner image"
+          }
+        }
+      },
+      "block_order": [
+        "slide_MGKYr4",
+        "slide_acPzh9",
+        "slide_VEDyh7",
+        "slide_ypjkDV",
+        "slide_4xpmtJ",
+        "slide_3pYHh9",
+        "slide_qLKQzJ",
+        "slide_dFYD36",
+        "slide_YxAJpn",
+        "slide_PawqrF",
+        "slide_UkC7m8",
+        "slide_xbnXmC",
+        "slide_JHgzU6",
+        "slide_ARtNz6",
+        "slide_XjL98M",
+        "slide_EBVkpR",
+        "slide_gjcwfT",
+        "slide_PqM4eW"
+      ],
+      "name": "Col Overview Slider",
+      "settings": {
+        "autoplay": true,
+        "duration_seconds": 4,
+        "show_dots": true
+      }
+    },
+    "section_text_8MUdPj": {
+      "type": "section-text",
+      "blocks": {
+        "heading_hLX8Dc": {
+          "type": "heading",
+          "settings": {
+            "text": "<p><em>WANDERINGS™ </em>Collection: <strong>PALMS</strong></p>",
+            "size": 60,
+            "margin_bottom": 50,
+            "heading_highlight_type": "highlight-color",
+            "highlight_color": "#000000",
+            "highlight_text_color": ""
+          }
+        },
+        "text_TAJynC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As a California Coastal brand, we are never short of palm trees to photograph.<br/>And honestly, we can’t seem to get enough of their towering fronds. Whether it’s the sound of the wind blowing overhead…or simply basking in their shade…something about palm trees and their ‘easy-breezy' attitude stands miles above the rest.</p>",
+            "size": 100,
+            "max_width": 650,
+            "margin_bottom": 25
+          }
+        },
+        "text_XrhBnt": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The WANDERINGS™ PALMS COLLECTION is inspired by endless time spent wandering coastal shores and tropical Islands, far & wide.</p>",
+            "size": 100,
+            "max_width": 675,
+            "margin_bottom": 25
+          }
+        },
+        "text_gxC6p8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In this PALMS Collection, you will find palms in all kinds & colors—from deep earthy greens, to pastel sunset hues—to dark moody palms, and simple blacks & whites.<br/>We hope these images relax you and whisk you away. <br/>We hope they inspire you…to WANDER</p>",
+            "size": 100,
+            "max_width": 675,
+            "margin_bottom": 25
+          }
+        },
+        "separator_8jCiMT": {
+          "type": "separator",
+          "settings": {
+            "separator_width": 30,
+            "margin_top": 50,
+            "margin_bottom": 50
+          }
+        },
+        "text_KHGkie": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The WANDERINGS™ PALMS Collection<br/>is presented in 9 Series/Parts.</p>",
+            "size": 100,
+            "max_width": 700,
+            "margin_bottom": 25
+          }
+        },
+        "text_LtQKFx": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Not all available artwork is featured on this website. If you would like to see the full WANDERINGS™ PEONIES Collection, please email us at <a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a> to get access to our WANDERINGS™ Catalogs, which contain the entire Collections, in full.</p>",
+            "size": 100,
+            "max_width": 1000,
+            "margin_bottom": 25
+          }
+        }
+      },
+      "block_order": [
+        "heading_hLX8Dc",
+        "text_TAJynC",
+        "text_XrhBnt",
+        "text_gxC6p8",
+        "separator_8jCiMT",
+        "text_KHGkie",
+        "text_LtQKFx"
+      ],
+      "name": "Text",
+      "settings": {
+        "custom_class": "shop_all__hero_intro",
+        "custom_id": "",
+        "text_position": "center",
+        "bg_color_secondary": false,
+        "text_color": "text-dark",
+        "width": "wrapper",
+        "padding_top": 120,
+        "padding_bottom": 60
+      }
+    },
+    "section_custom_html_x3DLPm": {
+      "type": "section-custom-html",
+      "custom_css": [
+        ".wrapper {text-align: center;}"
+      ],
+      "name": "Custom code",
+      "settings": {
+        "custom_code": "<a href=\"#\" class=\"scroll__heading\" id=\"scroll-next\">\n  Scroll to Shop Palms\n\n  <span class=\"svg-wrapper\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\"\n         width=\"20\"\n         height=\"24\"\n         viewBox=\"0 0 24 24\"\n         fill=\"none\"\n         stroke=\"currentColor\"\n         stroke-width=\"1\"\n         stroke-linecap=\"round\"\n         stroke-linejoin=\"round\"\n         aria-hidden=\"true\">\n      <line x1=\"12\" y1=\"0\" x2=\"12\" y2=\"14\"></line>\n      <polyline points=\"6 10 12 16 18 10\"></polyline>\n    </svg>\n  </span>\n</a>",
+        "width": "wrapper",
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    },
+    "section_list_collection_UnD6ej": {
+      "type": "section-list-collection",
+      "blocks": {
+        "collection_LVzNKe": {
+          "type": "collection",
+          "settings": {
+            "collection": "modern-palms",
+            "custom_collection_image": "shopify://shop_images/1_MODERN.jpg",
+            "heading": "Bold silhouettes, graphic lines, unexpected color — the MODERN PALMS Collection explores the striking geometry found within nature, where oversized fronds reveal their sculptural beauty. Through shape, color, and movement, these photographs celebrate the unexpected artistry of the natural world.",
+            "max_width": 440,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_cYKWnD": {
+          "type": "collection",
+          "settings": {
+            "collection": "island-palms",
+            "custom_collection_image": "shopify://shop_images/2_ISLANDS.jpg",
+            "heading": "Sweeping horizons and paths to faraway places—the ISLAND PALMS Collection explores the beauty of tropical landscapes, where secluded shores and swaying palms evoke a sense of endless escape. Through airy compositions, subtle color, and relaxed coastal moments, these photographs celebrate the effortless beauty and peaceful rhythm of the natural world.",
+            "max_width": 490,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_KderwA": {
+          "type": "collection",
+          "settings": {
+            "collection": "architectural-palms",
+            "custom_collection_image": "shopify://shop_images/3_ARCHITECTURAL.jpg",
+            "heading": "Clean lines, organic patterns, unexpected perspective — the ARCHITECTURAL PALMS Collection explores the visual rhythm found within the palm. Through bold angles, layered forms, and balanced compositions, these photographs celebrate the quiet artistry found in nature’s design.",
+            "max_width": 500,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_a87k4e": {
+          "type": "collection",
+          "settings": {
+            "collection": "iconic-palms",
+            "custom_collection_image": "shopify://shop_images/4_ICONIC.jpg",
+            "heading": "Classic silhouettes, graceful stature, enduring allure — the ICONIC PALMS Collection celebrates the Palm as nature’s star. Standing tall against the sky, these photographs reveal their unique character, elegance, and timeless presence, in the limelight.",
+            "max_width": 450,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_jmQxXz": {
+          "type": "collection",
+          "settings": {
+            "collection": "desert-palms",
+            "custom_collection_image": "shopify://shop_images/5_DESERT.jpg",
+            "heading": "Vast landscapes, quiet horizons, unexpected beauty — the DESERT PALMS Collection explores the graceful presence of palms within the raw simplicity of the desert. Through open skies, earthy tones, and moments of contrast, these photographs celebrate the remarkable beauty found in one of nature’s most expansive places.",
+            "max_width": 520,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_wDFRFz": {
+          "type": "collection",
+          "settings": {
+            "collection": "windswept-palms",
+            "custom_collection_image": "shopify://shop_images/6_WINDSWEPT2.jpg",
+            "heading": "Movement, rhythm, effortless grace — the WINDSWEPT PALMS Collection explores the beauty of palms transformed by wind and motion. Through flowing forms, shifting silhouettes, and moments of natural movement, these photographs celebrate the freedom, romance, and quiet poetry found within the natural world.",
+            "max_width": 520,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_RNzPtr": {
+          "type": "collection",
+          "settings": {
+            "collection": "moonlit-palms",
+            "custom_collection_image": "shopify://shop_images/8_MOONLIT.jpg",
+            "heading": "Night skies, luminous forms, unexpected magic — the MOONLIT PALMS Collection explores the transformation of the Palm, beneath the glow of moonlight. Through contrast, illumination, and silhouette, these photographs celebrate the quiet wonder and enchantment revealed when when nature is seen in a new light.",
+            "max_width": 520,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_hkz4HC": {
+          "type": "collection",
+          "settings": {
+            "collection": "flowering-palms",
+            "custom_collection_image": "shopify://shop_images/7_FLOWERING.jpg",
+            "heading": "Brilliant color, organic movement, joyful expression — the FLOWERING PALMS Collection explores the vivid beauty found within tropical botanical palms. Through bold hues, unexpected forms, and colorful details, these photographs celebrate the energy, vibrancy, and natural allure of the flowering world.",
+            "max_width": 500,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_WjWBpL": {
+          "type": "collection",
+          "settings": {
+            "collection": "sculptural-palms",
+            "custom_collection_image": "shopify://shop_images/9_SCULPTURAL.jpg",
+            "heading": "Elegant forms, graceful lines, timeless simplicity — the SCULPTURAL PALMS Collection explores the palm as a natural work of art. Through shape, scale, and form, these photographs celebrate the abstract beauty and sculptural presence found throughout the natural world.",
+            "max_width": 490,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 100
+          }
+        },
+        "collection_JGGmFE": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": "Not all artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ PALMS Collection, please email us at hello@shopwander.com to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.",
+            "max_width": 500,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "#FFFFFF",
+            "overlay_opacity": 100
+          }
+        }
+      },
+      "block_order": [
+        "collection_LVzNKe",
+        "collection_cYKWnD",
+        "collection_KderwA",
+        "collection_a87k4e",
+        "collection_jmQxXz",
+        "collection_wDFRFz",
+        "collection_RNzPtr",
+        "collection_hkz4HC",
+        "collection_WjWBpL",
+        "collection_JGGmFE"
+      ],
+      "custom_css": [
+        "@media only screen and (min-width: 768px) and (max-width: 991px) {.grid--mobile {display: flex; flex-direction: column; gap: 16px; } .grid--mobile .grid__item {width: 100%; flex-basis: 100%; }}"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "title": "",
+        "heading_size": 100,
+        "layout": "grid",
+        "alignment": "center",
+        "collections_per_row": 2,
+        "columns_mobile": "1",
+        "image_shape": "square",
+        "image_aspect_ratio": 1.1,
+        "enable_product_count": false,
+        "text_size": 115,
+        "overlay_text": false,
+        "enable_slider_mobile": false,
+        "section_bg_color": "",
+        "section_text_color": "",
+        "width": "wrapper--full-padded",
+        "padding_top": 8,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "subcollections",
+    "main",
+    "image_banner_col_overview_slider_4gLxxQ",
+    "section_text_8MUdPj",
+    "section_custom_html_x3DLPm",
+    "section_list_collection_UnD6ej"
+  ]
+}
