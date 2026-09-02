@@ -80,163 +80,10 @@
             "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-3.png",
             "alt": "Collection banner image"
           }
-        },
-        "slide_acPzh9": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/2_11.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-13.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_VEDyh7": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/4_12.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-4.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_ypjkDV": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/5_11.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-5.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_4xpmtJ": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/6_13.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-6.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_3pYHh9": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/7_11.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-7.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_qLKQzJ": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/8_12.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-8.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_dFYD36": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/9_27.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-9.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_YxAJpn": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/10_33.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-10.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_PawqrF": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/11_11.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-11.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_UkC7m8": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/12_19.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-12.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_xbnXmC": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/14_15.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-14.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_JHgzU6": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/15_3.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-15.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_ARtNz6": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/16_23.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-16.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_XjL98M": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/17_11.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-17.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_EBVkpR": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Mask_group.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-18.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_gjcwfT": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/19_16.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-19.png",
-            "alt": "Collection banner image"
-          }
-        },
-        "slide_PqM4eW": {
-          "type": "slide",
-          "settings": {
-            "desktop_image": "shopify://shop_images/20_16.png",
-            "mobile_image": "shopify://shop_images/WANDER_All-Palms-Slider-20.png",
-            "alt": "Collection banner image"
-          }
         }
       },
       "block_order": [
-        "slide_MGKYr4",
-        "slide_acPzh9",
-        "slide_VEDyh7",
-        "slide_ypjkDV",
-        "slide_4xpmtJ",
-        "slide_3pYHh9",
-        "slide_qLKQzJ",
-        "slide_dFYD36",
-        "slide_YxAJpn",
-        "slide_PawqrF",
-        "slide_UkC7m8",
-        "slide_xbnXmC",
-        "slide_JHgzU6",
-        "slide_ARtNz6",
-        "slide_XjL98M",
-        "slide_EBVkpR",
-        "slide_gjcwfT",
-        "slide_PqM4eW"
+        "slide_MGKYr4"
       ],
       "name": "Col Overview Slider",
       "settings": {
@@ -251,7 +98,7 @@
         "heading_hLX8Dc": {
           "type": "heading",
           "settings": {
-            "text": "<p><em>WANDERINGS™ </em>Collection: <strong>PALMS</strong></p>",
+            "text": "<p><em>WANDERINGS™ </em>Collection: <strong>ITALY & CAPRI</strong></p>",
             "size": 60,
             "margin_bottom": 50,
             "heading_highlight_type": "highlight-color",
@@ -262,25 +109,25 @@
         "text_TAJynC": {
           "type": "text",
           "settings": {
-            "text": "<p>As a California Coastal brand, we are never short of palm trees to photograph.<br/>And honestly, we can’t seem to get enough of their towering fronds. Whether it’s the sound of the wind blowing overhead…or simply basking in their shade…something about palm trees and their ‘easy-breezy' attitude stands miles above the rest.</p>",
+            "text": "<p>From pastel villages along the Amalfi cliffs, to the sacred sapphire waters of Capri — our WANDERINGS™ ITALY & CAPRI COLLECTION of FINE ART PHOTOGRAPHY PRINTS reminds us why Italy is a favorite place to WANDER.</p>",
             "size": 100,
-            "max_width": 650,
+            "max_width": 700,
             "margin_bottom": 25
           }
         },
         "text_XrhBnt": {
           "type": "text",
           "settings": {
-            "text": "<p>The WANDERINGS™ PALMS COLLECTION is inspired by endless time spent wandering coastal shores and tropical Islands, far & wide.</p>",
+            "text": "<p>Inspired by Italy's most captivating destinations, this exclusive Collection of museum-quality fine art prints transforms extraordinary landscapes into timeless works of art. Rich in atmosphere, la dolce vita and beauty, each print invites the spirit of Italy into the spaces where life unfolds.</p>",
             "size": 100,
-            "max_width": 675,
+            "max_width": 650,
             "margin_bottom": 25
           }
         },
         "text_gxC6p8": {
           "type": "text",
           "settings": {
-            "text": "<p>In this PALMS Collection, you will find palms in all kinds & colors—from deep earthy greens, to pastel sunset hues—to dark moody palms, and simple blacks & whites.<br/>We hope these images relax you and whisk you away. <br/>We hope they inspire you…to WANDER</p>",
+            "text": "<p>Forever romantic & always in style...Italia è Bellissima!</p>",
             "size": 100,
             "max_width": 675,
             "margin_bottom": 25
@@ -297,7 +144,7 @@
         "text_KHGkie": {
           "type": "text",
           "settings": {
-            "text": "<p>The WANDERINGS™ PALMS Collection<br/>is presented in 9 Series/Parts.</p>",
+            "text": "<p>The WANDERINGS™ ITALY & CAPRI Collection<br/>is presented in 7 Series/Parts.</p>",
             "size": 100,
             "max_width": 700,
             "margin_bottom": 25
@@ -342,7 +189,7 @@
       ],
       "name": "Custom code",
       "settings": {
-        "custom_code": "<a href=\"#\" class=\"scroll__heading\" id=\"scroll-next\">\n  Scroll to Shop Palms\n\n  <span class=\"svg-wrapper\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\"\n         width=\"20\"\n         height=\"24\"\n         viewBox=\"0 0 24 24\"\n         fill=\"none\"\n         stroke=\"currentColor\"\n         stroke-width=\"1\"\n         stroke-linecap=\"round\"\n         stroke-linejoin=\"round\"\n         aria-hidden=\"true\">\n      <line x1=\"12\" y1=\"0\" x2=\"12\" y2=\"14\"></line>\n      <polyline points=\"6 10 12 16 18 10\"></polyline>\n    </svg>\n  </span>\n</a>",
+        "custom_code": "<a href=\"#\" class=\"scroll__heading\" id=\"scroll-next\">\n  Scroll to Shop Italy & Capri\n\n  <span class=\"svg-wrapper\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\"\n         width=\"20\"\n         height=\"24\"\n         viewBox=\"0 0 24 24\"\n         fill=\"none\"\n         stroke=\"currentColor\"\n         stroke-width=\"1\"\n         stroke-linecap=\"round\"\n         stroke-linejoin=\"round\"\n         aria-hidden=\"true\">\n      <line x1=\"12\" y1=\"0\" x2=\"12\" y2=\"14\"></line>\n      <polyline points=\"6 10 12 16 18 10\"></polyline>\n    </svg>\n  </span>\n</a>",
         "width": "wrapper",
         "padding_top": 0,
         "padding_bottom": 60
@@ -476,7 +323,7 @@
             "max_width": 500,
             "card_title_override": "",
             "block_text_color": "",
-            "bg_color": "#FFFFFF",
+            "bg_color": "#ffffff",
             "overlay_opacity": 100
           }
         }
