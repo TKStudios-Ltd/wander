@@ -111,7 +111,7 @@
       "type": "section-custom-html",
       "name": "Custom code",
       "settings": {
-        "custom_code": "<div class=\"text-center\"><a href=\"/collections/palms\" class=\"slider__heading\">Shop Our Other Palms</a></div>",
+        "custom_code": "<div class=\"text-center\"><a href=\"/collections/italy-capri\" class=\"slider__heading\">Shop Our Other Italy & Capri</a></div>",
         "width": "wrapper",
         "padding_top": 40,
         "padding_bottom": 80
@@ -123,7 +123,7 @@
         "text_igARge": {
           "type": "text",
           "settings": {
-            "text": "<p>PLEASE NOTE: Not all available artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ PALMS Collection, please email us at <a>hello@shopwander.com</a> to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.</p>",
+            "text": "<p>PLEASE NOTE: Not all available artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ ITALY & CAPRI Collection, please email us at <a>hello@shopwander.com</a> to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.</p>",
             "size": 100,
             "max_width": 1250,
             "margin_bottom": 16
