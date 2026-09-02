@@ -11,18 +11,16 @@
 -%}
 
 {% assign is_signature = true %}
-{% if collection.handle contains 'palms' or collection.handle contains 'italy-capri' %}
-  {% assign is_signature = false %}
-{% endif %}
-
 {% assign is_palms = false %}
 {% assign is_italy = false %}
 
 {% if template.suffix == 'palms' %}
   {% assign is_palms = true %}
+  {% assign is_signature = false %}
 {% endif %}
 {% if template.suffix == 'italy' %}
   {% assign is_italy = true %}
+  {% assign is_signature = false %}
 {% endif %}
 
 {%- if metafield_images != blank or section.blocks.size > 0 -%}
