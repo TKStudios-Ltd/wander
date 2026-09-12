@@ -315,9 +315,9 @@
         "text_KHGkie": {
           "type": "text",
           "settings": {
-            "text": "<p>The WANDERINGS™ ITALY & CAPRI Collection<br/>is presented in 7 Series/Parts.</p>",
+            "text": "<p>The WANDERINGS™ ITALY & CAPRI Collection is presented in 7 Series/Parts.</p>",
             "size": 100,
-            "max_width": 700,
+            "max_width": 400,
             "margin_bottom": 25
           }
         },
