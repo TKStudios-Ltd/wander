@@ -271,7 +271,7 @@
         "text_XrhBnt": {
           "type": "text",
           "settings": {
-            "text": "<p>The WANDERINGS™ PALMS COLLECTION is inspired by endless time spent wandering coastal shores and tropical Islands, far & wide.</p>",
+            "text": "<p>The WANDERINGS™ PALMS COLLECTION is inspired by time spent wandering coastal shores and tropical Islands, far & wide.</p>",
             "size": 100,
             "max_width": 675,
             "margin_bottom": 25
@@ -280,7 +280,7 @@
         "text_gxC6p8": {
           "type": "text",
           "settings": {
-            "text": "<p>In this PALMS Collection, you will find palms in all kinds & colors—from deep earthy greens, to pastel sunset hues—to dark moody palms, and simple blacks & whites.<br/>We hope these images relax you and whisk you away. <br/>We hope they inspire you…to WANDER</p>",
+            "text": "<p>In this PALMS Collection, you will find palms in all kinds & colors—from deep earthy greens, to pastel sunset hues—to dark moody palms, and simple blacks & whites.<br/>We hope these images whisk you away. We hope they inspire you…to WANDER</p>",
             "size": 100,
             "max_width": 675,
             "margin_bottom": 25
@@ -476,7 +476,7 @@
             "max_width": 500,
             "card_title_override": "",
             "block_text_color": "",
-            "bg_color": "#FFFFFF",
+            "bg_color": "#ffffff",
             "overlay_opacity": 100
           }
         }
