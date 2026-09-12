@@ -297,9 +297,9 @@
         "text_KHGkie": {
           "type": "text",
           "settings": {
-            "text": "<p>The WANDERINGS™ PALMS Collection<br/>is presented in 9 Series/Parts.</p>",
+            "text": "<p>The WANDERINGS™ PALMS Collection is presented in 9 Series/Parts.</p>",
             "size": 100,
-            "max_width": 700,
+            "max_width": 500,
             "margin_bottom": 25
           }
         },
