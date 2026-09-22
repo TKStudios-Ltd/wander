@@ -34364,6 +34364,13 @@ div.footer-title h5 {
   transition: filter 0.5s ease;
 }
 
+.product-template-custom .product-card__image.with-frame img {
+  aspect-ratio: 2 / 3;
+}
+.product-template-custom-landscape .product-card__image.with-frame img {
+  aspect-ratio: 3 / 2;
+}
+
 @media (min-width: 1400px) {
   .product-template-custom-landscape .product-card .product-card__image img {
     width: 520px;
