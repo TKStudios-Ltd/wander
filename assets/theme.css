@@ -34500,10 +34500,10 @@ div.footer-title h5 {
 }
 @media (min-width: 768px) and (max-width: 989px) {
   .product-card .product-card__image.with-matte img {
-    padding: 0.8vw !important;
+    padding: 0.9vw !important;
   }
   .product-card .product-card__image.with-frame img {
-    border-width: 0.6vw !important;
+    border-width: 0.7vw !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
