@@ -34483,13 +34483,23 @@ div.footer-title h5 {
   border-width: 0 !important;
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 990px) and (max-width: 1200px) {
   .product-card .product-card__image.with-matte img {
     padding: 1vw !important;
   }
   .product-card .product-card__image.with-frame img {
     border-width: 0.8vw !important;
   }
+}
+@media (min-width: 768px) and (max-width: 989px) {
+  .product-card .product-card__image.with-matte img {
+    padding: 0.8vw !important;
+  }
+  .product-card .product-card__image.with-frame img {
+    border-width: 0.6vw !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
   .product-card .product-card__meta-list .product-meta__item {
     font-size: 0.5vw !important;
   }
