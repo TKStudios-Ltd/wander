@@ -475,7 +475,13 @@
   function getAllowedSizesFor(optTok, matTok){
     const key = `${optTok}|${matTok}`;
     if (IS_OLD) {
-      const oldRules = { ... };
+      const oldRules = {
+        'noframe|full': ['small', 'medium', 'large'],
+        'frame|full': ['small', 'medium', 'large'],
+        'frame|border': ['small', 'medium', 'large'],
+        'frame|oversized': ['small', 'medium', 'large', 'gallery', 'statement'],
+        'frame|canvas': []
+      };
       if (Array.isArray(oldRules[key])) return oldRules[key];
     }
     // MP tier rules (only for products tagged !MP12 / !MP24 / !MP33 / !MP40 / !MP48)
