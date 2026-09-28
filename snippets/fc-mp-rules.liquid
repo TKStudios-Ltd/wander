@@ -17,28 +17,30 @@ const S_TO_L = ['small','medium','large'];
 const S_TO_STATEMENT = ['small','medium','large','gallery','statement'];
 
 // null = every size allowed
+// NOTE: oversized is capped at Large everywhere until Gallery/Statement/Collector
+// oversized pricing, add-on SKUs and overlay images exist.
 const MP_RULES = {
   '12': {
     hideCanvas: true,
     allowed: {
-      'noframe|full':   S_TO_L,
-      'frame|full':     S_TO_L,
-      'frame|border':   S_TO_L,
+      'noframe|full':    S_TO_L,
+      'frame|full':      S_TO_L,
+      'frame|border':    S_TO_L,
       'frame|oversized': S_TO_L,
-      'frame|canvas':   []
+      'frame|canvas':    []
     },
     landing: {
       portrait:  { size: 'large', mat: 'oversized' },
-      landscape: { size: 'large',     mat: 'border' }   // TODO: pending Renee's decision
+      landscape: { size: 'large', mat: 'border' }   // TODO: pending Renee's decision
     }
   },
   '24': {
     allowed: {
-      'noframe|full':   S_TO_STATEMENT,
-      'frame|full':     S_TO_STATEMENT,
-      'frame|border':   S_TO_STATEMENT,
-      'frame|oversized': null,
-      'frame|canvas':   ['gallery','statement']
+      'noframe|full':    S_TO_STATEMENT,
+      'frame|full':      S_TO_STATEMENT,
+      'frame|border':    S_TO_STATEMENT,
+      'frame|oversized': S_TO_L,
+      'frame|canvas':    ['gallery','statement']
     },
     landing: {
       portrait:  { size: 'statement', mat: 'border' },
@@ -47,11 +49,11 @@ const MP_RULES = {
   },
   '40': {
     allowed: {
-      'noframe|full':   null,
-      'frame|full':     null,
-      'frame|border':   null,
-      'frame|oversized': null,
-      'frame|canvas':   ['gallery','statement','collector']
+      'noframe|full':    null,
+      'frame|full':      null,
+      'frame|border':    null,
+      'frame|oversized': S_TO_L,
+      'frame|canvas':    ['gallery','statement','collector']
     },
     landing: {
       portrait:  { size: 'collector', mat: 'border' },
