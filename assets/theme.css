@@ -34391,20 +34391,23 @@ div.footer-title h5 {
   .product-template-custom-landscape .product-card .product-card__image img {
     width: 35vw;
     height: auto;
+    aspect-ratio: 10 / 7;
   }
   .product-template-custom .product-card .product-card__image img {
     width: auto;
     height: 35vw;
+    aspect-ratio: 7 / 10;
   }
 }
 @media (min-width: 768px) and (max-width: 989px) {
   .product-template-custom-landscape .product-card .product-card__image img {
-    width: 32vw;
+    width: 31vw;
     height: auto;
+    aspect-ratio: 10 / 7;
   }
   .product-template-custom .product-card .product-card__image img {
     width: auto;
-    height: 32vw;
+    height: 31vw;
     aspect-ratio: 7 / 10;
   }
   .ibtps__slide .product-template-custom .product-card .product-card__image img {
