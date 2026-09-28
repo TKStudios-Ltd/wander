@@ -34397,26 +34397,31 @@ div.footer-title h5 {
   }
 }
 @media (min-width: 990px) and (max-width: 1399px) {
+  /* Landscape */
   .product-template-custom-landscape .product-card .product-card__image img {
     width: 35vw;
-    height: auto;
+    height: calc(35vw * 2 / 3);
   }
+  /* Portrait */
   .product-template-custom .product-card .product-card__image img {
-    width: auto;
+    width: calc(35vw * 2 / 3);
     height: 35vw;
   }
 }
 @media (min-width: 768px) and (max-width: 989px) {
+  /* Landscape */
   .product-template-custom-landscape .product-card .product-card__image img {
     width: 32vw;
-    height: auto;
+    height: calc(32vw * 2 / 3);
   }
+  /* Portrait */
   .product-template-custom .product-card .product-card__image img {
-    width: auto;
+    width: calc(32vw * 2 / 3);
     height: 32vw;
   }
-  .ibtps__slide .product-template-custom .product-card .product-card__image img {
-    width: auto;
+  .ibtps__slide
+  .product-template-custom .product-card .product-card__image img {
+    width: calc(36vw * 2 / 3);
     height: 36vw;
   }
 }
