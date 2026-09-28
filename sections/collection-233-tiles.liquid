@@ -156,6 +156,30 @@
   }
 }
 
+/* ========================================
+   FORCE PRODUCT CARD RATIOS
+======================================== */
+
+/* Landscape — exactly 3:2 */
+.collection-233-grid
+.grid-item.product-template-custom-landscape
+.product-card__image.with-frame img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 2 !important;
+  object-fit: cover;
+}
+
+/* Portrait — exactly 2:3 */
+.collection-233-grid
+.grid-item.product-template-custom
+.product-card__image.with-frame img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 2 / 3 !important;
+  object-fit: cover;
+}
+
 {% endstylesheet %}
 
 {%- liquid
