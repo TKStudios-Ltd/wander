@@ -34385,11 +34385,15 @@ div.footer-title h5 {
     width: calc(520px * 2 / 3);
     height: 520px;
   }
-  .recommended-products__wrapper .product-template-custom .product-card .product-card__image img { 
+  .recommended-products__wrapper
+  .product-template-custom .product-card .product-card__image img {
+    width: calc(500px * 2 / 3);
     height: 500px;
   }
-  .recommended-products__wrapper .product-template-custom-landscape .product-card .product-card__image img {
+  .recommended-products__wrapper
+  .product-template-custom-landscape .product-card .product-card__image img {
     width: 500px;
+    height: calc(500px * 2 / 3);
   }
 }
 @media (min-width: 990px) and (max-width: 1399px) {
