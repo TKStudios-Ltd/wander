@@ -25,29 +25,24 @@
    COLLECTION 2-3-3
 ========================================================= */
 
-.collection-233-grid {
-  --landscape-width: 520px;
-  --portrait-width: calc(var(--landscape-width) * 2 / 3);
+/*
+  Desktop:
+  - 2 landscapes per row
+  - 3 portraits per row
+
+  Widths account for the actual 4rem gaps.
+*/
+
+.collection-233-grid .grid-item.product-template-custom-landscape {
+  width: calc((100% - 4rem) / 2);
+}
+
+.collection-233-grid .grid-item.product-template-custom {
+  width: calc((100% - 8rem) / 3);
 }
 
 
-/* Landscape card */
-
-.collection-233-grid
-.grid-item.product-template-custom-landscape {
-  width: var(--landscape-width);
-}
-
-
-/* Portrait card */
-
-.collection-233-grid
-.grid-item.product-template-custom {
-  width: var(--portrait-width);
-}
-
-
-/* Every wrapper follows the grid item */
+/* All wrappers follow grid item */
 
 .collection-233-grid .grid-item .image-wrapper,
 .collection-233-grid .grid-item .product-card,
@@ -60,8 +55,10 @@
 }
 
 
-/* IMPORTANT:
-   Image keeps its actual intrinsic proportions.
+/*
+  IMPORTANT:
+  Collection images are controlled by their grid item.
+  This overrides the global 520px / 35vw / 32vw image rules.
 */
 
 .collection-233-grid
@@ -69,43 +66,66 @@
 .product-card__image img {
   display: block;
   width: 100% !important;
+  max-width: 100% !important;
+  object-fit: cover !important;
+}
+
+
+/* Landscape — exact 3:2 */
+
+.collection-233-grid
+.grid-item.product-template-custom-landscape
+.product-card__image img {
+  aspect-ratio: 3 / 2 !important;
   height: auto !important;
-  max-width: none !important;
-  aspect-ratio: auto !important;
-  object-fit: contain !important;
+}
+
+
+/* Portrait — exact 2:3 */
+
+.collection-233-grid
+.grid-item.product-template-custom
+.product-card__image img {
+  aspect-ratio: 2 / 3 !important;
+  height: auto !important;
 }
 
 
 /* =========================================================
-   COLLECTION RESPONSIVE
+   TABLET
 ========================================================= */
-
-@media (min-width: 1400px) {
-
-  .collection-233-grid {
-    --landscape-width: 520px;
-  }
-
-}
-
 
 @media (min-width: 990px) and (max-width: 1399px) {
 
-  .collection-233-grid {
-    --landscape-width: 35vw;
+  .collection-233-grid,
+  .search-grid {
     gap: 3.5rem;
   }
 
+  .collection-233-grid .grid-item.product-template-custom-landscape {
+    width: calc((100% - 3.5rem) / 2);
+  }
+
+  .collection-233-grid .grid-item.product-template-custom {
+    width: calc((100% - 7rem) / 3);
+  }
 }
 
 
 @media (min-width: 768px) and (max-width: 989px) {
 
-  .collection-233-grid {
-    --landscape-width: 32vw;
+  .collection-233-grid,
+  .search-grid {
     gap: 3rem;
   }
 
+  .collection-233-grid .grid-item.product-template-custom-landscape {
+    width: calc((100% - 3rem) / 2);
+  }
+
+  .collection-233-grid .grid-item.product-template-custom {
+    width: calc((100% - 6rem) / 3);
+  }
 }
 
 
@@ -151,19 +171,15 @@
 
   /* Collection */
 
-  .collection-233-grid {
-    --landscape-width: 80vw;
-  }
-
   .collection-233-grid
   .grid-item.product-template-custom-landscape {
-    width: var(--landscape-width);
+    width: 80vw;
     padding: 0 1rem;
   }
 
   .collection-233-grid
   .grid-item.product-template-custom {
-    width: calc(var(--landscape-width) * 2 / 3);
+    width: 60vw;
     padding: 0 0.75em;
   }
 
@@ -186,7 +202,6 @@
   .product-card__image-container {
     max-width: 80vw;
   }
-
 }
 
 {% endstylesheet %}
