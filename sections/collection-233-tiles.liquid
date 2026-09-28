@@ -1,5 +1,4 @@
 {% stylesheet %}
-
 .collection-233-grid,
 .search-grid {
   display: flex;
@@ -7,7 +6,6 @@
   gap: 4rem;
   justify-content: center;
 }
-
 .grid-item {
   flex: 0 0 auto;
   display: flex;
@@ -15,127 +13,41 @@
   align-items: center;
   width: 100%;
 }
-
-
-/* =========================================================
-   SEARCH GRID
-========================================================= */
-
-.search-grid .grid-item {
-  width: calc(33.333% - 4rem);
-}
-
-.search-grid .grid-item.product-template-custom .product-card__image-container {
+.search-grid .grid-item { width: calc(33.333% - 4rem); }
+.search-grid .grid-item.product-template-custom .product-card__image-container { 
   max-width: 15vw;
-  margin: auto;
+  margin: auto; 
 }
-
 .search-grid .grid-item.product-template-custom-landscape .product-card__image-container {
   max-width: 20vw;
-  margin: auto;
+  margin: auto; 
 }
-
-.search-grid .grid-item.product-template-custom-landscape {
-  justify-content: center;
+.search-grid .grid-item.product-template-custom-landscape { justify-content: center; }
+.collection-233-grid .grid-item.product-template-custom-landscape { 
+  width: calc(50% - 8rem); 
 }
-
-
-/* =========================================================
-   COLLECTION GRID
-   Grid controls layout only.
-   It does NOT control artwork dimensions.
-========================================================= */
-
-.collection-233-grid .grid-item.product-template-custom-landscape {
-  width: calc(50% - 8rem);
+.collection-233-grid .grid-item.product-template-custom { 
+  width: calc(33.333% - 3.5rem); 
 }
-
-.collection-233-grid .grid-item.product-template-custom {
-  width: calc(33.333% - 3.5rem);
-}
-
-
-/*
-  Do NOT force product-card/image wrappers to 100%.
-  Allow them to size around the image.
-*/
-
-.collection-233-grid .grid-item .image-wrapper {
-  object-fit: contain;
-  width: auto;
-  max-width: 100%;
-}
-
-.collection-233-grid .grid-item .product-card {
-  width: auto;
-  max-width: 100%;
-}
-
-.collection-233-grid .grid-item .product-card__link {
-  display: block;
-  width: auto;
-  max-width: 100%;
-}
-
-.collection-233-grid .grid-item .product-card__image-container {
-  width: auto;
-  max-width: 100%;
-  margin: auto;
-}
-
-.collection-233-grid .grid-item .product-card__image {
-  width: auto;
-  max-width: 100%;
-}
-
-
-/* =========================================================
-   BREAKPOINTS
-========================================================= */
+.collection-233-grid .grid-item .image-wrapper { object-fit: contain; width: -webkit-fill-available; }
 
 @media (min-width: 990px) and (max-width: 1200px) {
-  .collection-233-grid,
-  .search-grid,
-  .search-grid .grid-item {
-    gap: 3.5rem;
-  }
+  .collection-233-grid, .search-grid, .search-grid .grid-item { gap: 3.5rem; }
 }
-
 @media (min-width: 768px) and (max-width: 989px) {
-  .collection-233-grid,
-  .search-grid,
-  .search-grid .grid-item {
-    gap: 3rem;
-  }
+  .collection-233-grid, .search-grid, .search-grid .grid-item { gap: 3rem; }
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 767px) {
-
   .collection-233-grid .grid-item.product-template-custom-landscape,
-  .search-grid .grid-item {
-    width: 100%;
-    padding: 0 1rem;
+  .search-grid .grid-item { 
+    width: auto; padding: 0 1rem; 
   }
-
-  .collection-233-grid .grid-item.product-template-custom {
-    width: calc(100% - 22.5vw);
-    padding: 0 0.75em;
+  .collection-233-grid .grid-item.product-template-custom { 
+    width: auto; padding: 0 0.75em; 
   }
-
-  .search-grid .grid-item.product-template-custom .product-card__image-container {
-    max-width: 60vw;
-  }
-
-  .search-grid .grid-item.product-template-custom-landscape .product-card__image-container {
-    max-width: 80vw;
-  }
+  .search-grid .grid-item.product-template-custom .product-card__image-container { max-width: 60vw; }
+  .search-grid .grid-item.product-template-custom-landscape .product-card__image-container { max-width: 80vw; }
 }
-
 {% endstylesheet %}
 
 {%- liquid
