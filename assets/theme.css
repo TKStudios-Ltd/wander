@@ -34411,18 +34411,17 @@ div.footer-title h5 {
     height: 36vw;
   }
 }
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
   .product-template-custom-landscape .product-card .product-card__image img {
-    width: 75vw;
-    height: 50vw;
+    width: auto;
+    height: 55vw;
     aspect-ratio: 3 / 2;
   }
   .product-template-custom .product-card .product-card__image img {
-    width: 50vw;
-    height: 75vw;
-    aspect-ratio: 2 / 3;
+    width: auto;
+    height: 80vw;
   }
-} */
+}
 
 /* Search */
 
