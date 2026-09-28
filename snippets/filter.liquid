@@ -145,7 +145,7 @@
 
           {%- for filter_value in filter.values -%}
             {%- assign first_character = filter_value.label | slice: 0, 1 -%}
-            {%- if first_character == '*' -%}
+            {%- if first_character == '*' or first_character == '!' -%}
               {%- continue -%}
             {%- endif -%}
 
