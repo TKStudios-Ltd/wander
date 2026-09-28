@@ -1,0 +1,62 @@
+{%- liquid
+  assign mp_tier = ''
+  if product.tags contains '!MP12'
+    assign mp_tier = '12'
+  elsif product.tags contains '!MP24'
+    assign mp_tier = '24'
+  elsif product.tags contains '!MP33'
+    assign mp_tier = '33'
+  elsif product.tags contains '!MP40' or product.tags contains '!MP48'
+    assign mp_tier = '40'
+  endif
+-%}
+const MP_TIER = "{{ mp_tier }}";
+const MP_ORIENTATION = "{{ orientation }}";
+
+const S_TO_L = ['small','medium','large'];
+const S_TO_STATEMENT = ['small','medium','large','gallery','statement'];
+
+// null = every size allowed
+const MP_RULES = {
+  '12': {
+    hideCanvas: true,
+    allowed: {
+      'noframe|full':   S_TO_L,
+      'frame|full':     S_TO_L,
+      'frame|border':   S_TO_L,
+      'frame|oversized': S_TO_STATEMENT,
+      'frame|canvas':   []
+    },
+    landing: {
+      portrait:  { size: 'statement', mat: 'oversized' },
+      landscape: { size: 'large',     mat: 'border' }   // TODO: pending Renee's decision
+    }
+  },
+  '24': {
+    allowed: {
+      'noframe|full':   S_TO_STATEMENT,
+      'frame|full':     S_TO_STATEMENT,
+      'frame|border':   S_TO_STATEMENT,
+      'frame|oversized': null,
+      'frame|canvas':   ['gallery','statement']
+    },
+    landing: {
+      portrait:  { size: 'statement', mat: 'border' },
+      landscape: { size: 'statement', mat: 'border' }
+    }
+  },
+  '40': {
+    allowed: {
+      'noframe|full':   null,
+      'frame|full':     null,
+      'frame|border':   null,
+      'frame|oversized': null,
+      'frame|canvas':   ['gallery','statement','collector']
+    },
+    landing: {
+      portrait:  { size: 'collector', mat: 'border' },
+      landscape: { size: 'collector', mat: 'border' }
+    }
+  }
+};
+MP_RULES['33'] = MP_RULES['24']; // same rules as 24MP
