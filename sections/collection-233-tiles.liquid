@@ -1,16 +1,11 @@
 {% stylesheet %}
 
-/* =========================================================
-   GRID
-========================================================= */
-
 .collection-233-grid,
 .search-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .grid-item {
@@ -18,142 +13,100 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-
-/* =========================================================
-   COLLECTION 2-3-3
-========================================================= */
-
-/*
-  Desktop:
-  - 2 landscapes per row
-  - 3 portraits per row
-
-  Widths account for the actual 4rem gaps.
-*/
-
-.collection-233-grid .grid-item.product-template-custom-landscape {
-  width: calc((100% - 4rem) / 2);
-}
-
-.collection-233-grid .grid-item.product-template-custom {
-  width: calc((100% - 8rem) / 3);
-}
-
-
-/* All wrappers follow grid item */
-
-.collection-233-grid .grid-item .image-wrapper,
-.collection-233-grid .grid-item .product-card,
-.collection-233-grid .grid-item .product-card__link,
-.collection-233-grid .grid-item .product-card__image-container,
-.collection-233-grid .grid-item .product-card__image {
-  display: block;
   width: 100%;
-  max-width: none;
-}
-
-
-/*
-  IMPORTANT:
-  Collection images are controlled by their grid item.
-  This overrides the global 520px / 35vw / 32vw image rules.
-*/
-
-.collection-233-grid
-.grid-item
-.product-card__image img {
-  display: block;
-  width: 100% !important;
-  max-width: 100% !important;
-  object-fit: cover !important;
-}
-
-
-/* Landscape — exact 3:2 */
-
-.collection-233-grid
-.grid-item.product-template-custom-landscape
-.product-card__image img {
-  aspect-ratio: 3 / 2 !important;
-  height: auto !important;
-}
-
-
-/* Portrait — exact 2:3 */
-
-.collection-233-grid
-.grid-item.product-template-custom
-.product-card__image img {
-  aspect-ratio: 2 / 3 !important;
-  height: auto !important;
 }
 
 
 /* =========================================================
-   TABLET
-========================================================= */
-
-@media (min-width: 990px) and (max-width: 1399px) {
-
-  .collection-233-grid,
-  .search-grid {
-    gap: 3.5rem;
-  }
-
-  .collection-233-grid .grid-item.product-template-custom-landscape {
-    width: calc((100% - 3.5rem) / 2);
-  }
-
-  .collection-233-grid .grid-item.product-template-custom {
-    width: calc((100% - 7rem) / 3);
-  }
-}
-
-
-@media (min-width: 768px) and (max-width: 989px) {
-
-  .collection-233-grid,
-  .search-grid {
-    gap: 3rem;
-  }
-
-  .collection-233-grid .grid-item.product-template-custom-landscape {
-    width: calc((100% - 3rem) / 2);
-  }
-
-  .collection-233-grid .grid-item.product-template-custom {
-    width: calc((100% - 6rem) / 3);
-  }
-}
-
-
-/* =========================================================
-   SEARCH
+   SEARCH GRID
 ========================================================= */
 
 .search-grid .grid-item {
   width: calc(33.333% - 4rem);
 }
 
-.search-grid
-.grid-item.product-template-custom
-.product-card__image-container {
+.search-grid .grid-item.product-template-custom .product-card__image-container {
   max-width: 15vw;
   margin: auto;
 }
 
-.search-grid
-.grid-item.product-template-custom-landscape
-.product-card__image-container {
+.search-grid .grid-item.product-template-custom-landscape .product-card__image-container {
   max-width: 20vw;
   margin: auto;
 }
 
-.search-grid
-.grid-item.product-template-custom-landscape {
+.search-grid .grid-item.product-template-custom-landscape {
   justify-content: center;
+}
+
+
+/* =========================================================
+   COLLECTION GRID
+   Grid controls layout only.
+   It does NOT control artwork dimensions.
+========================================================= */
+
+.collection-233-grid .grid-item.product-template-custom-landscape {
+  width: calc(50% - 8rem);
+}
+
+.collection-233-grid .grid-item.product-template-custom {
+  width: calc(33.333% - 3.5rem);
+}
+
+
+/*
+  Do NOT force product-card/image wrappers to 100%.
+  Allow them to size around the image.
+*/
+
+.collection-233-grid .grid-item .image-wrapper {
+  object-fit: contain;
+  width: auto;
+  max-width: 100%;
+}
+
+.collection-233-grid .grid-item .product-card {
+  width: auto;
+  max-width: 100%;
+}
+
+.collection-233-grid .grid-item .product-card__link {
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+
+.collection-233-grid .grid-item .product-card__image-container {
+  width: auto;
+  max-width: 100%;
+  margin: auto;
+}
+
+.collection-233-grid .grid-item .product-card__image {
+  width: auto;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   BREAKPOINTS
+========================================================= */
+
+@media (min-width: 990px) and (max-width: 1200px) {
+  .collection-233-grid,
+  .search-grid,
+  .search-grid .grid-item {
+    gap: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 989px) {
+  .collection-233-grid,
+  .search-grid,
+  .search-grid .grid-item {
+    gap: 3rem;
+  }
 }
 
 
@@ -163,43 +116,22 @@
 
 @media (max-width: 767px) {
 
-  .collection-233-grid,
-  .search-grid {
-    gap: 3rem;
-  }
-
-
-  /* Collection */
-
-  .collection-233-grid
-  .grid-item.product-template-custom-landscape {
-    width: 80vw;
-    padding: 0 1rem;
-  }
-
-  .collection-233-grid
-  .grid-item.product-template-custom {
-    width: 60vw;
-    padding: 0 0.75em;
-  }
-
-
-  /* Search */
-
+  .collection-233-grid .grid-item.product-template-custom-landscape,
   .search-grid .grid-item {
     width: 100%;
     padding: 0 1rem;
   }
 
-  .search-grid
-  .grid-item.product-template-custom
-  .product-card__image-container {
+  .collection-233-grid .grid-item.product-template-custom {
+    width: calc(100% - 22.5vw);
+    padding: 0 0.75em;
+  }
+
+  .search-grid .grid-item.product-template-custom .product-card__image-container {
     max-width: 60vw;
   }
 
-  .search-grid
-  .grid-item.product-template-custom-landscape
-  .product-card__image-container {
+  .search-grid .grid-item.product-template-custom-landscape .product-card__image-container {
     max-width: 80vw;
   }
 }
