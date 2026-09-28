@@ -284,6 +284,8 @@
   const IS_FOREVER_BLOOMING = {% if product.tags contains 'Forever Blooming' %}true{% else %}false{% endif %};
   const IS_INNER_BEAUTY = {% if product.tags contains 'Inner Beauty' %}true{% else %}false{% endif %};
 
+  {%- render 'fc-mp-rules', product: product, orientation: 'portrait' -%}
+  
   const assetsBase = "{{ 'asset-probe.js' | asset_url }}".split('asset-probe.js')[0];
 
   const pillsSize   = root.querySelector('[data-role="size"]');
