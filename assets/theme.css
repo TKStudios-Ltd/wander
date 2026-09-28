@@ -29911,6 +29911,9 @@ body:not(.no-outline) .product-grid-item__image:focus-within {
 }
 
 .search-page__title {
+  font-family: var(--FONT-STACK-SUBHEADING);
+  letter-spacing: 1px;
+  text-transform: uppercase;
   padding: 20px var(--gutter);
   text-align: center;
 }
