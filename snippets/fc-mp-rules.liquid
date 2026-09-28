@@ -24,11 +24,11 @@ const MP_RULES = {
       'noframe|full':   S_TO_L,
       'frame|full':     S_TO_L,
       'frame|border':   S_TO_L,
-      'frame|oversized': S_TO_STATEMENT,
+      'frame|oversized': S_TO_L,
       'frame|canvas':   []
     },
     landing: {
-      portrait:  { size: 'statement', mat: 'oversized' },
+      portrait:  { size: 'large', mat: 'oversized' },
       landscape: { size: 'large',     mat: 'border' }   // TODO: pending Renee's decision
     }
   },
