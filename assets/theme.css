@@ -34413,13 +34413,12 @@ div.footer-title h5 {
 }
 @media (max-width: 767px) {
   .product-template-custom-landscape .product-card .product-card__image img {
-    width: auto;
-    height: 55vw;
-    aspect-ratio: 3 / 2;
+    width: 85vw;
+    height: 60vw;
   }
   .product-template-custom .product-card .product-card__image img {
-    width: auto;
-    height: 80vw;
+    width: 60vw;
+    height: 85vw;
   }
 }
 
