@@ -34375,12 +34375,14 @@ div.footer-title h5 {
 }
 
 @media (min-width: 1400px) {
+  /* Landscape — 3:2 */
   .product-template-custom-landscape .product-card .product-card__image img {
     width: 520px;
-    height: auto;
+    height: calc(520px * 2 / 3);
   }
+  /* Portrait — 2:3 */
   .product-template-custom .product-card .product-card__image img {
-    width: auto;
+    width: calc(520px * 2 / 3);
     height: 520px;
   }
   .recommended-products__wrapper .product-template-custom .product-card .product-card__image img { 
