@@ -276,6 +276,8 @@
   const IS_FOREVER_BLOOMING = {% if product.tags contains 'Forever Blooming' %}true{% else %}false{% endif %};
   const IS_INNER_BEAUTY = {% if product.tags contains 'Inner Beauty' %}true{% else %}false{% endif %};
 
+  {%- render 'fc-mp-rules', product: product, orientation: 'landscape' -%}
+
   const assetsBase = "{{ 'asset-probe.js' | asset_url }}".split('asset-probe.js')[0];
 
   const pillsSize   = root.querySelector('[data-role="size"]');
@@ -476,6 +478,10 @@
       };
 
       if (Array.isArray(oldRules[key])) return oldRules[key];
+    }
+    if (o.token === 'frame' && o.mat_token === 'canvas' &&
+      (IS_OLD || (MP_RULES[MP_TIER] && MP_RULES[MP_TIER].hideCanvas))) {
+      return;
     }
     // Check per-option allowed_sizes first
     const opt = (CFG.framing_options || []).find(o => o.token === optTok && o.mat_token === matTok);
@@ -773,7 +779,8 @@
     (CFG.framing_options || []).forEach(o => {
 
       // Hide Framed Canvas for !OLD products
-      if (IS_OLD && o.token === 'frame' && o.mat_token === 'canvas') {
+      if (o.token === 'frame' && o.mat_token === 'canvas' &&
+          (IS_OLD || (MP_RULES[MP_TIER] && MP_RULES[MP_TIER].hideCanvas))) {
         return;
       }
       
