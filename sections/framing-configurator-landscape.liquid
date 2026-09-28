@@ -590,7 +590,12 @@
     pendingLoad = myLoad;
 
     try {
-      await preloadOverlay(nextURL);
+      try {
+        await preloadOverlay(nextURL);
+      } catch (err) {
+        console.warn('Overlay image not found:', nextURL);
+        return;
+      }
       if (pendingLoad !== myLoad) return;
 
       root.setAttribute('data-size', myLoad.targetSizeToken);
