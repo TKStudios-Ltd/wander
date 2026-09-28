@@ -853,6 +853,28 @@
         ? 'natural'
         : (((CFG.frame_colors || []).find(c => c.token !== naToken) || {}).token || naToken);
 
+  } else if (MP_TIER && MP_RULES[MP_TIER]) {
+    // MP tier default (from snippets/fc-mp-rules.liquid)
+    const L = MP_RULES[MP_TIER].landing[MP_ORIENTATION] || { size: 'collector', mat: 'border' };
+    sizeToken = L.size;
+
+    const landingOpt =
+      (CFG.framing_options || []).find(
+        o => o.token === 'frame' && o.mat_token === L.mat
+      ) ||
+      (CFG.framing_options || []).find(o => o.token === 'frame') ||
+      (CFG.framing_options || [])[0];
+
+    optionToken = landingOpt ? landingOpt.token : 'frame';
+    matToken = landingOpt ? landingOpt.mat_token : 'border';
+
+    const natural =
+      (CFG.frame_colors || []).find(c => c.token === 'natural');
+
+    colorToken = natural
+      ? 'natural'
+      : (((CFG.frame_colors || []).find(c => c.token !== naToken) || {}).token || naToken);
+
   } else {
     // Standard default:
     // Collector / Framed with Mat / Natural
