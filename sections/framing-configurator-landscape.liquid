@@ -469,19 +469,12 @@
   function getAllowedSizesFor(optTok, matTok){
     const key = `${optTok}|${matTok}`;
     if (IS_OLD) {
-      const oldRules = {
-        'noframe|full': ['small', 'medium', 'large'],
-        'frame|full': ['small', 'medium', 'large'],
-        'frame|border': ['small', 'medium', 'large'],
-        'frame|oversized': ['small', 'medium', 'large', 'gallery', 'statement'],
-        'frame|canvas': []
-      };
-
+      const oldRules = { ... };
       if (Array.isArray(oldRules[key])) return oldRules[key];
     }
-    if (o.token === 'frame' && o.mat_token === 'canvas' &&
-      (IS_OLD || (MP_RULES[MP_TIER] && MP_RULES[MP_TIER].hideCanvas))) {
-      return;
+    // MP tier rules (only for products tagged !MP12 / !MP24 / !MP33 / !MP40 / !MP48)
+    if (MP_TIER && MP_RULES[MP_TIER] && key in MP_RULES[MP_TIER].allowed) {
+      return MP_RULES[MP_TIER].allowed[key];
     }
     // Check per-option allowed_sizes first
     const opt = (CFG.framing_options || []).find(o => o.token === optTok && o.mat_token === matTok);
@@ -778,7 +771,7 @@
 
     (CFG.framing_options || []).forEach(o => {
 
-      // Hide Framed Canvas for !OLD products
+      // Hide Framed Canvas for !OLD products and 12MP
       if (o.token === 'frame' && o.mat_token === 'canvas' &&
           (IS_OLD || (MP_RULES[MP_TIER] && MP_RULES[MP_TIER].hideCanvas))) {
         return;
