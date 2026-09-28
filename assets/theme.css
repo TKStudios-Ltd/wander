@@ -17233,12 +17233,13 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 }
 
 .collection__filters__title {
-  font-family: var(--FONT-STACK-HEADING);
+  font-family: var(--FONT-STACK-SUBHEADING);
+  letter-spacing: 1px;
+  text-transform: uppercase;
   font-weight: var(--FONT-WEIGHT-HEADING);
   font-style: var(--FONT-STYLE-HEADING);
-  text-transform: var(--HEADING-TEXT-CAPS);
   font-weight: var(--FONT-WEIGHT-HEADING-BOLD);
-  font-size: calc(1.5rem * var(--adjust-heading));
+  font-size: calc(1.2rem * var(--adjust-heading));
 }
 
 .collection--filters-disabled .collection__sort__label {
