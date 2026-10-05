@@ -35278,8 +35278,8 @@ main img {
 }
 
 .swym-aw-nudge-message {
-  font-family: var(--FONT-STACK-SUBHEADING);
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-family: var(--FONT-STACK-SUBHEADING) !important;
+  font-size: 11px !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
 }
