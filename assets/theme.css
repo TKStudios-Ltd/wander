@@ -35283,3 +35283,12 @@ main img {
   letter-spacing: 1px !important;
   text-transform: uppercase !important;
 }
+
+.swym-aw-nudge-login-btn {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Libre Baskerville", serif !important;
+  border-radius: 0 !important;
+}
