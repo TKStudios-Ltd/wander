@@ -168,7 +168,7 @@
         "text_7AYd6H": {
           "type": "text",
           "settings": {
-            "text": "<p>All Sizes listed are outer dimensions. Depending on Frame Selection, sizes listed below may vary by 1-2”.</p>",
+            "text": "<p>All Sizes listed are outer dimensions. Depending on Frame Selection, sizes may vary by 1-2”.</p>",
             "size": 100,
             "max_width": 875,
             "margin_bottom": 0
