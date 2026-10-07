@@ -26,11 +26,11 @@ const MP_RULES = {
       'noframe|full':    S_TO_L,
       'frame|full':      S_TO_L,
       'frame|border':    S_TO_L,
-      'frame|oversized': S_TO_L,
+      'frame|oversized': S_TO_STATEMENT,
       'frame|canvas':    []
     },
     landing: {
-        portrait:  { size: 'large', mat: 'border' },
+        portrait:  { size: 'statement', mat: 'oversized' },
         landscape: { size: 'large', mat: 'border' }
     }
   },
@@ -39,7 +39,7 @@ const MP_RULES = {
       'noframe|full':    S_TO_STATEMENT,
       'frame|full':      S_TO_STATEMENT,
       'frame|border':    S_TO_STATEMENT,
-      'frame|oversized': S_TO_L,
+      'frame|oversized': null,
       'frame|canvas':    ['gallery','statement']
     },
     landing: {
@@ -52,7 +52,7 @@ const MP_RULES = {
       'noframe|full':    null,
       'frame|full':      null,
       'frame|border':    null,
-      'frame|oversized': S_TO_L,
+      'frame|oversized': null,
       'frame|canvas':    ['gallery','statement','collector']
     },
     landing: {
