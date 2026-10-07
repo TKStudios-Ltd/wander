@@ -550,7 +550,7 @@
 } */
 
 [data-size="small"] .fc-mat-oversized .fc-artwork { inset: 32% 33.5% 33% 33.5%; }
-[data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 30% 30% 30% 30%; }
+[data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 31% 31% 31% 31%; }
 [data-size="large"] .fc-mat-oversized .fc-artwork { inset: 27.5% 27.5% 27.5% 27.5%; }
 [data-size="gallery"] .fc-mat-oversized .fc-artwork   { inset: 26% 26% 26% 26%; }
 [data-size="statement"] .fc-mat-oversized .fc-artwork   { inset: 24% 24% 24% 24%; }
