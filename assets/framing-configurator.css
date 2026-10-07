@@ -69,10 +69,10 @@
 /* Oversized */
 .fc-preview__frame.fc-mat-oversized.fc-size-small img[data-role="preview"],
 .fc-preview__frame.fc-mat-oversized.fc-size-small .fc-artwork {
-    transform: scale(0.85);
+    transform: scale(0.80);
 }
 .framing-configurator-landscape .fc-preview__frame.fc-mat-oversized.fc-size-small img[data-role="preview"] {
-    transform: scale(0.85) rotate(-90deg) scaleX(-1);
+    transform: scale(0.80) rotate(-90deg) scaleX(-1);
 }
 
 /* MEDIUM */
@@ -549,7 +549,7 @@
     box-shadow: inset 0 0.15vw 0.4vw rgba(0, 0, 0, 0.15), inset 0.15vw 0 0.4vw rgba(0, 0, 0, 0.15);
 } */
 
-[data-size="small"] .fc-mat-oversized .fc-artwork { inset: 33% 33% 33% 33%; }
+[data-size="small"] .fc-mat-oversized .fc-artwork { inset: 32% 33.5% 33% 33.5%; }
 [data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 30% 30% 30% 30%; }
 [data-size="large"] .fc-mat-oversized .fc-artwork { inset: 27.5% 27.5% 27.5% 27.5%; }
 [data-size="gallery"] .fc-mat-oversized .fc-artwork   { inset: 26% 26% 26% 26%; }
