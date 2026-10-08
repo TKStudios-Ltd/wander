@@ -11,7 +11,7 @@
     assign qty_sum = form_qty | plus: cart_qty
 -%}
 
-<section id="framing-configurator-{{ section.id }}" class="framing-configurator wrapper">
+<section id="framing-configurator-{{ section.id }}" class="framing-configurator wrapper" data-oversized-pos="{{ product.metafields.custom.oversized_mat_position | escape }}">
     {%- assign cfg = product.metafields.custom.framing_config -%}
     {%- if cfg == blank or cfg.value == blank -%}
     <div class="framing-configurator__notice">
