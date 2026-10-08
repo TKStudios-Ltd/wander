@@ -123,7 +123,7 @@
         "text_igARge": {
           "type": "text",
           "settings": {
-            "text": "<p>PLEASE NOTE: Not al available artwork issold on this website. If you would like to see our Collection in full, click <a href=\"https://catalogs.shopwander.com/\" target=\"_blank\" title=\"https://catalogs.shopwander.com/\">HERE</a> to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs.</p>",
+            "text": "<p>PLEASE NOTE: Not al available artwork is sold on this website. If you would like to see our Collection in full, click <a href=\"https://catalogs.shopwander.com/\" target=\"_blank\" title=\"https://catalogs.shopwander.com/\">HERE</a> to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs.</p>",
             "size": 100,
             "max_width": 1250,
             "margin_bottom": 16
