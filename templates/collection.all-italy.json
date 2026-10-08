@@ -374,7 +374,7 @@
           "settings": {
             "collection": "stone-sea",
             "custom_collection_image": "shopify://shop_images/sea_and_stone_sub_on_main_1.png",
-            "heading": "Where ancient stone meets the endless sea, our WANDERINGS™ ITALY & CAPRI COLLECTION – STONE + SEA explores coastal mediterranean landscapes shaped by centuries of sun, salt, and stories. With weathered stone, luminous waters and whitewashed horizons, it celebrates the breathtaking dance found only in the Mediterranean. ",
+            "heading": "<p>Where ancient stone meets the endless sea, our WANDERINGS™ ITALY & CAPRI COLLECTION – STONE + SEA explores coastal mediterranean landscapes shaped by centuries of sun, salt, and stories. With weathered stone, luminous waters and whitewashed horizons, it celebrates the breathtaking dance found only in the Mediterranean. </p>",
             "max_width": 460,
             "card_title_override": "",
             "block_text_color": "",
@@ -387,7 +387,7 @@
           "settings": {
             "collection": "stone-sea-noir",
             "custom_collection_image": "shopify://shop_images/sea_and_stone_NOIR_sub_on_main_1.png",
-            "heading": "WANDERINGS™ ITALY & CAPRI COLLECTION – STONE + SEA NOIR explores Italy through a neutral palette and a dramatic lens. Sculptural coastlines, ancient stone, and moody Mediterranean tones are highlighted— a study of shadow, texture, and the timeless beauty that exists beyond the postcard view.",
+            "heading": "<p>WANDERINGS™ ITALY & CAPRI COLLECTION – STONE + SEA NOIR explores Italy through a neutral palette and a dramatic lens. Sculptural coastlines, ancient stone, and moody Mediterranean tones are highlighted— a study of shadow, texture, and the timeless beauty that exists beyond the postcard view.</p>",
             "max_width": 430,
             "card_title_override": "",
             "block_text_color": "",
@@ -400,7 +400,7 @@
           "settings": {
             "collection": "sapphire-waters-of-capri",
             "custom_collection_image": "shopify://shop_images/blue_capri_sub_on_main_1.png",
-            "heading": "From iconic Faraglioni, to the striped umbrellas of Fontelina, our WANDERINGS™ ITALY & CAPRI Collection — SAPPHIRE WATERS OF CAPRI captures the intoxicating allure of an italian summer— where swimmers linger, boats drift, and every moment is drenched in la dolce vita. Each photograph is an invitation into the romance of Capri.",
+            "heading": "<p>From iconic Faraglioni, to the striped umbrellas of Fontelina, our WANDERINGS™ ITALY & CAPRI Collection — SAPPHIRE WATERS OF CAPRI captures the intoxicating allure of an italian summer— where swimmers linger, boats drift, and every moment is drenched in la dolce vita. Each photograph is an invitation into the romance of Capri.</p>",
             "max_width": 480,
             "card_title_override": "",
             "block_text_color": "",
@@ -413,7 +413,7 @@
           "settings": {
             "collection": "tyrrhenian-teal",
             "custom_collection_image": "shopify://shop_images/teal_sub_1.png",
-            "heading": "There’s magic in the waters of the Tyrrhenian Sea—an ever-changing canvas of gemstone waters shifting from brilliant teal to sapphire, emerald, and deep lapis. Our WANDERINGS™ ITALY & CAPRI COLLECTION – TYRRHENIAN TEAL is a study of the Mediterranean’s remarkable palette, and the ever-changing beauty of the sea.  ",
+            "heading": "<p>There’s magic in the waters of the Tyrrhenian Sea—an ever-changing canvas of gemstone waters shifting from brilliant teal to sapphire, emerald, and deep lapis. Our WANDERINGS™ ITALY & CAPRI COLLECTION – TYRRHENIAN TEAL is a study of the Mediterranean’s remarkable palette, and the ever-changing beauty of the sea.  </p>",
             "max_width": 480,
             "card_title_override": "",
             "block_text_color": "",
@@ -426,7 +426,7 @@
           "settings": {
             "collection": "pastel-amalfi-coast",
             "custom_collection_image": "shopify://shop_images/pastel_sub_on_main_1.png",
-            "heading": "Our WANDERINGS™ ITALY & CAPRI COLLECTION – PASTEL AMALFI COAST captures the iconic Amalfi Coast in a dreamlike palette. From pastel villages on the cliffs, to teal coastal coves, to towns & cliffs bathed in the Mediterranean sun, this series will transport you to a place you won’t want to leave.",
+            "heading": "<p>Our WANDERINGS™ ITALY & CAPRI COLLECTION – PASTEL AMALFI COAST captures the iconic Amalfi Coast in a dreamlike palette. From pastel villages on the cliffs, to teal coastal coves, to towns & cliffs bathed in the Mediterranean sun, this series will transport you to a place you won’t want to leave.</p>",
             "max_width": 520,
             "card_title_override": "",
             "block_text_color": "",
@@ -439,7 +439,7 @@
           "settings": {
             "collection": "sunwashed-amalfi",
             "custom_collection_image": "shopify://shop_images/sunwashed_amalfi_sub_on_main_1.png",
-            "heading": "Our WANDERINGS™ ITALY & CAPRI COLLECTION – SUNWASHED AMALFI captures the coastal beauty of sunbleached colors, salt-worn umbrellas, and quiet moments along the shore. Light, airy, and sophisticated, each artwork is an invitation to soften into the relaxed elegance of Italian coastal life —a dreamy world on a sunlit day.",
+            "heading": "<p>Our WANDERINGS™ ITALY & CAPRI COLLECTION – SUNWASHED AMALFI captures the coastal beauty of sunbleached colors, salt-worn umbrellas, and quiet moments along the shore. Light, airy, and sophisticated, each artwork is an invitation to soften into the relaxed elegance of Italian coastal life —a dreamy world on a sunlit day.</p>",
             "max_width": 540,
             "card_title_override": "",
             "block_text_color": "",
@@ -452,7 +452,7 @@
           "settings": {
             "collection": "amalfis-golden-hour",
             "custom_collection_image": "shopify://shop_images/golden_hour_amalfi_on_main_1.png",
-            "heading": "There’s a fleeting moment along the Amalfi Coast when everything turns to gold. The cliffs glow, the sea softens, and the villages hold the warmth of the setting sun. Our WANDERINGS™ ITALY & CAPRI COLLECTION – AMALFI’s GOLDEN HOUR captures Italy’s most dreamy hour, revealing the coast at its most captivating light. ",
+            "heading": "<p>There’s a fleeting moment along the Amalfi Coast when everything turns to gold. The cliffs glow, the sea softens, and the villages hold the warmth of the setting sun. Our WANDERINGS™ ITALY & CAPRI COLLECTION – AMALFI’s GOLDEN HOUR captures Italy’s most dreamy hour, revealing the coast at its most captivating light. </p>",
             "max_width": 520,
             "card_title_override": "",
             "block_text_color": "",
@@ -464,7 +464,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "heading": "Not all artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ ITALY & CAPRI Collection, please email us at hello@shopwander.com to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.",
+            "heading": "<p>Not al available artwork is sold on this website. If you would like to see our Collection in full, click <a href=\"https://catalogs.shopwander.com/\" target=\"_blank\" title=\"https://catalogs.shopwander.com/\">HERE</a> to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs.</p>",
             "max_width": 500,
             "card_title_override": "",
             "block_text_color": "",
