@@ -11,7 +11,7 @@
     assign qty_sum = form_qty | plus: cart_qty
 -%}
 
-<section id="framing-configurator-{{ section.id }}" class="framing-configurator framing-configurator-landscape wrapper">
+<section id="framing-configurator-{{ section.id }}" class="framing-configurator framing-configurator-landscape wrapper" data-oversized-pos="{{ product.metafields.custom.oversized_mat_position | escape }}">
     {%- assign cfg = product.metafields.custom.framing_config -%}
     {%- if cfg == blank or cfg.value == blank -%}
     <div class="framing-configurator__notice">
@@ -166,7 +166,9 @@
             {% endif %}
             <div class="order__sizing product__description rte">
               For additional information, sizing & options see TABS below & SIZE GUIDE <span class="size-chart-trigger__icon-flex"><span class="ruler-icon"></span><a href="/pages/size-guide" title="Size Guide" class="size-chart-trigger lb-regular" target="_blank" aria-expanded="false">Size Guide</a></span>
-              <br>Prices starting at $795
+            </div>
+            <div class="order__pricing product__description rte">
+              Prices starting at $795
             </div>
 
             {% form 'product', product, id: product_form_id, class: 'product__form', novalidate: 'novalidate', data-product-form: '' %}
