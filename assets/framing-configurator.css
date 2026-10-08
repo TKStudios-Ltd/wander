@@ -801,7 +801,16 @@ span.ruler-icon {
 
 /* Custom Adjustments */
 
-#solitary-stone-no-05-noir [data-size="collector"] .fc-mat-oversized .fc-artwork,
+/* Oversized mat: artwork position = bottom */
+.framing-configurator[data-oversized-pos="bottom"][data-size="collector"] .fc-mat-oversized .fc-artwork { inset: 21% 21% 24% 21%; }
+.framing-configurator[data-oversized-pos="bottom"][data-size="statement"] .fc-mat-oversized .fc-artwork { inset: 24% 24% 26% 24%; }
+.framing-configurator[data-oversized-pos="bottom"][data-size="gallery"] .fc-mat-oversized .fc-artwork { inset: 26% 26% 28% 26%; }
+.framing-configurator[data-oversized-pos="bottom"][data-size="large"] .fc-mat-oversized .fc-artwork { inset: 27.5% 27.5% 28.5% 28.5%; }
+.framing-configurator[data-oversized-pos="bottom"][data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 31% 31% 33.5% 32%; }
+.framing-configurator[data-oversized-pos="bottom"][data-size="small"] .fc-mat-oversized .fc-artwork { inset: 32% 33.5% 35% 33.5%; }
+
+
+/* #solitary-stone-no-05-noir [data-size="collector"] .fc-mat-oversized .fc-artwork,
 #solitary-stone-no-05-noir-x [data-size="collector"] .fc-mat-oversized .fc-artwork,
 #solitary-stone-no-05-lapis [data-size="collector"] .fc-mat-oversized .fc-artwork,
 #solitary-stone-no-05-b-w [data-size="collector"] .fc-mat-oversized .fc-artwork,
@@ -848,4 +857,4 @@ span.ruler-icon {
 #three-39-s-company-noir [data-size="small"] .fc-mat-oversized .fc-artwork,
 #the-sea-at-rest-no-02-noir [data-size="small"] .fc-mat-oversized .fc-artwork {
     inset: 32% 33.5% 35% 33.5%;
-}
+} */
