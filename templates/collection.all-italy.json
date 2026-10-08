@@ -464,7 +464,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "heading": "<p>Not al available artwork is sold on this website. If you would like to see our Collection in full, click <a href=\"https://catalogs.shopwander.com/\" target=\"_blank\" title=\"https://catalogs.shopwander.com/\">HERE</a> to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs.</p>",
+            "heading": "<p>Not all available artwork is sold on this website. If you would like to see our Collection in full, click <a href=\"https://catalogs.shopwander.com/\" target=\"_blank\" title=\"https://catalogs.shopwander.com/\">HERE</a> to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs.</p>",
             "max_width": 500,
             "card_title_override": "",
             "block_text_color": "",
