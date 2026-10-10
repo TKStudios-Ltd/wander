@@ -815,4 +815,4 @@ span.ruler-icon {
 .framing-configurator[data-oversized-pos="top"][data-size="gallery"] .fc-mat-oversized .fc-artwork { inset: 28% 26% 26% 26%; }
 .framing-configurator[data-oversized-pos="top"][data-size="large"] .fc-mat-oversized .fc-artwork { inset: 28.5% 28.5% 27.5% 27.5%; }
 .framing-configurator[data-oversized-pos="top"][data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 33.5% 32% 31% 31%; }
-.framing-configurator[data-oversized-pos="top"][data-size="small"] .fc-mat-oversized .fc-artwork { inset: 35% 33.5% 325% 32%; }
+.framing-configurator[data-oversized-pos="top"][data-size="small"] .fc-mat-oversized .fc-artwork { inset: 35% 33.5% 32.5% 32%; }
