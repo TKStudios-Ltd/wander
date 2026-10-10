@@ -16097,6 +16097,11 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     width: calc(100% - (300px + var(--gutter) / 2));
   }
 }
+@media only screen and (min-width: 1600px) {
+  .search-page__body .collection__products {
+    width: 1150px;
+  }
+}
 
 .collection--filters-sorting-disabled .collection__products,
 .collection--filters-disabled .collection__products,
