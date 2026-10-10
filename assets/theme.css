@@ -15998,6 +15998,9 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   flex-flow: row wrap;
   width: var(--wrapper-width);
 }
+.search-page__body .collection__inner {
+  justify-content: center;
+}
 .collection__inner .breadcrumbs {
   margin: 20px 0;
   flex-basis: 100%;
