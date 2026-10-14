@@ -153,6 +153,13 @@
             "title": "COPYRIGHT:  “I LIKE YOUR PHOTOGRAPHS, CAN I USE THEM?”",
             "text": "<p>All details, designs, parts & pages of this website, as well as all photographs, design, artwork, products, logos, etc seen on our website, www.shopwander.com, or social media @wander.brand.co, and @renee_cara are copyrighted and protected, by copyright and other intellectual property laws. They are provided for viewing purposes only. Do not copy, disperse, distribute or sell without direct permission from WANDER. Unless you obtain permission to sell or reproduce our images, it is a breach of copyright. For Commercial Licensing & Collaboration inquiries or for acquiring possible permission to sell/use/reproduce, contact us at <a href=\"mailto:hello@shopwander.com\" target=\"_blank\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a>. You can read our full Copyright Policy <a href=\"/pages/copyright-policy\" target=\"_blank\" title=\"/pages/copyright-policy\">HERE</a>.</p>"
           }
+        },
+        "text_RC9aUG": {
+          "type": "text",
+          "settings": {
+            "title": "Is your artwork human-made?",
+            "text": "<p>Yes. All Fine Art/Photography sold on our website is consciously & intentionally human-made. No AI-generated imagery is sold on our site. &nbsp;All Fine Art/Photography&nbsp;is created, captured, and thoughtfully refined by the artist, preserving the authenticity, intention, and unmistakable human touch behind every piece—qualities that cannot be replicated through artificial generation.</p>"
+          }
         }
       },
       "block_order": [
@@ -169,7 +176,8 @@
         "text_HX3mND",
         "text_EFzqFE",
         "text_D3YxCC",
-        "text_KT6PMg"
+        "text_KT6PMg",
+        "text_RC9aUG"
       ],
       "custom_css": [
         "@media screen and (max-width: 767px) {.wrapper--narrow {padding: 0 30px; }}"
