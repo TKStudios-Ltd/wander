@@ -34446,19 +34446,19 @@ div.footer-title h5 {
 
 @media (min-width: 1600px) {
   .search-grid .product-template-custom .product-card .product-card__image img {
-    width: 200px;
+    width: 210px;
     height: 300px;
   }
   .search-grid .product-template-custom-landscape .product-card .product-card__image img {
     width: 300px;
-    height: 200px;
+    height: 210px;
   }
   .search-grid .grid-item.product-template-custom .product-card__image-container {
     max-width: 200px;
   }
   .search-grid .product-card .product-card__image.with-frame img {
-    padding: 12px !important;
-    border-width: 0.45vw !important;
+    padding: 10px !important;
+    border-width: 0.4vw !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1599px) {
