@@ -34483,6 +34483,10 @@ div.footer-title h5 {
   }
 }
 
+.search-grid .product-card .product-card__meta-list .product-meta__location {
+  display: none;
+}
+
 .product-card .product-card__image.with-frame img {
   border: 10px solid transparent;
 
