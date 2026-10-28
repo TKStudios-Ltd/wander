@@ -464,7 +464,19 @@
           "type": "collection",
           "settings": {
             "collection": "jewels-on-the-water",
-            "heading": "Jewels on the Water",
+            "heading": "There’s magic in the waters of the Tyrrhenian Sea—a kaleidoscope of gemstone hues, shifting from brilliant teal to turquoise, sapphire, emerald, & deep lapis. Our WANDERINGS™ ITALY & CAPRI COLLECTION —JEWELS ON THE WATER is a study in the extraordinary beauty of the Mediterranean Sea. As sun meets sea, and colors collide, it’s an invitation into a vibrant and pristine, crystalline world.",
+            "max_width": 500,
+            "card_title_override": "",
+            "block_text_color": "",
+            "bg_color": "",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_P3HB6E": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-sea-speaks",
+            "heading": "Our WANDERINGS™ ITALY & CAPRI COLLECTION – THE SEA SPEAKS is a study in the colors, forms, and ever-changing beauty of the Sea. From waves to glimmers to glistening abstract forms—this Collection follows movement & light, and celebrates the Sea as a “living work of art”. Waves caught in motion, as colors shift and change—the Sea is both captivating and magical.",
             "max_width": 500,
             "card_title_override": "",
             "block_text_color": "",
@@ -494,6 +506,7 @@
         "collection_jmQxXz",
         "collection_wDFRFz",
         "collection_dJt9dt",
+        "collection_P3HB6E",
         "collection_JGGmFE"
       ],
       "custom_css": [
