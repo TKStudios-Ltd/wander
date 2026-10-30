@@ -677,6 +677,14 @@
     transform: translateY(-22.5%) translateX(-10%) scale(0.45);
 }
 
+/* Background 20 */
+[data-room-name="Background 20"].framing-configurator__preview_background.is-vir .fc-preview__frame {
+    transform: translateY(-20%) scale(0.55);
+}
+.framing-configurator-landscape [data-room-name="Background 20"].framing-configurator__preview_background.is-vir .fc-preview__frame {
+    transform: translateY(-20%) scale(0.55);
+}
+
 /* Background 28 */
 [data-room-name="Background 28"].framing-configurator__preview_background.is-vir .fc-preview__frame {
     transform: translateY(-13%) translateX(-4%) scale(0.45);
