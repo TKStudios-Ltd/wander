@@ -679,10 +679,10 @@
 
 /* Background 20 */
 [data-room-name="Background 20"].framing-configurator__preview_background.is-vir .fc-preview__frame {
-    transform: translateY(-20%) scale(0.55);
+    transform: translateY(-19%) scale(0.55);
 }
 .framing-configurator-landscape [data-room-name="Background 20"].framing-configurator__preview_background.is-vir .fc-preview__frame {
-    transform: translateY(-20%) scale(0.55);
+    transform: translateY(-19%) scale(0.55);
 }
 
 /* Background 28 */
