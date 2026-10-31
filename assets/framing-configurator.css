@@ -690,6 +690,13 @@
 .framing-configurator-landscape [data-room-name="Background 11"].framing-configurator__preview_background.is-vir .fc-preview__frame {
     transform: translateY(-16.5%) translateX(1.5%) scale(0.55);
 }
+/* Background 15 */
+[data-room-name="Background 15"].framing-configurator__preview_background.is-vir .fc-preview__frame {
+    transform: translateY(-15%) scale(0.45);
+}
+.framing-configurator-landscape [data-room-name="Background 15"].framing-configurator__preview_background.is-vir .fc-preview__frame {
+    transform: translateY(-12%) scale(0.45);
+}
 /* Background 18 */
 [data-room-name="Background 18"].framing-configurator__preview_background.is-vir .fc-preview__frame {
     transform: translateY(-9%) translateX(-3.5%) scale(0.4);
