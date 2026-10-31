@@ -685,10 +685,10 @@
 }
 /* Background 11 */
 [data-room-name="Background 11"].framing-configurator__preview_background.is-vir .fc-preview__frame {
-    transform: translateY(-18.5%) translateX(4.5%) scale(0.5);
+    transform: translateY(-18.5%) translateX(4.5%) scale(0.55);
 }
 .framing-configurator-landscape [data-room-name="Background 11"].framing-configurator__preview_background.is-vir .fc-preview__frame {
-    transform: translateY(-16.5%) translateX(1.5%) scale(0.5);
+    transform: translateY(-16.5%) translateX(1.5%) scale(0.55);
 }
 
 /* Background 20 */
