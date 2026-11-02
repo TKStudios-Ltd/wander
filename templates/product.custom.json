@@ -232,9 +232,7 @@
       "block_order": [
         "product_list_UFNPkx"
       ],
-      "custom_css": [
-        "@media (max-width: 767px) {.grid-item {padding: 0 1rem; max-width: 300px; }}"
-      ],
+      "custom_css": [],
       "name": "Recommended products",
       "settings": {
         "title": "Pairs well with",
