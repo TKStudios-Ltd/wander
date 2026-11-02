@@ -849,6 +849,12 @@ span.ruler-icon {
 .framing-configurator[data-oversized-pos="bottom"][data-size="large"] .fc-mat-oversized .fc-artwork { inset: 27.5% 27.5% 28.5% 28.5%; }
 .framing-configurator[data-oversized-pos="bottom"][data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 31% 31% 33.5% 32%; }
 .framing-configurator[data-oversized-pos="bottom"][data-size="small"] .fc-mat-oversized .fc-artwork { inset: 32% 33.5% 35% 33.5%; }
+.framing-configurator[data-oversized-pos="Bottom"][data-size="collector"] .fc-mat-oversized .fc-artwork { inset: 21% 21% 24% 21%; }
+.framing-configurator[data-oversized-pos="Bottom"][data-size="statement"] .fc-mat-oversized .fc-artwork { inset: 24% 24% 26% 24%; }
+.framing-configurator[data-oversized-pos="Bottom"][data-size="gallery"] .fc-mat-oversized .fc-artwork { inset: 26% 26% 28% 26%; }
+.framing-configurator[data-oversized-pos="Bottom"][data-size="large"] .fc-mat-oversized .fc-artwork { inset: 27.5% 27.5% 28.5% 28.5%; }
+.framing-configurator[data-oversized-pos="Bottom"][data-size="medium"] .fc-mat-oversized .fc-artwork { inset: 31% 31% 33.5% 32%; }
+.framing-configurator[data-oversized-pos="Bottom"][data-size="small"] .fc-mat-oversized .fc-artwork { inset: 32% 33.5% 35% 33.5%; }
 
 /* Oversized mat: artwork position = top */
 .framing-configurator[data-oversized-pos="top"][data-size="collector"] .fc-mat-oversized .fc-artwork { inset: 24% 21% 21% 21%; }
