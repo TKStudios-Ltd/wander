@@ -497,8 +497,8 @@
         "image_rYLq4p"
       ],
       "custom_css": [
-        "@media (min-width: 750px) {hr {width: 125px !important; }}",
-        "@media (max-width: 749px) {hr {margin: 60px auto !important; width: 100px !important; }}"
+        "@media (min-width: 768px) {hr {width: 125px !important; }}",
+        "@media (max-width: 767px) {hr {margin: 60px auto !important; width: 100px !important; }}"
       ],
       "name": "Text",
       "settings": {
@@ -529,8 +529,8 @@
         "text_JEXViQ"
       ],
       "custom_css": [
-        "@media (min-width: 750px) {p {font-size: 36px !important; line-height: 1.2; }}",
-        "@media (max-width: 749px) {p {font-size: 20px !important; line-height: 1.2; margin: 0 auto; max-width: 370px; }}"
+        "@media (min-width: 768px) {p {font-size: 36px !important; line-height: 1.2; }}",
+        "@media (max-width: 767px) {p {font-size: 20px !important; line-height: 1.2; margin: 0 auto; max-width: 370px; }}"
       ],
       "name": "Text",
       "settings": {
@@ -1302,7 +1302,7 @@
       ],
       "disabled": true,
       "custom_css": [
-        "@media (max-width: 749px) {.ibtas__text .ibtas__series {padding-left: 12px; margin-left: 12px; }}"
+        "@media (max-width: 767px) {.ibtas__text .ibtas__series {padding-left: 12px; margin-left: 12px; }}"
       ],
       "name": "Image Col Banner Slider",
       "settings": {
@@ -1359,7 +1359,7 @@
             "series_name": "WANDERINGS™ COLLECTION",
             "heading": "WANDERINGS™ Fine Art Photography",
             "products": [
-              "sea-of-jewels",
+              "jewel-reflections",
               "sea-of-jewels-2",
               "sea-of-jewels-3"
             ],
@@ -1790,8 +1790,8 @@
     "two_col_with_latest_blog_7wcAic": {
       "type": "two-col-with-latest-blog",
       "custom_css": [
-        "@media (min-width: 750px) {.rte {margin: 0 auto 30px !important; max-width: 550px; } .blog__post-title {font-size: 21px; }}",
-        "@media (max-width: 749px) {.rte {max-width: 360px; } .blog__post-item {width: 100%; } .h3 {--heading-size: calc(2rem * var(--adjust-heading)); margin-bottom: 2.5rem !important; }}",
+        "@media (min-width: 768px) {.rte {margin: 0 auto 30px !important; max-width: 550px; } .blog__post-title {font-size: 21px; }}",
+        "@media (max-width: 767px) {.rte {max-width: 360px; } .blog__post-item {width: 100%; } .h3 {--heading-size: calc(2rem * var(--adjust-heading)); margin-bottom: 2.5rem !important; }}",
         ".rte p {letter-spacing: 0.8px;}",
         "sup {font-size: 40%; top: -10px; left: 5px;}"
       ],
