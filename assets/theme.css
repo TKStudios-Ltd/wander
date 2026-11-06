@@ -18207,7 +18207,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     max-height: none !important;
     margin: 0 auto 6rem !important;
     transform: none !important;
-    z-index: 2;
+    z-index: 1;
   }
   #SearchPage.search-page--filters-top .collection__filters-wrapper,
   #SearchPage.search-page--filters-top .collection__filters-list {
@@ -18268,7 +18268,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     left: 50%;
     transform: translateX(-50%);
     min-width: 220px;
-    z-index: 3;
+    z-index: 2;
   }
   #SearchPage.search-page--filters-top .collection__filter-tags,
   #SearchPage.search-page--filters-top .is-expanded .collection__filter-tags {
