@@ -34604,7 +34604,7 @@ div.footer-title h5 {
 }
 @media (min-width: 768px) and (max-width: 1599px) {
   .search-grid .product-template-custom .product-card .product-card__image img {
-    height: 30vw;
+    height: 28vw;
   }
   .search-grid .grid-item.product-template-custom .product-card__image-container {
     max-width: 20vw;
@@ -34614,8 +34614,8 @@ div.footer-title h5 {
     height: 100%;
   }
   .search-grid .product-template-custom-landscape .product-card .product-card__image img {
-    width: 30vw;
-    max-width: 30vw;
+    width: 28vw;
+    max-width: 28vw;
   }
   .search-grid .product-card .product-card__image.with-frame img {
     padding: 0.8vw !important;
