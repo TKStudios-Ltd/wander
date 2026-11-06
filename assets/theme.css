@@ -34578,16 +34578,16 @@ div.footer-title h5 {
 
 @media (min-width: 1600px) {
   .search-grid .product-template-custom .product-card .product-card__image img {
-    width: 320px;
-    height: 460px;
+    width: 300px;
+    height: 435px;
   }
   .search-grid .product-template-custom-landscape .product-card .product-card__image img {
-    width: 460px;
-    height: 320px;
+    width: 435px;
+    height: 300px;
   }
-  .search-grid .grid-item.product-template-custom .product-card__image-container {
-    max-width: 320px;
-  }
+  /* .search-grid .grid-item.product-template-custom .product-card__image-container {
+    max-width: 300px;
+  } */
   .search-grid .product-card .product-card__image.with-frame img {
     padding: 12px !important;
     border-width: 0.5vw !important;
