@@ -34611,7 +34611,7 @@ div.footer-title h5 {
     width: 20vw;
   }
   .search-grid .grid-item.product-template-custom-landscape .product-card__image-container {
-    height: 20vw;
+    height: 100%;
   }
   .search-grid .product-template-custom-landscape .product-card .product-card__image img {
     width: 30vw;
