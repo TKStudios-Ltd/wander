@@ -18299,7 +18299,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     justify-content: center;
     gap: 10px;
     min-height: 0;
-    padding: 12px 0 2px;
+    padding: 4rem 0 2rem;
   }
   #SearchPage.search-page--filters-top .collection__filters-header.hidden {
     display: none;
