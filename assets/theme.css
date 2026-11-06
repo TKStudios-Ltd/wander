@@ -18268,7 +18268,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     left: 50%;
     transform: translateX(-50%);
     min-width: 220px;
-    z-index: 3;
+    z-index: 5;
   }
   #SearchPage.search-page--filters-top .collection__filter-tags,
   #SearchPage.search-page--filters-top .is-expanded .collection__filter-tags {
