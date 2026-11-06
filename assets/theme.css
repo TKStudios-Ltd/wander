@@ -18201,8 +18201,8 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   #SearchPage.search-page--filters-top .collection__filters {
     position: relative !important;
     top: auto !important;
-    width: calc(var(--site-width) - 3rem) !important;
-    max-width: none;
+    width: 100%;
+    max-width: calc(var(--site-width) - 3rem);
     height: auto !important;
     max-height: none !important;
     margin: 0 auto 6rem !important;
@@ -18311,8 +18311,8 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   }
   /* Grid uses the full width */
   #SearchPage.search-page--filters-top .collection__products {
-    width: calc(var(--site-width) + 3rem) !important;
-    max-width: none !important;
+    width: 100%;
+    max-width: calc(var(--site-width) + 3rem);
     margin: auto !important;
     position: relative;
     z-index: 1;
