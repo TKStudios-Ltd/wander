@@ -18198,11 +18198,11 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   #SearchPage.search-page--filters-top .collection__filters {
     position: relative !important;
     top: auto !important;
-    width: var(--site-width) !important;
+    width: calc(var(--site-width) - 6rem) !important;
     max-width: none;
     height: auto !important;
     max-height: none !important;
-    margin: 0 0 80px !important;
+    margin: 0 auto 80px !important;
     transform: none !important;
     z-index: 2;
   }
