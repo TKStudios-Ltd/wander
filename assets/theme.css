@@ -18320,9 +18320,11 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   }
   #SearchPage .collection__wrapper .wrapper--search-results .collection__filters {
     width: var(--site-width);
+    margin: auto;
   }
   #SearchPage .collection__wrapper .wrapper--search-results .collection__filters .collection__products {
-    width: calc(var(--site-width) - 3rem);
+    width: calc(var(--site-width) + 3rem);
+    margin: auto;
   }
 }
 
