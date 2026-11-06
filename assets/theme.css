@@ -34599,9 +34599,14 @@ div.footer-title h5 {
   }
   .search-grid .grid-item.product-template-custom .product-card__image-container {
     max-width: 20vw;
+    width: 20vw;
+  }
+  .search-grid .grid-item.product-template-custom-landscape .product-card__image-container {
+    height: 20vw;
   }
   .search-grid .product-template-custom-landscape .product-card .product-card__image img {
     width: 30vw;
+    max-width: 30vw;
   }
   .search-grid .product-card .product-card__image.with-frame img {
     padding: 0.8vw !important;
