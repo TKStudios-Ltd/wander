@@ -18188,6 +18188,9 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
    Search page – horizontal filters (768px and up only)
    ========================================================== */
 @media only screen and (min-width: 768px) {
+  .search-grid {
+    gap: 5rem 3rem;
+  }
   /* Stack filters above the grid */
   #SearchPage.search-page--filters-top .collection__inner {
     display: flex !important;
@@ -18202,7 +18205,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     max-width: none;
     height: auto !important;
     max-height: none !important;
-    margin: 0 auto 80px !important;
+    margin: 0 auto 6rem !important;
     transform: none !important;
     z-index: 2;
   }
