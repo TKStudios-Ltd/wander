@@ -34578,19 +34578,19 @@ div.footer-title h5 {
 
 @media (min-width: 1600px) {
   .search-grid .product-template-custom .product-card .product-card__image img {
-    width: 210px;
-    height: 300px;
+    width: 320px;
+    height: 400px;
   }
   .search-grid .product-template-custom-landscape .product-card .product-card__image img {
-    width: 300px;
-    height: 210px;
+    width: 400px;
+    height: 320px;
   }
   .search-grid .grid-item.product-template-custom .product-card__image-container {
-    max-width: 200px;
+    max-width: 320px;
   }
   .search-grid .product-card .product-card__image.with-frame img {
-    padding: 10px !important;
-    border-width: 0.4vw !important;
+    padding: 12px !important;
+    border-width: 0.5vw !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1599px) {
