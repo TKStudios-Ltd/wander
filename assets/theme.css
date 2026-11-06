@@ -18230,6 +18230,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     column-gap: 40px;
     border-top: var(--BORDER-WIDTH) solid var(--text-alpha-25);
     border-bottom: var(--BORDER-WIDTH) solid var(--text-alpha-25);
+    height: 56px;
   }
   #SearchPage.search-page--filters-top .collection__filter {
     position: relative;
@@ -18244,9 +18245,9 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   #SearchPage.search-page--filters-top .collection__filter__title {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 18px;
     width: auto;
-    padding: 14px 0;
+    padding: 10px 0;
     white-space: nowrap;
   }
   #SearchPage.search-page--filters-top .collection__filters,
