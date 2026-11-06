@@ -1163,6 +1163,37 @@
   {%- endif -%}
 </section>
 
+<script>
+  (function () {
+    const mq = window.matchMedia('(min-width: 768px)');
+    const root = document.getElementById('SearchPage');
+    if (!root) return;
+    const TRIGGER = '.collection__filter__title[data-collapsible-trigger]';
+    function closeAll(except) {
+      if (!mq.matches) return;
+      root.querySelectorAll(TRIGGER).forEach((t) => {
+        if (t !== except && t.getAttribute('aria-expanded') === 'true') t.click();
+      });
+    }
+    // Close on load (after the theme has initialised its collapsibles)
+    window.addEventListener('load', () => closeAll());
+    // Close after filters are re-rendered via AJAX
+    document.addEventListener('theme:filters:init', () => {
+      requestAnimationFrame(() => closeAll());
+    });
+    // Opening one closes the others; clicking outside closes all
+    document.addEventListener('click', (e) => {
+      if (!mq.matches) return;
+      const trigger = e.target.closest(TRIGGER);
+      if (trigger && root.contains(trigger)) {
+        if (trigger.getAttribute('aria-expanded') !== 'true') closeAll(trigger);
+        return;
+      }
+      if (!e.target.closest('#SearchPage .collection__filter')) closeAll();
+    }, true);
+  })();
+</script>
+
 {% schema %}
   {
     "name": "Search pages",
