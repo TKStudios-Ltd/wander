@@ -18331,6 +18331,10 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   #SearchPage .collection__wrapper .wrapper--search-results .collection__inner {
     width: 100%;
   }
+  .search-page__body .pagination {
+    margin: 6rem auto 0;
+    max-width: var(--site-width);
+  }
 }
 
 /*================ Banner ================*/
@@ -34642,6 +34646,7 @@ div.footer-title h5 {
 }
 .search-page__body .pagination {
   margin-top: 80px;
+  justify-content: flex-end;
 }
 
 .product-card .product-card__image.with-frame img {
