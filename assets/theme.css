@@ -18202,7 +18202,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     max-width: none;
     height: auto !important;
     max-height: none !important;
-    margin: 0 0 30px !important;
+    margin: 0 0 80px !important;
     transform: none !important;
     z-index: 2;
   }
