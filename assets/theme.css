@@ -18204,7 +18204,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     max-height: none !important;
     margin: 0 0 30px !important;
     transform: none !important;
-    z-index: 5;
+    z-index: 2;
   }
   #SearchPage.search-page--filters-top .collection__filters-wrapper,
   #SearchPage.search-page--filters-top .collection__filters-list {
@@ -18230,7 +18230,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     column-gap: 40px;
     border-top: var(--BORDER-WIDTH) solid var(--text-alpha-25);
     border-bottom: var(--BORDER-WIDTH) solid var(--text-alpha-25);
-    height: 56px;
+    height: 50px;
   }
   #SearchPage.search-page--filters-top .collection__filter {
     position: relative;
