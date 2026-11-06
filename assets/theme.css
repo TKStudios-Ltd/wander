@@ -18310,7 +18310,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   #SearchPage.search-page--filters-top .collection__products {
     width: calc(var(--site-width) + 3rem) !important;
     max-width: none !important;
-    margin-left: 0 !important;
+    margin: auto !important;
     position: relative;
     z-index: 1;
   }
