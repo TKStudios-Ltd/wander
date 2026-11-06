@@ -18314,9 +18314,9 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     position: relative;
     z-index: 1;
   }
-  /* #SearchPage .collection__wrapper .wrapper {
+  #SearchPage .collection__wrapper .wrapper {
     padding: 0;
-  } */
+  }
 }
 
 /*================ Banner ================*/
