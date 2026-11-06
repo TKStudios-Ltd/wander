@@ -18185,13 +18185,13 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
 }
 
 /* ==========================================================
-   Search page – horizontal filters (768px and up only)
-   ========================================================== */
+  Search page – horizontal filters (768px and up only)
+========================================================== */
+
 @media only screen and (min-width: 768px) {
   .search-grid {
     gap: 5rem 3rem;
   }
-  /* Stack filters above the grid */
   #SearchPage.search-page--filters-top .collection__inner {
     display: flex !important;
     flex-direction: column;
@@ -18261,7 +18261,6 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   #SearchPage.search-page--filters-top .collection__filter {
     overflow: visible !important;
   }
-  /* Each group's options open as a dropdown over the grid */
   #SearchPage.search-page--filters-top .collection__filter-tags-wrapper {
     position: absolute;
     top: 100%;
@@ -18270,17 +18269,26 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     min-width: 220px;
     z-index: 2;
   }
-  #SearchPage.search-page--filters-top .collection__filter-tags,
-  #SearchPage.search-page--filters-top .is-expanded .collection__filter-tags {
+  #SearchPage.search-page--filters-top .collection__filter-tags-wrapper > .collection__filter-tags {
     padding: 15px;
     margin: 0;
     background: var(--bg);
     border: var(--BORDER-WIDTH) solid var(--text-alpha-25);
-    border-bottom: var(--BORDER-WIDTH) solid var(--text-alpha-25);
     max-height: 60vh;
     overflow-y: auto;
   }
-  /* Active filter tags + Clear All sit in a line under the bar */
+  #SearchPage.search-page--filters-top .collection__filter-actions .collection__filter-tags {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: none;
+    max-height: none;
+    overflow: visible;
+  }
+  #SearchPage.search-page--filters-top .collection__filter-actions {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
   #SearchPage.search-page--filters-top .collection__filters-header {
     order: 99;
     flex: 0 0 100%;
