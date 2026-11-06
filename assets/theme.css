@@ -34592,6 +34592,9 @@ div.footer-title h5 {
     padding: 12px !important;
     border-width: 0.5vw !important;
   }
+  .search-grid .wrapper {
+    padding: 0;
+  }
 }
 @media (min-width: 768px) and (max-width: 1599px) {
   .search-grid .product-template-custom .product-card .product-card__image img {
