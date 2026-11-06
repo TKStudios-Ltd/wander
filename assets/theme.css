@@ -18233,6 +18233,13 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   }
   #SearchPage.search-page--filters-top .collection__filter {
     position: relative;
+    width: auto !important;
+    flex: 0 0 auto;
+    margin: 0;
+    border: 0;
+  }
+  #SearchPage.search-page--filters-top .collection__filter__title .collection__filter__count {
+    margin-left: 4px;
   }
   #SearchPage.search-page--filters-top .collection__filter__title {
     display: flex;
