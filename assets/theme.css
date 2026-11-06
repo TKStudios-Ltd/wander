@@ -18204,7 +18204,7 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
     max-height: none !important;
     margin: 0 0 30px !important;
     transform: none !important;
-    z-index: 20;
+    z-index: 5;
   }
   #SearchPage.search-page--filters-top .collection__filters-wrapper,
   #SearchPage.search-page--filters-top .collection__filters-list {
