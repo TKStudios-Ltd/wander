@@ -18322,9 +18322,8 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   #SearchPage.search-page--filters-top .collection__products {
     width: 100%;
     max-width: calc(var(--site-width) + 3rem);
-    margin: 4rem auto 0 !important;
+    margin: 0 auto !important;
     position: relative;
-    /* z-index: 1; */
   }
   #SearchPage .collection__wrapper .wrapper--search-results {
     padding: 0;
