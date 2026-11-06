@@ -18316,7 +18316,6 @@ body:has(.card-scrolling-effect):has([data-header-sticky]) .main-content > .shop
   }
   #SearchPage .collection__wrapper .wrapper--search-results {
     padding: 0;
-    width: 100%;
   }
   #SearchPage .collection__wrapper .wrapper--search-results .collection__inner {
     width: 100%;
