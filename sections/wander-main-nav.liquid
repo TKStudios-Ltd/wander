@@ -503,6 +503,21 @@ ul.pushNav {
         width: 12px;
     }
 
+    /* Linked header rows (e.g. Shop All Fine Art Photography): text fills the row, toggle stays separate */
+    .open-wrapper > a.openLevel__link {
+        flex: 1 1 auto;
+        margin-right: 20px;
+    }
+    /* Larger tap target for the plus/x toggle without changing how it looks */
+    .openLevel > div .open-close-wrapper .toggle-plus::before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+    }
+
     .pushNav li.closeLevel {
         margin-bottom: 30px;
         margin-left: 30px;
@@ -739,10 +754,17 @@ ul.pushNav {
                                     
                                     {% for sublink in link.links %}
                                         
+                                            {%- comment -%} Shop column headers link to Shop All Prints if no real URL is set in the menu admin {%- endcomment -%}
+                                            {% assign sublink_url = sublink.url %}
+                                            {% if link.title == 'Shop' and sublink.links.size > 0 %}
+                                                {% if sublink_url == blank or sublink_url == '#' %}
+                                                    {% assign sublink_url = '/collections' %}
+                                                {% endif %}
+                                            {% endif %}
                                             <li class="dropdown-item sans-serif">
 
                                                 <!-- LEVEL 2 -->
-                                                <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                                                <a href="{{ sublink_url }}">{{ sublink.title }}</a>
                                                     {% if sublink.links %}
                                                         <ul class="nav-collections">
                                                             {% for sublink2 in sublink.links %}
@@ -841,12 +863,24 @@ ul.pushNav {
                                 {% assign open_shop_all = true %}
                             {% endif %}
                         {% endif %}
+                        {%- comment -%} Shop headers link to Shop All Prints if no real URL is set in the menu admin {%- endcomment -%}
+                        {% assign sublink_url = sublink.url %}
+                        {% if link.title == 'Shop' and sublink.links.size > 0 %}
+                            {% if sublink_url == blank or sublink_url == '#' %}
+                                {% assign sublink_url = '/collections' %}
+                            {% endif %}
+                        {% endif %}
                         <li>
                         {% if sublink.links.size > 0 %}
                             <!-- LEVEL 2 row (with toggle) -->
                             <div class="openLevel js-openLevel">
                             <div class="open-wrapper">
-                                <div>{{ sublink.title }}</div>
+                                {% if sublink_url != blank and sublink_url != '#' %}
+                                    <!-- Header text is a link; only the plus/x button toggles -->
+                                    <a class="openLevel__link" href="{{ sublink_url }}">{{ sublink.title }}</a>
+                                {% else %}
+                                    <div>{{ sublink.title }}</div>
+                                {% endif %}
                                 <div class="open-close-wrapper">
                                 <button
                                     type="button"
@@ -999,6 +1033,8 @@ ul.pushNav {
     // Open next level when tapping the text row (ignore clicks on the plus button itself)
     $(document).on('click', '.js-openLevel .open-wrapper', function (e) {
       if ($(e.target).closest('.toggle-plus').length) return;
+      // Header rows that are links navigate normally; only the plus/x button toggles them
+      if ($(e.target).closest('a').length) return;
       var $row = $(this);
       var $li = $row.closest('li');
       var $level = $li.children('.js-pushNavLevel').first();
