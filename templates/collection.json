@@ -87,11 +87,11 @@
       ],
       "settings": {
         "show_breadcrumbs": true,
-        "enable_sorting": true,
+        "enable_sorting": false,
         "enable_filters": true,
         "filters_layout": "open",
         "show_more": true,
-        "filter_mode": "tag",
+        "filter_mode": "default",
         "bg_color": "",
         "padding_top": 30,
         "padding_bottom": 60
