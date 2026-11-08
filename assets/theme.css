@@ -34799,10 +34799,10 @@ div.footer-title h5 {
 }
 
 .search-grid .product-template-general .product-card__image img {
-  border: none;
+  border: none !important;
   padding: 0 !important;
-  box-shadow: none;
-  filter: none;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
 /* Shop All */
