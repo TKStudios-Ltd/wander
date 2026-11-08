@@ -34798,11 +34798,12 @@ div.footer-title h5 {
   z-index: 1;
 }
 
-.search-grid .product-template-general .product-card__image img {
+.search-page .search-grid .product-template-general .product-card__image img {
   border: none !important;
   padding: 0 !important;
   box-shadow: none !important;
   filter: none !important;
+  aspect-ratio: 1 / 1;
 }
 
 /* Shop All */
