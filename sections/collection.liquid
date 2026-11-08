@@ -4,11 +4,20 @@
   assign section_template = 'collection'
   assign carousel = false
   assign collection_count = collection.all_products_count
-  assign filter_mode = section.settings.filter_mode
+    assign filter_mode = section.settings.filter_mode
   assign filter_by_tags = false
   assign enable_filters = section.settings.enable_filters
   assign filters_layout = section.settings.filters_layout
   assign show_more = section.settings.show_more
+
+  comment
+    /collections/all – match search filters (faceted) and list every value
+  endcomment
+  if collection.handle == 'all'
+    assign filter_mode = 'default'
+    assign enable_filters = true
+    assign show_more = false
+  endif
 
   assign columns_mobile = settings.products_per_row_on_mobile | plus: 0
 
