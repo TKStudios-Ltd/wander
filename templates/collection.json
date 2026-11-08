@@ -44,7 +44,6 @@
     },
     "collection_233_tiles_Lwpbnk": {
       "type": "collection-233-tiles",
-      "disabled": true,
       "name": "Collection 2-3-3 Grid",
       "settings": {
         "swym_enabled": true,
@@ -85,6 +84,7 @@
       "block_order": [
         "96343c36-f832-4740-8cd6-2a90dcf9e4d9"
       ],
+      "disabled": true,
       "settings": {
         "show_breadcrumbs": true,
         "enable_sorting": false,
