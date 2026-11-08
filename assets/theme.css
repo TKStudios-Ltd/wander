@@ -34798,6 +34798,13 @@ div.footer-title h5 {
   z-index: 1;
 }
 
+.search-grid .product-template-general img {
+  border: none;
+  padding: 0 !important;
+  box-shadow: none;
+  filter: none;
+}
+
 /* Shop All */
 
 .shop_all__hero_intro.text-section .text__heading {
