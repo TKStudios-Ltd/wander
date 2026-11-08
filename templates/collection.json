@@ -91,7 +91,7 @@
         "enable_filters": true,
         "filters_layout": "open",
         "show_more": true,
-        "filter_mode": "default",
+        "filter_mode": "tag",
         "bg_color": "",
         "padding_top": 30,
         "padding_bottom": 60
