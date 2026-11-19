@@ -35512,6 +35512,10 @@ main img {
   letter-spacing: 1px;
   line-height: 1.4 !important;
 }
+.shopify-pc__banner__btns {
+  gap: 0.75rem 1rem;
+  margin-top: 1rem;
+}
 .shopify-pc__banner__dialog button {
   font-family: urw-din-semi-condensed !important;
   font-size: 12px !important;
@@ -35519,6 +35523,6 @@ main img {
   text-transform: uppercase;
   display: flex;
   height: 100% !important;
-  padding: 12px 40px !important;
+  padding: 12px 20px !important;
   margin: 0 !important;
 }
