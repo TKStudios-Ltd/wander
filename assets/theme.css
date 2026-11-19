@@ -35517,6 +35517,8 @@ main img {
   font-size: 12px !important;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  display: inline-flex;
+  display: flex;
+  height: 100% !important;
   padding: 12px 40px !important;
+  margin: 0 !important;
 }
