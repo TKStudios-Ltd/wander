@@ -35479,3 +35479,10 @@ main img {
   font-family: "Libre Baskerville", serif !important;
   border-radius: 0 !important;
 }
+
+@media (max-width: 989px) {
+  #trade-program .image-with-text__image,
+  #trade-program .image-with-text__content {
+    flex-basis: 100%;
+  }
+}
