@@ -35508,3 +35508,11 @@ main img {
   letter-spacing: 1px;
   line-height: 1.4 !important;
 }
+.shopify-pc__banner__dialog button {
+  font-family: urw-din-semi-condensed !important;
+  font-size: 12px !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  padding: 12px 40px !important;
+}
