@@ -238,6 +238,9 @@
       "settings": {
         "filter_template_suffix": "general",
         "filter_product_type": "Lifestyle Products",
+        "fallback_collection": "lifestyle-products",
+        "fallback_hide_sold_out": true,
+        "debug_related": true,
         "swym_enabled": true,
         "stacked_max_width": 480,
         "enable_tabs": false,
