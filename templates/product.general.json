@@ -224,18 +224,22 @@
     "related": {
       "type": "related-products",
       "blocks": {
-        "recent_BfMGQy": {
-          "type": "recent",
+        "related_xCPfac": {
+          "type": "related",
           "settings": {
             "title": "Pairs Well With",
-            "product_recently_limit": 3
+            "product_recommendations_limit": 3
           }
         }
       },
       "block_order": [
-        "recent_BfMGQy"
+        "related_xCPfac"
       ],
       "settings": {
+        "filter_template_suffix": "general",
+        "filter_product_type": "Lifestyle Products",
+        "swym_enabled": true,
+        "stacked_max_width": 480,
         "enable_tabs": false,
         "columns_mobile": "1",
         "type_style": "subheading-text",
