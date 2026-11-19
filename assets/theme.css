@@ -22761,10 +22761,10 @@ body#shop-all-peonies .list-collections-section .grid__container .list-collectio
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
 body#palms .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
 body#italy-amp-capri .list-collections-section .grid__container .list-collections__item:last-child .collection__peonies__title,
-body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .btn,
+/* body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .btn,
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .btn,
 body#palms .list-collections-section .grid__container .list-collections__item:last-child .btn,
-body#italy-amp-capri .list-collections-section .grid__container .list-collections__item:last-child .btn,
+body#italy-amp-capri .list-collections-section .grid__container .list-collections__item:last-child .btn, */
 body#shop-all-peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image,
 body#peonies .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image,
 body#palms .list-collections-section .grid__container .list-collections__item:last-child .list-collections__item__image,
