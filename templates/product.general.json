@@ -224,16 +224,16 @@
     "related": {
       "type": "related-products",
       "blocks": {
-        "related_JAPgWt": {
-          "type": "related",
+        "recent_BfMGQy": {
+          "type": "recent",
           "settings": {
             "title": "Pairs Well With",
-            "product_recommendations_limit": 3
+            "product_recently_limit": 3
           }
         }
       },
       "block_order": [
-        "related_JAPgWt"
+        "recent_BfMGQy"
       ],
       "settings": {
         "enable_tabs": false,
