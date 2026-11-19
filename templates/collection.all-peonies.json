@@ -414,6 +414,7 @@
             "heading": "Photographed during the stages of bud & bloom, \"PART 1 - BUDS & BLOOMS\" is a comprehensive collection of fine art photos that showcase the Peony in the early stages of life. Crisp petals, vibrant colors, perfect symmetry—all hallmarks of their youth.  Petals glow with vibrancy, softness & weightlessness —with a fleeting feeling of newness, as everything opens wide.",
             "max_width": 490,
             "card_title_override": "Part 1: Buds & Blooms",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "rgba(0,0,0,0)",
             "overlay_opacity": 0
@@ -427,6 +428,7 @@
             "heading": "Photographed during the most expansive blooms, \"PART 2 - SHE BLOOMS\" captures the peony in full glorious blooms—bursting with color, beauty, & joy. Overlapping peonies compete for the limelight. Bursting, billowing and dripping with life, these photographs spill beyond the frame & into the room—commanding a presence that's impossible to ignore.",
             "max_width": 500,
             "card_title_override": "Part 2: She Blooms",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 0
@@ -440,6 +442,7 @@
             "heading": "Photographed during each flower's \"prime\", \"PART 3 - FOREVER BLOOMING\" is a celebration of expansion and joie de vivre—featuring grand, breathtaking blooms in their fullest expression. Bold, vibrant, and unapologetically open, they overflow with life, and radiate joy in every petal. There's a sense of freedom in their openness—a kind of beauty that doesn't ask for permission.",
             "max_width": 500,
             "card_title_override": "Part 3: Forever Blooming",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -453,6 +456,7 @@
             "heading": "Photographed during the bud & the bloom stages, \"PART 4 - BOLD & BEAUTIFUL\" plays with light, dark and bright colors, creating bold intriguing visuals. Using concepts of duality, contrast, and unexpected colors & hues, the flowers take on new perspectives of beauty. Both strength and fragility are explored, revealing a delicate tension between resilience and vulnerability.",
             "max_width": 500,
             "card_title_override": "Part 4: Bold & Beautiful",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -466,6 +470,7 @@
             "heading": "\"PART 5 - VIBRANT BLOOMS\" is a comprehensive collection of fine art photos that showcase the Peony in full bloom. Perfect blooms, vibrant colors and ethereal lightness—with the full richness of expansion. Classic beauty is celebrated—as each peony floats & dances in the light. It's as if each flower knows this is its' moment to shine. ",
             "max_width": 480,
             "card_title_override": "Part 5: Vibrant Blooms",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -479,6 +484,7 @@
             "heading": "With the beauty of light & expansion, \"PART 6 - INNER BEAUTY\" showcases the peony — with delicate transparent blooms that dance in the light & glow from within. Suspended in air, they are weightless, soft, fleeting, & quietly radiant. The interplay of light & form highlights their delicacy—emphasizing a quiet, suspended stillness, and revealing a soft, luminous presence.",
             "max_width": 500,
             "card_title_override": "Part 6: Inner Beauty",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -492,6 +498,7 @@
             "heading": "With photographs shot when most flowers would be discarded, \"PART 7 - ETERNAL BEAUTY\" celebrates the mid- to later stages of each peony's life. Vibrant, colorful and still very much full-of-life—organic fluid forms take shape, and light illuminates. Colors & light create unusual perspectives, echoing an eternal resonance, universal beauty & permanence—defying the passage of time.",
             "max_width": 520,
             "card_title_override": "Part 7: Eternal Beauty",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -505,6 +512,7 @@
             "heading": "Floating in space and illuminated by light, each artwork in “PART 8 - LIGHTNESS OF BEING” reveals an unsung beauty & lightness found in the later stages of each flower’s life.  Ethereal, light, and often otherworldly, the images are both relaxing and unusual. With photographs shot when most flowers would be discarded, a new perspective of beauty is challenged—Wrinkles, fallen petals, & age are celebrated.",
             "max_width": 520,
             "card_title_override": "Part 8: Lightness of Being",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -518,6 +526,7 @@
             "heading": "With photographs taken at a stage in life when most flowers would be discarded,  “PART 9 - THE SPACE IN BETWEEN” explores the space in between life & death, matter & air, weight & weightlessness. Floating in space and illuminated by light, each form carries an ethereal presence and glass-like translucency—with shapes that bend, curl, and twist into organic, fluid and often fantastical forms. ",
             "max_width": 500,
             "card_title_override": "Part 9: The Space in Between",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -531,6 +540,7 @@
             "heading": "With windswept petals that feel suspended in time, the images in “PART 10 - UNSUNG BEAUTY” illuminate an inherent beauty & light within—even in the final stages of life.  Flowers float, and wrinkles are celebrated—and age seems to be forgotten with a mantra of “forever young”. A delicate beauty emerges, and time seems to stand still. We are reminded that age can be beautiful.",
             "max_width": 500,
             "card_title_override": "Part 10: Unsung Beauty",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -544,6 +554,7 @@
             "heading": "\"PART 11 - WILD BEAUTY\" celebrates the later stages of each peony's life — as wild, organic & unusual forms take shape. Caught in the stillness bearing the passage of time, it's as if age itself has loosened its grip. Beauty lingers not in perfection, but within wilted, fallen petals and an unapologetic allure. Each flower speaks with a voice that refuses to fade.",
             "max_width": 500,
             "card_title_override": "Part 11: Wild Beauty",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -557,6 +568,7 @@
             "heading": "With photographs shot when most flowers would be discarded, Part 12 embraces the elegance of aging, illuminating the confidence & wisdom that emerge over time. Rather than chasing youth, it honors what remains, as each flower tells its own evolving story. Transcending physical decay & the passage of time, this work reflects a deeper truth: that aging is not something to resist, but to embody.",
             "max_width": 500,
             "card_title_override": "Part 12: Ageless Beauty",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -570,6 +582,7 @@
             "heading": "Each flower & petal was kept to the end, beyond the point where most would be forgotten. Beauty is in the eye of the beholder—as wrinkles & decay bear impressions of a life well-lived. The end of life is surrendered to and witnessed— honoring the full circle of life and the beauty, grace, & resilience found deep within each peony, even up to its’ final hour. ",
             "max_width": 500,
             "card_title_override": "Part 13: Fallen",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -583,6 +596,7 @@
             "heading": "“PART 14 - FLOWERS GROW AFTER IT RAINS” is an abstract art series within the PEONIES COLLECTION. It follows the process after death—and reflects on the delicate balance of life after death, growth after hardship, light after darkness, and joy after grief.  It gently reminds us that time often heals...that beauty and vibrancy re-emerge...and that flowers always grow, after it rains.",
             "max_width": 510,
             "card_title_override": "Part 14: Flowers Grow After it Rains",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -596,6 +610,7 @@
             "heading": "This mixed media abstract art FRAGMENTS Collection represents the final stage of the artist’s exploration — an inquiry into the concepts of death, the afterlife, and the pieces that remain thereafter. Memories, impressions, and fragments are left behind with those we love, and imprinted in the Collective. As parts of a larger whole, each soul and species leaves an echo — and a light that endures. We are a constellation of species and souls. Forever connected. Forever shaping each other.",
             "max_width": 520,
             "card_title_override": "Part 15: Fragments",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -605,9 +620,10 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "heading": "Not all artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ PEONIES Collection, please visit catalogs.shopwander.com to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.",
+            "heading": "Not all artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ PEONIES Collection, please click below to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.",
             "max_width": 500,
             "card_title_override": "",
+            "link_to_catalog": true,
             "block_text_color": "",
             "bg_color": "#ffffff",
             "overlay_opacity": 100
