@@ -79,7 +79,7 @@
     "section_image_with_text_jkbYpP": {
       "type": "section-image-with-text",
       "custom_css": [
-        "@media (min-width: 989px) {.image-with-text__items {gap: 1vw; background: white; } .image-with-text__image, .image-with-text__content {flex-basis: calc(50% - 0.6vw); background: var(--bg) !important; } .image-with-text__content-items {max-width: 36rem; margin: auto; } .image-with-text__heading {font-size: 2.4rem !important; } .image-with-text__content {padding: 8rem 3rem !important; }}",
+        "@media (min-width: 768px) {.image-with-text__items {gap: 1vw; background: white; } .image-with-text__image, .image-with-text__content {flex-basis: calc(50% - 0.6vw); background: var(--bg) !important; } .image-with-text__content-items {max-width: 36rem; margin: auto; } .image-with-text__heading {font-size: 2.4rem !important; } .image-with-text__content {padding: 8rem 3rem !important; }}",
         ".image-with-text__content {padding: 5rem 3rem;}",
         ".image-with-text__heading {margin: 10px 0 35px; font-size: 2rem; line-height: 1;}",
         ".btn {margin-top: 1.5rem;}"
