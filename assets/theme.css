@@ -35494,6 +35494,10 @@ main img {
   }
 }
 
+.shopify-pc__banner__dialog {
+  border-radius: 0 !important;
+  box-shadow: 0px 1px 2px rgb(63 63 68 / 40%) !important;
+}
 .shopify-pc__banner__dialog h2 {
   text-transform: uppercase;
   font-family: urw-din-semi-condensed !important;
