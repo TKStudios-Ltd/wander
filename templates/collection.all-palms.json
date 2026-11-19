@@ -359,6 +359,7 @@
             "heading": "Bold silhouettes, graphic lines, unexpected color — the MODERN PALMS Collection explores the striking geometry found within nature, where oversized fronds reveal their sculptural beauty. Through shape, color, and movement, these photographs celebrate the unexpected artistry of the natural world.",
             "max_width": 440,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "rgba(0,0,0,0)",
             "overlay_opacity": 0
@@ -372,6 +373,7 @@
             "heading": "Sweeping horizons and paths to faraway places—the ISLAND PALMS Collection explores the beauty of tropical landscapes, where secluded shores and swaying palms evoke a sense of endless escape. Through airy compositions, subtle color, and relaxed coastal moments, these photographs celebrate the effortless beauty & peaceful rhythm of the palm.",
             "max_width": 490,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 0
@@ -385,6 +387,7 @@
             "heading": "Clean lines, organic patterns, unexpected perspective — the ARCHITECTURAL PALMS Collection explores the visual rhythm found within the palm. Through bold angles and layered forms, these photographs celebrate the quiet artistry found in nature’s design.",
             "max_width": 500,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -398,6 +401,7 @@
             "heading": "Classic silhouettes, graceful stature, enduring allure — the ICONIC PALMS Collection celebrates the Palm as nature’s star. Standing tall against the sky, these photographs reveal their unique character, elegance, and timeless presence, in the limelight.",
             "max_width": 450,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -411,6 +415,7 @@
             "heading": "Vast landscapes, quiet horizons, unexpected beauty — the DESERT PALMS Collection explores the graceful presence of palms within the raw simplicity of the desert. Through open skies, earthy tones, and moments of contrast, these photographs celebrate the remarkable beauty found in one of nature’s most expansive places.",
             "max_width": 520,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -424,6 +429,7 @@
             "heading": "Movement, rhythm, effortless grace — the WINDSWEPT PALMS Collection explores the beauty of palms transformed by wind and motion. Through flowing forms, shifting silhouettes, and moments of natural movement, these photographs celebrate the freedom, romance, and quiet poetry found within the natural world.",
             "max_width": 520,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -437,6 +443,7 @@
             "heading": "Night skies, luminous forms, unexpected magic — the MOONLIT PALMS Collection explores the transformation of the Palm, beneath the glow of moonlight. Through contrast, illumination, and silhouette, these photographs celebrate the quiet wonder and enchantment revealed when when nature is seen in a new light.",
             "max_width": 520,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -450,6 +457,7 @@
             "heading": "Brilliant color, organic movement, joyful expression — the FLOWERING PALMS Collection explores the vivid beauty found within tropical botanical palms. Through bold hues, unexpected forms, and colorful details, these photographs celebrate the energy, vibrancy, and natural allure of the flowering world.",
             "max_width": 500,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -463,6 +471,7 @@
             "heading": "Elegant forms, graceful lines, timeless simplicity — the SCULPTURAL PALMS Collection explores the palm as a natural work of art. Through shape, scale, and form, these photographs celebrate the abstract beauty and sculptural presence found throughout the natural world.",
             "max_width": 490,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -475,6 +484,7 @@
             "heading": "Not all artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ PALMS Collection, please visit catalogs.shopwander.com to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full. Click below to access:",
             "max_width": 500,
             "card_title_override": "",
+            "link_to_catalog": true,
             "block_text_color": "",
             "bg_color": "#ffffff",
             "overlay_opacity": 100
