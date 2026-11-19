@@ -249,8 +249,8 @@
         "tab_heading_size": 120,
         "bg_color": "",
         "width": "wrapper--full-padded",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 100,
+        "padding_bottom": 80
       }
     },
     "section_divider_8GL8if": {
