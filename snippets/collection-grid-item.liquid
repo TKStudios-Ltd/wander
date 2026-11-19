@@ -285,7 +285,7 @@
     {% assign is_signature = true %}
   {% endif %}
 
-  <a href="{{ collection_url }}" class="list-collections__item__outer{% if section_buttons %} btn--primary{% endif %}">
+    <a href="{{ collection_url }}" class="list-collections__item__outer{% if section_buttons %} btn--primary{% endif %}"{% if link_to_catalog %} target="_blank" rel="noopener"{% endif %}>
     <div class="list-collections__item__image"
       data-product-media-container
       {% if animations_enabled %}
