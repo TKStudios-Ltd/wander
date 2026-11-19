@@ -35493,3 +35493,18 @@ main img {
     flex-basis: 100%;
   }
 }
+
+.shopify-pc__banner__dialog h2 {
+  text-transform: uppercase;
+  font-family: urw-din-semi-condensed !important;
+  font-size: 12px !important;
+  letter-spacing: 1.5px;
+  margin: 0 0 1rem !important;
+}
+.shopify-pc__banner__dialog p {
+  text-transform: uppercase;
+  font-family: urw-din-semi-condensed !important;
+  font-size: 10px !important;
+  letter-spacing: 1px;
+  line-height: 1.4 !important;
+}
