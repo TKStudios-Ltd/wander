@@ -35522,6 +35522,7 @@ main img {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   display: flex;
+  justify-content: center !important;
   height: 100% !important;
   padding: 12px 20px !important;
   margin: 0 !important;
