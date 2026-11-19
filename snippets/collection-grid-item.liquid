@@ -100,6 +100,9 @@
     assign default_title = collection.title | strip_html | escape | truncatewords: 10
     assign collection_url = collection.url
   endif
+  if link_to_catalog
+    assign collection_url = 'https://catalogs.shopwander.com/'
+  endif
 
   assign overlay_opacity = overlay_opacity | default: 0
   assign placeholder_index = placeholder_index | default: 1
@@ -373,7 +376,11 @@
         {%- endif -%}
       </span>
 
-      <span class="btn btn--solid btn--large btn--black">Shop</span>
+      {%- if link_to_catalog -%}
+        <span class="btn btn--solid btn--large btn--black">Browse</span>
+      {%- else -%}
+        <span class="btn btn--solid btn--large btn--black">Shop</span>
+      {%- endif -%}
 
       {%- if enable_product_count -%}
         {%- liquid
