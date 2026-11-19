@@ -85,7 +85,7 @@
       ],
       "custom_css": [
         ".product__description.rte {margin-bottom: 1.5rem;}",
-        "@media (max-width: 749px) {.product__description.rte {margin: -1rem 0 0; }}"
+        "@media (max-width: 767px) {.product__description.rte {margin: -1rem 0 0; }}"
       ],
       "settings": {
         "product_sticky_enable": true,
@@ -205,7 +205,7 @@
       "disabled": true,
       "custom_css": [
         "p {font-family: Libre Baskerville, serif; font-size: 11px !important; text-transform: uppercase; letter-spacing: 1px; line-height: 1.8;}",
-        "@media (max-width: 749px) {p {font-size: 1.4vw !important; }}",
+        "@media (max-width: 767px) {p {font-size: 1.4vw !important; }}",
         "a {text-decoration: none;}",
         "a:hover {text-decoration: underline;}"
       ],
