@@ -35482,7 +35482,9 @@ main img {
 
 @media (max-width: 989px) {
   #trade-program .image-with-text__image,
-  #trade-program .image-with-text__content {
+  #trade-program .image-with-text__content,
+  #giving-back .image-with-text__image,
+  #giving-back .image-with-text__content {
     flex-basis: 100%;
   }
 }
