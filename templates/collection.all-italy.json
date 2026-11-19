@@ -377,6 +377,7 @@
             "heading": "<p>Where ancient stone meets the endless sea, our WANDERINGS™ ITALY & CAPRI COLLECTION – STONE + SEA explores coastal mediterranean landscapes shaped by centuries of sun, salt, and stories. With weathered stone, luminous waters and whitewashed horizons, it celebrates the breathtaking dance found only in the Mediterranean. </p>",
             "max_width": 460,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "rgba(0,0,0,0)",
             "overlay_opacity": 0
@@ -390,6 +391,7 @@
             "heading": "<p>WANDERINGS™ ITALY & CAPRI COLLECTION – STONE + SEA NOIR explores Italy through a neutral palette and a dramatic lens. Sculptural coastlines, ancient stone, and moody Mediterranean tones are highlighted— a study of shadow, texture, and the timeless beauty that exists beyond the postcard view.</p>",
             "max_width": 430,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 0
@@ -403,6 +405,7 @@
             "heading": "<p>From iconic Faraglioni, to the striped umbrellas of Fontelina, our WANDERINGS™ ITALY & CAPRI Collection — SAPPHIRE WATERS OF CAPRI captures the intoxicating allure of an italian summer— where swimmers linger, boats drift, and every moment is drenched in la dolce vita. Each photograph is an invitation into the romance of Capri.</p>",
             "max_width": 480,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -416,6 +419,7 @@
             "heading": "Aquamarine, seafoam, turquoise and teal—Our WANDERINGS™ ITALY & CAPRI COLLECTION – TYRRHENIAN TEAL puts this vibrant palette on full display. With gemstone waters, pastel towns, and sun-bleached shores, this Collection showcases the colorful and calming beauty of the Tyrrhenian Sea—where the sea shimmers, the villages glow, and every view feels like a dream.",
             "max_width": 480,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -429,6 +433,7 @@
             "heading": "<p>Our WANDERINGS™ ITALY & CAPRI COLLECTION – PASTEL AMALFI COAST captures the iconic Amalfi Coast in a dreamlike palette. From pastel villages on the cliffs, to teal coastal coves, to towns & cliffs bathed in the Mediterranean sun, this series will transport you to a place you won’t want to leave.</p>",
             "max_width": 520,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -442,6 +447,7 @@
             "heading": "<p>Our WANDERINGS™ ITALY & CAPRI COLLECTION – SUNWASHED AMALFI captures the coastal beauty of sunbleached colors, salt-worn umbrellas, and quiet moments along the shore. Light, airy, and sophisticated, each artwork is an invitation to soften into the relaxed elegance of Italian coastal life —a dreamy world on a sunlit day.</p>",
             "max_width": 540,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -455,6 +461,7 @@
             "heading": "There’s a fleeting moment along the Amalfi Coast when everything turns to gold. The cliffs glow, the sea softens, and the villages hold the warmth of the setting sun. Our WANDERINGS™ ITALY & CAPRI COLLECTION – AMALFI’s GOLDEN HOUR captures Italy’s most dreamy hour, revealing the coast at its most captivating light. ",
             "max_width": 470,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 100
@@ -468,6 +475,7 @@
             "heading": "There’s magic in the waters of the Tyrrhenian Sea—a kaleidoscope of gemstone hues, shifting from brilliant teal to turquoise, sapphire, emerald, & deep lapis. Our WANDERINGS™ ITALY & CAPRI COLLECTION —JEWELS ON THE WATER is a study in the extraordinary beauty of the Mediterranean Sea. As sun meets sea, and colors collide, it’s an invitation into a vibrant and pristine, crystalline world.",
             "max_width": 520,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -481,6 +489,7 @@
             "heading": "Our WANDERINGS™ ITALY & CAPRI COLLECTION – THE SEA SPEAKS is a study in the colors, forms, and ever-changing beauty of the Sea. From waves to glimmers to glistening abstract forms—this Collection follows movement & light, and celebrates the Sea as a “living work of art”. Waves caught in motion, as colors shift and change—the Sea is both captivating and magical.",
             "max_width": 500,
             "card_title_override": "",
+            "link_to_catalog": false,
             "block_text_color": "",
             "bg_color": "",
             "overlay_opacity": 30
@@ -490,9 +499,10 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "heading": "Not all artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ ITALY & CAPRI Collection, please visit catalogs.shopwander.com to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.",
+            "heading": "Not all artwork is featured & sold on this website. If you would like to see the full WANDERINGS™ ITALY & CAPRI Collection, please click below to get access to our WANDERINGS™ FINE ART PHOTOGRAPHY Catalogs, which contain all Artwork & Collections, in full.",
             "max_width": 500,
             "card_title_override": "",
+            "link_to_catalog": true,
             "block_text_color": "",
             "bg_color": "#ffffff",
             "overlay_opacity": 100
