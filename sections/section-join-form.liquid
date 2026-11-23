@@ -585,7 +585,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'Country: ' + get('TPCountry-{{ section.id }}'),
       'Website / Social: ' + get('TPWebsite-{{ section.id }}'),
       '',
-      '(Note: File uploads are not sent via Shopify contact forms.)'
+      'Next step: request business card and resale license by email for approval.'
     ].join('\n');
     var bodyField = document.getElementById('TPBody-{{ section.id }}');
     if (bodyField) bodyField.value = body;
@@ -628,12 +628,6 @@ document.addEventListener('DOMContentLoaded', function () {
       "id": "button_label",
       "label": "Button label",
       "default": "Submit"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_file_inputs",
-      "label": "Show file inputs (visual only)",
-      "default": true
     }
   ],
   "presets": [
