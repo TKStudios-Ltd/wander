@@ -13,7 +13,7 @@
   {% liquid
   assign tp_form_id = 'TradeProgramForm-' | append: section.id
 %}
-{% form 'contact', id: tp_form_id, class: 'contact-form' %}
+{% form 'customer', id: tp_form_id, class: 'contact-form' %}
 
   {% if form.posted_successfully? %}
     <p class="form-status form-status--success">{{ section.settings.success_text | default: 'Thanks—your application has been submitted.' }}</p>
@@ -29,8 +29,7 @@
     </div>
   {% endif %}
 
-  <input type="hidden" name="contact[tags]" value="Trade Program Application">
-  <textarea id="TPBody-{{ section.id }}" name="contact[body]" hidden></textarea>
+  <input type="hidden" name="contact[tags]" value="{{ section.settings.customer_tag | default: 'Trade Program' | escape }}">
 
   <div class="form__item-group">
     <div class="form__item">
@@ -51,7 +50,7 @@
   <div class="form__item-group">
     <div class="form__item">
       <label for="TPCountryCode-{{ section.id }}" class="field-label">Country Code</label>
-      <select id="TPCountryCode-{{ section.id }}" class="input--full" name="contact[country_code]">
+      <select id="TPCountryCode-{{ section.id }}" class="input--full">
         <option value="+93">+93 (Afghanistan)</option>
         <option value="+355">+355 (Albania)</option>
         <option value="+213">+213 (Algeria)</option>
@@ -254,46 +253,46 @@
     </div>
     <div class="form__item">
       <label for="TPPhone-{{ section.id }}" class="field-label">Phone*</label>
-      <input type="tel" id="TPPhone-{{ section.id }}" class="input--full" name="contact[phone]" required>
+      <input type="tel" id="TPPhone-{{ section.id }}" class="input--full" required>
     </div>
   </div>
 
   <div class="form__item">
     <label for="TPBusinessName-{{ section.id }}" class="field-label">Business Name*</label>
-    <input type="text" id="TPBusinessName-{{ section.id }}" class="input--full" name="contact[business_name]" required>
+    <input type="text" id="TPBusinessName-{{ section.id }}" class="input--full" required>
   </div>
 
   <div class="form__item">
     <label for="TPAddress1-{{ section.id }}" class="field-label">Address Line 1*</label>
-    <input type="text" id="TPAddress1-{{ section.id }}" class="input--full" name="contact[address1]" required>
+    <input type="text" id="TPAddress1-{{ section.id }}" class="input--full" required>
   </div>
 
   <div class="form__item">
     <label for="TPAddress2-{{ section.id }}" class="field-label">Address Line 2</label>
-    <input type="text" id="TPAddress2-{{ section.id }}" class="input--full" name="contact[address2]">
+    <input type="text" id="TPAddress2-{{ section.id }}" class="input--full">
   </div>
 
   <div class="form__item-group">
     <div class="form__item">
       <label for="TPCity-{{ section.id }}" class="field-label">City*</label>
-      <input type="text" id="TPCity-{{ section.id }}" class="input--full" name="contact[city]" required>
+      <input type="text" id="TPCity-{{ section.id }}" class="input--full" required>
     </div>
     <div class="form__item">
       <label for="TPState-{{ section.id }}" class="field-label">State*</label>
-      <input type="text" id="TPState-{{ section.id }}" class="input--full" name="contact[state]" required>
+      <input type="text" id="TPState-{{ section.id }}" class="input--full" required>
     </div>
   </div>
 
   <div class="form__item-group">
     <div class="form__item">
       <label for="TPZip-{{ section.id }}" class="field-label">ZIP*</label>
-      <input type="text" id="TPZip-{{ section.id }}" class="input--full" name="contact[zip]" required>
+      <input type="text" id="TPZip-{{ section.id }}" class="input--full" required>
     </div>
     <div class="form__item">
       <label for="TPCountry-{{ section.id }}" class="field-label">Country*</label>
 
       <div class="selector-wrapper">
-        <select id="TPCountry-{{ section.id }}" class="FormSelect" name="contact[country]" required>
+        <select id="TPCountry-{{ section.id }}" class="FormSelect" required>
           <option value="" selected disabled>Select Country</option>
 
           <option value="Afghanistan">Afghanistan</option>
@@ -504,11 +503,11 @@
   <div class="form__item-group">
     <div class="form__item">
       <label for="TPWebsite-{{ section.id }}" class="field-label">Website</label>
-      <input type="text" id="TPWebsite-{{ section.id }}" class="input--full" name="contact[website]">
+      <input type="text" id="TPWebsite-{{ section.id }}" class="input--full">
     </div>
     <div class="form__item">
       <label for="TPSocialMedia-{{ section.id }}" class="field-label">Social Media Link</label>
-      <input type="text" id="TPSocialMedia-{{ section.id }}" class="input--full" name="contact[social_media]">
+      <input type="text" id="TPSocialMedia-{{ section.id }}" class="input--full">
     </div>
   </div>
 
@@ -520,21 +519,6 @@
     <button type="submit" id="TPSubmit-{{ section.id }}" class="btn btn--solid btn--large btn--black">{{ section.settings.button_label | default: 'Submit' }}</button>
   </div>
 {% endform %}
-
-{%- comment -%} Hidden Shopify customer form: creates/tags the customer. Submitted into a hidden iframe so the page doesn't change, and as a real form so Shopify's hCaptcha can process it. {%- endcomment -%}
-{% liquid
-  assign tp_customer_form_id = 'TradeProgramCustomerForm-' | append: section.id
-  assign tp_customer_frame = 'TPCustomerFrame-' | append: section.id
-%}
-<iframe name="{{ tp_customer_frame }}" id="{{ tp_customer_frame }}" title="Trade program customer" hidden style="display:none"></iframe>
-<div style="display:none" aria-hidden="true">
-  {% form 'customer', id: tp_customer_form_id, target: tp_customer_frame %}
-    <input type="hidden" name="contact[email]" id="TPCustEmail-{{ section.id }}">
-    <input type="hidden" name="contact[first_name]" id="TPCustFirstName-{{ section.id }}">
-    <input type="hidden" name="contact[last_name]" id="TPCustLastName-{{ section.id }}">
-    <input type="hidden" name="contact[tags]" id="TPCustTags-{{ section.id }}">
-  {% endform %}
-</div>
 
 </section>
 
@@ -575,71 +559,14 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!form) return;
 
   // Mailchimp embedded form action URL (Audience > Signup forms > Embedded forms > copy the form "action").
-  // Leave blank in the theme editor to skip Mailchimp and only send the Shopify email.
+  // Leave blank in the theme editor to skip Mailchimp.
   var mcAction = {{ section.settings.mailchimp_action_url | json }};
-  var customerTag = {{ section.settings.customer_tag | default: 'Trade Program' | json }};
   var sending = false;
 
   var get = function (id) { var el = document.getElementById(id + '-' + sid); return el ? el.value.trim() : ''; };
 
-  function buildBody() {
-    return [
-      'Trade Program Application',
-      '--------------------------------',
-      'Name: ' + get('TPFirstName') + ' ' + get('TPLastName'),
-      'Email: ' + get('TPEmail'),
-      'Phone: ' + get('TPCountryCode') + ' ' + get('TPPhone'),
-      'Business Name: ' + get('TPBusinessName'),
-      'Address 1: ' + get('TPAddress1'),
-      'Address 2: ' + get('TPAddress2'),
-      'City: ' + get('TPCity'),
-      'State: ' + get('TPState'),
-      'ZIP: ' + get('TPZip'),
-      'Country: ' + get('TPCountry'),
-      'Website: ' + get('TPWebsite'),
-      'Social Media: ' + get('TPSocialMedia'),
-      '',
-      'Applicant has been tagged "Trade Program" in Shopify and asked to email their documents.',
-      'Approve: send the approval email with the code. Decline: remove the "Trade Program" tag from the customer.'
-    ].join('\n');
-  }
-
-  // Creates (or updates) the Shopify customer and tags them, by submitting the hidden
-  // Shopify customer form into a hidden iframe. Always calls done(), even on failure.
-  function createShopifyCustomer(done) {
-    var cForm = document.getElementById('TradeProgramCustomerForm-' + sid);
-    var frame = document.getElementById('TPCustomerFrame-' + sid);
-    if (!customerTag || !cForm || !frame) { done(); return; }
-
-    var finished = false;
-    var finish = function (why) {
-      if (finished) return;
-      finished = true;
-      if (window.console) console.log('Shopify customer:', why);
-      done();
-    };
-
-    var set = function (id, val) { var el = document.getElementById(id + '-' + sid); if (el) el.value = val; };
-    set('TPCustEmail', get('TPEmail'));
-    set('TPCustFirstName', get('TPFirstName'));
-    set('TPCustLastName', get('TPLastName'));
-    set('TPCustTags', customerTag);
-
-    frame.addEventListener('load', function () {
-      var where = '';
-      try { where = frame.contentWindow.location.href; } catch (e) { where = 'loaded'; }
-      finish(where);
-    }, { once: true });
-    setTimeout(function () { finish('timeout'); }, 8000);
-
-    cForm.setAttribute('target', 'TPCustomerFrame-' + sid);
-    // requestSubmit fires the submit event, so Shopify's hCaptcha can attach its token.
-    if (typeof cForm.requestSubmit === 'function') cForm.requestSubmit();
-    else cForm.submit();
-  }
-
   // Sends the applicant to the Mailchimp audience via JSONP (Mailchimp blocks normal cross-site requests).
-  // Always calls done(), even if Mailchimp fails or is slow, so the Shopify email is never lost.
+  // Always calls done(), even if Mailchimp fails or is slow, so the Shopify customer is still created.
   function sendToMailchimp(done) {
     if (!mcAction || mcAction.indexOf('list-manage.com') === -1) { done(); return; }
 
@@ -655,7 +582,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     window[cbName] = function (res) {
-      // "already subscribed" comes back as an error; that's fine, the Shopify email still goes out.
+      // "already subscribed" comes back as an error; that's fine, the Shopify form still submits.
       if (res && res.result !== 'success' && window.console) console.warn('Mailchimp:', res.msg);
       finish();
     };
@@ -695,9 +622,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Second pass: our work is done, let Shopify (and hCaptcha) submit normally.
     if (proceed) return;
 
-    var bodyField = document.getElementById('TPBody-' + sid);
-    if (bodyField) bodyField.value = buildBody();
-
     e.preventDefault();
     if (sending) return;
     sending = true;
@@ -705,13 +629,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var btn = document.getElementById('TPSubmit-' + sid);
     if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
 
-    createShopifyCustomer(function () {
-      sendToMailchimp(function () {
-        proceed = true;
-        if (btn) btn.disabled = false; // a disabled submitter can't be used by requestSubmit
-        if (typeof form.requestSubmit === 'function') form.requestSubmit(btn || undefined);
-        else HTMLFormElement.prototype.submit.call(form);
-      });
+    sendToMailchimp(function () {
+      proceed = true;
+      if (btn) btn.disabled = false; // a disabled submitter can't be used by requestSubmit
+      if (typeof form.requestSubmit === 'function') form.requestSubmit(btn || undefined);
+      else HTMLFormElement.prototype.submit.call(form);
     });
   });
 });
@@ -770,9 +692,9 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       "type": "text",
       "id": "customer_tag",
-      "label": "Customer tag on application",
+      "label": "Customer tag",
       "default": "Trade Program",
-      "info": "Applicants are created as Shopify customers with this tag. Must match the tag used in the T1 discount segment."
+      "info": "Applicants are created as Shopify customers with this tag. Must match the tag in the T1 discount segment."
     }
   ],
   "presets": [
