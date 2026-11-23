@@ -562,6 +562,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Mailchimp embedded form action URL (Audience > Signup forms > Embedded forms > copy the form "action").
   // Leave blank in the theme editor to skip Mailchimp and only send the Shopify email.
   var mcAction = {{ section.settings.mailchimp_action_url | json }};
+  var customerTag = {{ section.settings.customer_tag | default: 'Trade Program' | json }};
   var sending = false;
 
   var get = function (id) { var el = document.getElementById(id + '-' + sid); return el ? el.value.trim() : ''; };
@@ -586,6 +587,29 @@ document.addEventListener('DOMContentLoaded', function () {
       'Next step: applicant has been asked to email their business card and resale license for approval.',
       'Once approved, add the customer tag "Trade Program" in Shopify.'
     ].join('\n');
+  }
+
+  // Creates (or updates) the Shopify customer and tags them, using Shopify's built-in customer form.
+  // Always calls done(), even on failure, so the application email is never lost.
+  function createShopifyCustomer(done) {
+    if (!customerTag) { done(); return; }
+    var finished = false;
+    var finish = function () { if (!finished) { finished = true; done(); } };
+    setTimeout(finish, 4000);
+
+    var data = new FormData();
+    data.append('form_type', 'customer');
+    data.append('utf8', '\u2713');
+    data.append('contact[email]', get('TPEmail'));
+    data.append('contact[first_name]', get('TPFirstName'));
+    data.append('contact[last_name]', get('TPLastName'));
+    data.append('contact[tags]', customerTag);
+
+    fetch((window.Shopify && Shopify.routes && Shopify.routes.root ? Shopify.routes.root : '/') + 'contact', {
+      method: 'POST',
+      body: data,
+      credentials: 'same-origin'
+    }).then(finish, finish);
   }
 
   // Sends the applicant to the Mailchimp audience via JSONP (Mailchimp blocks normal cross-site requests).
@@ -643,7 +667,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var bodyField = document.getElementById('TPBody-' + sid);
     if (bodyField) bodyField.value = buildBody();
 
-    if (!mcAction) return; // No Mailchimp configured: normal Shopify submit.
 
     e.preventDefault();
     if (sending) return;
@@ -653,7 +676,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
 
     // form.submit() skips this listener, so there's no loop.
-    sendToMailchimp(function () { HTMLFormElement.prototype.submit.call(form); });
+    createShopifyCustomer(function () {
+      sendToMailchimp(function () { HTMLFormElement.prototype.submit.call(form); });
+    });
   });
 });
 </script>
@@ -703,6 +728,17 @@ document.addEventListener('DOMContentLoaded', function () {
       "id": "mailchimp_action_url",
       "label": "Mailchimp form action URL",
       "info": "From Mailchimp: Audience > Signup forms > Embedded forms. Copy the URL in the form's action attribute. Leave blank to skip Mailchimp."
+    },
+    {
+      "type": "header",
+      "content": "Shopify customer"
+    },
+    {
+      "type": "text",
+      "id": "customer_tag",
+      "label": "Customer tag on application",
+      "default": "Trade Program",
+      "info": "Applicants are created as Shopify customers with this tag. Must match the tag used in the T1 discount segment."
     }
   ],
   "presets": [
