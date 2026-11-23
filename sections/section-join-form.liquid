@@ -521,6 +521,21 @@
   </div>
 {% endform %}
 
+{%- comment -%} Hidden Shopify customer form: creates/tags the customer. Submitted into a hidden iframe so the page doesn't change, and as a real form so Shopify's hCaptcha can process it. {%- endcomment -%}
+{% liquid
+  assign tp_customer_form_id = 'TradeProgramCustomerForm-' | append: section.id
+  assign tp_customer_frame = 'TPCustomerFrame-' | append: section.id
+%}
+<iframe name="{{ tp_customer_frame }}" id="{{ tp_customer_frame }}" title="Trade program customer" hidden style="display:none"></iframe>
+<div style="display:none" aria-hidden="true">
+  {% form 'customer', id: tp_customer_form_id, target: tp_customer_frame %}
+    <input type="hidden" name="contact[email]" id="TPCustEmail-{{ section.id }}">
+    <input type="hidden" name="contact[first_name]" id="TPCustFirstName-{{ section.id }}">
+    <input type="hidden" name="contact[last_name]" id="TPCustLastName-{{ section.id }}">
+    <input type="hidden" name="contact[tags]" id="TPCustTags-{{ section.id }}">
+  {% endform %}
+</div>
+
 </section>
 
 <style>
@@ -584,38 +599,43 @@ document.addEventListener('DOMContentLoaded', function () {
       'Website: ' + get('TPWebsite'),
       'Social Media: ' + get('TPSocialMedia'),
       '',
-      'Next step: applicant has been asked to email their business card and resale license for approval.',
-      'Once approved, add the customer tag "Trade Program" in Shopify.'
+      'Applicant has been tagged "Trade Program" in Shopify and asked to email their documents.',
+      'Approve: send the approval email with the code. Decline: remove the "Trade Program" tag from the customer.'
     ].join('\n');
   }
 
-  // Creates (or updates) the Shopify customer and tags them, using Shopify's built-in customer form.
-  // Always calls done(), even on failure, so the application email is never lost.
+  // Creates (or updates) the Shopify customer and tags them, by submitting the hidden
+  // Shopify customer form into a hidden iframe. Always calls done(), even on failure.
   function createShopifyCustomer(done) {
-    if (!customerTag) { done(); return; }
+    var cForm = document.getElementById('TradeProgramCustomerForm-' + sid);
+    var frame = document.getElementById('TPCustomerFrame-' + sid);
+    if (!customerTag || !cForm || !frame) { done(); return; }
+
     var finished = false;
-    var finish = function () { if (!finished) { finished = true; done(); } };
-    setTimeout(finish, 4000);
+    var finish = function (why) {
+      if (finished) return;
+      finished = true;
+      if (window.console) console.log('Shopify customer:', why);
+      done();
+    };
 
-    var data = new FormData();
-    data.append('form_type', 'customer');
-    data.append('utf8', '\u2713');
-    data.append('contact[email]', get('TPEmail'));
-    data.append('contact[first_name]', get('TPFirstName'));
-    data.append('contact[last_name]', get('TPLastName'));
-    data.append('contact[tags]', customerTag);
+    var set = function (id, val) { var el = document.getElementById(id + '-' + sid); if (el) el.value = val; };
+    set('TPCustEmail', get('TPEmail'));
+    set('TPCustFirstName', get('TPFirstName'));
+    set('TPCustLastName', get('TPLastName'));
+    set('TPCustTags', customerTag);
 
-    fetch((window.Shopify && Shopify.routes && Shopify.routes.root ? Shopify.routes.root : '/') + 'contact', {
-      method: 'POST',
-      body: data,
-      credentials: 'same-origin'
-        }).then(function (r) {
-      console.log('Shopify customer:', r.status, r.url);
-      finish();
-    }, function (err) {
-      console.warn('Shopify customer error:', err);
-      finish();
-    });
+    frame.addEventListener('load', function () {
+      var where = '';
+      try { where = frame.contentWindow.location.href; } catch (e) { where = 'loaded'; }
+      finish(where);
+    }, { once: true });
+    setTimeout(function () { finish('timeout'); }, 8000);
+
+    cForm.setAttribute('target', 'TPCustomerFrame-' + sid);
+    // requestSubmit fires the submit event, so Shopify's hCaptcha can attach its token.
+    if (typeof cForm.requestSubmit === 'function') cForm.requestSubmit();
+    else cForm.submit();
   }
 
   // Sends the applicant to the Mailchimp audience via JSONP (Mailchimp blocks normal cross-site requests).
@@ -669,10 +689,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(script);
   }
 
+  var proceed = false;
+
   form.addEventListener('submit', function (e) {
+    // Second pass: our work is done, let Shopify (and hCaptcha) submit normally.
+    if (proceed) return;
+
     var bodyField = document.getElementById('TPBody-' + sid);
     if (bodyField) bodyField.value = buildBody();
-
 
     e.preventDefault();
     if (sending) return;
@@ -681,9 +705,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var btn = document.getElementById('TPSubmit-' + sid);
     if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
 
-    // form.submit() skips this listener, so there's no loop.
     createShopifyCustomer(function () {
-      sendToMailchimp(function () { HTMLFormElement.prototype.submit.call(form); });
+      sendToMailchimp(function () {
+        proceed = true;
+        if (btn) btn.disabled = false; // a disabled submitter can't be used by requestSubmit
+        if (typeof form.requestSubmit === 'function') form.requestSubmit(btn || undefined);
+        else HTMLFormElement.prototype.submit.call(form);
+      });
     });
   });
 });
