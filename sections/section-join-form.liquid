@@ -512,7 +512,7 @@
     </div>
   </div>
 
-  <div class="form__item-group">
+  {% comment %} <div class="form__item-group">
     <div class="form__item">
       <label for="TPBusinessCard-{{ section.id }}" class="field-label">Business Card (file)</label>
       <input type="file" id="TPBusinessCard-{{ section.id }}" class="input--full" {% unless section.settings.show_file_inputs %}disabled{% endunless %}>
@@ -521,7 +521,7 @@
       <label for="TPResale-{{ section.id }}" class="field-label">Resale License (file)</label>
       <input type="file" id="TPResale-{{ section.id }}" class="input--full" {% unless section.settings.show_file_inputs %}disabled{% endunless %}>
     </div>
-  </div>
+  </div> {% endcomment %}
 
   <div class="form__note">
     {{ section.settings.disclaimer | default: 'Note: Uploads are not transmitted via Shopify’s native contact form.' }}
