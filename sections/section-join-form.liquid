@@ -512,23 +512,12 @@
     </div>
   </div>
 
-  {% comment %} <div class="form__item-group">
-    <div class="form__item">
-      <label for="TPBusinessCard-{{ section.id }}" class="field-label">Business Card (file)</label>
-      <input type="file" id="TPBusinessCard-{{ section.id }}" class="input--full" {% unless section.settings.show_file_inputs %}disabled{% endunless %}>
-    </div>
-    <div class="form__item">
-      <label for="TPResale-{{ section.id }}" class="field-label">Resale License (file)</label>
-      <input type="file" id="TPResale-{{ section.id }}" class="input--full" {% unless section.settings.show_file_inputs %}disabled{% endunless %}>
-    </div>
-  </div> {% endcomment %}
-
   <div class="form__note">
-    {{ section.settings.disclaimer | default: 'Note: Uploads are not transmitted via Shopify’s native contact form.' }}
+    {{ section.settings.disclaimer }}
   </div>
 
   <div class="form__actions form__item form__item--submit">
-    <button type="submit" class="btn btn--solid btn--large btn--black">{{ section.settings.button_label | default: 'Submit' }}</button>
+    <button type="submit" id="TPSubmit-{{ section.id }}" class="btn btn--solid btn--large btn--black">{{ section.settings.button_label | default: 'Submit' }}</button>
   </div>
 {% endform %}
 
@@ -566,30 +555,106 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  var form = document.getElementById('TradeProgramForm-{{ section.id }}');
+  var sid = '{{ section.id }}';
+  var form = document.getElementById('TradeProgramForm-' + sid);
   if (!form) return;
-  form.addEventListener('submit', function () {
-    var get = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
-    var body = [
+
+  // Mailchimp embedded form action URL (Audience > Signup forms > Embedded forms > copy the form "action").
+  // Leave blank in the theme editor to skip Mailchimp and only send the Shopify email.
+  var mcAction = {{ section.settings.mailchimp_action_url | json }};
+  var sending = false;
+
+  var get = function (id) { var el = document.getElementById(id + '-' + sid); return el ? el.value.trim() : ''; };
+
+  function buildBody() {
+    return [
       'Trade Program Application',
       '--------------------------------',
-      'Name: ' + get('TPFirstName-{{ section.id }}') + ' ' + get('TPLastName-{{ section.id }}'),
-      'Email: ' + get('TPEmail-{{ section.id }}'),
-      'Phone: ' + (get('TPCountryCode-{{ section.id }}') || '') + ' ' + get('TPPhone-{{ section.id }}'),
-      'Business Name: ' + get('TPBusinessName-{{ section.id }}'),
-      'Address 1: ' + get('TPAddress1-{{ section.id }}'),
-      'Address 2: ' + get('TPAddress2-{{ section.id }}'),
-      'City: ' + get('TPCity-{{ section.id }}'),
-      'State: ' + get('TPState-{{ section.id }}'),
-      'ZIP: ' + get('TPZip-{{ section.id }}'),
-      'Country: ' + get('TPCountry-{{ section.id }}'),
-      'Website / Social: ' + get('TPWebsite-{{ section.id }}'),
+      'Name: ' + get('TPFirstName') + ' ' + get('TPLastName'),
+      'Email: ' + get('TPEmail'),
+      'Phone: ' + get('TPCountryCode') + ' ' + get('TPPhone'),
+      'Business Name: ' + get('TPBusinessName'),
+      'Address 1: ' + get('TPAddress1'),
+      'Address 2: ' + get('TPAddress2'),
+      'City: ' + get('TPCity'),
+      'State: ' + get('TPState'),
+      'ZIP: ' + get('TPZip'),
+      'Country: ' + get('TPCountry'),
+      'Website: ' + get('TPWebsite'),
+      'Social Media: ' + get('TPSocialMedia'),
       '',
-      'Next step: request business card and resale license by email for approval.'
+      'Next step: applicant has been asked to email their business card and resale license for approval.',
+      'Once approved, add the customer tag "Trade Program" in Shopify.'
     ].join('\n');
-    var bodyField = document.getElementById('TPBody-{{ section.id }}');
-    if (bodyField) bodyField.value = body;
-  }, { passive: true });
+  }
+
+  // Sends the applicant to the Mailchimp audience via JSONP (Mailchimp blocks normal cross-site requests).
+  // Always calls done(), even if Mailchimp fails or is slow, so the Shopify email is never lost.
+  function sendToMailchimp(done) {
+    if (!mcAction || mcAction.indexOf('list-manage.com') === -1) { done(); return; }
+
+    var finished = false;
+    var cbName = 'tpMcCb_' + sid.replace(/[^a-zA-Z0-9_]/g, '_') + '_' + Date.now();
+    var script = document.createElement('script');
+    var finish = function () {
+      if (finished) return;
+      finished = true;
+      try { delete window[cbName]; } catch (e) { window[cbName] = undefined; }
+      if (script.parentNode) script.parentNode.removeChild(script);
+      done();
+    };
+
+    window[cbName] = function (res) {
+      // "already subscribed" comes back as an error; that's fine, the Shopify email still goes out.
+      if (res && res.result !== 'success' && window.console) console.warn('Mailchimp:', res.msg);
+      finish();
+    };
+
+    var fields = {
+      EMAIL: get('TPEmail'),
+      FNAME: get('TPFirstName'),
+      LNAME: get('TPLastName'),
+      PHONE: (get('TPCountryCode') + ' ' + get('TPPhone')).trim(),
+      BIZNAME: get('TPBusinessName'),
+      ADDR1: get('TPAddress1'),
+      ADDR2: get('TPAddress2'),
+      CITY: get('TPCity'),
+      STATE: get('TPState'),
+      ZIP: get('TPZip'),
+      COUNTRY: get('TPCountry'),
+      WEBSITE: get('TPWebsite'),
+      SOCIAL: get('TPSocialMedia')
+    };
+
+    var params = [];
+    for (var k in fields) {
+      if (fields[k]) params.push(encodeURIComponent(k) + '=' + encodeURIComponent(fields[k]));
+    }
+    params.push('c=' + cbName);
+
+    var url = mcAction.replace('/post?', '/post-json?').replace(/&amp;/g, '&');
+    script.src = url + (url.indexOf('?') === -1 ? '?' : '&') + params.join('&');
+    script.onerror = finish;
+    setTimeout(finish, 4000);
+    document.body.appendChild(script);
+  }
+
+  form.addEventListener('submit', function (e) {
+    var bodyField = document.getElementById('TPBody-' + sid);
+    if (bodyField) bodyField.value = buildBody();
+
+    if (!mcAction) return; // No Mailchimp configured: normal Shopify submit.
+
+    e.preventDefault();
+    if (sending) return;
+    sending = true;
+
+    var btn = document.getElementById('TPSubmit-' + sid);
+    if (btn) { btn.disabled = true; btn.setAttribute('aria-busy', 'true'); }
+
+    // form.submit() skips this listener, so there's no loop.
+    sendToMailchimp(function () { HTMLFormElement.prototype.submit.call(form); });
+  });
 });
 </script>
 
@@ -628,6 +693,16 @@ document.addEventListener('DOMContentLoaded', function () {
       "id": "button_label",
       "label": "Button label",
       "default": "Submit"
+    },
+    {
+      "type": "header",
+      "content": "Mailchimp"
+    },
+    {
+      "type": "text",
+      "id": "mailchimp_action_url",
+      "label": "Mailchimp form action URL",
+      "info": "From Mailchimp: Audience > Signup forms > Embedded forms. Copy the URL in the form's action attribute. Leave blank to skip Mailchimp."
     }
   ],
   "presets": [
