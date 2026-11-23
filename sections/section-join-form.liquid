@@ -609,7 +609,13 @@ document.addEventListener('DOMContentLoaded', function () {
       method: 'POST',
       body: data,
       credentials: 'same-origin'
-    }).then(finish, finish);
+        }).then(function (r) {
+      console.log('Shopify customer:', r.status, r.url);
+      finish();
+    }, function (err) {
+      console.warn('Shopify customer error:', err);
+      finish();
+    });
   }
 
   // Sends the applicant to the Mailchimp audience via JSONP (Mailchimp blocks normal cross-site requests).
