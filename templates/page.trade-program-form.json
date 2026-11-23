@@ -94,7 +94,8 @@
         "note_text": "",
         "disclaimer": "<p>NOTE: Tax exemptions only apply by providing a valid resale certificate for the state(s) your orders are shipped. A valid business card or website or social media link and a resale license must be provided in order to proceed with our program. After you submit this form, we'll email you to request these documents for approval.</p><p>If you are outside of the US, please contact us directly to discuss if you are eligible for a Wander Trade account. Please feel free to contact us for any other questions at&nbsp;<br/><a href=\"mailto:hello@shopwander.com\" title=\"mailto:hello@shopwander.com\">hello@shopwander.com</a>.</p>",
         "success_text": "Thanks, your application has been submitted.",
-        "button_label": "Submit"
+        "button_label": "Submit",
+        "mailchimp_action_url": "https://shopwander.us21.list-manage.com/subscribe/post?u=9b079dcde9658af62bed6e351&id=99e007ed52&f_id=002bc8e9f0"
       }
     }
   },
