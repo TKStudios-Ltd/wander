@@ -174,9 +174,10 @@
               <span class="product-meta__item product-meta__collection">{{ collection_title | escape }}</span>
             {%- endunless -%}
 
-            {%- if location_text != blank -%}
+            {%- assign hidden_collection_locations = 'Amalfi Golden Hour|Sunwashed Amalfi Coast' | split: '|' -%}
+            {%- unless location_text == blank or hidden_collection_locations contains collection_title -%}
               <span class="product-meta__item product-meta__location hide-mob hide-tablet">{{ location_text | escape }}</span>
-            {%- endif -%}
+            {%- endunless -%}
 
             <span class="product-meta__item product-card__title">“{{ product.title | escape }}”</span>
           </div>
