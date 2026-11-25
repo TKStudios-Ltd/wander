@@ -718,6 +718,13 @@
 .framing-configurator-landscape [data-room-name="Background 28"].framing-configurator__preview_background.is-vir .fc-preview__frame {
     transform: translateY(-13.5%) translateX(-4%) scale(0.45);
 }
+/* Background 30 */
+[data-room-name="Background 30"].framing-configurator__preview_background.is-vir .fc-preview__frame {
+    transform: translateY(-16%) translateX(0%) scale(0.55);
+}
+.framing-configurator-landscape [data-room-name="Background 30"].framing-configurator__preview_background.is-vir .fc-preview__frame {
+    transform: translateY(-16%) translateX(0%) scale(0.55);
+}
 
 /* ------------------------------
    General
