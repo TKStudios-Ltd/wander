@@ -720,7 +720,7 @@
 }
 /* Background 30 */
 [data-room-name="Background 30"].framing-configurator__preview_background.is-vir .fc-preview__frame {
-    transform: translateY(-16%) translateX(0%) scale(0.55);
+    transform: translateY(-14%) translateX(0%) scale(0.55);
 }
 .framing-configurator-landscape [data-room-name="Background 30"].framing-configurator__preview_background.is-vir .fc-preview__frame {
     transform: translateY(-16%) translateX(0%) scale(0.55);
